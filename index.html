@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Greek">
+    <meta name="theme-color" content="#f0f2f5">
+    <title>Greek Match</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<h1>Greek Match</h1>
+<p class="subtitle" id="subtitle">Drag the Greek word to its English meaning</p>
+
+<div id="score-banner"></div>
+
+<div class="game">
+    <div class="game-header">
+        <div class="lang-toggle">
+            <button class="lang-btn active" id="lang-gr" title="Guess Greek">&#x1F1EC;&#x1F1F7;</button>
+            <button class="lang-btn" id="lang-en" title="Guess English">&#x1F1EC;&#x1F1E7;</button>
+        </div>
+    </div>
+    <div id="match-container">
+        <div class="bank" id="bank"></div>
+        <div class="pairs" id="pairs"></div>
+    </div>
+
+    <div id="quiz-container" style="display:none">
+        <div class="quiz-header">
+            <span id="quiz-progress">1 / 6</span>
+            <span id="quiz-timer-text">15</span>
+        </div>
+        <div id="quiz-word"></div>
+        <div class="quiz-timer-bar"><div id="quiz-timer-fill"></div></div>
+        <div id="quiz-options"></div>
+    </div>
+
+    <div class="actions">
+        <button id="btn-check">Check Answers</button>
+        <button id="btn-retry" style="display:none">Try Again</button>
+        <button id="btn-new"   style="display:none">New Round</button>
+        <button id="btn-switch-a"></button>
+        <button id="btn-switch-b"></button>
+    </div>
+</div>
+
+<script src="js/game.js"></script>
+</body>
+</html>

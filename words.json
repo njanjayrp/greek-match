@@ -1,0 +1,1202 @@
+[
+    {
+        "greek": "η οικοδομή",
+        "english": "building",
+        "marked": false
+    },
+    {
+        "greek": "ο οικοδόμος",
+        "english": "builder \/ construction worker",
+        "marked": false
+    },
+    {
+        "greek": "το οικόπεδο",
+        "english": "plot of land",
+        "marked": false
+    },
+    {
+        "greek": "η πολυκατοικία",
+        "english": "apartment block",
+        "marked": false
+    },
+    {
+        "greek": "η μονοκατοικία",
+        "english": "detached house",
+        "marked": false
+    },
+    {
+        "greek": "το διαμέρισμα",
+        "english": "apartment \/ flat",
+        "marked": false
+    },
+    {
+        "greek": "το οροφοδιαμέρισμα",
+        "english": "penthouse \/ top-floor flat",
+        "marked": false
+    },
+    {
+        "greek": "ο ουρανοξύστης",
+        "english": "skyscraper",
+        "marked": false
+    },
+    {
+        "greek": "το εξοχικό σπίτι",
+        "english": "country \/ holiday house",
+        "marked": false
+    },
+    {
+        "greek": "μοντέρνος",
+        "english": "modern",
+        "marked": false
+    },
+    {
+        "greek": "άνετος",
+        "english": "comfortable",
+        "marked": false
+    },
+    {
+        "greek": "ευρύχωρος",
+        "english": "spacious",
+        "marked": false
+    },
+    {
+        "greek": "ευάερος",
+        "english": "airy \/ well-ventilated",
+        "marked": false
+    },
+    {
+        "greek": "ευήλιος",
+        "english": "sunny",
+        "marked": false
+    },
+    {
+        "greek": "φωτεινός",
+        "english": "bright \/ well-lit",
+        "marked": false
+    },
+    {
+        "greek": "γωνιακός",
+        "english": "corner",
+        "marked": false
+    },
+    {
+        "greek": "ακατοίκητος",
+        "english": "uninhabited",
+        "marked": false
+    },
+    {
+        "greek": "ανακαινισμένος",
+        "english": "renovated",
+        "marked": false
+    },
+    {
+        "greek": "η πρόοδος",
+        "english": "progress",
+        "marked": false
+    },
+    {
+        "greek": "η περίοδος",
+        "english": "period",
+        "marked": false
+    },
+    {
+        "greek": "η άνοδος",
+        "english": "ascent \/ rise",
+        "marked": false
+    },
+    {
+        "greek": "η κάθοδος",
+        "english": "descent",
+        "marked": false
+    },
+    {
+        "greek": "η λεωφόρος",
+        "english": "avenue \/ boulevard",
+        "marked": false
+    },
+    {
+        "greek": "η ψήφος",
+        "english": "vote",
+        "marked": false
+    },
+    {
+        "greek": "η νόσος",
+        "english": "disease \/ illness",
+        "marked": false
+    },
+    {
+        "greek": "η ήπειρος",
+        "english": "continent",
+        "marked": false
+    },
+    {
+        "greek": "σπουδάζω",
+        "english": "to study (at university)",
+        "marked": false
+    },
+    {
+        "greek": "σκουπίζουμε → σκουπίζαμε",
+        "english": "we vacuum → we were vacuuming",
+        "marked": false
+    },
+    {
+        "greek": "γυρίζω → γύριζα",
+        "english": "I return → I was returning",
+        "marked": false
+    },
+    {
+        "greek": "διασκεδάζουν → διασκέδαζαν",
+        "english": "they have fun → they were having fun",
+        "marked": false
+    },
+    {
+        "greek": "πλένεις → έπλενες",
+        "english": "you wash → you were washing",
+        "marked": false
+    },
+    {
+        "greek": "χτίζω → έχτιζα",
+        "english": "I build → I was building",
+        "marked": false
+    },
+    {
+        "greek": "τότε",
+        "english": "then \/ at that time",
+        "marked": false
+    },
+    {
+        "greek": "συνήθως",
+        "english": "usually",
+        "marked": false
+    },
+    {
+        "greek": "συχνά",
+        "english": "often",
+        "marked": false
+    },
+    {
+        "greek": "πολλές φορές",
+        "english": "many times",
+        "marked": false
+    },
+    {
+        "greek": "κάθε καλοκαίρι",
+        "english": "every summer",
+        "marked": false
+    },
+    {
+        "greek": "ασταμάτητα",
+        "english": "non-stop",
+        "marked": false
+    },
+    {
+        "greek": "συνεχώς",
+        "english": "continuously",
+        "marked": false
+    },
+    {
+        "greek": "χωρίς διακοπή",
+        "english": "without a break",
+        "marked": false
+    },
+    {
+        "greek": "χτες",
+        "english": "yesterday",
+        "marked": false
+    },
+    {
+        "greek": "προχτές",
+        "english": "the day before yesterday",
+        "marked": false
+    },
+    {
+        "greek": "όλη τη μέρα",
+        "english": "all day",
+        "marked": false
+    },
+    {
+        "greek": "η άνοιξη",
+        "english": "spring",
+        "marked": false
+    },
+    {
+        "greek": "το καλοκαίρι",
+        "english": "summer",
+        "marked": false
+    },
+    {
+        "greek": "το φθινόπωρο",
+        "english": "autumn \/ fall",
+        "marked": false
+    },
+    {
+        "greek": "ο χειμώνας",
+        "english": "winter",
+        "marked": false
+    },
+    {
+        "greek": "η βροχή \/ βρέχει",
+        "english": "rain \/ it is raining",
+        "marked": false
+    },
+    {
+        "greek": "το χιόνι \/ χιονίζει",
+        "english": "snow \/ it is snowing",
+        "marked": false
+    },
+    {
+        "greek": "κάνει κρύο",
+        "english": "it is cold",
+        "marked": false
+    },
+    {
+        "greek": "έχει ήλιο \/ λιακάδα",
+        "english": "it is sunny",
+        "marked": false
+    },
+    {
+        "greek": "κάνει ζέστη",
+        "english": "it is hot \/ warm",
+        "marked": false
+    },
+    {
+        "greek": "έχει συννεφιά",
+        "english": "it is cloudy",
+        "marked": false
+    },
+    {
+        "greek": "φυσάει",
+        "english": "it is windy",
+        "marked": false
+    },
+    {
+        "greek": "εδώ και έναν μήνα",
+        "english": "for a month now",
+        "marked": false
+    },
+    {
+        "greek": "περίπου έναν χρόνο",
+        "english": "for about a year",
+        "marked": false
+    },
+    {
+        "greek": "σχεδόν πέντε χρόνια",
+        "english": "for almost five years",
+        "marked": false
+    },
+    {
+        "greek": "από πέρυσι \/ πέρσι",
+        "english": "since last year",
+        "marked": false
+    },
+    {
+        "greek": "από φέτος",
+        "english": "since this year",
+        "marked": false
+    },
+    {
+        "greek": "είκοσι μέρες",
+        "english": "twenty days",
+        "marked": false
+    },
+    {
+        "greek": "μία εβδομάδα",
+        "english": "one week",
+        "marked": false
+    },
+    {
+        "greek": "γελάω",
+        "english": "to laugh",
+        "marked": false
+    },
+    {
+        "greek": "μελετάω",
+        "english": "to study \/ to research",
+        "marked": false
+    },
+    {
+        "greek": "περνάω",
+        "english": "to pass",
+        "marked": false
+    },
+    {
+        "greek": "συναντάω",
+        "english": "to meet",
+        "marked": false
+    },
+    {
+        "greek": "χαιρετάω",
+        "english": "to greet",
+        "marked": false
+    },
+    {
+        "greek": "πονάω",
+        "english": "to hurt \/ to be in pain",
+        "marked": false
+    },
+    {
+        "greek": "φοράω",
+        "english": "to wear",
+        "marked": false
+    },
+    {
+        "greek": "ο πονοκέφαλος",
+        "english": "headache",
+        "marked": false
+    },
+    {
+        "greek": "το κυλικείο",
+        "english": "canteen \/ school cafeteria",
+        "marked": false
+    },
+    {
+        "greek": "η ξαδέλφη",
+        "english": "female cousin",
+        "marked": false
+    },
+    {
+        "greek": "το τζάκι",
+        "english": "fireplace",
+        "marked": false
+    },
+    {
+        "greek": "ο καναπές",
+        "english": "sofa",
+        "marked": false
+    },
+    {
+        "greek": "η πολυθρόνα",
+        "english": "armchair",
+        "marked": false
+    },
+    {
+        "greek": "νωρίς",
+        "english": "early",
+        "marked": false
+    },
+    {
+        "greek": "καλούτσικα",
+        "english": "so-so \/ not bad",
+        "marked": false
+    },
+    {
+        "greek": "λέγομαι",
+        "english": "I am called \/ my name is",
+        "marked": false
+    },
+    {
+        "greek": "απαντάω",
+        "english": "to answer",
+        "marked": false
+    },
+    {
+        "greek": "η κουβέρτα",
+        "english": "blanket",
+        "marked": false
+    },
+    {
+        "greek": "κάθομαι",
+        "english": "to sit",
+        "marked": false
+    },
+    {
+        "greek": "το παγκάκι",
+        "english": "bench",
+        "marked": false
+    },
+    {
+        "greek": "η λίμνη",
+        "english": "lake",
+        "marked": false
+    },
+    {
+        "greek": "το γρασίδι",
+        "english": "grass",
+        "marked": false
+    },
+    {
+        "greek": "το δέντρο",
+        "english": "tree",
+        "marked": false
+    },
+    {
+        "greek": "η παπιά",
+        "english": "duck",
+        "marked": false
+    },
+    {
+        "greek": "το λούτρινο",
+        "english": "plush toy \/ stuffed animal",
+        "marked": false
+    },
+    {
+        "greek": "τα σύννεφα",
+        "english": "the clouds",
+        "marked": false
+    },
+    {
+        "greek": "το μπλουζάκι",
+        "english": "t-shirt",
+        "marked": false
+    },
+    {
+        "greek": "το κοντομάνικο",
+        "english": "short-sleeved shirt",
+        "marked": false
+    },
+    {
+        "greek": "η καθηγήτρια",
+        "english": "teacher (female)",
+        "marked": false
+    },
+    {
+        "greek": "ο φοιτητής \/ η φοιτήτρια",
+        "english": "university student (male \/ female)",
+        "marked": false
+    },
+    {
+        "greek": "η πλατεία",
+        "english": "square \/ plaza",
+        "marked": false
+    },
+    {
+        "greek": "η εταιρεία",
+        "english": "company",
+        "marked": false
+    },
+    {
+        "greek": "επίσης",
+        "english": "also \/ as well",
+        "marked": false
+    },
+    {
+        "greek": "τα άρθρα",
+        "english": "articles (grammar)",
+        "marked": false
+    },
+    {
+        "greek": "τα ουσιαστικά",
+        "english": "nouns",
+        "marked": false
+    },
+    {
+        "greek": "το ξενοδοχείο",
+        "english": "hotel",
+        "marked": false
+    },
+    {
+        "greek": "το νοσοκομείο",
+        "english": "hospital",
+        "marked": false
+    },
+    {
+        "greek": "τα σταφύλια",
+        "english": "grapes",
+        "marked": false
+    },
+    {
+        "greek": "το αχλάδι",
+        "english": "pear",
+        "marked": false
+    },
+    {
+        "greek": "το καλάθι",
+        "english": "basket",
+        "marked": false
+    },
+    {
+        "greek": "η σειρά",
+        "english": "turn \/ queue \/ series",
+        "marked": false
+    },
+    {
+        "greek": "δυστυχώς",
+        "english": "unfortunately",
+        "marked": false
+    },
+    {
+        "greek": "η γεύση",
+        "english": "taste \/ flavour",
+        "marked": false
+    },
+    {
+        "greek": "φυσικά",
+        "english": "naturally \/ of course",
+        "marked": false
+    },
+    {
+        "greek": "μάλιστα",
+        "english": "indeed \/ certainly \/ of course",
+        "marked": false
+    },
+    {
+        "greek": "αμέσως",
+        "english": "immediately",
+        "marked": false
+    },
+    {
+        "greek": "η συμβουλή",
+        "english": "advice",
+        "marked": false
+    },
+    {
+        "greek": "το βήμα",
+        "english": "step",
+        "marked": false
+    },
+    {
+        "greek": "συμφωνώ",
+        "english": "to agree",
+        "marked": false
+    },
+    {
+        "greek": "προσπαθώ",
+        "english": "to try",
+        "marked": false
+    },
+    {
+        "greek": "το αποτέλεσμα",
+        "english": "result",
+        "marked": false
+    },
+    {
+        "greek": "η καθημερινότητα",
+        "english": "everyday life",
+        "marked": false
+    },
+    {
+        "greek": "ήρεμος",
+        "english": "calm",
+        "marked": false
+    },
+    {
+        "greek": "σημαντικός",
+        "english": "important",
+        "marked": false
+    },
+    {
+        "greek": "ξυπνάω",
+        "english": "to wake up",
+        "marked": false
+    },
+    {
+        "greek": "περίπου",
+        "english": "approximately \/ about",
+        "marked": false
+    },
+    {
+        "greek": "μερικοί \/ μερικές \/ μερικά",
+        "english": "some \/ a few",
+        "marked": false
+    },
+    {
+        "greek": "έτοιμος",
+        "english": "ready",
+        "marked": false
+    },
+    {
+        "greek": "ο μανάβης",
+        "english": "greengrocer",
+        "marked": false
+    },
+    {
+        "greek": "απέναντι",
+        "english": "opposite \/ across the road",
+        "marked": false
+    },
+    {
+        "greek": "καταπληκτικά",
+        "english": "fantastically \/ amazingly",
+        "marked": false
+    },
+    {
+        "greek": "ποτέ",
+        "english": "never",
+        "marked": false
+    },
+    {
+        "greek": "σχεδόν ποτέ",
+        "english": "almost never",
+        "marked": false
+    },
+    {
+        "greek": "σπάνια",
+        "english": "rarely",
+        "marked": false
+    },
+    {
+        "greek": "κάπου κάπου",
+        "english": "once in a while",
+        "marked": false
+    },
+    {
+        "greek": "πότε πότε",
+        "english": "now and then",
+        "marked": false
+    },
+    {
+        "greek": "καμιά φορά",
+        "english": "sometimes",
+        "marked": false
+    },
+    {
+        "greek": "μερικές φορές",
+        "english": "sometimes \/ a few times",
+        "marked": false
+    },
+    {
+        "greek": "σχεδόν πάντα",
+        "english": "almost always",
+        "marked": false
+    },
+    {
+        "greek": "πάντα",
+        "english": "always",
+        "marked": false
+    },
+    {
+        "greek": "ψάχνω",
+        "english": "to look for \/ to seek",
+        "marked": false
+    },
+    {
+        "greek": "το μήνυμα",
+        "english": "message",
+        "marked": false
+    },
+    {
+        "greek": "κρατώ",
+        "english": "to hold \/ to keep",
+        "marked": false
+    },
+    {
+        "greek": "ξεραίνω",
+        "english": "to dry",
+        "marked": false
+    },
+    {
+        "greek": "τα ψώνια",
+        "english": "shopping",
+        "marked": false
+    },
+    {
+        "greek": "λεπτός",
+        "english": "thin \/ slim",
+        "marked": false
+    },
+    {
+        "greek": "ντύνομαι",
+        "english": "to get dressed \/ to get ready",
+        "marked": false
+    },
+    {
+        "greek": "κοιμάμαι",
+        "english": "to sleep",
+        "marked": false
+    },
+    {
+        "greek": "η άσκηση",
+        "english": "exercise",
+        "marked": false
+    },
+    {
+        "greek": "ο χορός",
+        "english": "dance",
+        "marked": false
+    },
+    {
+        "greek": "ξεκουράζομαι",
+        "english": "to rest",
+        "marked": false
+    },
+    {
+        "greek": "το ποτό",
+        "english": "drink",
+        "marked": false
+    },
+    {
+        "greek": "καίω",
+        "english": "to burn",
+        "marked": false
+    },
+    {
+        "greek": "φιλώ",
+        "english": "to kiss",
+        "marked": false
+    },
+    {
+        "greek": "ίσως",
+        "english": "perhaps",
+        "marked": false
+    },
+    {
+        "greek": "το τέρμα",
+        "english": "end \/ terminal",
+        "marked": false
+    },
+    {
+        "greek": "η περιοχή",
+        "english": "area",
+        "marked": false
+    },
+    {
+        "greek": "ο ύπνος",
+        "english": "sleep",
+        "marked": false
+    },
+    {
+        "greek": "εκτός",
+        "english": "except \/ outside",
+        "marked": false
+    },
+    {
+        "greek": "αργά",
+        "english": "slowly \/ late",
+        "marked": false
+    },
+    {
+        "greek": "προτιμάω",
+        "english": "to prefer",
+        "marked": false
+    },
+    {
+        "greek": "αποφασίζω",
+        "english": "to decide",
+        "marked": false
+    },
+    {
+        "greek": "ετοιμάζομαι",
+        "english": "to get ready \/ to prepare",
+        "marked": false
+    },
+    {
+        "greek": "ξεκινάω",
+        "english": "to start \/ to leave",
+        "marked": false
+    },
+    {
+        "greek": "διάλειμμα",
+        "english": "break \/ interval",
+        "marked": false
+    },
+    {
+        "greek": "κοιτάω",
+        "english": "to look \/ to watch",
+        "marked": false
+    },
+    {
+        "greek": "κανονίζω",
+        "english": "to arrange \/ to organise",
+        "marked": false
+    },
+    {
+        "greek": "το βαγόνι",
+        "english": "train carriage \/ wagon",
+        "marked": false
+    },
+    {
+        "greek": "ο επιβάτης",
+        "english": "passenger",
+        "marked": false
+    },
+    {
+        "greek": "η αποβάθρα \/ η πλατφόρμα",
+        "english": "platform",
+        "marked": false
+    },
+    {
+        "greek": "το μετρό",
+        "english": "metro \/ underground",
+        "marked": false
+    },
+    {
+        "greek": "το τραμ",
+        "english": "tram",
+        "marked": false
+    },
+    {
+        "greek": "ο προαστιακός",
+        "english": "suburban train",
+        "marked": false
+    },
+    {
+        "greek": "ο σταθμός",
+        "english": "station",
+        "marked": false
+    },
+    {
+        "greek": "η στάση",
+        "english": "stop (bus\/tram stop)",
+        "marked": false
+    },
+    {
+        "greek": "το λεωφορείο",
+        "english": "bus",
+        "marked": false
+    },
+    {
+        "greek": "το τρόλεϊ",
+        "english": "trolleybus",
+        "marked": false
+    },
+    {
+        "greek": "το ταξί",
+        "english": "taxi",
+        "marked": false
+    },
+    {
+        "greek": "ο ηλεκτρικός",
+        "english": "electric railway \/ metro (old Athens term)",
+        "marked": false
+    },
+    {
+        "greek": "όμως",
+        "english": "however \/ but",
+        "marked": false
+    },
+    {
+        "greek": "επιλέγω",
+        "english": "to choose \/ to select",
+        "marked": false
+    },
+    {
+        "greek": "καθόλου",
+        "english": "at all \/ not at all",
+        "marked": false
+    },
+    {
+        "greek": "οπότε",
+        "english": "so \/ therefore \/ whenever",
+        "marked": false
+    },
+    {
+        "greek": "καλή συνέχεια",
+        "english": "have a good continuation \/ carry on well",
+        "marked": false
+    },
+    {
+        "greek": "χαρούμενος",
+        "english": "happy",
+        "marked": false
+    },
+    {
+        "greek": "μεταπτυχιακό",
+        "english": "postgraduate degree \/ masters",
+        "marked": false
+    },
+    {
+        "greek": "έτος",
+        "english": "year (formal)",
+        "marked": false
+    },
+    {
+        "greek": "συζητάω",
+        "english": "to chat \/ to discuss",
+        "marked": false
+    },
+    {
+        "greek": "έπειτα",
+        "english": "then \/ afterwards",
+        "marked": false
+    },
+    {
+        "greek": "η διακοπή \/ οι διακοπές",
+        "english": "break \/ holidays",
+        "marked": false
+    },
+    {
+        "greek": "το όνειρο \/ τα όνειρα",
+        "english": "dream \/ dreams",
+        "marked": false
+    },
+    {
+        "greek": "γκάλοπ",
+        "english": "opinion poll \/ gallup poll",
+        "marked": false
+    },
+    {
+        "greek": "ο υπάλληλος",
+        "english": "employee \/ clerk",
+        "marked": true
+    },
+    {
+        "greek": "κλείνω",
+        "english": "to close \/ to book",
+        "marked": false
+    },
+    {
+        "greek": "σύντομη",
+        "english": "brief \/ short",
+        "marked": true
+    },
+    {
+        "greek": "απλό",
+        "english": "simple",
+        "marked": false
+    },
+    {
+        "greek": "το καράβι",
+        "english": "ship \/ boat",
+        "marked": false
+    },
+    {
+        "greek": "η θέση",
+        "english": "seat \/ position",
+        "marked": false
+    },
+    {
+        "greek": "πατάω",
+        "english": "to step on \/ to press",
+        "marked": true
+    },
+    {
+        "greek": "ο ελεγκτής",
+        "english": "inspector \/ controller",
+        "marked": true
+    },
+    {
+        "greek": "διαλέγω",
+        "english": "to choose \/ to select",
+        "marked": true
+    },
+    {
+        "greek": "συνδέω",
+        "english": "to connect",
+        "marked": true
+    },
+    {
+        "greek": "διαφωνώ",
+        "english": "to disagree",
+        "marked": true
+    },
+    {
+        "greek": "βουρτσίζω",
+        "english": "to brush (teeth)",
+        "marked": true
+    },
+    {
+        "greek": "τα δόντια",
+        "english": "teeth",
+        "marked": true
+    },
+    {
+        "greek": "από χρυσό",
+        "english": "made of gold",
+        "marked": true
+    },
+    {
+        "greek": "στους φίλους μου",
+        "english": "at my friends' place",
+        "marked": true
+    },
+    {
+        "greek": "στις τρεις",
+        "english": "at three o'clock",
+        "marked": true
+    },
+    {
+        "greek": "στα μαθήματα",
+        "english": "at the lessons",
+        "marked": true
+    },
+    {
+        "greek": "για λίγο",
+        "english": "for a little while",
+        "marked": true
+    },
+    {
+        "greek": "προς το γραφείο",
+        "english": "towards the office",
+        "marked": true
+    },
+    {
+        "greek": "μέχρι τις τρεις",
+        "english": "until three",
+        "marked": true
+    },
+    {
+        "greek": "ώς εδώ",
+        "english": "up to here",
+        "marked": true
+    },
+    {
+        "greek": "χωρίς λεφτά",
+        "english": "without money",
+        "marked": true
+    },
+    {
+        "greek": "εξαιτίας της βροχής",
+        "english": "because of the rain",
+        "marked": true
+    },
+    {
+        "greek": "αντί της Μαρίας",
+        "english": "instead of Maria",
+        "marked": true
+    },
+    {
+        "greek": "εκτός του Αχιλλέα",
+        "english": "except Achilles",
+        "marked": true
+    },
+    {
+        "greek": "υπέρ του Νίκου",
+        "english": "in favour of Nikos",
+        "marked": true
+    },
+    {
+        "greek": "κατά τις δέκα",
+        "english": "around ten o'clock",
+        "marked": true
+    },
+    {
+        "greek": "κατά τη γνώμη μου",
+        "english": "in my opinion",
+        "marked": true
+    },
+    {
+        "greek": "τα αλμυρά",
+        "english": "salty snacks \/ savouries",
+        "marked": true
+    },
+    {
+        "greek": "το σακίδιο \/ η τσάντα πλάτης",
+        "english": "backpack",
+        "marked": true
+    },
+    {
+        "greek": "η πλάτη",
+        "english": "back (body part)",
+        "marked": true
+    },
+    {
+        "greek": "το κουλούρι",
+        "english": "koulouri \/ sesame bread ring",
+        "marked": false
+    },
+    {
+        "greek": "πετάω",
+        "english": "to throw \/ to fly",
+        "marked": true
+    },
+    {
+        "greek": "ο χρυσός",
+        "english": "gold",
+        "marked": false
+    },
+    {
+        "greek": "παραγγέλνω",
+        "english": "to order",
+        "marked": true
+    },
+    {
+        "greek": "το υλικό",
+        "english": "material",
+        "marked": false
+    },
+    {
+        "greek": "ο τόπος",
+        "english": "place",
+        "marked": false
+    },
+    {
+        "greek": "φεύγω → έφυγα",
+        "english": "to leave → I left",
+        "marked": true
+    },
+    {
+        "greek": "φτάνω → έφτασα",
+        "english": "to arrive → I arrived",
+        "marked": true
+    },
+    {
+        "greek": "όχι μόνο... αλλά και",
+        "english": "not only... but also",
+        "marked": false
+    },
+    {
+        "greek": "ωστόσο",
+        "english": "nevertheless \/ yet",
+        "marked": false
+    },
+    {
+        "greek": "αντίθετα",
+        "english": "on the contrary",
+        "marked": false
+    },
+    {
+        "greek": "από τη μία (πλευρά)... από την άλλη πλευρά",
+        "english": "on the one hand... on the other hand",
+        "marked": false
+    },
+    {
+        "greek": "ή... ή",
+        "english": "either... or",
+        "marked": false
+    },
+    {
+        "greek": "είτε... είτε",
+        "english": "either... or (formal)",
+        "marked": false
+    },
+    {
+        "greek": "ούτε... ούτε",
+        "english": "neither... nor",
+        "marked": false
+    },
+    {
+        "greek": "άρα",
+        "english": "therefore \/ so (conclusion)",
+        "marked": false
+    },
+    {
+        "greek": "επομένως",
+        "english": "therefore \/ consequently (formal)",
+        "marked": false
+    },
+    {
+        "greek": "πρώτον",
+        "english": "firstly",
+        "marked": false
+    },
+    {
+        "greek": "αρχικά",
+        "english": "initially \/ at first",
+        "marked": false
+    },
+    {
+        "greek": "καταρχάς",
+        "english": "first of all",
+        "marked": false
+    },
+    {
+        "greek": "δεύτερον",
+        "english": "secondly",
+        "marked": false
+    },
+    {
+        "greek": "ύστερα",
+        "english": "afterwards \/ later",
+        "marked": false
+    },
+    {
+        "greek": "στη συνέχεια",
+        "english": "then \/ next \/ subsequently",
+        "marked": false
+    },
+    {
+        "greek": "δηλαδή",
+        "english": "that is \/ in other words \/ meaning",
+        "marked": false
+    },
+    {
+        "greek": "ακόμα",
+        "english": "also \/ still \/ even",
+        "marked": false
+    },
+    {
+        "greek": "επιπλέον",
+        "english": "moreover \/ furthermore \/ in addition",
+        "marked": false
+    }
+]
