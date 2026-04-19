@@ -892,12 +892,12 @@
     {
         "greek": "συζητάω",
         "english": "to chat \/ to discuss",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "έπειτα",
         "english": "then \/ afterwards",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "η διακοπή \/ οι διακοπές",
@@ -922,7 +922,7 @@
     {
         "greek": "κλείνω",
         "english": "to close \/ to book",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "σύντομη",
@@ -936,7 +936,7 @@
     },
     {
         "greek": "το καράβι",
-        "english": "ship \/ boat",
+        "english": "boat",
         "marked": false
     },
     {
@@ -956,7 +956,7 @@
     },
     {
         "greek": "διαλέγω",
-        "english": "to choose \/ to select",
+        "english": "to choose",
         "marked": true
     },
     {
@@ -1056,11 +1056,11 @@
     },
     {
         "greek": "τα αλμυρά",
-        "english": "salty snacks \/ savouries",
+        "english": "salty snacks",
         "marked": true
     },
     {
-        "greek": "το σακίδιο \/ η τσάντα πλάτης",
+        "greek": "η τσάντα πλάτης",
         "english": "backpack",
         "marked": true
     },
@@ -1116,7 +1116,7 @@
     },
     {
         "greek": "ωστόσο",
-        "english": "nevertheless \/ yet",
+        "english": "nevertheless",
         "marked": true
     },
     {
@@ -1176,17 +1176,17 @@
     },
     {
         "greek": "ύστερα",
-        "english": "afterwards \/ later",
+        "english": "afterwards",
         "marked": true
     },
     {
         "greek": "στη συνέχεια",
-        "english": "then \/ next \/ subsequently",
+        "english": "subsequently",
         "marked": true
     },
     {
         "greek": "δηλαδή",
-        "english": "that is \/ in other words \/ meaning",
+        "english": "in other words",
         "marked": true
     },
     {
@@ -1196,7 +1196,7 @@
     },
     {
         "greek": "επιπλέον",
-        "english": "moreover \/ furthermore \/ in addition",
+        "english": "furthermore",
         "marked": true
     }
 ]
