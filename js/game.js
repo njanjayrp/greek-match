@@ -571,7 +571,7 @@ function normalizeAnswer(s, isGreek) {
 }
 
 function answerVariants(raw, isGreek) {
-    return raw.split(/\s*\/\s*/).map(s => normalizeAnswer(s, isGreek)).filter(Boolean);
+    return raw.split(/\s*[\/\u2192]\s*/).map(s => normalizeAnswer(s, isGreek)).filter(Boolean);
 }
 
 function checkTypedAnswer(typed, correctRaw, isGreek) {
