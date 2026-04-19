@@ -1112,91 +1112,91 @@
     {
         "greek": "όχι μόνο... αλλά και",
         "english": "not only... but also",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ωστόσο",
         "english": "nevertheless \/ yet",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "αντίθετα",
         "english": "on the contrary",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "από τη μία (πλευρά)... από την άλλη πλευρά",
         "english": "on the one hand... on the other hand",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ή... ή",
         "english": "either... or",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "είτε... είτε",
         "english": "either... or (formal)",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ούτε... ούτε",
         "english": "neither... nor",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "άρα",
         "english": "therefore \/ so (conclusion)",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "επομένως",
         "english": "therefore \/ consequently (formal)",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "πρώτον",
         "english": "firstly",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "αρχικά",
         "english": "initially \/ at first",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "καταρχάς",
         "english": "first of all",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "δεύτερον",
         "english": "secondly",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ύστερα",
         "english": "afterwards \/ later",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "στη συνέχεια",
         "english": "then \/ next \/ subsequently",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "δηλαδή",
         "english": "that is \/ in other words \/ meaning",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ακόμα",
         "english": "also \/ still \/ even",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "επιπλέον",
         "english": "moreover \/ furthermore \/ in addition",
-        "marked": false
+        "marked": true
     }
 ]
