@@ -611,13 +611,13 @@ function submitTypingAnswer(e) {
         appendTypingHistory(result, correctRaw, typedValue);
         setTimeout(advanceTyping, 900);
     } else if (result === "accent") {
-        feedback.textContent = "\u26a0 " + correctRaw + "  \u2014 check accents \u2014 tap Next";
+        feedback.textContent = "\u26a0 " + correctRaw;
         feedback.className   = "warn";
         typingScore++;
         appendTypingHistory(result, correctRaw, typedValue);
         submit.textContent = "Next";
     } else {
-        feedback.textContent = "\u2717 " + correctRaw + "  \u2014 tap Next";
+        feedback.textContent = "\u2717 " + correctRaw;
         feedback.className   = "wrong";
         typingWrong.push(item.greek);
         appendTypingHistory(result, correctRaw, typedValue);
@@ -640,7 +640,7 @@ function appendTypingHistory(result, correctRaw, typed) {
     if (result !== "correct" && typed) {
         const typedSpan = document.createElement("span");
         typedSpan.className = "typed";
-        typedSpan.textContent = "(typed: " + typed + ")";
+        typedSpan.textContent = "\u2190 " + typed;
         li.appendChild(typedSpan);
     }
     document.getElementById("typing-history").appendChild(li);
