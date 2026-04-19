@@ -541,6 +541,7 @@ function buildTyping() {
     document.getElementById("btn-check").style.display    = "none";
     document.getElementById("btn-retry").style.display    = "none";
     document.getElementById("btn-new").style.display      = "none";
+    document.getElementById("typing-history").innerHTML   = "";
     showTypingQuestion();
 }
 
@@ -602,22 +603,47 @@ function submitTypingAnswer(e) {
     const feedback      = document.getElementById("typing-feedback");
     input.disabled      = true;
 
+    const typedValue = input.value.trim();
     if (result === "correct") {
         feedback.textContent = "\u2713 " + correctRaw;
         feedback.className   = "correct";
         typingScore++;
+        appendTypingHistory(result, correctRaw, typedValue);
         setTimeout(advanceTyping, 900);
     } else if (result === "accent") {
         feedback.textContent = "\u26a0 " + correctRaw + "  \u2014 check accents \u2014 tap Next";
         feedback.className   = "warn";
         typingScore++;
+        appendTypingHistory(result, correctRaw, typedValue);
         submit.textContent = "Next";
     } else {
         feedback.textContent = "\u2717 " + correctRaw + "  \u2014 tap Next";
         feedback.className   = "wrong";
         typingWrong.push(item.greek);
+        appendTypingHistory(result, correctRaw, typedValue);
         submit.textContent = "Next";
     }
+}
+
+function appendTypingHistory(result, correctRaw, typed) {
+    const li = document.createElement("li");
+    li.className = "typing-history-" + result;
+    const symbol = result === "correct" ? "\u2713" : result === "accent" ? "\u26a0" : "\u2717";
+    const mark   = document.createElement("span");
+    mark.className = "mark";
+    mark.textContent = symbol;
+    const word   = document.createElement("span");
+    word.className = "word";
+    word.textContent = correctRaw;
+    li.appendChild(mark);
+    li.appendChild(word);
+    if (result !== "correct" && typed) {
+        const typedSpan = document.createElement("span");
+        typedSpan.className = "typed";
+        typedSpan.textContent = "(typed: " + typed + ")";
+        li.appendChild(typedSpan);
+    }
+    document.getElementById("typing-history").appendChild(li);
 }
 
 function advanceTyping() {

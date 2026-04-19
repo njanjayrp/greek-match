@@ -133,6 +133,24 @@ h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6
 #typing-feedback.warn    { color: #d97706; }
 #typing-feedback.wrong   { color: #dc2626; }
 
+#typing-history {
+    list-style: none; margin-top: 12px; display: flex; flex-direction: column; gap: 4px;
+}
+#typing-history li {
+    display: flex; align-items: center; gap: 8px; padding: 8px 12px;
+    background: #fff; border: 1.5px solid #e2e5ea; border-radius: 7px;
+    font-size: 14px;
+}
+#typing-history li .mark { font-weight: 700; font-size: 15px; width: 18px; flex-shrink: 0; }
+#typing-history li .word { font-weight: 600; }
+#typing-history li .typed { color: #888; font-size: 13px; margin-left: auto; }
+.typing-history-correct { border-color: #bbf7d0 !important; }
+.typing-history-correct .mark { color: #16a34a; }
+.typing-history-warn    { border-color: #fde68a !important; background: #fffbeb !important; }
+.typing-history-warn .mark { color: #d97706; }
+.typing-history-wrong   { border-color: #fecaca !important; background: #fef2f2 !important; }
+.typing-history-wrong .mark { color: #dc2626; }
+
 /* -- Shared -- */
 .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
