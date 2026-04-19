@@ -590,7 +590,12 @@ function submitTypingAnswer(e) {
     if (e) e.preventDefault();
     const item  = round[typingIndex];
     const input = document.getElementById("typing-input");
-    if (input.disabled) return;
+    const submit = document.getElementById("typing-submit");
+    if (input.disabled) {
+        // Second press: advance
+        advanceTyping();
+        return;
+    }
     const isGreekAnswer = lang === "greek";
     const correctRaw    = isGreekAnswer ? item.greek : item.english;
     const result        = checkTypedAnswer(input.value, correctRaw, isGreekAnswer);
@@ -601,22 +606,25 @@ function submitTypingAnswer(e) {
         feedback.textContent = "\u2713 " + correctRaw;
         feedback.className   = "correct";
         typingScore++;
+        setTimeout(advanceTyping, 900);
     } else if (result === "accent") {
-        feedback.textContent = "\u2713 " + correctRaw + "  \u2014 check accents";
+        feedback.textContent = "\u26a0 " + correctRaw + "  \u2014 check accents \u2014 tap Next";
         feedback.className   = "warn";
         typingScore++;
+        submit.textContent = "Next";
     } else {
-        feedback.textContent = "\u2717 " + correctRaw;
+        feedback.textContent = "\u2717 " + correctRaw + "  \u2014 tap Next";
         feedback.className   = "wrong";
         typingWrong.push(item.greek);
+        submit.textContent = "Next";
     }
+}
 
-    const delay = result === "wrong" ? 1600 : (result === "accent" ? 1400 : 800);
-    setTimeout(() => {
-        typingIndex++;
-        if (typingIndex < 6) showTypingQuestion();
-        else finishTyping();
-    }, delay);
+function advanceTyping() {
+    document.getElementById("typing-submit").textContent = "Check";
+    typingIndex++;
+    if (typingIndex < 6) showTypingQuestion();
+    else finishTyping();
 }
 
 function finishTyping() {

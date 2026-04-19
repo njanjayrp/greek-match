@@ -130,7 +130,7 @@ h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6
     min-height: 22px; padding: 4px;
 }
 #typing-feedback.correct { color: #16a34a; }
-#typing-feedback.warn    { color: #c2410c; }
+#typing-feedback.warn    { color: #d97706; }
 #typing-feedback.wrong   { color: #dc2626; }
 
 /* -- Shared -- */
