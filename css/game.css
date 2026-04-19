@@ -103,6 +103,36 @@ h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6
 .quiz-opt.wrong   { border-color: #ef4444; background: #fef2f2; color: #dc2626; }
 .quiz-opt:disabled { cursor: default; }
 
+/* -- Typing game -- */
+#typing-container { margin-bottom: 24px; }
+.typing-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 16px; font-size: 13px; color: #888; font-weight: 600;
+}
+#typing-word {
+    background: #fff; border: 1.5px solid #e2e5ea; border-radius: 10px;
+    padding: 28px 24px; text-align: center; font-size: 20px; font-weight: 700;
+    margin-bottom: 16px; letter-spacing: -0.3px;
+}
+#typing-form { display: flex; gap: 8px; margin-bottom: 12px; }
+#typing-input {
+    flex: 1; padding: 12px 14px; font-size: 16px;
+    border: 1.5px solid #e2e5ea; border-radius: 8px; background: #fff;
+    color: #1a1a2e; font-family: inherit;
+    -webkit-user-select: text; user-select: text;
+}
+#typing-input:focus    { outline: none; border-color: #4a6cf7; }
+#typing-input:disabled { opacity: 0.65; background: #f6f7fa; }
+#typing-submit { background: #1a1a2e; color: #fff; padding: 10px 20px; }
+#typing-submit:hover { background: #2d2d4e; }
+#typing-feedback {
+    text-align: center; font-size: 15px; font-weight: 600;
+    min-height: 22px; padding: 4px;
+}
+#typing-feedback.correct { color: #16a34a; }
+#typing-feedback.warn    { color: #c2410c; }
+#typing-feedback.wrong   { color: #dc2626; }
+
 /* -- Shared -- */
 .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
@@ -122,9 +152,18 @@ button:active { transform: scale(0.97); }
 #btn-switch-a:hover, #btn-switch-b:hover { background: #d8dae4; }
 
 .game-header {
-    display: flex; justify-content: flex-end; align-items: center;
+    display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 10px;
 }
+.mode-select {
+    font-size: 13px; font-weight: 600; padding: 7px 28px 7px 12px;
+    border: 1.5px solid #e2e5ea; border-radius: 7px; background: #fff;
+    color: #1a1a2e; cursor: pointer; font-family: inherit;
+    -webkit-appearance: none; appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%231a1a2e' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat; background-position: right 9px center; background-size: 10px;
+}
+.mode-select:focus { outline: none; border-color: #4a6cf7; }
 .lang-toggle { display: flex; gap: 6px; align-items: center; }
 .lang-btn {
     font-size: 20px; cursor: pointer; opacity: 0.3;
@@ -151,4 +190,5 @@ button:active { transform: scale(0.97); }
     button { padding: 10px 18px; font-size: 13px; }
     #quiz-word { padding: 20px 16px; font-size: 18px; }
     .quiz-opt { padding: 12px 10px; font-size: 13px; }
+    #typing-word { padding: 20px 16px; font-size: 18px; }
 }

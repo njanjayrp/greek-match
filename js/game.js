@@ -19,22 +19,26 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (urlMode === "quiz" || urlMode === "xmatch") mode = urlMode;
+    if (["quiz", "xmatch", "type"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     round = selectRound();
 
     // Event listeners
     document.getElementById("btn-check").addEventListener("click", checkMatchAnswers);
-    document.getElementById("btn-retry").addEventListener("click", () => mode === "quiz" ? buildQuiz() : buildMatch());
+    document.getElementById("btn-retry").addEventListener("click", () => {
+        if (mode === "quiz") buildQuiz();
+        else if (mode === "type") buildTyping();
+        else buildMatch();
+    });
     document.getElementById("btn-new").addEventListener("click", () => {
         const url = new URL(location.href);
         url.searchParams.set("mode", mode);
         url.searchParams.set("lang", lang);
         location.href = url.toString();
     });
-    document.getElementById("btn-switch-a").addEventListener("click", e => switchMode(e.currentTarget.dataset.target));
-    document.getElementById("btn-switch-b").addEventListener("click", e => switchMode(e.currentTarget.dataset.target));
+    document.getElementById("mode-select").addEventListener("change", e => switchMode(e.target.value));
+    document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
     document.getElementById("lang-gr").addEventListener("click", () => setLang("greek"));
     document.getElementById("lang-en").addEventListener("click", () => setLang("english"));
 
@@ -42,6 +46,7 @@ function initApp(words) {
         document.getElementById("lang-gr").classList.remove("active");
         document.getElementById("lang-en").classList.add("active");
     }
+    document.getElementById("mode-select").value = mode;
     applyMode();
 }
 
@@ -102,6 +107,7 @@ function setLang(l) {
     document.getElementById("lang-en").classList.toggle("active", l === "english");
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
+    else if (mode === "type") buildTyping();
     else buildMatch();
 }
 
@@ -109,6 +115,7 @@ function updateSubtitle() {
     const subtitles = {
         match:  { greek: "Tap or drag the Greek word to its English meaning",        english: "Tap or drag the English word to its Greek meaning" },
         quiz:   { greek: "Choose the correct Greek word",                            english: "Choose the correct English word" },
+        type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
         xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
@@ -498,20 +505,15 @@ function updateWeights(wrongGreekWords) {
     localStorage.setItem("greek_seen", JSON.stringify([round.map(w => w.greek), ...seen].slice(0, 2)));
 }
 
-const MODE_LABEL = { match: "Match", quiz: "Quiz", xmatch: "X Match" };
-const MODE_ORDER = ["match", "quiz", "xmatch"];
-
 function applyMode() {
-    const isQuiz = mode === "quiz";
-    document.getElementById("match-container").style.display = isQuiz ? "none" : "";
-    document.getElementById("quiz-container").style.display  = isQuiz ? ""     : "none";
-    const others = MODE_ORDER.filter(m => m !== mode);
-    document.getElementById("btn-switch-a").textContent = "Switch to " + MODE_LABEL[others[0]];
-    document.getElementById("btn-switch-a").dataset.target = others[0];
-    document.getElementById("btn-switch-b").textContent = "Switch to " + MODE_LABEL[others[1]];
-    document.getElementById("btn-switch-b").dataset.target = others[1];
+    const isMatchLike = (mode === "match" || mode === "xmatch");
+    document.getElementById("match-container").style.display  = isMatchLike ? "" : "none";
+    document.getElementById("quiz-container").style.display   = mode === "quiz" ? "" : "none";
+    document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
+    document.getElementById("mode-select").value = mode;
     updateSubtitle();
-    if (isQuiz) buildQuiz();
+    if (mode === "quiz") buildQuiz();
+    else if (mode === "type") buildTyping();
     else buildMatch();
 }
 
@@ -522,6 +524,107 @@ function switchMode(target) {
     mode = target;
     if ((prev === "xmatch") !== (mode === "xmatch")) round = selectRound();
     applyMode();
+}
+
+// ── Typing (recall) game ────────────────────────────────────────────────────
+
+let typingIndex = 0;
+let typingScore = 0;
+let typingWrong = [];
+
+function buildTyping() {
+    typingIndex = 0;
+    typingScore = 0;
+    typingWrong = [];
+    checked    = false;
+    document.getElementById("score-banner").style.display = "none";
+    document.getElementById("btn-check").style.display    = "none";
+    document.getElementById("btn-retry").style.display    = "none";
+    document.getElementById("btn-new").style.display      = "none";
+    showTypingQuestion();
+}
+
+function showTypingQuestion() {
+    const item  = round[typingIndex];
+    const input = document.getElementById("typing-input");
+    const feedback = document.getElementById("typing-feedback");
+    document.getElementById("typing-progress").textContent = (typingIndex + 1) + " / 6";
+    document.getElementById("typing-word").textContent     = lang === "greek" ? item.english : item.greek;
+    input.value       = "";
+    input.disabled    = false;
+    input.lang        = lang === "greek" ? "el" : "en";
+    input.placeholder = lang === "greek" ? "\u03b3\u03c1\u03ac\u03c8\u03b5 \u03c3\u03c4\u03b1 \u03b5\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac\u2026" : "type in English\u2026";
+    feedback.textContent = "";
+    feedback.className   = "";
+    input.focus();
+}
+
+function stripAccents(s) {
+    return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").normalize("NFC");
+}
+
+function normalizeAnswer(s, isGreek) {
+    s = (s || "").toLowerCase().trim();
+    s = s.replace(/\([^)]*\)/g, " ").trim();
+    if (isGreek) s = s.replace(/^(ο|η|το|οι|τα|τον|την|τους|τις|του|της|των)\s+/, "");
+    return s.replace(/\s+/g, " ").trim();
+}
+
+function answerVariants(raw, isGreek) {
+    return raw.split(/\s*\/\s*/).map(s => normalizeAnswer(s, isGreek)).filter(Boolean);
+}
+
+function checkTypedAnswer(typed, correctRaw, isGreek) {
+    const t = normalizeAnswer(typed, isGreek);
+    const variants = answerVariants(correctRaw, isGreek);
+    if (variants.includes(t)) return "correct";
+    if (isGreek) {
+        const tNoAcc = stripAccents(t);
+        const variantsNoAcc = variants.map(stripAccents);
+        if (variantsNoAcc.includes(tNoAcc)) return "accent";
+    }
+    return "wrong";
+}
+
+function submitTypingAnswer(e) {
+    if (e) e.preventDefault();
+    const item  = round[typingIndex];
+    const input = document.getElementById("typing-input");
+    if (input.disabled) return;
+    const isGreekAnswer = lang === "greek";
+    const correctRaw    = isGreekAnswer ? item.greek : item.english;
+    const result        = checkTypedAnswer(input.value, correctRaw, isGreekAnswer);
+    const feedback      = document.getElementById("typing-feedback");
+    input.disabled      = true;
+
+    if (result === "correct") {
+        feedback.textContent = "\u2713 " + correctRaw;
+        feedback.className   = "correct";
+        typingScore++;
+    } else if (result === "accent") {
+        feedback.textContent = "\u2713 " + correctRaw + "  \u2014 check accents";
+        feedback.className   = "warn";
+        typingScore++;
+    } else {
+        feedback.textContent = "\u2717 " + correctRaw;
+        feedback.className   = "wrong";
+        typingWrong.push(item.greek);
+    }
+
+    const delay = result === "wrong" ? 1600 : (result === "accent" ? 1400 : 800);
+    setTimeout(() => {
+        typingIndex++;
+        if (typingIndex < 6) showTypingQuestion();
+        else finishTyping();
+    }, delay);
+}
+
+function finishTyping() {
+    updateWeights(typingWrong);
+    showScoreBanner(typingScore, 6);
+    document.getElementById("btn-retry").style.display = "";
+    document.getElementById("btn-new").style.display   = "";
+    document.getElementById("typing-input").disabled   = true;
 }
 
 // ── Boot ─────────────────────────────────────────────────────────────────────

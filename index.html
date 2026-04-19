@@ -21,6 +21,12 @@
 
 <div class="game">
     <div class="game-header">
+        <select class="mode-select" id="mode-select" aria-label="Mode">
+            <option value="match">Match</option>
+            <option value="quiz">Quiz</option>
+            <option value="type">Type</option>
+            <option value="xmatch">Marked</option>
+        </select>
         <div class="lang-toggle">
             <button class="lang-btn active" id="lang-gr" title="Guess Greek">&#x1F1EC;&#x1F1F7;</button>
             <button class="lang-btn" id="lang-en" title="Guess English">&#x1F1EC;&#x1F1E7;</button>
@@ -41,12 +47,22 @@
         <div id="quiz-options"></div>
     </div>
 
+    <div id="typing-container" style="display:none">
+        <div class="typing-header">
+            <span id="typing-progress">1 / 6</span>
+        </div>
+        <div id="typing-word"></div>
+        <form id="typing-form" autocomplete="off">
+            <input type="text" id="typing-input" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
+            <button type="submit" id="typing-submit">Check</button>
+        </form>
+        <div id="typing-feedback"></div>
+    </div>
+
     <div class="actions">
         <button id="btn-check">Check Answers</button>
         <button id="btn-retry" style="display:none">Try Again</button>
         <button id="btn-new"   style="display:none">New Round</button>
-        <button id="btn-switch-a"></button>
-        <button id="btn-switch-b"></button>
     </div>
 </div>
 
