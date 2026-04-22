@@ -1201,7 +1201,12 @@
     },
     {
         "greek": "κατοικώ",
-        "english": "to live \/ to reside \/ to inhabit",
+        "english": "to inhabit",
+        "marked": false
+    },
+    {
+        "greek": "το πτυχίο",
+        "english": "diploma",
         "marked": false
     }
 ]
