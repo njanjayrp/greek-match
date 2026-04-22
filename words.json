@@ -800,7 +800,7 @@
         "marked": false
     },
     {
-        "greek": "η αποβάθρα \/ η πλατφόρμα",
+        "greek": "η αποβάθρα",
         "english": "platform",
         "marked": false
     },
@@ -856,7 +856,7 @@
     },
     {
         "greek": "επιλέγω",
-        "english": "to choose \/ to select",
+        "english": "select",
         "marked": false
     },
     {
@@ -956,7 +956,7 @@
     },
     {
         "greek": "διαλέγω",
-        "english": "to choose",
+        "english": "pick",
         "marked": true
     },
     {

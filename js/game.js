@@ -578,13 +578,11 @@ function answerVariants(raw, isGreek) {
 function checkTypedAnswer(typed, correctRaw, isGreek) {
     const t = normalizeAnswer(typed, isGreek);
     const variants = answerVariants(correctRaw, isGreek);
-    if (variants.includes(t)) return "correct";
     if (isGreek) {
         const tNoAcc = stripAccents(t);
-        const variantsNoAcc = variants.map(stripAccents);
-        if (variantsNoAcc.includes(tNoAcc)) return "accent";
+        return variants.map(stripAccents).includes(tNoAcc) ? "correct" : "wrong";
     }
-    return "wrong";
+    return variants.includes(t) ? "correct" : "wrong";
 }
 
 function submitTypingAnswer(e) {
@@ -610,12 +608,6 @@ function submitTypingAnswer(e) {
         typingScore++;
         appendTypingHistory(result, correctRaw, typedValue);
         setTimeout(advanceTyping, 900);
-    } else if (result === "accent") {
-        feedback.textContent = "\u26a0 " + correctRaw;
-        feedback.className   = "warn";
-        typingScore++;
-        appendTypingHistory(result, correctRaw, typedValue);
-        submit.textContent = "Next";
     } else {
         feedback.textContent = "\u2717 " + correctRaw;
         feedback.className   = "wrong";
@@ -628,7 +620,7 @@ function submitTypingAnswer(e) {
 function appendTypingHistory(result, correctRaw, typed) {
     const li = document.createElement("li");
     li.className = "typing-history-" + result;
-    const symbol = result === "correct" ? "\u2713" : result === "accent" ? "\u26a0" : "\u2717";
+    const symbol = result === "correct" ? "\u2713" : "\u2717";
     const mark   = document.createElement("span");
     mark.className = "mark";
     mark.textContent = symbol;
