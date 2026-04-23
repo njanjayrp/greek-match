@@ -76,7 +76,7 @@
     },
     {
         "greek": "γωνιακός",
-        "english": "corner",
+        "english": "corner (adj.)",
         "marked": false
     },
     {
@@ -1207,6 +1207,11 @@
     {
         "greek": "το πτυχίο",
         "english": "diploma",
+        "marked": false
+    },
+    {
+        "greek": "η γωνία",
+        "english": "corner",
         "marked": false
     }
 ]
