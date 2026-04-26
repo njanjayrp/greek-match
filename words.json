@@ -131,7 +131,7 @@
     },
     {
         "greek": "σπουδάζω",
-        "english": "to study (at university)",
+        "english": "to study at university",
         "marked": false
     },
     {
@@ -161,7 +161,7 @@
     },
     {
         "greek": "τότε",
-        "english": "then \/ at that time",
+        "english": "at that time",
         "marked": false
     },
     {
@@ -896,7 +896,7 @@
     },
     {
         "greek": "έπειτα",
-        "english": "then \/ afterwards",
+        "english": "then",
         "marked": true
     },
     {
