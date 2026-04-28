@@ -987,22 +987,22 @@
     {
         "greek": "στους φίλους μου",
         "english": "at my friends' place",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στις τρεις",
         "english": "at three o'clock",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "για λίγο",
         "english": "for a little while",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "προς το γραφείο",
         "english": "towards the office",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μέχρι τις τρεις",
