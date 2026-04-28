@@ -1062,12 +1062,12 @@
     {
         "greek": "η τσάντα πλάτης",
         "english": "backpack",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η πλάτη",
         "english": "back (body part)",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το κουλούρι",
