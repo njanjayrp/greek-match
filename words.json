@@ -1213,5 +1213,90 @@
         "greek": "η γωνία",
         "english": "corner",
         "marked": false
+    },
+    {
+        "greek": "ότι",
+        "english": "that (opinion)",
+        "marked": false
+    },
+    {
+        "greek": "πως",
+        "english": "that (informal)",
+        "marked": false
+    },
+    {
+        "greek": "γιατί",
+        "english": "because (everyday)",
+        "marked": false
+    },
+    {
+        "greek": "επειδή",
+        "english": "because",
+        "marked": false
+    },
+    {
+        "greek": "αφού",
+        "english": "since",
+        "marked": false
+    },
+    {
+        "greek": "όταν",
+        "english": "when",
+        "marked": false
+    },
+    {
+        "greek": "μόλις",
+        "english": "as soon as",
+        "marked": false
+    },
+    {
+        "greek": "πριν (να)",
+        "english": "before",
+        "marked": false
+    },
+    {
+        "greek": "μέχρι (να)",
+        "english": "until",
+        "marked": false
+    },
+    {
+        "greek": "καθώς",
+        "english": "as (while)",
+        "marked": false
+    },
+    {
+        "greek": "όποτε",
+        "english": "whenever",
+        "marked": false
+    },
+    {
+        "greek": "αν και",
+        "english": "although",
+        "marked": false
+    },
+    {
+        "greek": "παρόλο που",
+        "english": "even though",
+        "marked": false
+    },
+    {
+        "greek": "ενώ",
+        "english": "whereas",
+        "marked": false
+    },
+    {
+        "greek": "μήπως",
+        "english": "in case",
+        "marked": false
+    },
+    {
+        "greek": "ώστε",
+        "english": "so that",
+        "marked": false
+    },
+    {
+        "greek": "για να",
+        "english": "in order to",
+        "marked": false
     }
 ]
