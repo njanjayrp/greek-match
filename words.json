@@ -1225,11 +1225,6 @@
         "marked": false
     },
     {
-        "greek": "γιατί",
-        "english": "because (everyday)",
-        "marked": false
-    },
-    {
         "greek": "επειδή",
         "english": "because",
         "marked": false
@@ -1297,11 +1292,6 @@
     {
         "greek": "για να",
         "english": "in order to",
-        "marked": false
-    },
-    {
-        "greek": "που",
-        "english": "that \/ which (relative)",
         "marked": false
     }
 ]
