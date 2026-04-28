@@ -1215,83 +1215,68 @@
         "marked": false
     },
     {
-        "greek": "ότι",
-        "english": "that (opinion)",
-        "marked": false
-    },
-    {
-        "greek": "πως",
-        "english": "that (informal)",
-        "marked": false
-    },
-    {
         "greek": "επειδή",
         "english": "because",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "αφού",
         "english": "since",
-        "marked": false
-    },
-    {
-        "greek": "όταν",
-        "english": "when",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "μόλις",
         "english": "as soon as",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "πριν (να)",
         "english": "before",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "μέχρι (να)",
         "english": "until",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "καθώς",
         "english": "as (while)",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "όποτε",
         "english": "whenever",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "αν και",
         "english": "although",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "παρόλο που",
         "english": "even though",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ενώ",
         "english": "whereas",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "μήπως",
         "english": "in case",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ώστε",
         "english": "so that",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "για να",
         "english": "in order to",
-        "marked": false
+        "marked": true
     }
 ]
