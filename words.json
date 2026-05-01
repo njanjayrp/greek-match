@@ -746,7 +746,7 @@
     },
     {
         "greek": "εκτός",
-        "english": "except \/ outside",
+        "english": "except",
         "marked": false
     },
     {
@@ -810,11 +810,6 @@
         "marked": false
     },
     {
-        "greek": "το τραμ",
-        "english": "tram",
-        "marked": false
-    },
-    {
         "greek": "ο προαστιακός",
         "english": "suburban train",
         "marked": false
@@ -837,11 +832,6 @@
     {
         "greek": "το τρόλεϊ",
         "english": "trolleybus",
-        "marked": false
-    },
-    {
-        "greek": "το ταξί",
-        "english": "taxi",
         "marked": false
     },
     {
