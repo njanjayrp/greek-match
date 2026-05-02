@@ -69,12 +69,21 @@ function selectRound() {
     const eligible = active.filter(w => !recent.has(w.greek));
     const fallback = active.filter(w =>  recent.has(w.greek));
 
+    const allCount = allWords.length;
+    const idxByGreek = new Map(allWords.map((w, i) => [w.greek, i]));
+    function effectiveWeight(w) {
+        const base = weights[w.greek] || 1;
+        const fromEnd = allCount - 1 - (idxByGreek.get(w.greek) ?? 0);
+        const bonus = fromEnd < 40 ? 1 + (1 - fromEnd / 40) * 1.5 : 1;
+        return base * bonus;
+    }
+
     function weightedPick(pool, exclude) {
         const avail = pool.filter(w => !exclude.has(w.greek));
         if (!avail.length) return null;
-        const total = avail.reduce((s, w) => s + (weights[w.greek] || 1), 0);
+        const total = avail.reduce((s, w) => s + effectiveWeight(w), 0);
         let r = Math.random() * total;
-        for (const w of avail) { r -= (weights[w.greek] || 1); if (r <= 0) return w; }
+        for (const w of avail) { r -= effectiveWeight(w); if (r <= 0) return w; }
         return avail[avail.length - 1];
     }
     function randomPick(pool, exclude) {
