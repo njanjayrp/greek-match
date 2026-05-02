@@ -1428,5 +1428,50 @@
         "greek": "το θρανίο",
         "english": "desk (school)",
         "marked": false
+    },
+    {
+        "greek": "θυμάμαι",
+        "english": "to remember",
+        "marked": false
+    },
+    {
+        "greek": "οι γονείς",
+        "english": "parents",
+        "marked": false
+    },
+    {
+        "greek": "το χέρι",
+        "english": "hand",
+        "marked": false
+    },
+    {
+        "greek": "η ουρά",
+        "english": "queue",
+        "marked": false
+    },
+    {
+        "greek": "ο \/ η συνάδελφος",
+        "english": "colleague",
+        "marked": false
+    },
+    {
+        "greek": "φοβάμαι",
+        "english": "to be afraid",
+        "marked": false
+    },
+    {
+        "greek": "χτυπώ",
+        "english": "to hit",
+        "marked": false
+    },
+    {
+        "greek": "εντατικά",
+        "english": "intensively",
+        "marked": false
+    },
+    {
+        "greek": "οι εξετάσεις",
+        "english": "exams",
+        "marked": false
     }
 ]
