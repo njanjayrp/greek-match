@@ -957,7 +957,7 @@
     {
         "greek": "διαφωνώ",
         "english": "to disagree",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "βουρτσίζω",
@@ -967,7 +967,7 @@
     {
         "greek": "τα δόντια",
         "english": "teeth",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "από χρυσό",
@@ -997,7 +997,7 @@
     {
         "greek": "μέχρι τις τρεις",
         "english": "until three",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ώς εδώ",
@@ -1032,7 +1032,7 @@
     {
         "greek": "κατά τις δέκα",
         "english": "around ten o'clock",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κατά τη γνώμη μου",
@@ -1042,7 +1042,7 @@
     {
         "greek": "τα αλμυρά",
         "english": "salty snacks",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η τσάντα πλάτης",
@@ -1072,12 +1072,12 @@
     {
         "greek": "παραγγέλνω",
         "english": "to order",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το υλικό",
         "english": "material",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ο τόπος",
@@ -1087,12 +1087,12 @@
     {
         "greek": "φεύγω → έφυγα",
         "english": "to leave → I left",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "φτάνω → έφτασα",
         "english": "to arrive → I arrived",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "όχι μόνο... αλλά και",
