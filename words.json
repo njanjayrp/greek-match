@@ -1206,7 +1206,7 @@
     },
     {
         "greek": "αφού",
-        "english": "since",
+        "english": "after \/ since \/ given that",
         "marked": true
     },
     {
@@ -1226,7 +1226,7 @@
     },
     {
         "greek": "καθώς",
-        "english": "as (while)",
+        "english": "as \/ while",
         "marked": true
     },
     {
@@ -1241,12 +1241,12 @@
     },
     {
         "greek": "παρόλο που",
-        "english": "even though",
+        "english": "even though \/ despite the fact that",
         "marked": true
     },
     {
         "greek": "ενώ",
-        "english": "whereas",
+        "english": "while \/ whereas (contrastive)",
         "marked": true
     },
     {
@@ -1256,12 +1256,177 @@
     },
     {
         "greek": "ώστε",
-        "english": "so that",
+        "english": "so that \/ with the result that",
         "marked": true
     },
     {
         "greek": "για να",
         "english": "in order to",
         "marked": true
+    },
+    {
+        "greek": "πως",
+        "english": "that",
+        "marked": true
+    },
+    {
+        "greek": "μη(ν)",
+        "english": "don't let",
+        "marked": true
+    },
+    {
+        "greek": "που",
+        "english": "that (resultative)",
+        "marked": true
+    },
+    {
+        "greek": "λήγω",
+        "english": "to expire",
+        "marked": false
+    },
+    {
+        "greek": "το κλειδί",
+        "english": "key",
+        "marked": false
+    },
+    {
+        "greek": "σύντομα",
+        "english": "soon",
+        "marked": false
+    },
+    {
+        "greek": "βγαίνω",
+        "english": "to go out",
+        "marked": false
+    },
+    {
+        "greek": "η ταινία",
+        "english": "movie",
+        "marked": false
+    },
+    {
+        "greek": "νομίζω",
+        "english": "to think",
+        "marked": false
+    },
+    {
+        "greek": "όλος",
+        "english": "whole",
+        "marked": false
+    },
+    {
+        "greek": "η αλήθεια",
+        "english": "truth",
+        "marked": false
+    },
+    {
+        "greek": "θυμώνω",
+        "english": "to get angry",
+        "marked": false
+    },
+    {
+        "greek": "τόσο",
+        "english": "so much",
+        "marked": false
+    },
+    {
+        "greek": "η συμπεριφορά",
+        "english": "behavior",
+        "marked": false
+    },
+    {
+        "greek": "η ημέρα",
+        "english": "day",
+        "marked": false
+    },
+    {
+        "greek": "ξαναμιλώ",
+        "english": "to speak again",
+        "marked": false
+    },
+    {
+        "greek": "βρίσκω",
+        "english": "to find",
+        "marked": false
+    },
+    {
+        "greek": "η κίνηση",
+        "english": "traffic",
+        "marked": false
+    },
+    {
+        "greek": "λείπω",
+        "english": "to be absent",
+        "marked": false
+    },
+    {
+        "greek": "χορεύω",
+        "english": "to dance",
+        "marked": false
+    },
+    {
+        "greek": "το ποντίκι",
+        "english": "mouse",
+        "marked": false
+    },
+    {
+        "greek": "περνώ",
+        "english": "to drop by",
+        "marked": false
+    },
+    {
+        "greek": "πεινάω",
+        "english": "to be hungry",
+        "marked": false
+    },
+    {
+        "greek": "κλαίω",
+        "english": "to cry",
+        "marked": false
+    },
+    {
+        "greek": "άσχημος",
+        "english": "ugly",
+        "marked": false
+    },
+    {
+        "greek": "αυστηρός",
+        "english": "strict",
+        "marked": false
+    },
+    {
+        "greek": "η δίαιτα",
+        "english": "diet",
+        "marked": false
+    },
+    {
+        "greek": "η γιορτή",
+        "english": "name day",
+        "marked": false
+    },
+    {
+        "greek": "μαθαίνω",
+        "english": "to learn",
+        "marked": false
+    },
+    {
+        "greek": "καλύτερα",
+        "english": "better",
+        "marked": false
+    },
+    {
+        "greek": "η συμμαθήτρια",
+        "english": "classmate (f.)",
+        "marked": false
+    },
+    {
+        "greek": "διπλανός",
+        "english": "adjacent",
+        "marked": false
+    },
+    {
+        "greek": "το θρανίο",
+        "english": "desk (school)",
+        "marked": false
     }
 ]
