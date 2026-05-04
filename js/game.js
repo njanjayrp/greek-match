@@ -93,11 +93,12 @@ function selectRound() {
 
     const picked = new Set();
     const round  = [];
-    for (let i = 0; i < 4; i++) {
+    const weightedCount = mode === "xmatch" ? 0 : 4;
+    for (let i = 0; i < weightedCount; i++) {
         const w = weightedPick(eligible, picked) || weightedPick(fallback, picked);
         if (w) { round.push(w); picked.add(w.greek); }
     }
-    for (let i = 0; i < 2; i++) {
+    for (let i = round.length; i < 6; i++) {
         const w = randomPick(eligible, picked) || randomPick(fallback, picked);
         if (w) { round.push(w); picked.add(w.greek); }
     }
