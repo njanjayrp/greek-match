@@ -1473,5 +1473,70 @@
         "greek": "οι εξετάσεις",
         "english": "exams",
         "marked": false
+    },
+    {
+        "greek": "γνωρίζομαι",
+        "english": "to get to know each other",
+        "marked": false
+    },
+    {
+        "greek": "αγχώνομαι",
+        "english": "to get stressed",
+        "marked": false
+    },
+    {
+        "greek": "συνηθίζω",
+        "english": "to get used to",
+        "marked": false
+    },
+    {
+        "greek": "αποφεύγω",
+        "english": "to avoid",
+        "marked": false
+    },
+    {
+        "greek": "αλλάζω θέμα",
+        "english": "to change the subject",
+        "marked": false
+    },
+    {
+        "greek": "μετράω",
+        "english": "to count",
+        "marked": false
+    },
+    {
+        "greek": "κρίνω",
+        "english": "to judge",
+        "marked": false
+    },
+    {
+        "greek": "αφήνω εντύπωση",
+        "english": "to leave an impression",
+        "marked": false
+    },
+    {
+        "greek": "ο \/ η σύντροφος",
+        "english": "partner",
+        "marked": false
+    },
+    {
+        "greek": "ο αλκοολικός",
+        "english": "alcoholic",
+        "marked": false
+    },
+    {
+        "greek": "κυκλοφορώ",
+        "english": "to circulate",
+        "marked": false
+    },
+    {
+        "greek": "η παρέα",
+        "english": "group of friends",
+        "marked": false
+    },
+    {
+        "greek": "αναγνωρίζω",
+        "english": "to recognize",
+        "marked": false
     }
 ]
