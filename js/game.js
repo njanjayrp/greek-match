@@ -58,9 +58,11 @@ function modePool() {
 
 function selectRound() {
     const weights  = JSON.parse(localStorage.getItem("greek_weights")  || "{}");
+    const streaks  = JSON.parse(localStorage.getItem("greek_streaks")  || "{}");
     const mastered = new Set(JSON.parse(localStorage.getItem("greek_mastered") || "[]"));
     const seen2    = JSON.parse(localStorage.getItem("greek_seen")     || "[]");
     const recent   = new Set(seen2.flat());
+    const exposure = JSON.parse(localStorage.getItem("greek_exposure") || "{}");
 
     const pool     = modePool();
     let active     = pool.filter(w => !mastered.has(w.greek));
@@ -69,13 +71,16 @@ function selectRound() {
     const eligible = active.filter(w => !recent.has(w.greek));
     const fallback = active.filter(w =>  recent.has(w.greek));
 
-    const allCount = allWords.length;
-    const idxByGreek = new Map(allWords.map((w, i) => [w.greek, i]));
+    // A word is "truly new" if it has no stored state (no weight, no streak, no exposure).
+    // Existing words have a streak (any correct answer creates one), so this survives the
+    // first run without a migration. Bonus decays from 8x to 1x over 5 exposures.
+    function newnessBonus(w) {
+        if (weights[w.greek] || streaks[w.greek]) return 1;
+        const exp = exposure[w.greek] || 0;
+        return exp >= 5 ? 1 : 1 + (1 - exp / 5) * 7;
+    }
     function effectiveWeight(w) {
-        const base = weights[w.greek] || 1;
-        const fromEnd = allCount - 1 - (idxByGreek.get(w.greek) ?? 0);
-        const bonus = fromEnd < 40 ? 1 + (1 - fromEnd / 40) * 1.5 : 1;
-        return base * bonus;
+        return (weights[w.greek] || 1) * newnessBonus(w);
     }
 
     function weightedPick(pool, exclude) {
@@ -93,7 +98,7 @@ function selectRound() {
 
     const picked = new Set();
     const round  = [];
-    const weightedCount = mode === "xmatch" ? 0 : 4;
+    const weightedCount = mode === "xmatch" ? 0 : 6;
     for (let i = 0; i < weightedCount; i++) {
         const w = weightedPick(eligible, picked) || weightedPick(fallback, picked);
         if (w) { round.push(w); picked.add(w.greek); }
@@ -513,6 +518,10 @@ function updateWeights(wrongGreekWords) {
 
     const seen = JSON.parse(localStorage.getItem("greek_seen") || "[]");
     localStorage.setItem("greek_seen", JSON.stringify([round.map(w => w.greek), ...seen].slice(0, 2)));
+
+    const exposure = JSON.parse(localStorage.getItem("greek_exposure") || "{}");
+    round.forEach(w => { exposure[w.greek] = (exposure[w.greek] || 0) + 1; });
+    localStorage.setItem("greek_exposure", JSON.stringify(exposure));
 }
 
 function applyMode() {
