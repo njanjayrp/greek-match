@@ -650,11 +650,6 @@
         "marked": false
     },
     {
-        "greek": "πάντα",
-        "english": "always",
-        "marked": false
-    },
-    {
         "greek": "ψάχνω",
         "english": "to look for \/ to seek",
         "marked": false
@@ -822,11 +817,6 @@
     {
         "greek": "η στάση",
         "english": "stop (bus\/tram stop)",
-        "marked": false
-    },
-    {
-        "greek": "το λεωφορείο",
-        "english": "bus",
         "marked": false
     },
     {
@@ -1285,11 +1275,6 @@
         "marked": false
     },
     {
-        "greek": "το κλειδί",
-        "english": "key",
-        "marked": false
-    },
-    {
         "greek": "σύντομα",
         "english": "soon",
         "marked": false
@@ -1405,11 +1390,6 @@
         "marked": false
     },
     {
-        "greek": "μαθαίνω",
-        "english": "to learn",
-        "marked": false
-    },
-    {
         "greek": "καλύτερα",
         "english": "better",
         "marked": false
@@ -1461,7 +1441,7 @@
     },
     {
         "greek": "χτυπώ",
-        "english": "to hit",
+        "english": "to hit \/ to knock \/ to ring (a bell)",
         "marked": false
     },
     {
