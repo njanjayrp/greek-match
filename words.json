@@ -1538,5 +1538,190 @@
         "greek": "αναγνωρίζω",
         "english": "to recognize",
         "marked": false
+    },
+    {
+        "greek": "η ειδοποίηση",
+        "english": "notification",
+        "marked": false
+    },
+    {
+        "greek": "η προσπάθεια",
+        "english": "attempt",
+        "marked": false
+    },
+    {
+        "greek": "η παράδοση",
+        "english": "delivery",
+        "marked": false
+    },
+    {
+        "greek": "η αποστολή",
+        "english": "shipment",
+        "marked": false
+    },
+    {
+        "greek": "το κατάστημα",
+        "english": "store",
+        "marked": false
+    },
+    {
+        "greek": "η δυνατότητα",
+        "english": "possibility",
+        "marked": false
+    },
+    {
+        "greek": "η παραλαβή",
+        "english": "pickup",
+        "marked": false
+    },
+    {
+        "greek": "η άφιξη",
+        "english": "arrival",
+        "marked": false
+    },
+    {
+        "greek": "ο πίνακας",
+        "english": "table (chart) \/ board",
+        "marked": false
+    },
+    {
+        "greek": "η γνωριμία",
+        "english": "acquaintance",
+        "marked": false
+    },
+    {
+        "greek": "η κουλτούρα",
+        "english": "culture",
+        "marked": false
+    },
+    {
+        "greek": "ο τρόπος",
+        "english": "way",
+        "marked": false
+    },
+    {
+        "greek": "το γυμναστήριο",
+        "english": "gym",
+        "marked": false
+    },
+    {
+        "greek": "τα μέσα κοινωνικής δικτύωσης",
+        "english": "social media",
+        "marked": false
+    },
+    {
+        "greek": "το ταξίδι",
+        "english": "trip",
+        "marked": false
+    },
+    {
+        "greek": "η πρώτη φορά",
+        "english": "first time",
+        "marked": false
+    },
+    {
+        "greek": "η ηλικία",
+        "english": "age",
+        "marked": false
+    },
+    {
+        "greek": "το χόμπι",
+        "english": "hobby",
+        "marked": false
+    },
+    {
+        "greek": "το ενδιαφέρον",
+        "english": "interest",
+        "marked": false
+    },
+    {
+        "greek": "η ντροπή",
+        "english": "shame",
+        "marked": false
+    },
+    {
+        "greek": "το άγχος",
+        "english": "stress",
+        "marked": false
+    },
+    {
+        "greek": "το χαμόγελο",
+        "english": "smile",
+        "marked": false
+    },
+    {
+        "greek": "η ερώτηση",
+        "english": "question",
+        "marked": false
+    },
+    {
+        "greek": "η συζήτηση",
+        "english": "discussion",
+        "marked": false
+    },
+    {
+        "greek": "φιλικός",
+        "english": "friendly",
+        "marked": false
+    },
+    {
+        "greek": "δημιουργώ",
+        "english": "to create",
+        "marked": false
+    },
+    {
+        "greek": "η φιλία",
+        "english": "friendship",
+        "marked": false
+    },
+    {
+        "greek": "η εμπειρία",
+        "english": "experience",
+        "marked": false
+    },
+    {
+        "greek": "ο αναπτήρας",
+        "english": "lighter",
+        "marked": false
+    },
+    {
+        "greek": "τα ψιλά",
+        "english": "small change",
+        "marked": false
+    },
+    {
+        "greek": "το κουτάκι",
+        "english": "small can",
+        "marked": false
+    },
+    {
+        "greek": "το πακέτο",
+        "english": "pack",
+        "marked": false
+    },
+    {
+        "greek": "τα πατατάκια",
+        "english": "chips",
+        "marked": false
+    },
+    {
+        "greek": "το περίπτερο",
+        "english": "kiosk",
+        "marked": false
+    },
+    {
+        "greek": "η λαϊκή",
+        "english": "farmer's market",
+        "marked": false
+    },
+    {
+        "greek": "η θερμίδα",
+        "english": "calorie",
+        "marked": false
+    },
+    {
+        "greek": "διώχνω",
+        "english": "to chase away",
+        "marked": false
     }
 ]
