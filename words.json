@@ -316,7 +316,7 @@
     },
     {
         "greek": "περνάω",
-        "english": "to pass",
+        "english": "to pass \/ to drop by",
         "marked": false
     },
     {
@@ -721,7 +721,7 @@
     },
     {
         "greek": "ίσως",
-        "english": "perhaps",
+        "english": "maybe",
         "marked": false
     },
     {
@@ -890,11 +890,6 @@
         "marked": false
     },
     {
-        "greek": "γκάλοπ",
-        "english": "opinion poll \/ gallup poll",
-        "marked": false
-    },
-    {
         "greek": "ο υπάλληλος",
         "english": "employee \/ clerk",
         "marked": false
@@ -932,11 +927,6 @@
     {
         "greek": "ο ελεγκτής",
         "english": "inspector \/ controller",
-        "marked": true
-    },
-    {
-        "greek": "διαλέγω",
-        "english": "pick",
         "marked": true
     },
     {
@@ -1355,11 +1345,6 @@
         "marked": false
     },
     {
-        "greek": "περνώ",
-        "english": "to drop by",
-        "marked": false
-    },
-    {
         "greek": "πεινάω",
         "english": "to be hungry",
         "marked": false
@@ -1377,11 +1362,6 @@
     {
         "greek": "αυστηρός",
         "english": "strict",
-        "marked": false
-    },
-    {
-        "greek": "η δίαιτα",
-        "english": "diet",
         "marked": false
     },
     {
