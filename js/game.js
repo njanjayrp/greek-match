@@ -22,6 +22,12 @@ function initApp(words) {
     if (["quiz", "xmatch", "type"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
+    // Build the group dropdown from the data
+    populateGroupSelect();
+    group = localStorage.getItem("greek_group") || "__all__";
+    if (!groupExists(group)) group = "__all__";
+    document.getElementById("group-select").value = group;
+
     round = selectRound();
 
     // Event listeners
@@ -38,6 +44,7 @@ function initApp(words) {
         location.href = url.toString();
     });
     document.getElementById("mode-select").addEventListener("change", e => switchMode(e.target.value));
+    document.getElementById("group-select").addEventListener("change", e => switchGroup(e.target.value));
     document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
     document.getElementById("lang-gr").addEventListener("click", () => setLang("greek"));
     document.getElementById("lang-en").addEventListener("click", () => setLang("english"));
@@ -50,10 +57,28 @@ function initApp(words) {
     applyMode();
 }
 
+function populateGroupSelect() {
+    const select = document.getElementById("group-select");
+    const groups = [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
+    for (const g of groups) {
+        const opt = document.createElement("option");
+        opt.value = g;
+        opt.textContent = g;
+        select.appendChild(opt);
+    }
+}
+
+function groupExists(g) {
+    if (g === "__all__") return true;
+    return allWords.some(w => w.group === g);
+}
+
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 function modePool() {
-    return mode === "xmatch" ? allWords.filter(w => w.marked) : allWords;
+    if (mode === "xmatch") return allWords.filter(w => w.marked);
+    if (group === "__all__") return allWords;
+    return allWords.filter(w => w.group === group);
 }
 
 function selectRound() {
@@ -71,11 +96,15 @@ function selectRound() {
     const eligible = active.filter(w => !recent.has(w.greek));
     const fallback = active.filter(w =>  recent.has(w.greek));
 
-    // A word is "truly new" if it has no stored state (no weight, no streak, no exposure).
-    // Existing words have a streak (any correct answer creates one), so this survives the
-    // first run without a migration. Bonus decays from 8x to 1x over 5 exposures.
+    // Boost recently-added vocab: only words within the last 60 entries of words.json
+    // that also have no prior state. Older unseen words fall back to baseline so they
+    // don't crowd the bonus pool.
+    const allCount = allWords.length;
+    const idxByGreek = new Map(allWords.map((w, i) => [w.greek, i]));
     function newnessBonus(w) {
         if (weights[w.greek] || streaks[w.greek]) return 1;
+        const fromEnd = allCount - 1 - (idxByGreek.get(w.greek) ?? 0);
+        if (fromEnd >= 60) return 1;
         const exp = exposure[w.greek] || 0;
         return exp >= 5 ? 1 : 1 + (1 - exp / 5) * 7;
     }
@@ -111,6 +140,7 @@ function selectRound() {
 }
 
 let mode    = "match";
+let group   = "__all__";
 let lang    = "greek";
 let checked = false;
 let round   = [];
@@ -543,6 +573,18 @@ function switchMode(target) {
     mode = target;
     if ((prev === "xmatch") !== (mode === "xmatch")) round = selectRound();
     applyMode();
+}
+
+function switchGroup(target) {
+    if (target === group) return;
+    group = target;
+    localStorage.setItem("greek_group", group);
+    // xmatch ignores group, so don't re-pick the round in that case
+    if (mode !== "xmatch") {
+        clearInterval(quizTimer);
+        round = selectRound();
+        applyMode();
+    }
 }
 
 // ── Typing (recall) game ────────────────────────────────────────────────────

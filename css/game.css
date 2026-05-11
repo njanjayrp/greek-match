@@ -168,6 +168,7 @@ button:active { transform: scale(0.97); }
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 10px;
 }
+.header-left { display: flex; gap: 6px; align-items: center; }
 .mode-select {
     font-size: 13px; font-weight: 600; padding: 7px 28px 7px 12px;
     border: 1.5px solid #e2e5ea; border-radius: 7px; background: #fff;
