@@ -1608,12 +1608,6 @@
         "marked": false
     },
     {
-        "greek": "το ποντίκι",
-        "english": "mouse",
-        "group": "Commerce & delivery",
-        "marked": false
-    },
-    {
         "greek": "πεινάω",
         "english": "to be hungry",
         "group": "Daily routine",
@@ -2019,6 +2013,24 @@
         "greek": "διώχνω",
         "english": "to chase away",
         "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "παραδίδω",
+        "english": "to deliver",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "παραλαμβάνω",
+        "english": "to pick up",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "λαμβάνω",
+        "english": "to receive",
+        "group": "Commerce & delivery",
         "marked": false
     }
 ]
