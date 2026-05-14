@@ -780,12 +780,6 @@
         "marked": false
     },
     {
-        "greek": "ψάχνω",
-        "english": "to look for \/ to seek",
-        "group": "Common verbs",
-        "marked": false
-    },
-    {
         "greek": "το μήνυμα",
         "english": "message",
         "group": "Commerce & delivery",
@@ -849,12 +843,6 @@
         "greek": "το ποτό",
         "english": "drink",
         "group": "Food & market",
-        "marked": false
-    },
-    {
-        "greek": "καίω",
-        "english": "to burn",
-        "group": "Common verbs",
         "marked": false
     },
     {
@@ -1260,12 +1248,6 @@
         "marked": false
     },
     {
-        "greek": "παραγγέλνω",
-        "english": "to order",
-        "group": "Food & market",
-        "marked": false
-    },
-    {
         "greek": "το υλικό",
         "english": "material",
         "group": "General",
@@ -1524,12 +1506,6 @@
         "marked": false
     },
     {
-        "greek": "βγαίνω",
-        "english": "to go out",
-        "group": "Common verbs",
-        "marked": false
-    },
-    {
         "greek": "η ταινία",
         "english": "movie",
         "group": "Leisure & travel",
@@ -1584,12 +1560,6 @@
         "marked": false
     },
     {
-        "greek": "βρίσκω",
-        "english": "to find",
-        "group": "Common verbs",
-        "marked": false
-    },
-    {
         "greek": "η κίνηση",
         "english": "traffic",
         "group": "General",
@@ -1611,12 +1581,6 @@
         "greek": "πεινάω",
         "english": "to be hungry",
         "group": "Daily routine",
-        "marked": false
-    },
-    {
-        "greek": "κλαίω",
-        "english": "to cry",
-        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -1731,12 +1695,6 @@
         "greek": "συνηθίζω",
         "english": "to get used to",
         "group": "Social & communication",
-        "marked": false
-    },
-    {
-        "greek": "αποφεύγω",
-        "english": "to avoid",
-        "group": "Common verbs",
         "marked": false
     },
     {
@@ -2010,27 +1968,603 @@
         "marked": false
     },
     {
-        "greek": "διώχνω",
-        "english": "to chase away",
-        "group": "Common verbs",
+        "greek": "βλέπω",
+        "english": "I see",
+        "group": "Irregular verbs",
         "marked": false
     },
     {
-        "greek": "παραδίδω",
-        "english": "to deliver",
-        "group": "Commerce & delivery",
+        "greek": "έβλεπα",
+        "english": "I was seeing",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να δω",
+        "english": "let me see",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "είδα",
+        "english": "I saw",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "λέω",
+        "english": "I say",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έλεγα",
+        "english": "I was saying",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να πω",
+        "english": "let me say",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "είπα",
+        "english": "I said",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "τρώω",
+        "english": "I eat",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έτρωγα",
+        "english": "I was eating",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να φάω",
+        "english": "let me eat",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έφαγα",
+        "english": "I ate",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "πίνω",
+        "english": "I drink",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έπινα",
+        "english": "I was drinking",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να πιω",
+        "english": "let me drink",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ήπια",
+        "english": "I drank",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παίρνω",
+        "english": "I take",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έπαιρνα",
+        "english": "I was taking",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να πάρω",
+        "english": "let me take",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "πήρα",
+        "english": "I took",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "δίνω",
+        "english": "I give",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έδινα",
+        "english": "I was giving",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να δώσω",
+        "english": "let me give",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έδωσα",
+        "english": "I gave",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "βάζω",
+        "english": "I put",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έβαζα",
+        "english": "I was putting",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να βάλω",
+        "english": "let me put",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έβαλα",
+        "english": "I put",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έρχομαι",
+        "english": "I come",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ερχόμουν",
+        "english": "I was coming",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να έρθω",
+        "english": "let me come",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ήρθα",
+        "english": "I came",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "βρίσκω",
+        "english": "I find",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έβρισκα",
+        "english": "I was finding",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να βρω",
+        "english": "let me find",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "βρήκα",
+        "english": "I found",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "μπαίνω",
+        "english": "I enter",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έμπαινα",
+        "english": "I was entering",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να μπω",
+        "english": "let me enter",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "μπήκα",
+        "english": "I entered",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "βγαίνω",
+        "english": "I go out",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έβγαινα",
+        "english": "I was going out",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να βγω",
+        "english": "let me go out",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "βγήκα",
+        "english": "I went out",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ανεβαίνω",
+        "english": "I go up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ανέβαινα",
+        "english": "I was going up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να ανέβω",
+        "english": "let me go up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ανέβηκα",
+        "english": "I went up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "κατεβαίνω",
+        "english": "I go down",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "κατέβαινα",
+        "english": "I was going down",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να κατέβω",
+        "english": "let me go down",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "κατέβηκα",
+        "english": "I went down",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "πηγαίνω",
+        "english": "I go",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "πήγαινα",
+        "english": "I was going",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να πάω",
+        "english": "let me go",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "πήγα",
+        "english": "I went",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "μαθαίνω",
+        "english": "I learn",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "μάθαινα",
+        "english": "I was learning",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να μάθω",
+        "english": "let me learn",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έμαθα",
+        "english": "I learned",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "αφήνω",
+        "english": "I leave",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "άφηνα",
+        "english": "I was leaving",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να αφήσω",
+        "english": "let me leave",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "άφησα",
+        "english": "I left",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "κλαίω",
+        "english": "I cry",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έκλαιγα",
+        "english": "I was crying",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να κλάψω",
+        "english": "let me cry",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έκλαψα",
+        "english": "I cried",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "καίω",
+        "english": "I burn",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έκαιγα",
+        "english": "I was burning",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να κάψω",
+        "english": "let me burn",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έκαψα",
+        "english": "I burned",
+        "group": "Irregular verbs",
         "marked": false
     },
     {
         "greek": "παραλαμβάνω",
-        "english": "to pick up",
-        "group": "Commerce & delivery",
+        "english": "I pick up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παραλάμβανα",
+        "english": "I was picking up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να παραλάβω",
+        "english": "let me pick up",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παρέλαβα",
+        "english": "I picked up",
+        "group": "Irregular verbs",
         "marked": false
     },
     {
         "greek": "λαμβάνω",
-        "english": "to receive",
-        "group": "Commerce & delivery",
+        "english": "I receive",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "λάμβανα",
+        "english": "I was receiving",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να λάβω",
+        "english": "let me receive",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έλαβα",
+        "english": "I received",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "αποφεύγω",
+        "english": "I avoid",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "απέφευγα",
+        "english": "I was avoiding",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να αποφύγω",
+        "english": "let me avoid",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "απέφυγα",
+        "english": "I avoided",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "διώχνω",
+        "english": "I chase away",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έδιωχνα",
+        "english": "I was chasing away",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να διώξω",
+        "english": "let me chase away",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έδιωξα",
+        "english": "I chased away",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παραδίδω",
+        "english": "I deliver",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παρέδιδα",
+        "english": "I was delivering",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να παραδώσω",
+        "english": "let me deliver",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παρέδωσα",
+        "english": "I delivered",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "ψάχνω",
+        "english": "I search",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έψαχνα",
+        "english": "I was searching",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να ψάξω",
+        "english": "let me search",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "έψαξα",
+        "english": "I searched",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παραγγέλνω",
+        "english": "I order",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παράγγελνα",
+        "english": "I was ordering",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "να παραγγείλω",
+        "english": "let me order",
+        "group": "Irregular verbs",
+        "marked": false
+    },
+    {
+        "greek": "παρήγγειλα",
+        "english": "I ordered",
+        "group": "Irregular verbs",
         "marked": false
     }
 ]
