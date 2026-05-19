@@ -2566,5 +2566,29 @@
         "english": "I ordered",
         "group": "Irregular verbs",
         "marked": false
+    },
+    {
+        "greek": "το άρωμα",
+        "english": "perfume",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "το εξάμηνο",
+        "english": "semester",
+        "group": "School & study",
+        "marked": false
+    },
+    {
+        "greek": "ο χάρτης",
+        "english": "map",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "η αφίσα",
+        "english": "poster",
+        "group": "General",
+        "marked": false
     }
 ]
