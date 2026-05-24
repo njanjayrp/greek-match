@@ -29,6 +29,7 @@
                 <option value="match">Match</option>
                 <option value="quiz">Quiz</option>
                 <option value="type">Type</option>
+                <option value="fill">Fill</option>
                 <option value="xmatch">Marked</option>
             </select>
         </div>
@@ -52,6 +53,16 @@
         <div id="quiz-options"></div>
     </div>
 
+    <div id="fill-container" style="display:none">
+        <div class="fill-header">
+            <span id="fill-progress">1 / 6</span>
+            <span id="fill-topic"></span>
+        </div>
+        <div id="fill-prompt"></div>
+        <div id="fill-sentence"></div>
+        <div id="fill-blanks"></div>
+    </div>
+
     <div id="typing-container" style="display:none">
         <div class="typing-header">
             <span id="typing-progress">1 / 6</span>
@@ -72,6 +83,6 @@
     </div>
 </div>
 
-<script src="js/game.js?v=10"></script>
+<script src="js/game.js?v=11"></script>
 </body>
 </html>

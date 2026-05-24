@@ -1,0 +1,2340 @@
+[
+  {
+    "id": "meeting-people-001",
+    "topic": "Meeting people",
+    "en": "What's your name?",
+    "template": "Πώς {0} λένε;",
+    "blanks": [
+      {
+        "answer": "σε",
+        "options": [
+          "σε",
+          "σου",
+          "σας",
+          "με"
+        ],
+        "hint": "you (singular, accusative)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-002",
+    "topic": "Meeting people",
+    "en": "How is your friend (fem.) called?",
+    "template": "Πώς {0} η φίλη σου;",
+    "blanks": [
+      {
+        "answer": "λέγεται",
+        "options": [
+          "λέγεται",
+          "λέγομαι",
+          "λέγονται",
+          "λέμε"
+        ],
+        "hint": "she is called (3sg passive)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-003",
+    "topic": "Meeting people",
+    "en": "Where are you from?",
+    "template": "Από πού {0};",
+    "blanks": [
+      {
+        "answer": "είσαι",
+        "options": [
+          "είσαι",
+          "είμαι",
+          "είναι",
+          "είστε"
+        ],
+        "hint": "you are (2sg)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-004",
+    "topic": "Meeting people",
+    "en": "Where are you (plural/formal) from?",
+    "template": "Από πού {0};",
+    "blanks": [
+      {
+        "answer": "είστε",
+        "options": [
+          "είστε",
+          "είσαι",
+          "είμαστε",
+          "είναι"
+        ],
+        "hint": "you are (2pl / formal)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-005",
+    "topic": "Meeting people",
+    "en": "I'm glad to see you.",
+    "template": "Χαίρομαι που {0} βλέπω.",
+    "blanks": [
+      {
+        "answer": "σε",
+        "options": [
+          "σε",
+          "σας",
+          "με",
+          "τον"
+        ],
+        "hint": "you (singular, accusative)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-006",
+    "topic": "Meeting people",
+    "en": "I'm glad to meet you (formal).",
+    "template": "Χαίρομαι που {0} γνωρίζω.",
+    "blanks": [
+      {
+        "answer": "σας",
+        "options": [
+          "σας",
+          "σε",
+          "μας",
+          "τους"
+        ],
+        "hint": "you (plural/formal, accusative)"
+      }
+    ]
+  },
+  {
+    "id": "family-001",
+    "topic": "Family",
+    "en": "I have a sister and a brother.",
+    "template": "Έχω {0} και {1}.",
+    "blanks": [
+      {
+        "answer": "αδελφή",
+        "options": [
+          "αδελφή",
+          "αδελφές",
+          "αδελφός",
+          "αδελφό"
+        ],
+        "hint": "sister (accusative singular)"
+      },
+      {
+        "answer": "αδελφό",
+        "options": [
+          "αδελφό",
+          "αδελφός",
+          "αδελφούς",
+          "αδελφή"
+        ],
+        "hint": "brother (accusative singular)"
+      }
+    ]
+  },
+  {
+    "id": "family-002",
+    "topic": "Family",
+    "en": "I have three children.",
+    "template": "Έχω τρία {0}.",
+    "blanks": [
+      {
+        "answer": "παιδιά",
+        "options": [
+          "παιδιά",
+          "παιδί",
+          "παιδιού",
+          "παιδιών"
+        ],
+        "hint": "children (accusative plural neuter)"
+      }
+    ]
+  },
+  {
+    "id": "family-003",
+    "topic": "Family",
+    "en": "I love my parents.",
+    "template": "Αγαπώ {0} γονείς {1}.",
+    "blanks": [
+      {
+        "answer": "τους",
+        "options": [
+          "τους",
+          "τις",
+          "τα",
+          "τον"
+        ],
+        "hint": "the (accusative plural masc.)"
+      },
+      {
+        "answer": "μου",
+        "options": [
+          "μου",
+          "σου",
+          "του",
+          "μας"
+        ],
+        "hint": "my"
+      }
+    ]
+  },
+  {
+    "id": "family-004",
+    "topic": "Family",
+    "en": "Do you miss your parents?",
+    "template": "Σου {0} οι γονείς σου;",
+    "blanks": [
+      {
+        "answer": "λείπουν",
+        "options": [
+          "λείπουν",
+          "λείπει",
+          "λείπω",
+          "λείπεις"
+        ],
+        "hint": "they are missing (3pl)"
+      }
+    ]
+  },
+  {
+    "id": "family-005",
+    "topic": "Family",
+    "en": "He isn't married.",
+    "template": "Δεν είναι {0}.",
+    "blanks": [
+      {
+        "answer": "παντρεμένος",
+        "options": [
+          "παντρεμένος",
+          "παντρεμένη",
+          "παντρεμένοι",
+          "παντρεμένο"
+        ],
+        "hint": "married (masculine singular)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-001",
+    "topic": "At the café",
+    "en": "I drink a lot of coffee.",
+    "template": "Πίνω πολύ {0}.",
+    "blanks": [
+      {
+        "answer": "καφέ",
+        "options": [
+          "καφέ",
+          "καφές",
+          "καφέδες",
+          "καφέδων"
+        ],
+        "hint": "coffee (accusative singular)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-002",
+    "topic": "At the café",
+    "en": "I'd like an orange juice.",
+    "template": "Θα ήθελα {0} χυμό πορτοκάλι.",
+    "blanks": [
+      {
+        "answer": "έναν",
+        "options": [
+          "έναν",
+          "ένα",
+          "μία",
+          "ένας"
+        ],
+        "hint": "a/one (accusative masculine)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-003",
+    "topic": "At the café",
+    "en": "The bill, please.",
+    "template": "{0} λογαριασμό, παρακαλώ.",
+    "blanks": [
+      {
+        "answer": "Τον",
+        "options": [
+          "Τον",
+          "Την",
+          "Το",
+          "Τους"
+        ],
+        "hint": "the (accusative masculine singular)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-004",
+    "topic": "At the café",
+    "en": "I pay the bill.",
+    "template": "Πληρώνω {0} λογαριασμό.",
+    "blanks": [
+      {
+        "answer": "τον",
+        "options": [
+          "τον",
+          "την",
+          "το",
+          "τους"
+        ],
+        "hint": "the (accusative masculine singular)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-005",
+    "topic": "At the café",
+    "en": "Let's split the bill.",
+    "template": "Να {0} τον λογαριασμό.",
+    "blanks": [
+      {
+        "answer": "μοιράσουμε",
+        "options": [
+          "μοιράσουμε",
+          "μοιράζω",
+          "μοιράζετε",
+          "μοίρασα"
+        ],
+        "hint": "we split (1pl subjunctive aorist)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-001",
+    "topic": "Asking directions",
+    "en": "Where is the beach?",
+    "template": "Πού είναι {0} παραλία;",
+    "blanks": [
+      {
+        "answer": "η",
+        "options": [
+          "η",
+          "ο",
+          "το",
+          "οι"
+        ],
+        "hint": "the (nominative feminine singular)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-002",
+    "topic": "Asking directions",
+    "en": "Where is the hotel?",
+    "template": "Πού είναι {0} ξενοδοχείο;",
+    "blanks": [
+      {
+        "answer": "το",
+        "options": [
+          "το",
+          "ο",
+          "η",
+          "τα"
+        ],
+        "hint": "the (nominative neuter singular)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-003",
+    "topic": "Asking directions",
+    "en": "Is it near here?",
+    "template": "Είναι εδώ {0};",
+    "blanks": [
+      {
+        "answer": "κοντά",
+        "options": [
+          "κοντά",
+          "μακριά",
+          "εκεί",
+          "δίπλα"
+        ],
+        "hint": "near (adverb)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-004",
+    "topic": "Asking directions",
+    "en": "The bridge is on the right.",
+    "template": "Η γέφυρα είναι στα {0}.",
+    "blanks": [
+      {
+        "answer": "δεξιά",
+        "options": [
+          "δεξιά",
+          "αριστερά",
+          "δεξί",
+          "αριστερό"
+        ],
+        "hint": "right (adverbial — 'on the right')"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-005",
+    "topic": "Asking directions",
+    "en": "The exit is on the left.",
+    "template": "Η έξοδος είναι στα {0}.",
+    "blanks": [
+      {
+        "answer": "αριστερά",
+        "options": [
+          "αριστερά",
+          "δεξιά",
+          "αριστερό",
+          "δεξί"
+        ],
+        "hint": "left (adverbial — 'on the left')"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-006",
+    "topic": "Asking directions",
+    "en": "How do I get to the hotel?",
+    "template": "Πώς {0} στο ξενοδοχείο;",
+    "blanks": [
+      {
+        "answer": "πάω",
+        "options": [
+          "πάω",
+          "πας",
+          "πάμε",
+          "πάει"
+        ],
+        "hint": "I go (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "weather-001",
+    "topic": "Weather",
+    "en": "It's hot today.",
+    "template": "{0} ζέστη σήμερα.",
+    "blanks": [
+      {
+        "answer": "Κάνει",
+        "options": [
+          "Κάνει",
+          "Κάνουν",
+          "Έχει",
+          "Είναι"
+        ],
+        "hint": "it makes / it is (3sg, impersonal)"
+      }
+    ]
+  },
+  {
+    "id": "weather-002",
+    "topic": "Weather",
+    "en": "It's cold today.",
+    "template": "Κάνει {0} σήμερα.",
+    "blanks": [
+      {
+        "answer": "κρύο",
+        "options": [
+          "κρύο",
+          "ζέστη",
+          "κρύος",
+          "ψύχρα"
+        ],
+        "hint": "cold (noun, with 'κάνει')"
+      }
+    ]
+  },
+  {
+    "id": "weather-003",
+    "topic": "Weather",
+    "en": "It's sunny and it's hot.",
+    "template": "Έχει {0} και κάνει ζέστη.",
+    "blanks": [
+      {
+        "answer": "ήλιο",
+        "options": [
+          "ήλιο",
+          "ήλιος",
+          "ηλίου",
+          "ήλιοι"
+        ],
+        "hint": "sun (accusative singular — 'έχει ήλιο')"
+      }
+    ]
+  },
+  {
+    "id": "weather-004",
+    "topic": "Weather",
+    "en": "How's the weather?",
+    "template": "Πώς είναι {0} καιρός;",
+    "blanks": [
+      {
+        "answer": "ο",
+        "options": [
+          "ο",
+          "η",
+          "το",
+          "οι"
+        ],
+        "hint": "the (nominative masculine singular)"
+      }
+    ]
+  },
+  {
+    "id": "weather-005",
+    "topic": "Weather",
+    "en": "The sun is shining.",
+    "template": "Ο ήλιος {0}.",
+    "blanks": [
+      {
+        "answer": "λάμπει",
+        "options": [
+          "λάμπει",
+          "λάμπουν",
+          "λάμπω",
+          "λάμπεις"
+        ],
+        "hint": "it shines (3sg)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-001",
+    "topic": "Daily routine",
+    "en": "I drink coffee every morning.",
+    "template": "{0} καφέ κάθε πρωί.",
+    "blanks": [
+      {
+        "answer": "Πίνω",
+        "options": [
+          "Πίνω",
+          "Πίνεις",
+          "Πίνει",
+          "Πίνουμε"
+        ],
+        "hint": "I drink (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-002",
+    "topic": "Daily routine",
+    "en": "I usually work in the morning.",
+    "template": "Συνήθως {0} το πρωί.",
+    "blanks": [
+      {
+        "answer": "δουλεύω",
+        "options": [
+          "δουλεύω",
+          "δουλεύεις",
+          "δουλεύει",
+          "δουλεύουν"
+        ],
+        "hint": "I work (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-003",
+    "topic": "Daily routine",
+    "en": "I go to school every morning.",
+    "template": "{0} κάθε πρωί σχολείο.",
+    "blanks": [
+      {
+        "answer": "Πάω",
+        "options": [
+          "Πάω",
+          "Πας",
+          "Πάει",
+          "Πάμε"
+        ],
+        "hint": "I go (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-004",
+    "topic": "Daily routine",
+    "en": "I take a bath every morning.",
+    "template": "Κάνω μπάνιο κάθε {0}.",
+    "blanks": [
+      {
+        "answer": "πρωί",
+        "options": [
+          "πρωί",
+          "βράδυ",
+          "μέρα",
+          "νύχτα"
+        ],
+        "hint": "morning (acc. neuter sg.)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-005",
+    "topic": "Daily routine",
+    "en": "Where were you this morning?",
+    "template": "Πού {0} το πρωί;",
+    "blanks": [
+      {
+        "answer": "ήσουν",
+        "options": [
+          "ήσουν",
+          "ήμουν",
+          "ήταν",
+          "ήσασταν"
+        ],
+        "hint": "you were (2sg, imperfect of είμαι)"
+      }
+    ]
+  },
+  {
+    "id": "shopping-001",
+    "topic": "Shopping",
+    "en": "How much is the ticket?",
+    "template": "Πόσο {0} το εισιτήριο;",
+    "blanks": [
+      {
+        "answer": "κάνει",
+        "options": [
+          "κάνει",
+          "κάνουν",
+          "κάνεις",
+          "κάνω"
+        ],
+        "hint": "it costs (3sg)"
+      }
+    ]
+  },
+  {
+    "id": "shopping-002",
+    "topic": "Shopping",
+    "en": "How much are these apples?",
+    "template": "Πόσο {0} αυτά τα μήλα;",
+    "blanks": [
+      {
+        "answer": "κάνουν",
+        "options": [
+          "κάνουν",
+          "κάνει",
+          "κάνεις",
+          "κάνουμε"
+        ],
+        "hint": "they cost (3pl)"
+      }
+    ]
+  },
+  {
+    "id": "shopping-003",
+    "topic": "Shopping",
+    "en": "The bed costs 120 euros!",
+    "template": "Το κρεβάτι {0} 120 ευρώ!",
+    "blanks": [
+      {
+        "answer": "κοστίζει",
+        "options": [
+          "κοστίζει",
+          "κοστίζουν",
+          "κοστίζω",
+          "κόστιζε"
+        ],
+        "hint": "it costs (3sg)"
+      }
+    ]
+  },
+  {
+    "id": "shopping-004",
+    "topic": "Shopping",
+    "en": "Fish is expensive.",
+    "template": "Το ψάρι είναι {0}.",
+    "blanks": [
+      {
+        "answer": "ακριβό",
+        "options": [
+          "ακριβό",
+          "ακριβός",
+          "ακριβή",
+          "ακριβά"
+        ],
+        "hint": "expensive (nom. neuter sg., agreeing with 'το ψάρι')"
+      }
+    ]
+  },
+  {
+    "id": "shopping-005",
+    "topic": "Shopping",
+    "en": "Mother went shopping.",
+    "template": "Η μητέρα {0} για ψώνια.",
+    "blanks": [
+      {
+        "answer": "πήγε",
+        "options": [
+          "πήγε",
+          "πηγαίνει",
+          "πάω",
+          "πήγαν"
+        ],
+        "hint": "she went (3sg aorist)"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-001",
+    "topic": "Plans & weekend",
+    "en": "How was your weekend?",
+    "template": "Πώς {0} το Σαββατοκύριακο;",
+    "blanks": [
+      {
+        "answer": "πέρασες",
+        "options": [
+          "πέρασες",
+          "πέρασα",
+          "περνάει",
+          "περνάς"
+        ],
+        "hint": "you spent / passed (2sg aorist)"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-002",
+    "topic": "Plans & weekend",
+    "en": "What will you do this weekend?",
+    "template": "Τι θα {0} το Σαββατοκύριακο;",
+    "blanks": [
+      {
+        "answer": "κάνεις",
+        "options": [
+          "κάνεις",
+          "κάνω",
+          "κάνει",
+          "κάνετε"
+        ],
+        "hint": "you do (2sg — with 'θα' = future)"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-003",
+    "topic": "Plans & weekend",
+    "en": "We'll stay home all weekend.",
+    "template": "Όλο το Σαββατοκύριακο θα {0} σπίτι.",
+    "blanks": [
+      {
+        "answer": "μείνουμε",
+        "options": [
+          "μείνουμε",
+          "μένουμε",
+          "μείνω",
+          "μένω"
+        ],
+        "hint": "we stay (1pl, subjunctive aorist — with 'θα')"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-004",
+    "topic": "Plans & weekend",
+    "en": "We want to help.",
+    "template": "{0} να βοηθήσουμε.",
+    "blanks": [
+      {
+        "answer": "Θέλουμε",
+        "options": [
+          "Θέλουμε",
+          "Θέλω",
+          "Θέλεις",
+          "Θέλει"
+        ],
+        "hint": "we want (1pl)"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-005",
+    "topic": "Plans & weekend",
+    "en": "We're watching a movie.",
+    "template": "Βλέπουμε {0} ταινία.",
+    "blanks": [
+      {
+        "answer": "μια",
+        "options": [
+          "μια",
+          "έναν",
+          "ένα",
+          "μιας"
+        ],
+        "hint": "a/one (accusative feminine)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-001",
+    "topic": "Feelings",
+    "en": "Don't be sad! (to a male)",
+    "template": "Μην είσαι {0}!",
+    "blanks": [
+      {
+        "answer": "λυπημένος",
+        "options": [
+          "λυπημένος",
+          "λυπημένη",
+          "λυπημένα",
+          "λυπημένο"
+        ],
+        "hint": "sad (masculine singular)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-002",
+    "topic": "Feelings",
+    "en": "Why are you so sad? (to a female)",
+    "template": "Γιατί είσαι τόσο {0};",
+    "blanks": [
+      {
+        "answer": "λυπημένη",
+        "options": [
+          "λυπημένη",
+          "λυπημένος",
+          "λυπημένες",
+          "λυπημένο"
+        ],
+        "hint": "sad (feminine singular)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-003",
+    "topic": "Feelings",
+    "en": "I don't get angry often.",
+    "template": "Δεν {0} συχνά.",
+    "blanks": [
+      {
+        "answer": "θυμώνω",
+        "options": [
+          "θυμώνω",
+          "θυμώνεις",
+          "θυμώνει",
+          "θυμώνουμε"
+        ],
+        "hint": "I get angry (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "travel-001",
+    "topic": "Travel",
+    "en": "I'm going on a trip.",
+    "template": "Πηγαίνω σε {0} ταξίδι.",
+    "blanks": [
+      {
+        "answer": "ένα",
+        "options": [
+          "ένα",
+          "έναν",
+          "μία",
+          "ενός"
+        ],
+        "hint": "a/one (accusative neuter)"
+      }
+    ]
+  },
+  {
+    "id": "travel-002",
+    "topic": "Travel",
+    "en": "He stayed at the hotel.",
+    "template": "{0} στο ξενοδοχείο.",
+    "blanks": [
+      {
+        "answer": "Έμεινε",
+        "options": [
+          "Έμεινε",
+          "Μένει",
+          "Έμεινα",
+          "Μένουν"
+        ],
+        "hint": "he stayed (3sg aorist)"
+      }
+    ]
+  },
+  {
+    "id": "travel-003",
+    "topic": "Travel",
+    "en": "Last year I worked in a hotel.",
+    "template": "Πέρσι {0} σε ένα ξενοδοχείο.",
+    "blanks": [
+      {
+        "answer": "δούλευα",
+        "options": [
+          "δούλευα",
+          "δούλεψα",
+          "δουλεύω",
+          "δουλεύουν"
+        ],
+        "hint": "I was working (1sg imperfect)"
+      }
+    ]
+  },
+  {
+    "id": "travel-004",
+    "topic": "Travel",
+    "en": "I'm going to the beach.",
+    "template": "Πάω {0} παραλία.",
+    "blanks": [
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στις"
+        ],
+        "hint": "to the (accusative feminine singular)"
+      }
+    ]
+  },
+  {
+    "id": "travel-005",
+    "topic": "Travel",
+    "en": "Are you on vacation here?",
+    "template": "{0} διακοπές εδώ;",
+    "blanks": [
+      {
+        "answer": "Κάνεις",
+        "options": [
+          "Κάνεις",
+          "Κάνω",
+          "Κάνει",
+          "Κάνετε"
+        ],
+        "hint": "you do/take (2sg) — 'κάνω διακοπές' = to be on vacation"
+      }
+    ]
+  },
+  {
+    "id": "travel-006",
+    "topic": "Travel",
+    "en": "How did you spend your vacation?",
+    "template": "Πώς {0} τις διακοπές;",
+    "blanks": [
+      {
+        "answer": "πέρασες",
+        "options": [
+          "πέρασες",
+          "πέρασα",
+          "περνάει",
+          "περνάς"
+        ],
+        "hint": "you spent (2sg aorist)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-007",
+    "topic": "Meeting people",
+    "en": "My name is Anna and I'm from Serbia.",
+    "template": "Με {0} Άννα και {1} από τη Σερβία.",
+    "blanks": [
+      {
+        "answer": "λένε",
+        "options": [
+          "λένε",
+          "λέω",
+          "λέει",
+          "λέμε"
+        ],
+        "hint": "they call (3pl present of λέω) — used for 'my name is'"
+      },
+      {
+        "answer": "είμαι",
+        "options": [
+          "είμαι",
+          "είσαι",
+          "είναι",
+          "είμαστε"
+        ],
+        "hint": "I am (1sg of είμαι)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-008",
+    "topic": "Meeting people",
+    "en": "Nice to meet you, let's talk again soon!",
+    "template": "Χάρηκα πολύ που {0} γνώρισα, τα {1} σύντομα!",
+    "blanks": [
+      {
+        "answer": "σε",
+        "options": [
+          "σε",
+          "σου",
+          "σας",
+          "με"
+        ],
+        "hint": "you (sg. accusative weak pronoun)"
+      },
+      {
+        "answer": "λέμε",
+        "options": [
+          "λέμε",
+          "λέω",
+          "λέει",
+          "λένε"
+        ],
+        "hint": "we say (1pl present) — idiom 'τα λέμε'"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-009",
+    "topic": "Meeting people",
+    "en": "I work at a company and I've lived here for three years.",
+    "template": "{0} σε μια εταιρεία και {1} εδώ τρία χρόνια.",
+    "blanks": [
+      {
+        "answer": "Δουλεύω",
+        "options": [
+          "Δουλεύω",
+          "Δουλεύεις",
+          "Δουλεύει",
+          "Δουλεύουμε"
+        ],
+        "hint": "I work (1sg)"
+      },
+      {
+        "answer": "μένω",
+        "options": [
+          "μένω",
+          "μένεις",
+          "μένει",
+          "μένουμε"
+        ],
+        "hint": "I stay/live (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-010",
+    "topic": "Meeting people",
+    "en": "Do you speak English? I only speak a little Greek.",
+    "template": "{0} αγγλικά; Εγώ {1} λίγα ελληνικά μόνο.",
+    "blanks": [
+      {
+        "answer": "Μιλάς",
+        "options": [
+          "Μιλάς",
+          "Μιλάω",
+          "Μιλάει",
+          "Μιλάμε"
+        ],
+        "hint": "you speak (2sg)"
+      },
+      {
+        "answer": "μιλάω",
+        "options": [
+          "μιλάω",
+          "μιλάς",
+          "μιλάει",
+          "μιλάμε"
+        ],
+        "hint": "I speak (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "meeting-people-011",
+    "topic": "Meeting people",
+    "en": "What city are you from? I'm from Athens.",
+    "template": "Από ποια πόλη {0}; Εγώ είμαι από {1} Αθήνα.",
+    "blanks": [
+      {
+        "answer": "είσαι",
+        "options": [
+          "είσαι",
+          "είμαι",
+          "είναι",
+          "είμαστε"
+        ],
+        "hint": "you are (2sg)"
+      },
+      {
+        "answer": "την",
+        "options": [
+          "την",
+          "τον",
+          "το",
+          "τις"
+        ],
+        "hint": "the (accusative feminine singular)"
+      }
+    ]
+  },
+  {
+    "id": "family-006",
+    "topic": "Family",
+    "en": "My sister lives in Thessaloniki with her parents.",
+    "template": "Η αδελφή μου μένει {0} Θεσσαλονίκη με {1} γονείς της.",
+    "blanks": [
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "to the (acc. feminine sg.)"
+      },
+      {
+        "answer": "τους",
+        "options": [
+          "τους",
+          "τις",
+          "τα",
+          "τον"
+        ],
+        "hint": "the (accusative masculine plural)"
+      }
+    ]
+  },
+  {
+    "id": "family-007",
+    "topic": "Family",
+    "en": "My children go to school every morning.",
+    "template": "Τα παιδιά μου {0} {1} σχολείο κάθε πρωί.",
+    "blanks": [
+      {
+        "answer": "πηγαίνουν",
+        "options": [
+          "πηγαίνουν",
+          "πηγαίνει",
+          "πηγαίνω",
+          "πηγαίνεις"
+        ],
+        "hint": "they go (3pl)"
+      },
+      {
+        "answer": "στο",
+        "options": [
+          "στο",
+          "στον",
+          "στην",
+          "στα"
+        ],
+        "hint": "to the (acc. neuter singular)"
+      }
+    ]
+  },
+  {
+    "id": "family-008",
+    "topic": "Family",
+    "en": "I have two older sisters and one younger brother.",
+    "template": "Έχω δύο μεγαλύτερες {0} και έναν μικρότερο {1}.",
+    "blanks": [
+      {
+        "answer": "αδελφές",
+        "options": [
+          "αδελφές",
+          "αδελφή",
+          "αδελφούς",
+          "αδελφών"
+        ],
+        "hint": "sisters (acc. fem. plural)"
+      },
+      {
+        "answer": "αδελφό",
+        "options": [
+          "αδελφό",
+          "αδελφός",
+          "αδελφούς",
+          "αδελφή"
+        ],
+        "hint": "brother (acc. masc. singular)"
+      }
+    ]
+  },
+  {
+    "id": "family-009",
+    "topic": "Family",
+    "en": "My father has been married to my mother for thirty years.",
+    "template": "Ο πατέρας μου είναι {0} με {1} μητέρα μου τριάντα χρόνια.",
+    "blanks": [
+      {
+        "answer": "παντρεμένος",
+        "options": [
+          "παντρεμένος",
+          "παντρεμένη",
+          "παντρεμένο",
+          "παντρεμένοι"
+        ],
+        "hint": "married (masc. sg.)"
+      },
+      {
+        "answer": "την",
+        "options": [
+          "την",
+          "τον",
+          "το",
+          "τις"
+        ],
+        "hint": "the (acc. feminine singular)"
+      }
+    ]
+  },
+  {
+    "id": "family-010",
+    "topic": "Family",
+    "en": "My parents have lived in Greece for many years.",
+    "template": "{0} γονείς μου ζουν {1} Ελλάδα εδώ και πολλά χρόνια.",
+    "blanks": [
+      {
+        "answer": "Οι",
+        "options": [
+          "Οι",
+          "Ο",
+          "Η",
+          "Τα"
+        ],
+        "hint": "the (nominative plural)"
+      },
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "in the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-006",
+    "topic": "At the café",
+    "en": "I'd like a coffee and a glass of water, please.",
+    "template": "Θα ήθελα {0} καφέ και {1} ποτήρι νερό, παρακαλώ.",
+    "blanks": [
+      {
+        "answer": "έναν",
+        "options": [
+          "έναν",
+          "ένα",
+          "μία",
+          "ένας"
+        ],
+        "hint": "a/one (acc. masculine)"
+      },
+      {
+        "answer": "ένα",
+        "options": [
+          "ένα",
+          "έναν",
+          "μία",
+          "ενός"
+        ],
+        "hint": "a/one (acc. neuter)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-007",
+    "topic": "At the café",
+    "en": "How much is a Greek coffee with milk and sugar?",
+    "template": "Πόσο {0} ένας ελληνικός καφές με γάλα και {1};",
+    "blanks": [
+      {
+        "answer": "κάνει",
+        "options": [
+          "κάνει",
+          "κάνουν",
+          "κάνεις",
+          "κάνω"
+        ],
+        "hint": "it costs (3sg)"
+      },
+      {
+        "answer": "ζάχαρη",
+        "options": [
+          "ζάχαρη",
+          "γάλα",
+          "νερό",
+          "ψωμί"
+        ],
+        "hint": "sugar (matches 'with γάλα and ___')"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-008",
+    "topic": "At the café",
+    "en": "We have an appointment at five at a café in the square.",
+    "template": "Έχουμε ραντεβού {0} πέντε σε ένα καφέ {1} πλατεία.",
+    "blanks": [
+      {
+        "answer": "στις",
+        "options": [
+          "στις",
+          "στον",
+          "στην",
+          "στο"
+        ],
+        "hint": "at (with feminine plural — used with clock times like 'στις 5')"
+      },
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "in/at the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-009",
+    "topic": "At the café",
+    "en": "My friend wants two teas and one orange juice.",
+    "template": "Ο φίλος μου {0} δύο τσάι και {1} χυμό πορτοκάλι.",
+    "blanks": [
+      {
+        "answer": "θέλει",
+        "options": [
+          "θέλει",
+          "θέλω",
+          "θέλεις",
+          "θέλουν"
+        ],
+        "hint": "he wants (3sg)"
+      },
+      {
+        "answer": "έναν",
+        "options": [
+          "έναν",
+          "ένα",
+          "μία",
+          "ένας"
+        ],
+        "hint": "a/one (acc. masculine)"
+      }
+    ]
+  },
+  {
+    "id": "at-the-café-010",
+    "topic": "At the café",
+    "en": "Can I have the bill, please? I have to leave.",
+    "template": "{0} να έχω {1} λογαριασμό, παρακαλώ; Πρέπει να φύγω.",
+    "blanks": [
+      {
+        "answer": "Μπορώ",
+        "options": [
+          "Μπορώ",
+          "Μπορείς",
+          "Μπορεί",
+          "Μπορούμε"
+        ],
+        "hint": "I can (1sg)"
+      },
+      {
+        "answer": "τον",
+        "options": [
+          "τον",
+          "την",
+          "το",
+          "τους"
+        ],
+        "hint": "the (acc. masculine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-007",
+    "topic": "Asking directions",
+    "en": "Excuse me, how can I get to the museum from here?",
+    "template": "Συγγνώμη, πώς {0} να πάω {1} μουσείο από εδώ;",
+    "blanks": [
+      {
+        "answer": "μπορώ",
+        "options": [
+          "μπορώ",
+          "μπορείς",
+          "μπορεί",
+          "μπορούμε"
+        ],
+        "hint": "I can (1sg)"
+      },
+      {
+        "answer": "στο",
+        "options": [
+          "στο",
+          "στον",
+          "στην",
+          "στα"
+        ],
+        "hint": "to the (acc. neuter sg.)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-008",
+    "topic": "Asking directions",
+    "en": "Turn right at the traffic light and the bank is on the left.",
+    "template": "Στρίψτε {0} στο φανάρι και η τράπεζα είναι {1}.",
+    "blanks": [
+      {
+        "answer": "δεξιά",
+        "options": [
+          "δεξιά",
+          "αριστερά",
+          "κοντά",
+          "ευθεία"
+        ],
+        "hint": "right (direction adverb)"
+      },
+      {
+        "answer": "αριστερά",
+        "options": [
+          "αριστερά",
+          "δεξιά",
+          "κοντά",
+          "ευθεία"
+        ],
+        "hint": "on the left"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-009",
+    "topic": "Asking directions",
+    "en": "The hotel is near the beach, only five minutes away.",
+    "template": "Το ξενοδοχείο είναι κοντά {0} παραλία, μόνο πέντε λεπτά {1}.",
+    "blanks": [
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "to the (acc. feminine sg.)"
+      },
+      {
+        "answer": "μακριά",
+        "options": [
+          "μακριά",
+          "κοντά",
+          "εδώ",
+          "εκεί"
+        ],
+        "hint": "far (adverb — 'away')"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-010",
+    "topic": "Asking directions",
+    "en": "Do you know where the metro station is? I'm lost.",
+    "template": "Ξέρετε πού {0} ο σταθμός {1} μετρό; Είμαι χαμένος.",
+    "blanks": [
+      {
+        "answer": "είναι",
+        "options": [
+          "είναι",
+          "είμαι",
+          "είσαι",
+          "είμαστε"
+        ],
+        "hint": "it is (3sg)"
+      },
+      {
+        "answer": "του",
+        "options": [
+          "του",
+          "της",
+          "τους",
+          "τον"
+        ],
+        "hint": "of the (genitive neuter sg.)"
+      }
+    ]
+  },
+  {
+    "id": "asking-directions-011",
+    "topic": "Asking directions",
+    "en": "Is the market far from here? Take a taxi.",
+    "template": "Η αγορά είναι {0} από εδώ; {1} ένα ταξί.",
+    "blanks": [
+      {
+        "answer": "μακριά",
+        "options": [
+          "μακριά",
+          "κοντά",
+          "εκεί",
+          "εδώ"
+        ],
+        "hint": "far (adverb)"
+      },
+      {
+        "answer": "Πάρε",
+        "options": [
+          "Πάρε",
+          "Πάρτε",
+          "Παίρνω",
+          "Πήρα"
+        ],
+        "hint": "take (imperative 2sg)"
+      }
+    ]
+  },
+  {
+    "id": "weather-006",
+    "topic": "Weather",
+    "en": "It's very hot today, I want to go to the beach.",
+    "template": "Σήμερα {0} πολύ ζέστη, θέλω να πάω {1} παραλία.",
+    "blanks": [
+      {
+        "answer": "κάνει",
+        "options": [
+          "κάνει",
+          "κάνουν",
+          "έχει",
+          "είναι"
+        ],
+        "hint": "it makes (3sg impersonal — 'κάνει ζέστη')"
+      },
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "to the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "weather-007",
+    "topic": "Weather",
+    "en": "In winter it's cold and rains often in Serbia.",
+    "template": "Τον χειμώνα {0} κρύο και βρέχει συχνά {1} Σερβία.",
+    "blanks": [
+      {
+        "answer": "κάνει",
+        "options": [
+          "κάνει",
+          "κάνουν",
+          "έχει",
+          "είναι"
+        ],
+        "hint": "it makes (3sg)"
+      },
+      {
+        "answer": "στη",
+        "options": [
+          "στη",
+          "στην",
+          "στον",
+          "στο"
+        ],
+        "hint": "in (στη before consonant; feminine singular)"
+      }
+    ]
+  },
+  {
+    "id": "weather-008",
+    "topic": "Weather",
+    "en": "The weather today is nice and the sun is shining brightly.",
+    "template": "Ο καιρός σήμερα είναι ωραίος και {0} ήλιος {1} δυνατά.",
+    "blanks": [
+      {
+        "answer": "ο",
+        "options": [
+          "ο",
+          "η",
+          "το",
+          "οι"
+        ],
+        "hint": "the (nominative masculine sg.)"
+      },
+      {
+        "answer": "λάμπει",
+        "options": [
+          "λάμπει",
+          "λάμπουν",
+          "λάμπω",
+          "λάμπεις"
+        ],
+        "hint": "it shines (3sg)"
+      }
+    ]
+  },
+  {
+    "id": "weather-009",
+    "topic": "Weather",
+    "en": "I don't like it when it snows because it's very cold.",
+    "template": "Δεν {0} αρέσει όταν χιονίζει γιατί {1} πολύ κρύο.",
+    "blanks": [
+      {
+        "answer": "μου",
+        "options": [
+          "μου",
+          "σου",
+          "του",
+          "της"
+        ],
+        "hint": "to me (weak pronoun)"
+      },
+      {
+        "answer": "κάνει",
+        "options": [
+          "κάνει",
+          "κάνουν",
+          "έχει",
+          "είναι"
+        ],
+        "hint": "it makes (3sg)"
+      }
+    ]
+  },
+  {
+    "id": "weather-010",
+    "topic": "Weather",
+    "en": "Tomorrow it will rain all day, take an umbrella.",
+    "template": "Αύριο θα {0} όλη {1} ημέρα, πάρε μια ομπρέλα.",
+    "blanks": [
+      {
+        "answer": "βρέχει",
+        "options": [
+          "βρέχει",
+          "βρέχουν",
+          "χιονίζει",
+          "κάνει"
+        ],
+        "hint": "it rains (3sg — with θα = future)"
+      },
+      {
+        "answer": "την",
+        "options": [
+          "την",
+          "τον",
+          "το",
+          "τις"
+        ],
+        "hint": "the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-006",
+    "topic": "Daily routine",
+    "en": "Every morning I wake up at seven and drink a coffee.",
+    "template": "Κάθε πρωί {0} στις επτά και {1} έναν καφέ.",
+    "blanks": [
+      {
+        "answer": "ξυπνάω",
+        "options": [
+          "ξυπνάω",
+          "ξυπνάς",
+          "ξυπνάει",
+          "ξυπνάμε"
+        ],
+        "hint": "I wake up (1sg)"
+      },
+      {
+        "answer": "πίνω",
+        "options": [
+          "πίνω",
+          "πίνεις",
+          "πίνει",
+          "πίνουμε"
+        ],
+        "hint": "I drink (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-007",
+    "topic": "Daily routine",
+    "en": "I go to work by bus every day.",
+    "template": "{0} στη δουλειά με {1} λεωφορείο κάθε μέρα.",
+    "blanks": [
+      {
+        "answer": "Πηγαίνω",
+        "options": [
+          "Πηγαίνω",
+          "Πηγαίνεις",
+          "Πηγαίνει",
+          "Πηγαίνουμε"
+        ],
+        "hint": "I go (1sg)"
+      },
+      {
+        "answer": "το",
+        "options": [
+          "το",
+          "τον",
+          "την",
+          "τα"
+        ],
+        "hint": "the (acc. neuter sg.)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-008",
+    "topic": "Daily routine",
+    "en": "In the evening I read a book before I sleep.",
+    "template": "Το βράδυ {0} ένα βιβλίο πριν να {1}.",
+    "blanks": [
+      {
+        "answer": "διαβάζω",
+        "options": [
+          "διαβάζω",
+          "διαβάζεις",
+          "διαβάζει",
+          "διαβάζουμε"
+        ],
+        "hint": "I read (1sg)"
+      },
+      {
+        "answer": "κοιμηθώ",
+        "options": [
+          "κοιμηθώ",
+          "κοιμάμαι",
+          "κοιμηθείς",
+          "κοιμηθούμε"
+        ],
+        "hint": "I sleep (1sg subjunctive aorist)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-009",
+    "topic": "Daily routine",
+    "en": "We usually eat together as a family at eight in the evening.",
+    "template": "Συνήθως {0} μαζί ως οικογένεια {1} οκτώ το βράδυ.",
+    "blanks": [
+      {
+        "answer": "τρώμε",
+        "options": [
+          "τρώμε",
+          "τρώω",
+          "τρως",
+          "τρώει"
+        ],
+        "hint": "we eat (1pl)"
+      },
+      {
+        "answer": "στις",
+        "options": [
+          "στις",
+          "στον",
+          "στην",
+          "στο"
+        ],
+        "hint": "at (with clock time — fem. plural)"
+      }
+    ]
+  },
+  {
+    "id": "daily-routine-010",
+    "topic": "Daily routine",
+    "en": "On the weekend I stay home and rest all day.",
+    "template": "Το Σαββατοκύριακο {0} σπίτι και ξεκουράζομαι όλη {1} ημέρα.",
+    "blanks": [
+      {
+        "answer": "μένω",
+        "options": [
+          "μένω",
+          "μένεις",
+          "μένει",
+          "μένουμε"
+        ],
+        "hint": "I stay (1sg)"
+      },
+      {
+        "answer": "την",
+        "options": [
+          "την",
+          "τον",
+          "το",
+          "τις"
+        ],
+        "hint": "the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "shopping-006",
+    "topic": "Shopping",
+    "en": "How much is this dress? It's too expensive for me.",
+    "template": "Πόσο {0} αυτό το φόρεμα; Είναι πολύ {1} για μένα.",
+    "blanks": [
+      {
+        "answer": "κάνει",
+        "options": [
+          "κάνει",
+          "κάνουν",
+          "κάνεις",
+          "κάνω"
+        ],
+        "hint": "it costs (3sg)"
+      },
+      {
+        "answer": "ακριβό",
+        "options": [
+          "ακριβό",
+          "ακριβή",
+          "ακριβός",
+          "ακριβά"
+        ],
+        "hint": "expensive (nom. neuter sg. — agrees with 'το φόρεμα')"
+      }
+    ]
+  },
+  {
+    "id": "shopping-007",
+    "topic": "Shopping",
+    "en": "I'd like to buy a gift for my mother.",
+    "template": "Θα ήθελα να {0} ένα δώρο για {1} μητέρα μου.",
+    "blanks": [
+      {
+        "answer": "αγοράσω",
+        "options": [
+          "αγοράσω",
+          "αγοράζω",
+          "αγοράζεις",
+          "αγόρασα"
+        ],
+        "hint": "I buy (1sg subjunctive aorist — after 'να')"
+      },
+      {
+        "answer": "τη",
+        "options": [
+          "τη",
+          "την",
+          "τον",
+          "το"
+        ],
+        "hint": "the (acc. fem. sg. — short form before consonant)"
+      }
+    ]
+  },
+  {
+    "id": "shopping-008",
+    "topic": "Shopping",
+    "en": "Can I pay by card or do I have to pay cash?",
+    "template": "{0} να πληρώσω με κάρτα ή πρέπει {1} μετρητά;",
+    "blanks": [
+      {
+        "answer": "Μπορώ",
+        "options": [
+          "Μπορώ",
+          "Μπορείς",
+          "Μπορεί",
+          "Μπορούμε"
+        ],
+        "hint": "I can (1sg)"
+      },
+      {
+        "answer": "με",
+        "options": [
+          "με",
+          "σε",
+          "για",
+          "από"
+        ],
+        "hint": "with (preposition — 'πληρώνω με μετρητά')"
+      }
+    ]
+  },
+  {
+    "id": "shopping-009",
+    "topic": "Shopping",
+    "en": "The fish costs ten euros per kilo today, it's expensive.",
+    "template": "Το ψάρι σήμερα {0} δέκα ευρώ το κιλό, είναι {1}.",
+    "blanks": [
+      {
+        "answer": "κοστίζει",
+        "options": [
+          "κοστίζει",
+          "κοστίζουν",
+          "κοστίζω",
+          "κόστιζε"
+        ],
+        "hint": "it costs (3sg)"
+      },
+      {
+        "answer": "ακριβό",
+        "options": [
+          "ακριβό",
+          "ακριβή",
+          "ακριβός",
+          "ακριβά"
+        ],
+        "hint": "expensive (nom. neuter sg. — agrees with 'το ψάρι')"
+      }
+    ]
+  },
+  {
+    "id": "shopping-010",
+    "topic": "Shopping",
+    "en": "Let's go shopping on Saturday, I need new clothes.",
+    "template": "{0} για ψώνια το Σάββατο, χρειάζομαι {1} ρούχα.",
+    "blanks": [
+      {
+        "answer": "Πάμε",
+        "options": [
+          "Πάμε",
+          "Πάω",
+          "Πας",
+          "Πάει"
+        ],
+        "hint": "let's go / we go (1pl)"
+      },
+      {
+        "answer": "καινούργια",
+        "options": [
+          "καινούργια",
+          "καινούργιο",
+          "καινούργιος",
+          "καινούργιες"
+        ],
+        "hint": "new (acc. neuter plural — agrees with 'ρούχα')"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-006",
+    "topic": "Plans & weekend",
+    "en": "What will you do this weekend? Shall we go out for food?",
+    "template": "Τι θα {0} το Σαββατοκύριακο; Θα {1} για φαγητό μαζί;",
+    "blanks": [
+      {
+        "answer": "κάνεις",
+        "options": [
+          "κάνεις",
+          "κάνω",
+          "κάνει",
+          "κάνετε"
+        ],
+        "hint": "you do (2sg — with 'θα' = future)"
+      },
+      {
+        "answer": "βγούμε",
+        "options": [
+          "βγούμε",
+          "βγαίνω",
+          "βγαίνεις",
+          "βγαίνουμε"
+        ],
+        "hint": "we go out (1pl subjunctive aorist — with 'θα')"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-007",
+    "topic": "Plans & weekend",
+    "en": "Want to go to the cinema tonight? A good movie is playing.",
+    "template": "{0} να πάμε σινεμά απόψε; Παίζει {1} καλή ταινία.",
+    "blanks": [
+      {
+        "answer": "Θέλεις",
+        "options": [
+          "Θέλεις",
+          "Θέλω",
+          "Θέλει",
+          "Θέλουμε"
+        ],
+        "hint": "you want (2sg)"
+      },
+      {
+        "answer": "μια",
+        "options": [
+          "μια",
+          "μία",
+          "ένα",
+          "έναν"
+        ],
+        "hint": "a/one (nom. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-008",
+    "topic": "Plans & weekend",
+    "en": "On Saturday we'll throw a party for my birthday.",
+    "template": "Το Σάββατο θα {0} ένα πάρτι για τα γενέθλιά {1}.",
+    "blanks": [
+      {
+        "answer": "κάνουμε",
+        "options": [
+          "κάνουμε",
+          "κάνω",
+          "κάνεις",
+          "κάνουν"
+        ],
+        "hint": "we do/make (1pl — with 'θα')"
+      },
+      {
+        "answer": "μου",
+        "options": [
+          "μου",
+          "σου",
+          "του",
+          "μας"
+        ],
+        "hint": "my (possessive)"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-009",
+    "topic": "Plans & weekend",
+    "en": "We're all tired, let's stay home and rest.",
+    "template": "{0} όλοι κουρασμένοι, ας {1} σπίτι και να ξεκουραστούμε.",
+    "blanks": [
+      {
+        "answer": "Είμαστε",
+        "options": [
+          "Είμαστε",
+          "Είμαι",
+          "Είσαι",
+          "Είναι"
+        ],
+        "hint": "we are (1pl)"
+      },
+      {
+        "answer": "μείνουμε",
+        "options": [
+          "μείνουμε",
+          "μένουμε",
+          "μείνω",
+          "μένω"
+        ],
+        "hint": "we stay (1pl subjunctive aorist — with 'ας')"
+      }
+    ]
+  },
+  {
+    "id": "plans-weekend-010",
+    "topic": "Plans & weekend",
+    "en": "Tomorrow we'll meet my friends at the café.",
+    "template": "Αύριο θα {0} με {1} φίλους μου στο καφέ.",
+    "blanks": [
+      {
+        "answer": "συναντηθούμε",
+        "options": [
+          "συναντηθούμε",
+          "συναντάμε",
+          "συναντάω",
+          "συναντηθείς"
+        ],
+        "hint": "we meet (1pl subjunctive aorist — with 'θα')"
+      },
+      {
+        "answer": "τους",
+        "options": [
+          "τους",
+          "τις",
+          "τα",
+          "τον"
+        ],
+        "hint": "the (acc. masc. plural)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-004",
+    "topic": "Feelings",
+    "en": "I'm very happy to see you after so many years.",
+    "template": "Είμαι πολύ {0} που {1} βλέπω μετά από τόσα χρόνια.",
+    "blanks": [
+      {
+        "answer": "χαρούμενος",
+        "options": [
+          "χαρούμενος",
+          "χαρούμενη",
+          "χαρούμενο",
+          "χαρούμενοι"
+        ],
+        "hint": "happy (nom. masculine sg.)"
+      },
+      {
+        "answer": "σε",
+        "options": [
+          "σε",
+          "σου",
+          "σας",
+          "με"
+        ],
+        "hint": "you (sg. accusative)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-005",
+    "topic": "Feelings",
+    "en": "Why are you sad today? Did something bad happen at work?",
+    "template": "Γιατί είσαι {0} σήμερα; Συνέβη κάτι κακό {1} δουλειά;",
+    "blanks": [
+      {
+        "answer": "λυπημένη",
+        "options": [
+          "λυπημένη",
+          "λυπημένος",
+          "λυπημένο",
+          "λυπημένες"
+        ],
+        "hint": "sad (nom. feminine sg.)"
+      },
+      {
+        "answer": "στη",
+        "options": [
+          "στη",
+          "στην",
+          "στον",
+          "στο"
+        ],
+        "hint": "at the (στη before consonant — fem. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-006",
+    "topic": "Feelings",
+    "en": "When I'm tired, I just want to sleep early.",
+    "template": "Όταν {0} κουρασμένος, θέλω μόνο να {1} νωρίς.",
+    "blanks": [
+      {
+        "answer": "είμαι",
+        "options": [
+          "είμαι",
+          "είσαι",
+          "είναι",
+          "είμαστε"
+        ],
+        "hint": "I am (1sg)"
+      },
+      {
+        "answer": "κοιμηθώ",
+        "options": [
+          "κοιμηθώ",
+          "κοιμάμαι",
+          "κοιμηθείς",
+          "κοιμηθούμε"
+        ],
+        "hint": "I sleep (1sg subjunctive aorist)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-007",
+    "topic": "Feelings",
+    "en": "My brother gets angry easily when he loses at games.",
+    "template": "Ο αδελφός μου {0} εύκολα όταν χάνει {1} παιχνίδια.",
+    "blanks": [
+      {
+        "answer": "θυμώνει",
+        "options": [
+          "θυμώνει",
+          "θυμώνω",
+          "θυμώνεις",
+          "θυμώνουν"
+        ],
+        "hint": "he gets angry (3sg)"
+      },
+      {
+        "answer": "στα",
+        "options": [
+          "στα",
+          "στον",
+          "στην",
+          "στο"
+        ],
+        "hint": "in/at the (acc. neuter plural)"
+      }
+    ]
+  },
+  {
+    "id": "feelings-008",
+    "topic": "Feelings",
+    "en": "I'm a little scared of spiders but I adore small children.",
+    "template": "{0} λίγο τις αράχνες αλλά {1} τα μικρά παιδιά.",
+    "blanks": [
+      {
+        "answer": "Φοβάμαι",
+        "options": [
+          "Φοβάμαι",
+          "Φοβάσαι",
+          "Φοβάται",
+          "Φοβόμαστε"
+        ],
+        "hint": "I'm afraid (1sg of φοβάμαι)"
+      },
+      {
+        "answer": "λατρεύω",
+        "options": [
+          "λατρεύω",
+          "λατρεύεις",
+          "λατρεύει",
+          "λατρεύουν"
+        ],
+        "hint": "I adore (1sg)"
+      }
+    ]
+  },
+  {
+    "id": "travel-007",
+    "topic": "Travel",
+    "en": "In summer we'll go on vacation to Greece with the kids.",
+    "template": "Το καλοκαίρι θα {0} διακοπές {1} Ελλάδα με τα παιδιά.",
+    "blanks": [
+      {
+        "answer": "πάμε",
+        "options": [
+          "πάμε",
+          "πάω",
+          "πας",
+          "πάει"
+        ],
+        "hint": "we go (1pl — with 'θα')"
+      },
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "to the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "travel-008",
+    "topic": "Travel",
+    "en": "I stayed two weeks at a hotel near the beach.",
+    "template": "{0} δύο εβδομάδες σε ένα ξενοδοχείο κοντά {1} παραλία.",
+    "blanks": [
+      {
+        "answer": "Έμεινα",
+        "options": [
+          "Έμεινα",
+          "Έμεινες",
+          "Έμεινε",
+          "Μένω"
+        ],
+        "hint": "I stayed (1sg aorist)"
+      },
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "to the (acc. feminine sg.)"
+      }
+    ]
+  },
+  {
+    "id": "travel-009",
+    "topic": "Travel",
+    "en": "Our plane will leave at eight in the evening.",
+    "template": "Το αεροπλάνο {0} θα φύγει {1} οκτώ το βράδυ.",
+    "blanks": [
+      {
+        "answer": "μας",
+        "options": [
+          "μας",
+          "μου",
+          "σας",
+          "τους"
+        ],
+        "hint": "our (possessive)"
+      },
+      {
+        "answer": "στις",
+        "options": [
+          "στις",
+          "στον",
+          "στην",
+          "στο"
+        ],
+        "hint": "at (with clock time — fem. plural)"
+      }
+    ]
+  },
+  {
+    "id": "travel-010",
+    "topic": "Travel",
+    "en": "Last year I traveled to Italy and stayed there ten days.",
+    "template": "Πέρσι {0} στην Ιταλία και {1} δέκα μέρες εκεί.",
+    "blanks": [
+      {
+        "answer": "ταξίδεψα",
+        "options": [
+          "ταξίδεψα",
+          "ταξιδεύω",
+          "ταξιδεύεις",
+          "ταξίδεψε"
+        ],
+        "hint": "I traveled (1sg aorist)"
+      },
+      {
+        "answer": "έμεινα",
+        "options": [
+          "έμεινα",
+          "έμεινες",
+          "έμεινε",
+          "μένω"
+        ],
+        "hint": "I stayed (1sg aorist)"
+      }
+    ]
+  },
+  {
+    "id": "travel-011",
+    "topic": "Travel",
+    "en": "Let's go to the beach tomorrow morning to swim a little.",
+    "template": "Πάμε {0} παραλία αύριο το πρωί για να {1} λίγο.",
+    "blanks": [
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στα"
+        ],
+        "hint": "to the (acc. feminine sg.)"
+      },
+      {
+        "answer": "κολυμπήσουμε",
+        "options": [
+          "κολυμπήσουμε",
+          "κολυμπάμε",
+          "κολυμπώ",
+          "κολυμπάς"
+        ],
+        "hint": "we swim (1pl subjunctive aorist — with 'να')"
+      }
+    ]
+  }
+]

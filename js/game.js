@@ -1,5 +1,7 @@
 // Words loaded from words.json
 let allWords = [];
+// Sentences loaded from sentences.json (lazy)
+let allSentences = [];
 
 // ── Touch drag state ────────────────────────────────────────────────────────
 let touchDragChip   = null;
@@ -19,7 +21,7 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["quiz", "xmatch", "type"].includes(urlMode)) mode = urlMode;
+    if (["quiz", "xmatch", "type", "fill"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
@@ -31,12 +33,8 @@ function initApp(words) {
     round = selectRound();
 
     // Event listeners
-    document.getElementById("btn-check").addEventListener("click", checkMatchAnswers);
-    document.getElementById("btn-retry").addEventListener("click", () => {
-        if (mode === "quiz") buildQuiz();
-        else if (mode === "type") buildTyping();
-        else buildMatch();
-    });
+    document.getElementById("btn-check").addEventListener("click", dispatchCheck);
+    document.getElementById("btn-retry").addEventListener("click", dispatchRetry);
     document.getElementById("btn-new").addEventListener("click", () => {
         const url = new URL(location.href);
         url.searchParams.set("mode", mode);
@@ -59,8 +57,16 @@ function initApp(words) {
 
 function populateGroupSelect() {
     const select = document.getElementById("group-select");
-    const groups = [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
-    for (const g of groups) {
+    select.innerHTML = "";
+    const allOpt = document.createElement("option");
+    allOpt.value = "__all__";
+    allOpt.textContent = mode === "fill" ? "All topics" : "All groups";
+    select.appendChild(allOpt);
+
+    const items = mode === "fill"
+        ? [...new Set(allSentences.map(s => s.topic).filter(Boolean))].sort()
+        : [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
+    for (const g of items) {
         const opt = document.createElement("option");
         opt.value = g;
         opt.textContent = g;
@@ -70,18 +76,35 @@ function populateGroupSelect() {
 
 function groupExists(g) {
     if (g === "__all__") return true;
+    if (mode === "fill") return allSentences.some(s => s.topic === g);
     return allWords.some(w => w.group === g);
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 function modePool() {
+    if (mode === "fill") {
+        return group === "__all__" ? allSentences : allSentences.filter(s => s.topic === group);
+    }
     if (mode === "xmatch") return allWords.filter(w => w.marked);
     if (group === "__all__") return allWords;
     return allWords.filter(w => w.group === group);
 }
 
 function selectRound() {
+    if (mode === "fill") {
+        const pool = modePool().slice();
+        // Shuffle and take up to 6
+        for (let i = pool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        return pool.slice(0, Math.min(6, pool.length));
+    }
+    return selectWordRound();
+}
+
+function selectWordRound() {
     const weights  = JSON.parse(localStorage.getItem("greek_weights")  || "{}");
     const streaks  = JSON.parse(localStorage.getItem("greek_streaks")  || "{}");
     const mastered = new Set(JSON.parse(localStorage.getItem("greek_mastered") || "[]"));
@@ -153,6 +176,7 @@ function setLang(l) {
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
+    else if (mode === "fill") buildFill();
     else buildMatch();
 }
 
@@ -161,6 +185,7 @@ function updateSubtitle() {
         match:  { greek: "Tap or drag the Greek word to its English meaning",        english: "Tap or drag the English word to its Greek meaning" },
         quiz:   { greek: "Choose the correct Greek word",                            english: "Choose the correct English word" },
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
+        fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
         xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
@@ -559,10 +584,14 @@ function applyMode() {
     document.getElementById("match-container").style.display  = isMatchLike ? "" : "none";
     document.getElementById("quiz-container").style.display   = mode === "quiz" ? "" : "none";
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
+    document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
     document.getElementById("mode-select").value = mode;
+    // Lang toggle has no role in Fill mode
+    document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
+    else if (mode === "fill") buildFill();
     else buildMatch();
 }
 
@@ -571,14 +600,30 @@ function switchMode(target) {
     clearInterval(quizTimer);
     const prev = mode;
     mode = target;
-    if ((prev === "xmatch") !== (mode === "xmatch")) round = selectRound();
+    // Rebuild dropdown — Fill uses sentence topics, others use word groups
+    populateGroupSelect();
+    if (mode === "fill") {
+        group = localStorage.getItem("greek_topic") || "__all__";
+    } else {
+        group = localStorage.getItem("greek_group") || "__all__";
+    }
+    if (!groupExists(group)) group = "__all__";
+    document.getElementById("group-select").value = group;
+    // Always re-pick the round when entering or leaving fill (different data shape)
+    if (mode === "fill" || prev === "fill" || (prev === "xmatch") !== (mode === "xmatch")) {
+        round = selectRound();
+    }
     applyMode();
 }
 
 function switchGroup(target) {
     if (target === group) return;
     group = target;
-    localStorage.setItem("greek_group", group);
+    if (mode === "fill") {
+        localStorage.setItem("greek_topic", group);
+    } else {
+        localStorage.setItem("greek_group", group);
+    }
     // xmatch ignores group, so don't re-pick the round in that case
     if (mode !== "xmatch") {
         clearInterval(quizTimer);
@@ -714,10 +759,185 @@ function finishTyping() {
     document.getElementById("typing-input").disabled   = true;
 }
 
+// ── Fill (sentence-blank) game ──────────────────────────────────────────────
+
+let fillIndex   = 0;
+let fillScore   = 0;
+let fillTotal   = 0;
+let fillChecked = false;
+let fillState   = []; // per-blank: { selected: string|null }
+
+function buildFill() {
+    fillIndex = 0;
+    fillScore = 0;
+    fillTotal = 0;
+    document.getElementById("score-banner").style.display = "none";
+    document.getElementById("btn-check").style.display    = "";
+    document.getElementById("btn-retry").style.display    = "none";
+    document.getElementById("btn-new").style.display      = "none";
+    if (!round.length) {
+        document.getElementById("fill-prompt").textContent   = "No sentences for this topic.";
+        document.getElementById("fill-sentence").innerHTML   = "";
+        document.getElementById("fill-blanks").innerHTML     = "";
+        document.getElementById("btn-check").style.display   = "none";
+        return;
+    }
+    showFillQuestion();
+}
+
+function showFillQuestion() {
+    const item = round[fillIndex];
+    fillChecked = false;
+    fillState   = item.blanks.map(() => ({ selected: null }));
+
+    document.getElementById("fill-progress").textContent = (fillIndex + 1) + " / " + round.length;
+    document.getElementById("fill-topic").textContent    = item.topic || "";
+    document.getElementById("fill-prompt").textContent   = item.en;
+
+    renderFillSentence();
+    renderFillBlanks();
+    document.getElementById("btn-check").textContent = "Check";
+    document.getElementById("btn-check").style.display = "";
+}
+
+function renderFillSentence() {
+    const item    = round[fillIndex];
+    const sentEl  = document.getElementById("fill-sentence");
+    sentEl.innerHTML = "";
+
+    // Split template on placeholders {0}, {1}, ... and render slots inline
+    const parts = item.template.split(/(\{\d+\})/);
+    parts.forEach(part => {
+        const m = part.match(/^\{(\d+)\}$/);
+        if (m) {
+            const idx = parseInt(m[1], 10);
+            const slot = document.createElement("span");
+            slot.className = "fill-slot";
+            slot.dataset.idx = idx;
+            const sel = fillState[idx] && fillState[idx].selected;
+            const correctVal = item.blanks[idx].answer;
+            if (sel) {
+                slot.textContent = sel;
+                slot.classList.add("filled");
+                if (fillChecked) {
+                    slot.classList.add(sel === correctVal ? "correct" : "wrong");
+                    if (sel !== correctVal) {
+                        const fix = document.createElement("span");
+                        fix.className = "fill-fix";
+                        fix.textContent = correctVal;
+                        slot.appendChild(fix);
+                    }
+                }
+            } else {
+                slot.textContent = "___";
+                if (fillChecked) {
+                    slot.classList.add("wrong");
+                    const fix = document.createElement("span");
+                    fix.className = "fill-fix";
+                    fix.textContent = correctVal;
+                    slot.appendChild(fix);
+                }
+            }
+            sentEl.appendChild(slot);
+        } else if (part) {
+            sentEl.appendChild(document.createTextNode(part));
+        }
+    });
+}
+
+function renderFillBlanks() {
+    const item     = round[fillIndex];
+    const wrap     = document.getElementById("fill-blanks");
+    wrap.innerHTML = "";
+
+    item.blanks.forEach((b, idx) => {
+        const group = document.createElement("div");
+        group.className = "fill-blank-group";
+
+        const hint = document.createElement("div");
+        hint.className = "fill-hint";
+        hint.textContent = "▸ " + b.hint;
+        group.appendChild(hint);
+
+        const opts = document.createElement("div");
+        opts.className = "fill-options";
+        b.options.forEach(opt => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "fill-opt";
+            btn.textContent = opt;
+            if (fillState[idx].selected === opt) btn.classList.add("selected");
+            if (fillChecked) {
+                btn.disabled = true;
+                if (opt === b.answer) btn.classList.add("correct");
+                else if (opt === fillState[idx].selected) btn.classList.add("wrong");
+            } else {
+                btn.addEventListener("click", () => {
+                    fillState[idx].selected = (fillState[idx].selected === opt) ? null : opt;
+                    renderFillSentence();
+                    renderFillBlanks();
+                });
+            }
+            opts.appendChild(btn);
+        });
+        group.appendChild(opts);
+        wrap.appendChild(group);
+    });
+}
+
+function checkFillAnswers() {
+    if (fillChecked) { advanceFill(); return; }
+    const item = round[fillIndex];
+    let correct = 0;
+    item.blanks.forEach((b, idx) => {
+        if (fillState[idx].selected === b.answer) correct++;
+    });
+    fillScore += correct;
+    fillTotal += item.blanks.length;
+    fillChecked = true;
+    renderFillSentence();
+    renderFillBlanks();
+    document.getElementById("btn-check").textContent =
+        fillIndex < round.length - 1 ? "Next" : "Finish";
+}
+
+function advanceFill() {
+    fillIndex++;
+    if (fillIndex < round.length) {
+        showFillQuestion();
+    } else {
+        finishFill();
+    }
+}
+
+function finishFill() {
+    showScoreBanner(fillScore, fillTotal);
+    document.getElementById("btn-check").style.display = "none";
+    document.getElementById("btn-retry").style.display = "";
+    document.getElementById("btn-new").style.display   = "";
+}
+
+// Wire Check/Retry buttons for Fill mode too
+function dispatchCheck() {
+    if (mode === "fill") checkFillAnswers();
+    else checkMatchAnswers();
+}
+function dispatchRetry() {
+    if (mode === "quiz") buildQuiz();
+    else if (mode === "type") buildTyping();
+    else if (mode === "fill") { round = selectRound(); buildFill(); }
+    else buildMatch();
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────────
-fetch('./words.json')
-    .then(r => r.json())
-    .then(initApp)
+Promise.all([
+    fetch('./words.json').then(r => r.json()),
+    fetch('./sentences.json').then(r => r.json()).catch(() => [])
+])
+    .then(([words, sentences]) => {
+        allSentences = sentences;
+        initApp(words);
+    })
     .catch(err => {
         document.body.innerHTML = '<h1>Failed to load words</h1><p>' + err.message + '</p>';
     });
