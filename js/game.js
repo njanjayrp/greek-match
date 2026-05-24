@@ -94,12 +94,11 @@ function modePool() {
 function selectRound() {
     if (mode === "fill") {
         const pool = modePool().slice();
-        // Shuffle and take up to 6
         for (let i = pool.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [pool[i], pool[j]] = [pool[j], pool[i]];
         }
-        return pool.slice(0, Math.min(6, pool.length));
+        return pool.slice(0, Math.min(10, pool.length));
     }
     return selectWordRound();
 }
