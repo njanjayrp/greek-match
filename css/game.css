@@ -227,6 +227,9 @@ button:active { transform: scale(0.97); }
     background-repeat: no-repeat; background-position: right 9px center; background-size: 10px;
 }
 .mode-select:focus { outline: none; border-color: #4a6cf7; }
+.mode-select:disabled {
+    opacity: 0.4; cursor: not-allowed; background-color: #f0f2f5;
+}
 .lang-toggle { display: flex; gap: 6px; align-items: center; }
 .lang-btn {
     font-size: 20px; cursor: pointer; opacity: 0.3;
