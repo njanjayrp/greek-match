@@ -827,15 +827,12 @@ function renderFillSentence() {
                         slot.appendChild(fix);
                     }
                 }
+            } else if (fillChecked) {
+                // Empty slot after check: show correct answer in green, no strikethrough placeholder
+                slot.textContent = correctVal;
+                slot.classList.add("missed");
             } else {
                 slot.textContent = "___";
-                if (fillChecked) {
-                    slot.classList.add("wrong");
-                    const fix = document.createElement("span");
-                    fix.className = "fill-fix";
-                    fix.textContent = correctVal;
-                    slot.appendChild(fix);
-                }
             }
             sentEl.appendChild(slot);
         } else if (part) {
@@ -872,7 +869,10 @@ function renderFillBlanks() {
                 else if (opt === fillState[idx].selected) btn.classList.add("wrong");
             } else {
                 btn.addEventListener("click", () => {
-                    fillState[idx].selected = (fillState[idx].selected === opt) ? null : opt;
+                    // No toggle-off: clicking the same option is a no-op.
+                    // To change choice, click a different option.
+                    if (fillState[idx].selected === opt) return;
+                    fillState[idx].selected = opt;
                     renderFillSentence();
                     renderFillBlanks();
                 });

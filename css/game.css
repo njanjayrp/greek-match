@@ -173,6 +173,7 @@ h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6
 .fill-slot.correct { background: #f0fdf4; border-bottom-color: #22c55e; color: #16a34a; }
 .fill-slot.wrong   { background: #fef2f2; border-bottom-color: #ef4444; color: #dc2626;
                      text-decoration: line-through; text-decoration-color: #dc2626; }
+.fill-slot.missed  { background: #f0fdf4; border-bottom-color: #22c55e; color: #16a34a; }
 .fill-fix {
     display: block; font-size: 12px; font-weight: 600; color: #16a34a;
     text-decoration: none; margin-top: 2px;
