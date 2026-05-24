@@ -589,6 +589,8 @@ function applyMode() {
     document.getElementById("mode-select").value = mode;
     // Lang toggle has no role in Fill mode
     document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
+    // Marked mode ignores the group filter — disable the dropdown so it doesn't mislead
+    document.getElementById("group-select").disabled = (mode === "xmatch");
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
