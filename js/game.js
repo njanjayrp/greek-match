@@ -124,6 +124,8 @@ function selectWordRound() {
     const allCount = allWords.length;
     const idxByGreek = new Map(allWords.map((w, i) => [w.greek, i]));
     function newnessBonus(w) {
+        // In Marked mode the user has explicitly chosen the pool — no position-based boost
+        if (mode === "xmatch") return 1;
         if (weights[w.greek] || streaks[w.greek]) return 1;
         const fromEnd = allCount - 1 - (idxByGreek.get(w.greek) ?? 0);
         if (fromEnd >= 60) return 1;

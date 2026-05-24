@@ -1359,7 +1359,7 @@
         "greek": "στη συνέχεια",
         "english": "subsequently",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "δηλαδή",
@@ -2751,7 +2751,7 @@
         "greek": "η γραβάτα",
         "english": "tie",
         "group": "Clothes & accessories",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η βαλίτσα",
@@ -2823,7 +2823,7 @@
         "greek": "σαν",
         "english": "like / as",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "θαυμάζω",
