@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon-192.png?v=2">
     <link rel="apple-touch-icon" href="icons/icon-192.png?v=2">
-    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/game.css?v=3">
 </head>
 <body>
 <h1>Greek Match</h1>
@@ -22,15 +22,15 @@
 <div class="game">
     <div class="game-header">
         <div class="header-left">
-            <select class="mode-select" id="group-select" aria-label="Group">
-                <option value="__all__">All groups</option>
-            </select>
             <select class="mode-select" id="mode-select" aria-label="Mode">
                 <option value="match">Match</option>
                 <option value="quiz">Quiz</option>
                 <option value="type">Type</option>
                 <option value="fill">Fill</option>
                 <option value="xmatch">Marked</option>
+            </select>
+            <select class="mode-select" id="group-select" aria-label="Group">
+                <option value="__all__">All groups</option>
             </select>
         </div>
         <div class="lang-toggle">

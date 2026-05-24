@@ -228,7 +228,12 @@ button:active { transform: scale(0.97); }
 }
 .mode-select:focus { outline: none; border-color: #4a6cf7; }
 .mode-select:disabled {
-    opacity: 0.4; cursor: not-allowed; background-color: #f0f2f5;
+    cursor: not-allowed;
+    color: #b0b4bd;
+    background: #f6f7fa;
+    border-color: #e2e5ea;
+    background-image: none;
+    padding-right: 12px;
 }
 .lang-toggle { display: flex; gap: 6px; align-items: center; }
 .lang-btn {
