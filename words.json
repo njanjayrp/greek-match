@@ -2734,5 +2734,101 @@
         "english": "dream",
         "group": "Feelings & emotions",
         "marked": false
+    },
+    {
+        "greek": "η διεύθυνση",
+        "english": "address",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "διψάω",
+        "english": "to be thirsty",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "η γραβάτα",
+        "english": "tie",
+        "group": "Clothes & accessories",
+        "marked": true
+    },
+    {
+        "greek": "η βαλίτσα",
+        "english": "suitcase",
+        "group": "Leisure & travel",
+        "marked": true
+    },
+    {
+        "greek": "η έκπτωση",
+        "english": "discount",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "ξεχνάω",
+        "english": "to forget",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "εξάλλου",
+        "english": "besides / moreover",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "το εκδοτήριο",
+        "english": "ticket office",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "η απεργία",
+        "english": "strike",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η μετακίνηση",
+        "english": "move / commute",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "αλλιώς",
+        "english": "otherwise",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "ευγενικός",
+        "english": "kind / polite",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "έως",
+        "english": "until",
+        "group": "Time & frequency",
+        "marked": true
+    },
+    {
+        "greek": "ως",
+        "english": "as",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "σαν",
+        "english": "like / as",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "θαυμάζω",
+        "english": "to admire",
+        "group": "Feelings & emotions",
+        "marked": true
     }
 ]
