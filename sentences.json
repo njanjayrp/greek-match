@@ -1030,40 +1030,40 @@
     ]
   },
   {
-    "id": "klitika-006",
-    "topic": "Κλιτικά",
-    "en": "Whatever I asked, he answered me right away without thinking about it twice.",
-    "template": "Ό,τι κι αν ρωτούσα, {0} απαντούσε αμέσως χωρίς να {1} {2} ξανασκεφτεί.",
+    "id": "paratatikos-009",
+    "topic": "Παρατατικός",
+    "en": "Whatever I would ask him, he would answer me right away without thinking it over.",
+    "template": "Ό,τι κι αν τον {0}, μου {1} αμέσως χωρίς να το {2}.",
     "blanks": [
       {
-        "answer": "μου",
+        "answer": "ρωτούσα",
         "options": [
-          "μου",
-          "σου",
-          "του",
-          "της"
+          "ρωτούσα",
+          "ρώτησα",
+          "ρωτάω",
+          "ρωτούσε"
         ],
-        "hint": "to me (indirect)"
+        "hint": "I would ask (imperfect 1sg — habitual past)"
       },
       {
-        "answer": "το",
+        "answer": "απαντούσε",
         "options": [
-          "το",
-          "τα",
-          "την",
-          "τον"
+          "απαντούσε",
+          "απάντησε",
+          "απαντάει",
+          "απαντούσα"
         ],
-        "hint": "it (direct — neut. sg.)"
+        "hint": "he would answer (imperfect 3sg — habitual past)"
       },
       {
-        "answer": "το",
+        "answer": "ξανασκεφτεί",
         "options": [
-          "το",
-          "τα",
-          "την",
-          "τον"
+          "ξανασκεφτεί",
+          "ξανασκέφτεται",
+          "ξανασκέφτηκε",
+          "ξανασκεφτείς"
         ],
-        "hint": "it again — same referent (clitic before 'ξανασκεφτεί')"
+        "hint": "think it over again (perfective subjunctive 3sg — single act, with 'να')"
       }
     ]
   },

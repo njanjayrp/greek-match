@@ -2830,5 +2830,47 @@
         "english": "to admire",
         "group": "Feelings & emotions",
         "marked": true
+    },
+    {
+        "greek": "η αφετηρία",
+        "english": "starting point / bus terminus",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "έχει πολλή κίνηση",
+        "english": "there is heavy traffic",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "η διαδρομή",
+        "english": "route / journey",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "δεν αργεί ποτέ",
+        "english": "it is never late",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "έχει ανταπόκριση",
+        "english": "it has a connection / transfer",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "το πρόστιμο",
+        "english": "fine / penalty",
+        "group": "Transport",
+        "marked": true
+    },
+    {
+        "greek": "ανοίγω",
+        "english": "to open",
+        "group": "Common verbs",
+        "marked": true
     }
 ]
