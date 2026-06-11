@@ -164,31 +164,31 @@
     {
         "greek": "σκουπίζουμε → σκουπίζαμε",
         "english": "we vacuum → we were vacuuming",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
         "greek": "γυρίζω → γύριζα",
         "english": "I return → I was returning",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
         "greek": "διασκεδάζουν → διασκέδαζαν",
         "english": "they have fun → they were having fun",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
         "greek": "πλένεις → έπλενες",
         "english": "you wash → you were washing",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
         "greek": "χτίζω → έχτιζα",
         "english": "I build → I was building",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
@@ -332,37 +332,37 @@
     {
         "greek": "περίπου έναν χρόνο",
         "english": "for about a year",
-        "group": "Durations",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "σχεδόν πέντε χρόνια",
         "english": "for almost five years",
-        "group": "Durations",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "από πέρυσι / πέρσι",
         "english": "since last year",
-        "group": "Durations",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "από φέτος",
         "english": "since this year",
-        "group": "Durations",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "είκοσι μέρες",
         "english": "twenty days",
-        "group": "Durations",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "μία εβδομάδα",
         "english": "one week",
-        "group": "Durations",
+        "group": "Time & frequency",
         "marked": false
     },
     {
@@ -416,31 +416,31 @@
     {
         "greek": "το κυλικείο",
         "english": "canteen / school cafeteria",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "η ξαδέλφη",
         "english": "female cousin",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
         "greek": "το τζάκι",
         "english": "fireplace",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
         "greek": "ο καναπές",
         "english": "sofa",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
         "greek": "η πολυθρόνα",
         "english": "armchair",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
@@ -470,7 +470,7 @@
     {
         "greek": "η κουβέρτα",
         "english": "blanket",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
@@ -524,13 +524,13 @@
     {
         "greek": "το μπλουζάκι",
         "english": "t-shirt",
-        "group": "Clothes & accessories",
+        "group": "Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το κοντομάνικο",
         "english": "short-sleeved shirt",
-        "group": "Clothes & accessories",
+        "group": "Wardrobe and Colors",
         "marked": false
     },
     {
@@ -590,19 +590,19 @@
     {
         "greek": "τα σταφύλια",
         "english": "grapes",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "το αχλάδι",
         "english": "pear",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "το καλάθι",
         "english": "basket",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -620,7 +620,7 @@
     {
         "greek": "η γεύση",
         "english": "taste / flavour",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -716,7 +716,7 @@
     {
         "greek": "ο μανάβης",
         "english": "greengrocer",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -800,7 +800,7 @@
     {
         "greek": "τα ψώνια",
         "english": "shopping",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -842,7 +842,7 @@
     {
         "greek": "το ποτό",
         "english": "drink",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -1130,7 +1130,7 @@
     {
         "greek": "από χρυσό",
         "english": "made of gold",
-        "group": "Clothes & accessories",
+        "group": "Wardrobe and Colors",
         "marked": true
     },
     {
@@ -1214,13 +1214,13 @@
     {
         "greek": "τα αλμυρά",
         "english": "salty snacks",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "η τσάντα πλάτης",
         "english": "backpack",
-        "group": "Clothes & accessories",
+        "group": "Wardrobe and Colors",
         "marked": false
     },
     {
@@ -1232,7 +1232,7 @@
     {
         "greek": "το κουλούρι",
         "english": "sesame bread ring",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -1244,7 +1244,7 @@
     {
         "greek": "ο χρυσός",
         "english": "gold",
-        "group": "Clothes & accessories",
+        "group": "Wardrobe and Colors",
         "marked": false
     },
     {
@@ -1262,13 +1262,13 @@
     {
         "greek": "φεύγω → έφυγα",
         "english": "to leave → I left",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
         "greek": "φτάνω → έφτασα",
         "english": "to arrive → I arrived",
-        "group": "Past tense verbs",
+        "group": "Common verbs",
         "marked": false
     },
     {
@@ -1400,97 +1400,97 @@
     {
         "greek": "επειδή",
         "english": "because",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "αφού",
         "english": "after / since / given that",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "μόλις",
         "english": "as soon as",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "πριν (να)",
         "english": "before",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "μέχρι (να)",
         "english": "until",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "καθώς",
         "english": "as / while",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "όποτε",
         "english": "whenever",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "αν και",
         "english": "although",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "παρόλο που",
         "english": "even though / despite the fact that",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "ενώ",
         "english": "while / whereas (contrastive)",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "μήπως",
         "english": "in case",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "ώστε",
         "english": "so that / with the result that",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "για να",
         "english": "in order to",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "πως",
         "english": "that",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "μη(ν)",
         "english": "don't let",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "που",
         "english": "that (resultative)",
-        "group": "Subordinating conjunctions",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
@@ -1634,7 +1634,7 @@
     {
         "greek": "οι γονείς",
         "english": "parents",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
@@ -1922,49 +1922,49 @@
     {
         "greek": "ο αναπτήρας",
         "english": "lighter",
-        "group": "Kiosk",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "τα ψιλά",
         "english": "small change",
-        "group": "Kiosk",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "το κουτάκι",
         "english": "small can",
-        "group": "Kiosk",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "το πακέτο",
         "english": "pack",
-        "group": "Kiosk",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "τα πατατάκια",
         "english": "chips",
-        "group": "Kiosk",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "το περίπτερο",
         "english": "kiosk",
-        "group": "Kiosk",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "η λαϊκή",
         "english": "farmer's market",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "η θερμίδα",
         "english": "calorie",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -2606,19 +2606,19 @@
     {
         "greek": "το βερίκοκο",
         "english": "apricot",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "ο λωτός",
         "english": "persimmon",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
         "greek": "η καρύδα",
         "english": "coconut",
-        "group": "Food & market",
+        "group": "Commerce & delivery",
         "marked": false
     },
     {
@@ -2660,7 +2660,7 @@
     {
         "greek": "παντρεμένος",
         "english": "married",
-        "group": "Home & family",
+        "group": "Housing & buildings",
         "marked": false
     },
     {
@@ -2750,7 +2750,7 @@
     {
         "greek": "η γραβάτα",
         "english": "tie",
-        "group": "Clothes & accessories",
+        "group": "Wardrobe and Colors",
         "marked": false
     },
     {
@@ -2872,5 +2872,299 @@
         "english": "to open",
         "group": "Common verbs",
         "marked": true
+    },
+    {
+        "greek": "το κερί",
+        "english": "candle",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η μπλούζα",
+        "english": "blouse / top",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το φόρεμα",
+        "english": "dress",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η φούστα",
+        "english": "skirt",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το παντελόνι",
+        "english": "trousers",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το τζιν",
+        "english": "jeans",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η βερμούδα",
+        "english": "bermuda shorts",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το σορτς",
+        "english": "shorts",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το κοστούμι",
+        "english": "suit",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το φούτερ",
+        "english": "hoodie / sweatshirt",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η φόρμα",
+        "english": "tracksuit",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το πουλόβερ",
+        "english": "pullover / sweater",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το πουκάμισο",
+        "english": "shirt",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το σακάκι",
+        "english": "jacket / blazer",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το παλτό",
+        "english": "coat",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η καμπαρντίνα",
+        "english": "trench coat",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μπουφάν",
+        "english": "jacket / windbreaker",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "οι μπότες",
+        "english": "boots",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "τα γάντια",
+        "english": "gloves",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το κασκόλ",
+        "english": "scarf (wool)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "ο σκούφος",
+        "english": "beanie",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το καπέλο",
+        "english": "hat",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το φουλάρι",
+        "english": "scarf (silk)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η ζώνη",
+        "english": "belt",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η τσάντα",
+        "english": "bag",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "βαμβακερός",
+        "english": "cotton (adj)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "βελούδινος",
+        "english": "velvet",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "μάλλινος",
+        "english": "woolen",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "μεταξωτός",
+        "english": "silk (adj)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "δερμάτινος",
+        "english": "leather (adj)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "γούνινος",
+        "english": "fur (adj)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "γαλάζιος",
+        "english": "light blue / sky blue",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το καφέ",
+        "english": "brown (color)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μπλε",
+        "english": "blue",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το ροζ",
+        "english": "pink",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μπορντό",
+        "english": "burgundy",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μουσταρδί",
+        "english": "mustard yellow",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το λαχανί",
+        "english": "lime green",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το γκρι",
+        "english": "grey",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μπεζ",
+        "english": "beige",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το εκρού",
+        "english": "ecru / off-white",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το κρεμ",
+        "english": "cream",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μοβ",
+        "english": "purple",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το πορτοκαλί",
+        "english": "orange (color)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το πετρόλ",
+        "english": "petrol blue",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το λαδί",
+        "english": "olive (color)",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το χακί",
+        "english": "khaki",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το τιρκουάζ",
+        "english": "turquoise",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το φούξια",
+        "english": "fuchsia",
+        "group": "Wardrobe and Colors",
+        "marked": false
     }
 ]
