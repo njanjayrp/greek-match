@@ -2,55 +2,55 @@
     {
         "greek": "η οικοδομή",
         "english": "building",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ο οικοδόμος",
         "english": "builder / construction worker",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το οικόπεδο",
         "english": "plot of land",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η πολυκατοικία",
         "english": "apartment block",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η μονοκατοικία",
         "english": "detached house",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το διαμέρισμα",
         "english": "apartment / flat",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το οροφοδιαμέρισμα",
         "english": "penthouse / top-floor flat",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ο ουρανοξύστης",
         "english": "skyscraper",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το εξοχικό σπίτι",
         "english": "country / holiday house",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -62,103 +62,103 @@
     {
         "greek": "άνετος",
         "english": "comfortable",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ευρύχωρος",
         "english": "spacious",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ευάερος",
         "english": "airy / well-ventilated",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ευήλιος",
         "english": "sunny",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "φωτεινός",
         "english": "bright / well-lit",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "γωνιακός",
         "english": "corner (adj.)",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ακατοίκητος",
         "english": "uninhabited",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ανακαινισμένος",
         "english": "renovated",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η πρόοδος",
         "english": "progress",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η περίοδος",
         "english": "period",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η άνοδος",
         "english": "ascent / rise",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η κάθοδος",
         "english": "descent",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η λεωφόρος",
         "english": "avenue / boulevard",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η ψήφος",
         "english": "vote",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η νόσος",
         "english": "disease / illness",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η ήπειρος",
         "english": "continent",
-        "group": "Feminine -ος nouns",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "σπουδάζω",
         "english": "to study at university",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -266,67 +266,67 @@
     {
         "greek": "το καλοκαίρι",
         "english": "summer",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το φθινόπωρο",
         "english": "autumn / fall",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ο χειμώνας",
         "english": "winter",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η βροχή / βρέχει",
         "english": "rain / it is raining",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το χιόνι / χιονίζει",
         "english": "snow / it is snowing",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "κάνει κρύο",
         "english": "it is cold",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έχει ήλιο / λιακάδα",
         "english": "it is sunny",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "κάνει ζέστη",
         "english": "it is hot / warm",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έχει συννεφιά",
         "english": "it is cloudy",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "φυσάει",
         "english": "it is windy",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "εδώ και έναν μήνα",
         "english": "for a month now",
-        "group": "Weather & seasons",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -410,7 +410,7 @@
     {
         "greek": "ο πονοκέφαλος",
         "english": "headache",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -422,31 +422,31 @@
     {
         "greek": "η ξαδέλφη",
         "english": "female cousin",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το τζάκι",
         "english": "fireplace",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ο καναπές",
         "english": "sofa",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η πολυθρόνα",
         "english": "armchair",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "νωρίς",
         "english": "early",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -470,7 +470,7 @@
     {
         "greek": "η κουβέρτα",
         "english": "blanket",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -482,43 +482,43 @@
     {
         "greek": "το παγκάκι",
         "english": "bench",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η λίμνη",
         "english": "lake",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το γρασίδι",
         "english": "grass",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το δέντρο",
         "english": "tree",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η παπιά",
         "english": "duck",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το λούτρινο",
         "english": "plush toy / stuffed animal",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "τα σύννεφα",
         "english": "the clouds",
-        "group": "Outdoors & nature",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -536,7 +536,7 @@
     {
         "greek": "η καθηγήτρια",
         "english": "teacher (female)",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -548,43 +548,43 @@
     {
         "greek": "η πλατεία",
         "english": "square / plaza",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η εταιρεία",
         "english": "company",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "επίσης",
         "english": "also / as well",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "τα άρθρα",
         "english": "articles (grammar)",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "τα ουσιαστικά",
         "english": "nouns",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "το ξενοδοχείο",
         "english": "hotel",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το νοσοκομείο",
         "english": "hospital",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -614,7 +614,7 @@
     {
         "greek": "δυστυχώς",
         "english": "unfortunately",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -626,19 +626,19 @@
     {
         "greek": "φυσικά",
         "english": "naturally / of course",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "μάλιστα",
         "english": "indeed / certainly / of course",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "αμέσως",
         "english": "immediately",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -692,13 +692,13 @@
     {
         "greek": "ξυπνάω",
         "english": "to wake up",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "περίπου",
         "english": "approximately / about",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -722,13 +722,13 @@
     {
         "greek": "απέναντι",
         "english": "opposite / across the road",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "καταπληκτικά",
         "english": "fantastically / amazingly",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -812,31 +812,31 @@
     {
         "greek": "ντύνομαι",
         "english": "to get dressed",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "κοιμάμαι",
         "english": "to sleep",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "η άσκηση",
         "english": "exercise",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "ο χορός",
         "english": "dance",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "ξεκουράζομαι",
         "english": "to rest",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -854,7 +854,7 @@
     {
         "greek": "ίσως",
         "english": "maybe",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -866,13 +866,13 @@
     {
         "greek": "η περιοχή",
         "english": "area",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ο ύπνος",
         "english": "sleep",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -884,7 +884,7 @@
     {
         "greek": "αργά",
         "english": "slowly / late",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -902,7 +902,7 @@
     {
         "greek": "ετοιμάζομαι",
         "english": "to get ready / to prepare",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -914,7 +914,7 @@
     {
         "greek": "διάλειμμα",
         "english": "break / interval",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -938,55 +938,55 @@
     {
         "greek": "ο επιβάτης",
         "english": "passenger",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "η αποβάθρα",
         "english": "platform",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "το μετρό",
         "english": "metro / underground",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "ο προαστιακός",
         "english": "suburban train",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "ο σταθμός",
         "english": "station",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "η στάση",
         "english": "stop (bus/tram stop)",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "το τρόλεϊ",
         "english": "trolleybus",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "ο ηλεκτρικός",
         "english": "electric railway / metro (old Athens term)",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "όμως",
         "english": "however / but",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
@@ -998,7 +998,7 @@
     {
         "greek": "καθόλου",
         "english": "at all / not at all",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -1022,7 +1022,7 @@
     {
         "greek": "μεταπτυχιακό",
         "english": "postgraduate degree / masters",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1101,7 +1101,7 @@
         "greek": "ο ελεγκτής",
         "english": "inspector / controller",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "συνδέω",
@@ -1118,13 +1118,13 @@
     {
         "greek": "βουρτσίζω",
         "english": "to brush (teeth)",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": true
     },
     {
         "greek": "τα δόντια",
         "english": "teeth",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1142,73 +1142,73 @@
     {
         "greek": "στις τρεις",
         "english": "at three o'clock",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": false
     },
     {
         "greek": "για λίγο",
         "english": "for a little while",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": false
     },
     {
         "greek": "προς το γραφείο",
         "english": "towards the office",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": false
     },
     {
         "greek": "μέχρι τις τρεις",
         "english": "until three",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": false
     },
     {
         "greek": "ώς εδώ",
         "english": "up to here",
-        "group": "Prepositional phrases",
-        "marked": true
+        "group": "Connectors & logic",
+        "marked": false
     },
     {
         "greek": "χωρίς λεφτά",
         "english": "without money",
-        "group": "Prepositional phrases",
-        "marked": true
+        "group": "Connectors & logic",
+        "marked": false
     },
     {
         "greek": "εξαιτίας της βροχής",
         "english": "because of the rain",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "αντί της Μαρίας",
         "english": "instead of Maria",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "εκτός του Αχιλλέα",
         "english": "except Achilles",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "υπέρ του Νίκου",
         "english": "in favour of Nikos",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
         "greek": "κατά τις δέκα",
         "english": "around ten o'clock",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": false
     },
     {
         "greek": "κατά τη γνώμη μου",
         "english": "in my opinion",
-        "group": "Prepositional phrases",
+        "group": "Connectors & logic",
         "marked": true
     },
     {
@@ -1226,7 +1226,7 @@
     {
         "greek": "η πλάτη",
         "english": "back (body part)",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1256,7 +1256,7 @@
     {
         "greek": "ο τόπος",
         "english": "place",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -1299,7 +1299,7 @@
         "greek": "ή... ή",
         "english": "either... or",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "είτε... είτε",
@@ -1335,7 +1335,7 @@
         "greek": "αρχικά",
         "english": "initially",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "καταρχάς",
@@ -1376,7 +1376,7 @@
     {
         "greek": "επιπλέον",
         "english": "furthermore",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": true
     },
     {
@@ -1388,13 +1388,13 @@
     {
         "greek": "το πτυχίο",
         "english": "diploma",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "η γωνία",
         "english": "corner",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -1437,13 +1437,13 @@
         "greek": "όποτε",
         "english": "whenever",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αν και",
         "english": "although",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "παρόλο που",
@@ -1473,7 +1473,7 @@
         "greek": "για να",
         "english": "in order to",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "πως",
@@ -1502,13 +1502,13 @@
     {
         "greek": "σύντομα",
         "english": "soon",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η ταινία",
         "english": "movie",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
@@ -1538,7 +1538,7 @@
     {
         "greek": "τόσο",
         "english": "so much",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
@@ -1574,13 +1574,13 @@
     {
         "greek": "χορεύω",
         "english": "to dance",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "πεινάω",
         "english": "to be hungry",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1598,31 +1598,31 @@
     {
         "greek": "η γιορτή",
         "english": "name day",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "καλύτερα",
         "english": "better",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "η συμμαθήτρια",
         "english": "classmate (f.)",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "διπλανός",
         "english": "adjacent",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "το θρανίο",
         "english": "desk (school)",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1634,13 +1634,13 @@
     {
         "greek": "οι γονείς",
         "english": "parents",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το χέρι",
         "english": "hand",
-        "group": "Daily routine",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1670,13 +1670,13 @@
     {
         "greek": "εντατικά",
         "english": "intensively",
-        "group": "Adverbs & qualifiers",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "οι εξετάσεις",
         "english": "exams",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -1826,19 +1826,19 @@
     {
         "greek": "το γυμναστήριο",
         "english": "gym",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "τα μέσα κοινωνικής δικτύωσης",
         "english": "social media",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "το ταξίδι",
         "english": "trip",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
@@ -1856,13 +1856,13 @@
     {
         "greek": "το χόμπι",
         "english": "hobby",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "το ενδιαφέρον",
         "english": "interest",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
@@ -2576,7 +2576,7 @@
     {
         "greek": "το εξάμηνο",
         "english": "semester",
-        "group": "School & study",
+        "group": "Daily life & school",
         "marked": false
     },
     {
@@ -2594,7 +2594,7 @@
     {
         "greek": "τα γενέθλια",
         "english": "birthday",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": false
     },
     {
@@ -2624,13 +2624,13 @@
     {
         "greek": "το ανθοπωλείο",
         "english": "flower shop",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "το ψιλικατζίδικο",
         "english": "convenience store",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -2660,7 +2660,7 @@
     {
         "greek": "παντρεμένος",
         "english": "married",
-        "group": "Housing & buildings",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -2708,19 +2708,19 @@
     {
         "greek": "το φανάρι",
         "english": "traffic light",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": false
     },
     {
         "greek": "η γέφυρα",
         "english": "bridge",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "η έξοδος",
         "english": "exit",
-        "group": "Places & locations",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -2756,7 +2756,7 @@
     {
         "greek": "η βαλίτσα",
         "english": "suitcase",
-        "group": "Leisure & travel",
+        "group": "Transport & travel",
         "marked": true
     },
     {
@@ -2780,7 +2780,7 @@
     {
         "greek": "το εκδοτήριο",
         "english": "ticket office",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
@@ -2792,7 +2792,7 @@
     {
         "greek": "η μετακίνηση",
         "english": "move / commute",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
@@ -2834,31 +2834,31 @@
     {
         "greek": "η αφετηρία",
         "english": "starting point / bus terminus",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
         "greek": "έχει πολλή κίνηση",
         "english": "there is heavy traffic",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
         "greek": "η διαδρομή",
         "english": "route / journey",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
         "greek": "έχει ανταπόκριση",
         "english": "it has a connection / transfer",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
         "greek": "το πρόστιμο",
         "english": "fine / penalty",
-        "group": "Transport",
+        "group": "Transport & travel",
         "marked": true
     },
     {
