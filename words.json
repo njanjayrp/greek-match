@@ -477,7 +477,7 @@
         "greek": "κάθομαι",
         "english": "to sit",
         "group": "General",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "το παγκάκι",
@@ -3159,6 +3159,114 @@
         "greek": "το φούξια",
         "english": "fuchsia",
         "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "ζεσταίνομαι",
+        "english": "to feel warm / warm up",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "αισθάνομαι",
+        "english": "to feel",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "σηκώνομαι",
+        "english": "to get up / stand up",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "κουράζομαι",
+        "english": "to get tired",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ο πυρετός",
+        "english": "fever",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "ο εαυτός",
+        "english": "self / oneself",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "διαφορετικός",
+        "english": "different",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η κακία",
+        "english": "malice / spite",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "συγχωρώ",
+        "english": "to forgive",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "η αξία",
+        "english": "value",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "πραγματικός",
+        "english": "real / true",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "βγάζω",
+        "english": "to take out / bring out",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "υποστηρίζω",
+        "english": "to support",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "νιώθω",
+        "english": "to feel",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "κρατάω κακία",
+        "english": "to hold a grudge",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "στα δύσκολα",
+        "english": "in tough times",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "ακονίζω",
+        "english": "to sharpen",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "το σίδερο",
+        "english": "iron",
+        "group": "General",
         "marked": false
     }
 ]
