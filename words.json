@@ -1239,7 +1239,7 @@
         "greek": "πετάω",
         "english": "to throw / to fly",
         "group": "Common verbs",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ο χρυσός",
@@ -1305,13 +1305,13 @@
         "greek": "είτε... είτε",
         "english": "either... or (formal)",
         "group": "Connectors & logic",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ούτε... ούτε",
         "english": "neither... nor",
         "group": "Connectors & logic",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "άρα",
@@ -1449,7 +1449,7 @@
         "greek": "παρόλο που",
         "english": "even though / despite the fact that",
         "group": "Connectors & logic",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ενώ",

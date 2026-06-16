@@ -2,7 +2,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #fdfcf6;
+    background: #f0f2f5;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     display: flex;
@@ -17,11 +17,7 @@ body {
     overscroll-behavior: none;
 }
 
-h1 {
-    font-family: "Didot", "GFS Didot", Georgia, "Times New Roman", serif;
-    font-size: 26px; font-weight: 600; letter-spacing: 0.5px;
-    color: #0d4d8a; margin-bottom: 6px;
-}
+h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
 .subtitle { font-size: 13px; color: #888; margin-bottom: 32px; }
 
 .game { width: 100%; max-width: 720px; }
@@ -42,7 +38,7 @@ h1 {
     padding: 6px 8px; min-height: 48px; display: flex; align-items: center;
     transition: border-color 0.15s, background 0.15s; position: relative;
 }
-.dropzone.over    { border-color: #1565c0; background: #e3f2fd; }
+.dropzone.over    { border-color: #4a6cf7; background: #f0f4ff; }
 .dropzone.correct { border: 1.5px solid #22c55e; background: #f0fdf4; }
 .dropzone.wrong   { border: 1.5px solid #ef4444; background: #fef2f2; }
 .dropzone.empty-hint::before {
@@ -56,7 +52,7 @@ h1 {
     padding: 16px; display: flex; flex-wrap: wrap; gap: 8px;
     min-height: 64px; margin-bottom: 24px; transition: border-color 0.15s, background 0.15s;
 }
-.bank.over { border-color: #1565c0; background: #e3f2fd; }
+.bank.over { border-color: #4a6cf7; background: #f0f4ff; }
 
 .chip {
     background: #1a1a2e; color: #fff; border-radius: 6px; padding: 8px 14px;
@@ -71,7 +67,7 @@ h1 {
 .dropzone.correct .chip { background: #16a34a; }
 .dropzone.wrong .chip   { background: #dc2626; }
 .chip.repeat::after    { content: "\21BA"; margin-left: 6px; opacity: 0.5; font-size: 11px; }
-.chip.selected         { outline: 2px solid #1565c0; box-shadow: 0 0 0 3px rgba(74,108,247,0.25); }
+.chip.selected         { outline: 2px solid #4a6cf7; box-shadow: 0 0 0 3px rgba(74,108,247,0.25); }
 
 /* -- Quiz game -- */
 #quiz-container { margin-bottom: 24px; }
@@ -90,7 +86,7 @@ h1 {
 .quiz-timer-bar {
     height: 4px; background: #e2e5ea; border-radius: 2px; margin-bottom: 16px; overflow: hidden;
 }
-#quiz-timer-fill { height: 100%; background: #1565c0; width: 100%; transition: width 0.1s linear; }
+#quiz-timer-fill { height: 100%; background: #4a6cf7; width: 100%; transition: width 0.1s linear; }
 
 #quiz-options {
     display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
@@ -102,7 +98,7 @@ h1 {
     text-align: center; transition: border-color 0.15s, background 0.15s;
     color: #1a1a2e;
 }
-.quiz-opt:hover:not(:disabled) { border-color: #1565c0; background: #e3f2fd; }
+.quiz-opt:hover:not(:disabled) { border-color: #4a6cf7; background: #f0f4ff; }
 .quiz-opt.correct { border-color: #22c55e; background: #f0fdf4; color: #16a34a; font-weight: 700; }
 .quiz-opt.wrong   { border-color: #ef4444; background: #fef2f2; color: #dc2626; }
 .quiz-opt:disabled { cursor: default; }
@@ -125,7 +121,7 @@ h1 {
     color: #1a1a2e; font-family: inherit;
     -webkit-user-select: text; user-select: text;
 }
-#typing-input:focus    { outline: none; border-color: #1565c0; }
+#typing-input:focus    { outline: none; border-color: #4a6cf7; }
 #typing-input:disabled { opacity: 0.65; background: #f6f7fa; }
 #typing-submit { background: #1a1a2e; color: #fff; padding: 10px 20px; }
 #typing-submit:hover { background: #2d2d4e; }
@@ -156,7 +152,7 @@ h1 {
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 16px; font-size: 13px; color: #888; font-weight: 600;
 }
-#fill-topic { font-size: 12px; color: #1565c0; text-transform: uppercase; letter-spacing: 0.5px; }
+#fill-topic { font-size: 12px; color: #4a6cf7; text-transform: uppercase; letter-spacing: 0.5px; }
 #fill-prompt {
     background: #fff; border: 1.5px solid #e2e5ea; border-radius: 10px 10px 0 0;
     padding: 16px 20px; text-align: center; font-size: 14px; color: #666;
@@ -173,7 +169,7 @@ h1 {
     border-bottom: 2px solid #c8cdd6; border-radius: 4px;
     color: #1a1a2e; font-weight: 700; transition: all 0.15s; position: relative;
 }
-.fill-slot.filled  { background: #e3f2fd; border-bottom-color: #1565c0; color: #1565c0; }
+.fill-slot.filled  { background: #f0f4ff; border-bottom-color: #4a6cf7; color: #4a6cf7; }
 .fill-slot.correct { background: #f0fdf4; border-bottom-color: #22c55e; color: #16a34a; }
 .fill-slot.wrong   { background: #fef2f2; border-bottom-color: #ef4444; color: #dc2626;
                      text-decoration: line-through; text-decoration-color: #dc2626; }
@@ -193,8 +189,8 @@ h1 {
     color: #1a1a2e; transition: border-color 0.15s, background 0.15s;
     font-family: inherit; flex: 1 1 0; min-width: 70px;
 }
-.fill-opt:hover:not(:disabled) { border-color: #1565c0; background: #e3f2fd; }
-.fill-opt.selected { border-color: #1565c0; background: #1565c0; color: #fff; }
+.fill-opt:hover:not(:disabled) { border-color: #4a6cf7; background: #f0f4ff; }
+.fill-opt.selected { border-color: #4a6cf7; background: #4a6cf7; color: #fff; }
 .fill-opt.correct  { border-color: #22c55e; background: #f0fdf4; color: #16a34a; }
 .fill-opt.wrong    { border-color: #ef4444; background: #fef2f2; color: #dc2626; }
 .fill-opt:disabled { cursor: default; }
@@ -212,8 +208,8 @@ button:active { transform: scale(0.97); }
 #btn-check:hover  { background: #2d2d4e; }
 #btn-retry  { background: #e8eaf0; color: #1a1a2e; }
 #btn-retry:hover  { background: #d8dae4; }
-#btn-new    { background: #1565c0; color: #fff; }
-#btn-new:hover    { background: #0d4d8a; }
+#btn-new    { background: #4a6cf7; color: #fff; }
+#btn-new:hover    { background: #3a5ce7; }
 #btn-switch-a, #btn-switch-b { background: #e8eaf0; color: #1a1a2e; }
 #btn-switch-a:hover, #btn-switch-b:hover { background: #d8dae4; }
 
@@ -230,7 +226,7 @@ button:active { transform: scale(0.97); }
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%231a1a2e' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
     background-repeat: no-repeat; background-position: right 9px center; background-size: 10px;
 }
-.mode-select:focus { outline: none; border-color: #1565c0; }
+.mode-select:focus { outline: none; border-color: #4a6cf7; }
 .mode-select:disabled {
     cursor: not-allowed;
     color: #b0b4bd;
