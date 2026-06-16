@@ -2,7 +2,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #fdfcf6;
+    background: #c9bda3;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     display: flex;
@@ -59,17 +59,18 @@ h1 {
 .bank.over { border-color: #1565c0; background: #e3f2fd; }
 
 .chip {
-    background: #1a1a2e; color: #fff; border-radius: 6px; padding: 8px 14px;
-    font-size: 14px; cursor: grab; user-select: none; white-space: nowrap;
+    background: #fff; color: #15395a; border: 1.5px solid #15395a;
+    border-radius: 6px; padding: 8px 14px;
+    font-size: 14px; font-weight: 600; cursor: grab; user-select: none; white-space: nowrap;
     transition: opacity 0.15s, transform 0.15s;
     touch-action: none;
 }
 .chip:active           { cursor: grabbing; }
 .chip.dragging         { opacity: 0.35; }
 .chip.touch-dragging   { position: fixed; z-index: 1000; pointer-events: none; opacity: 0.85; transform: scale(1.08); }
-.dropzone .chip        { width: 100%; background: #2d3a8c; }
-.dropzone.correct .chip { background: #16a34a; }
-.dropzone.wrong .chip   { background: #dc2626; }
+.dropzone .chip        { width: 100%; background: #0d5eaf; color: #fff; border-color: #0d5eaf; }
+.dropzone.correct .chip { background: #16a34a; color: #fff; border-color: #16a34a; }
+.dropzone.wrong .chip   { background: #dc2626; color: #fff; border-color: #dc2626; }
 .chip.repeat::after    { content: "\21BA"; margin-left: 6px; opacity: 0.5; font-size: 11px; }
 .chip.selected         { outline: 2px solid #1565c0; box-shadow: 0 0 0 3px rgba(74,108,247,0.25); }
 
@@ -127,8 +128,8 @@ h1 {
 }
 #typing-input:focus    { outline: none; border-color: #1565c0; }
 #typing-input:disabled { opacity: 0.65; background: #f6f7fa; }
-#typing-submit { background: #1a1a2e; color: #fff; padding: 10px 20px; }
-#typing-submit:hover { background: #2d2d4e; }
+#typing-submit { background: #fff; color: #15395a; border: 1.5px solid #15395a; padding: 10px 20px; }
+#typing-submit:hover { background: #f5efdf; }
 #typing-feedback {
     text-align: center; font-size: 15px; font-weight: 600;
     min-height: 22px; padding: 4px;
@@ -208,13 +209,13 @@ button {
 }
 button:active { transform: scale(0.97); }
 
-#btn-check  { background: #1a1a2e; color: #fff; }
-#btn-check:hover  { background: #2d2d4e; }
-#btn-retry  { background: #e8eaf0; color: #1a1a2e; }
+#btn-check  { background: #fff; color: #15395a; border: 1.5px solid #15395a; }
+#btn-check:hover  { background: #f5efdf; }
+#btn-retry  { background: #e8eaf0; color: #15395a; }
 #btn-retry:hover  { background: #d8dae4; }
-#btn-new    { background: #1565c0; color: #fff; }
-#btn-new:hover    { background: #0d4d8a; }
-#btn-switch-a, #btn-switch-b { background: #e8eaf0; color: #1a1a2e; }
+#btn-new    { background: #0d5eaf; color: #fff; }
+#btn-new:hover    { background: #003f7a; }
+#btn-switch-a, #btn-switch-b { background: #e8eaf0; color: #15395a; }
 #btn-switch-a:hover, #btn-switch-b:hover { background: #d8dae4; }
 
 .game-header {
