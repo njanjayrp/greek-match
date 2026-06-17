@@ -1479,7 +1479,7 @@
         "greek": "πως",
         "english": "that",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μη(ν)",
@@ -1491,7 +1491,7 @@
         "greek": "που",
         "english": "that (resultative)",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "λήγω",
