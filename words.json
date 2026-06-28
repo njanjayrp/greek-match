@@ -524,13 +524,13 @@
     {
         "greek": "το μπλουζάκι",
         "english": "t-shirt",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το κοντομάνικο",
         "english": "short-sleeved shirt",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -1130,7 +1130,7 @@
     {
         "greek": "από χρυσό",
         "english": "made of gold",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
@@ -1220,7 +1220,7 @@
     {
         "greek": "η τσάντα πλάτης",
         "english": "backpack",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -1244,7 +1244,7 @@
     {
         "greek": "ο χρυσός",
         "english": "gold",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -2750,7 +2750,7 @@
     {
         "greek": "η γραβάτα",
         "english": "tie",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -2870,289 +2870,289 @@
     {
         "greek": "η μπλούζα",
         "english": "blouse / top",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το φόρεμα",
         "english": "dress",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η φούστα",
         "english": "skirt",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το παντελόνι",
         "english": "trousers",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το τζιν",
         "english": "jeans",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η βερμούδα",
         "english": "bermuda shorts",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το σορτς",
         "english": "shorts",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το κοστούμι",
         "english": "suit",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το φούτερ",
         "english": "hoodie / sweatshirt",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η φόρμα",
         "english": "tracksuit",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το πουλόβερ",
         "english": "pullover / sweater",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το πουκάμισο",
         "english": "shirt",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το σακάκι",
         "english": "jacket / blazer",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το παλτό",
         "english": "coat",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η καμπαρντίνα",
         "english": "trench coat",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μπουφάν",
         "english": "jacket / windbreaker",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "οι μπότες",
         "english": "boots",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "τα γάντια",
         "english": "gloves",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το κασκόλ",
         "english": "scarf (wool)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "ο σκούφος",
         "english": "beanie",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το καπέλο",
         "english": "hat",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το φουλάρι",
         "english": "scarf (silk)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η ζώνη",
         "english": "belt",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η τσάντα",
         "english": "bag",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "βαμβακερός",
         "english": "cotton (adj)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "βελούδινος",
         "english": "velvet",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "μάλλινος",
         "english": "woolen",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "μεταξωτός",
         "english": "silk (adj)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "δερμάτινος",
         "english": "leather (adj)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "γούνινος",
         "english": "fur (adj)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "γαλάζιος",
         "english": "light blue / sky blue",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το καφέ",
         "english": "brown (color)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μπλε",
         "english": "blue",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το ροζ",
         "english": "pink",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μπορντό",
         "english": "burgundy",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μουσταρδί",
         "english": "mustard yellow",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το λαχανί",
         "english": "lime green",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το γκρι",
         "english": "grey",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μπεζ",
         "english": "beige",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το εκρού",
         "english": "ecru / off-white",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το κρεμ",
         "english": "cream",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μοβ",
         "english": "purple",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το πορτοκαλί",
         "english": "orange (color)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το πετρόλ",
         "english": "petrol blue",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το λαδί",
         "english": "olive (color)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το χακί",
         "english": "khaki",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το τιρκουάζ",
         "english": "turquoise",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το φούξια",
         "english": "fuchsia",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -3266,283 +3266,283 @@
     {
         "greek": "το σώμα",
         "english": "body",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το κεφάλι",
         "english": "head",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "ο ώμος",
         "english": "shoulder",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η μέση",
         "english": "waist",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "οι γλουτοί",
         "english": "buttocks",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "τα δάχτυλα",
         "english": "fingers / toes",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η κοιλιά",
         "english": "belly",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το στήθος",
         "english": "chest",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το πόδι",
         "english": "leg / foot",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μπούτι",
         "english": "thigh",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η γάμπα",
         "english": "calf",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το γόνατο",
         "english": "knee",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η πατούσα",
         "english": "sole of foot",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το πέλμα",
         "english": "sole / footprint",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "κανονικός",
         "english": "normal / regular (build)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "αδύνατος",
         "english": "slim / weak",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "παχύς",
         "english": "fat",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "χοντρός",
         "english": "fat / chubby",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "ψηλός",
         "english": "tall",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "κοντός",
         "english": "short (height)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "το κιλό",
         "english": "kilo",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το ύψος",
         "english": "height",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "τα μαλλιά",
         "english": "hair",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "ξανθός",
         "english": "blonde",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "μελαχρινός",
         "english": "dark-haired",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "κοκκινομάλλης",
         "english": "red-haired",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "ασπρομάλλης",
         "english": "white-haired",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "γκριζομάλλης",
         "english": "grey-haired",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "μακρύς",
         "english": "long",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "ίσιος",
         "english": "straight",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "σγουρός",
         "english": "curly",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "σπαστός",
         "english": "wavy",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "τα ράστα",
         "english": "dreadlocks",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "ο κότσος",
         "english": "bun",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η κοτσίδα",
         "english": "braid",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η αλογοουρά",
         "english": "ponytail",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "τα μάτια",
         "english": "eyes",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "γαλανός",
         "english": "blue (eyes)",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "η μύτη",
         "english": "nose",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "μυτερός",
         "english": "pointed",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "στραβός",
         "english": "crooked",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "ξυρισμένος",
         "english": "clean-shaven",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "το μουστάκι",
         "english": "mustache",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "το μούσι",
         "english": "goatee",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "τα γένια",
         "english": "beard",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "η φαλάκρα",
         "english": "baldness",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "φαλακρός",
         "english": "bald",
-        "group": "Wardrobe and Colors",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {

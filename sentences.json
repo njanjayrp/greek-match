@@ -1838,5 +1838,275 @@
         "hint": "trust (perfective subjunctive — 'δεν θα τον ___')"
       }
     ]
+  },
+  {
+    "id": "paragogi-001",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "He speaks Greek very well.",
+    "template": "Μιλάει πολύ {0} τα ελληνικά.",
+    "blanks": [
+      {
+        "answer": "καλά",
+        "options": [
+          "καλά",
+          "καλός",
+          "καλό",
+          "καλή"
+        ],
+        "hint": "adverb from καλός (adj → adv: neut. pl. form)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-002",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "He runs very fast.",
+    "template": "Τρέχει πολύ {0}.",
+    "blanks": [
+      {
+        "answer": "γρήγορα",
+        "options": [
+          "γρήγορα",
+          "γρήγορος",
+          "γρήγορη",
+          "γρήγορο"
+        ],
+        "hint": "adverb from γρήγορος"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-003",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "Her beauty is impressive.",
+    "template": "Η {0} της είναι εντυπωσιακή.",
+    "blanks": [
+      {
+        "answer": "ομορφιά",
+        "options": [
+          "ομορφιά",
+          "όμορφος",
+          "όμορφη",
+          "ομορφαίνω"
+        ],
+        "hint": "abstract noun from όμορφος (adj → noun in -ιά)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-004",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "It's very hot in August.",
+    "template": "Κάνει πολύ {0} τον Αύγουστο.",
+    "blanks": [
+      {
+        "answer": "ζέστη",
+        "options": [
+          "ζέστη",
+          "ζεστός",
+          "ζεστό",
+          "ζεσταίνω"
+        ],
+        "hint": "noun from ζεστός (used with κάνει for weather)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-005",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "He wrote me a long letter from Australia.",
+    "template": "Μου έγραψε ένα μακρύ {0} από την Αυστραλία.",
+    "blanks": [
+      {
+        "answer": "γράμμα",
+        "options": [
+          "γράμμα",
+          "γραφή",
+          "γράψιμο",
+          "γραφέας"
+        ],
+        "hint": "result-noun from γράφω (verb → -μα noun)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-006",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "I have a good thought about your project.",
+    "template": "Έχω μια καλή {0} για το πρότζεκτ σου.",
+    "blanks": [
+      {
+        "answer": "σκέψη",
+        "options": [
+          "σκέψη",
+          "σκέφτομαι",
+          "σκεπτικός",
+          "σκεφτικό"
+        ],
+        "hint": "action-noun from σκέφτομαι (verb → -ση noun)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-007",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "The school year begins in September.",
+    "template": "Η {0} χρονιά αρχίζει τον Σεπτέμβριο.",
+    "blanks": [
+      {
+        "answer": "σχολική",
+        "options": [
+          "σχολική",
+          "σχολικό",
+          "σχολείο",
+          "σχολικά"
+        ],
+        "hint": "relational adj from σχολείο (noun → -ικός), fem. to agree with χρονιά"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-008",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "I'm wearing a cotton t-shirt.",
+    "template": "Φοράω ένα {0} μπλουζάκι.",
+    "blanks": [
+      {
+        "answer": "βαμβακερό",
+        "options": [
+          "βαμβακερό",
+          "βαμβακερή",
+          "βαμβάκι",
+          "βαμβακερός"
+        ],
+        "hint": "material adj from βαμβάκι (noun → -ερός), neut. to agree with μπλουζάκι"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-009",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "I drink coffee only in the morning hours.",
+    "template": "Πίνω καφέ μόνο τις {0} ώρες.",
+    "blanks": [
+      {
+        "answer": "πρωινές",
+        "options": [
+          "πρωινές",
+          "πρωί",
+          "πρωινός",
+          "πρωινά"
+        ],
+        "hint": "time-adj from πρωί (noun → -ινός), fem. pl. to agree with ώρες"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-010",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "In summer there are many tourists on the island.",
+    "template": "Το καλοκαίρι υπάρχουν πολλοί {0} στο νησί.",
+    "blanks": [
+      {
+        "answer": "τουρίστες",
+        "options": [
+          "τουρίστες",
+          "τουρίστας",
+          "τουρισμός",
+          "τουριστικός"
+        ],
+        "hint": "person-noun from τουρισμός (noun → -ιστής), masc. pl."
+      }
+    ]
+  },
+  {
+    "id": "paragogi-011",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "The teacher explained the lesson to us very clearly.",
+    "template": "Ο {0} μάς εξήγησε το μάθημα πολύ καθαρά.",
+    "blanks": [
+      {
+        "answer": "δάσκαλος",
+        "options": [
+          "δάσκαλος",
+          "διδάσκω",
+          "διδασκαλία",
+          "δασκάλα"
+        ],
+        "hint": "person-noun from διδάσκω (verb → -αλος agent)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-012",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "I bought the medicines from the pharmacy across the street.",
+    "template": "Αγόρασα τα φάρμακα από το {0} απέναντι.",
+    "blanks": [
+      {
+        "answer": "φαρμακείο",
+        "options": [
+          "φαρμακείο",
+          "φάρμακο",
+          "φαρμακοποιός",
+          "φαρμακείου"
+        ],
+        "hint": "place-noun from φάρμακο (noun → -είο for place where)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-013",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "I saw a small child playing in the yard.",
+    "template": "Είδα ένα μικρό {0} να παίζει στην αυλή.",
+    "blanks": [
+      {
+        "answer": "παιδάκι",
+        "options": [
+          "παιδάκι",
+          "παιδί",
+          "παιδιά",
+          "παιδικός"
+        ],
+        "hint": "diminutive of παιδί (noun + -άκι)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-014",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "He drives the car very slowly.",
+    "template": "Οδηγεί το αυτοκίνητο πολύ {0}.",
+    "blanks": [
+      {
+        "answer": "αργά",
+        "options": [
+          "αργά",
+          "αργός",
+          "αργή",
+          "αργό"
+        ],
+        "hint": "adverb from αργός (slow)"
+      }
+    ]
+  },
+  {
+    "id": "paragogi-015",
+    "topic": "Παραγωγή Λέξεων",
+    "en": "Freedom is a fundamental human right.",
+    "template": "Η {0} είναι θεμελιώδες ανθρώπινο δικαίωμα.",
+    "blanks": [
+      {
+        "answer": "ελευθερία",
+        "options": [
+          "ελευθερία",
+          "ελεύθερος",
+          "ελεύθερα",
+          "ελευθερώνω"
+        ],
+        "hint": "abstract noun from ελεύθερος (adj → -ία)"
+      }
+    ]
   }
 ]
