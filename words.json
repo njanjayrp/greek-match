@@ -3163,7 +3163,7 @@
     },
     {
         "greek": "αισθάνομαι",
-        "english": "to feel",
+        "english": "to feel (formal)",
         "group": "Common verbs",
         "marked": true
     },
@@ -3235,7 +3235,7 @@
     },
     {
         "greek": "νιώθω",
-        "english": "to feel",
+        "english": "to feel (colloquial)",
         "group": "Feelings & emotions",
         "marked": true
     },
