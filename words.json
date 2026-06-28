@@ -1485,7 +1485,7 @@
         "greek": "μη(ν)",
         "english": "don't let",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "που",
@@ -1497,7 +1497,7 @@
         "greek": "λήγω",
         "english": "to expire",
         "group": "Commerce & delivery",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "σύντομα",
@@ -1533,7 +1533,7 @@
         "greek": "θυμώνω",
         "english": "to get angry",
         "group": "Feelings & emotions",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "τόσο",
@@ -2838,12 +2838,6 @@
         "marked": true
     },
     {
-        "greek": "έχει πολλή κίνηση",
-        "english": "there is heavy traffic",
-        "group": "Transport & travel",
-        "marked": true
-    },
-    {
         "greek": "η διαδρομή",
         "english": "route / journey",
         "group": "Transport & travel",
@@ -3268,5 +3262,383 @@
         "english": "iron",
         "group": "General",
         "marked": false
+    },
+    {
+        "greek": "το σώμα",
+        "english": "body",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το κεφάλι",
+        "english": "head",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "ο ώμος",
+        "english": "shoulder",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η μέση",
+        "english": "waist",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "οι γλουτοί",
+        "english": "buttocks",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "τα δάχτυλα",
+        "english": "fingers / toes",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η κοιλιά",
+        "english": "belly",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το στήθος",
+        "english": "chest",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το πόδι",
+        "english": "leg / foot",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μπούτι",
+        "english": "thigh",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η γάμπα",
+        "english": "calf",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το γόνατο",
+        "english": "knee",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η πατούσα",
+        "english": "sole of foot",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το πέλμα",
+        "english": "sole / footprint",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "κανονικός",
+        "english": "normal / regular (build)",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "αδύνατος",
+        "english": "slim / weak",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "παχύς",
+        "english": "fat",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "χοντρός",
+        "english": "fat / chubby",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "ψηλός",
+        "english": "tall",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "κοντός",
+        "english": "short (height)",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "το κιλό",
+        "english": "kilo",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το ύψος",
+        "english": "height",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "τα μαλλιά",
+        "english": "hair",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "ξανθός",
+        "english": "blonde",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "μελαχρινός",
+        "english": "dark-haired",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "κοκκινομάλλης",
+        "english": "red-haired",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "ασπρομάλλης",
+        "english": "white-haired",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "γκριζομάλλης",
+        "english": "grey-haired",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "μακρύς",
+        "english": "long",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "ίσιος",
+        "english": "straight",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "σγουρός",
+        "english": "curly",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "σπαστός",
+        "english": "wavy",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "τα ράστα",
+        "english": "dreadlocks",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "ο κότσος",
+        "english": "bun",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η κοτσίδα",
+        "english": "braid",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η αλογοουρά",
+        "english": "ponytail",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "τα μάτια",
+        "english": "eyes",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "γαλανός",
+        "english": "blue (eyes)",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "η μύτη",
+        "english": "nose",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "μυτερός",
+        "english": "pointed",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "στραβός",
+        "english": "crooked",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "ξυρισμένος",
+        "english": "clean-shaven",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "το μουστάκι",
+        "english": "mustache",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "το μούσι",
+        "english": "goatee",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "τα γένια",
+        "english": "beard",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η φαλάκρα",
+        "english": "baldness",
+        "group": "Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "φαλακρός",
+        "english": "bald",
+        "group": "Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "η βιτρίνα",
+        "english": "window display",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "φτηνός",
+        "english": "cheap",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "μαλακός",
+        "english": "soft",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "το νούμερο",
+        "english": "size (clothing/shoe)",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "η τιμή",
+        "english": "price",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "το ταμείο",
+        "english": "checkout / register",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "οι προσφορές",
+        "english": "offers / promotions",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "το αγαπημένο",
+        "english": "favorite (n., neut.)",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "αγαπημένος",
+        "english": "favorite (adj.)",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "οδηγώ",
+        "english": "to drive",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "πλένομαι",
+        "english": "to wash oneself",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "σκέφτομαι",
+        "english": "to think",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ονειρεύομαι",
+        "english": "to dream",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "βρίσκομαι",
+        "english": "to be located",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "βιάζομαι",
+        "english": "to be in a hurry",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "λυπάμαι",
+        "english": "to be sorry / sad",
+        "group": "Common verbs",
+        "marked": true
     }
 ]
