@@ -2454,5 +2454,425 @@
         "hint": "holds (3sg present)"
       }
     ]
+  },
+  {
+    "id": "prep-airport-013",
+    "topic": "Prep: Airport",
+    "en": "My flight was cancelled, so I have to wait hours at the airport.",
+    "template": "Η πτήση μου {0}, οπότε πρέπει να {1} ώρες στο αεροδρόμιο.",
+    "blanks": [
+      {
+        "answer": "ακυρώθηκε",
+        "options": [
+          "ακυρώθηκε",
+          "ακύρωσε",
+          "ακυρώνει",
+          "ακυρώνομαι"
+        ],
+        "hint": "was cancelled (passive aor 3sg)"
+      },
+      {
+        "answer": "περιμένω",
+        "options": [
+          "περιμένω",
+          "περιμένεις",
+          "περιμένει",
+          "περίμενα"
+        ],
+        "hint": "wait (1sg subjunctive with πρέπει)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-014",
+    "topic": "Prep: Airport",
+    "en": "At customs you must declare what you have in your luggage.",
+    "template": "Στο τελωνείο πρέπει να {0} τι έχεις στις {1} σου.",
+    "blanks": [
+      {
+        "answer": "δηλώσεις",
+        "options": [
+          "δηλώσεις",
+          "δηλώνεις",
+          "δήλωσες",
+          "δηλώνω"
+        ],
+        "hint": "declare (2sg perfective subj — with πρέπει)"
+      },
+      {
+        "answer": "αποσκευές",
+        "options": [
+          "αποσκευές",
+          "αποσκευή",
+          "αποσκευών",
+          "αποσκευά"
+        ],
+        "hint": "luggage (acc. pl.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-015",
+    "topic": "Prep: Airport",
+    "en": "When the announcement for my flight is heard, I'll go to the gate.",
+    "template": "Όταν {0} η ανακοίνωση για την {1} μου, θα πάω στην πύλη.",
+    "blanks": [
+      {
+        "answer": "ακουστεί",
+        "options": [
+          "ακουστεί",
+          "ακούεται",
+          "ακούστηκε",
+          "ακούει"
+        ],
+        "hint": "is heard (3sg passive subj — with όταν+future)"
+      },
+      {
+        "answer": "πτήση",
+        "options": [
+          "πτήση",
+          "πτήσεις",
+          "επιβίβαση",
+          "άφιξη"
+        ],
+        "hint": "flight (acc. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-016",
+    "topic": "Prep: Airport",
+    "en": "I didn't catch the flight because there was a delay on the train.",
+    "template": "Δεν πρόλαβα την πτήση γιατί {0} {1} στο τρένο.",
+    "blanks": [
+      {
+        "answer": "είχε",
+        "options": [
+          "είχε",
+          "είχα",
+          "είχαν",
+          "έχει"
+        ],
+        "hint": "there was (3sg impersonal, past)"
+      },
+      {
+        "answer": "καθυστέρηση",
+        "options": [
+          "καθυστέρηση",
+          "καθυστερήσεις",
+          "ακύρωση",
+          "ανακοίνωση"
+        ],
+        "hint": "delay (acc. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-017",
+    "topic": "Prep: Airport",
+    "en": "At the Athens airport there are always many tourists in summer.",
+    "template": "Στο αεροδρόμιο της Αθήνας {0} πάντα πολλοί τουρίστες {1} καλοκαίρι.",
+    "blanks": [
+      {
+        "answer": "υπάρχουν",
+        "options": [
+          "υπάρχουν",
+          "υπάρχει",
+          "υπάρχει",
+          "υπήρχαν"
+        ],
+        "hint": "there are (3pl)"
+      },
+      {
+        "answer": "το",
+        "options": [
+          "το",
+          "τον",
+          "τη",
+          "τα"
+        ],
+        "hint": "the (acc. neut. sg. — definite article for habitual time)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-018",
+    "topic": "Prep: Airport",
+    "en": "You have to arrive at the airport three hours before your flight.",
+    "template": "Πρέπει να {0} στο αεροδρόμιο τρεις ώρες πριν {1} πτήση σου.",
+    "blanks": [
+      {
+        "answer": "φτάσεις",
+        "options": [
+          "φτάσεις",
+          "φτάνεις",
+          "έφτασες",
+          "φτάσουν"
+        ],
+        "hint": "you arrive (2sg perf subj)"
+      },
+      {
+        "answer": "την",
+        "options": [
+          "την",
+          "τη",
+          "τον",
+          "τις"
+        ],
+        "hint": "the (acc. fem. sg. before vowel)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-019",
+    "topic": "Prep: Airport",
+    "en": "In the waiting area many passengers are sitting with their phones in hand.",
+    "template": "Στην αίθουσα αναμονής {0} πολλοί επιβάτες με τα κινητά τους στο {1}.",
+    "blanks": [
+      {
+        "answer": "κάθονται",
+        "options": [
+          "κάθονται",
+          "κάθεται",
+          "κάθομαι",
+          "καθίσαμε"
+        ],
+        "hint": "they sit (3pl deponent present)"
+      },
+      {
+        "answer": "χέρι",
+        "options": [
+          "χέρι",
+          "χέρια",
+          "χεριού",
+          "χέρια"
+        ],
+        "hint": "hand (acc. neut. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-020",
+    "topic": "Prep: Airport",
+    "en": "We can't board the plane without a boarding pass.",
+    "template": "Δεν μπορούμε να {0} στο αεροπλάνο χωρίς {1} επιβίβασης.",
+    "blanks": [
+      {
+        "answer": "επιβιβαστούμε",
+        "options": [
+          "επιβιβαστούμε",
+          "επιβιβαζόμαστε",
+          "επιβιβάστηκα",
+          "επιβιβάζονται"
+        ],
+        "hint": "board (1pl perf subj of επιβιβάζομαι)"
+      },
+      {
+        "answer": "κάρτα",
+        "options": [
+          "κάρτα",
+          "κάρτες",
+          "καρτών",
+          "κάρτας"
+        ],
+        "hint": "card (acc. fem. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-021",
+    "topic": "Prep: Airport",
+    "en": "The announcement said that the gate changed from B12 to B15.",
+    "template": "Η ανακοίνωση είπε ότι η πύλη {0} από την Β12 {1} Β15.",
+    "blanks": [
+      {
+        "answer": "άλλαξε",
+        "options": [
+          "άλλαξε",
+          "αλλάζει",
+          "αλλάζω",
+          "άλλαξαν"
+        ],
+        "hint": "changed (3sg aorist)"
+      },
+      {
+        "answer": "στην",
+        "options": [
+          "στην",
+          "στον",
+          "στο",
+          "στις"
+        ],
+        "hint": "to the (acc. fem. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-022",
+    "topic": "Prep: Airport",
+    "en": "The passenger weighed his suitcase and saw that it was too heavy.",
+    "template": "Ο επιβάτης ζύγισε τη βαλίτσα του και {0} ότι {1} πολύ βαριά.",
+    "blanks": [
+      {
+        "answer": "είδε",
+        "options": [
+          "είδε",
+          "βλέπει",
+          "βλέπω",
+          "είδαν"
+        ],
+        "hint": "saw (3sg aor of βλέπω)"
+      },
+      {
+        "answer": "ήταν",
+        "options": [
+          "ήταν",
+          "είναι",
+          "είμαι",
+          "ήμουν"
+        ],
+        "hint": "was (3sg imperfect of είμαι)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-023",
+    "topic": "Prep: Airport",
+    "en": "Before we leave for the airport, we have to check that we have our passports.",
+    "template": "Πριν φύγουμε για το αεροδρόμιο, πρέπει να {0} ότι έχουμε τα {1} μας.",
+    "blanks": [
+      {
+        "answer": "ελέγξουμε",
+        "options": [
+          "ελέγξουμε",
+          "ελέγχουμε",
+          "έλεγξα",
+          "ελέγχει"
+        ],
+        "hint": "check (1pl perf subj — with πρέπει)"
+      },
+      {
+        "answer": "διαβατήρια",
+        "options": [
+          "διαβατήρια",
+          "διαβατήριο",
+          "διαβατηρίων",
+          "διαβατηρίου"
+        ],
+        "hint": "passports (acc. neut. pl.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-024",
+    "topic": "Prep: Airport",
+    "en": "The family is saying goodbye to the daughter who is leaving to study abroad.",
+    "template": "Η οικογένεια {0} αντίο στην κόρη που {1} για σπουδές στο εξωτερικό.",
+    "blanks": [
+      {
+        "answer": "λέει",
+        "options": [
+          "λέει",
+          "λένε",
+          "λέω",
+          "είπε"
+        ],
+        "hint": "says (3sg present)"
+      },
+      {
+        "answer": "φεύγει",
+        "options": [
+          "φεύγει",
+          "φεύγουν",
+          "φεύγω",
+          "έφυγε"
+        ],
+        "hint": "is leaving (3sg present)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-025",
+    "topic": "Prep: Airport",
+    "en": "The pilot welcomes the passengers and informs them about the flight duration.",
+    "template": "Ο πιλότος {0} τους επιβάτες και τους {1} για τη διάρκεια της πτήσης.",
+    "blanks": [
+      {
+        "answer": "καλωσορίζει",
+        "options": [
+          "καλωσορίζει",
+          "καλωσορίζουν",
+          "καλωσόρισε",
+          "καλωσορίζω"
+        ],
+        "hint": "welcomes (3sg present)"
+      },
+      {
+        "answer": "ενημερώνει",
+        "options": [
+          "ενημερώνει",
+          "ενημερώνουν",
+          "ενημερώνω",
+          "ενημέρωσε"
+        ],
+        "hint": "informs (3sg present)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-026",
+    "topic": "Prep: Airport",
+    "en": "At the check-in desk you'll hand over your luggage and receive your boarding pass.",
+    "template": "Στο γκισέ {0} τσεκ-ιν θα παραδώσεις τις αποσκευές σου και θα {1} την κάρτα επιβίβασης.",
+    "blanks": [
+      {
+        "answer": "του",
+        "options": [
+          "του",
+          "της",
+          "τους",
+          "τα"
+        ],
+        "hint": "of the (gen. neut. sg.)"
+      },
+      {
+        "answer": "πάρεις",
+        "options": [
+          "πάρεις",
+          "παίρνεις",
+          "πήρες",
+          "πάρουν"
+        ],
+        "hint": "receive (2sg perf subj — with θα)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-027",
+    "topic": "Prep: Airport",
+    "en": "Although the flight had a delay, all the passengers stayed calm.",
+    "template": "{0} η πτήση είχε καθυστέρηση, όλοι οι επιβάτες {1} ήρεμοι.",
+    "blanks": [
+      {
+        "answer": "Αν και",
+        "options": [
+          "Αν και",
+          "Επειδή",
+          "Όταν",
+          "Πριν"
+        ],
+        "hint": "although (contrast)"
+      },
+      {
+        "answer": "έμειναν",
+        "options": [
+          "έμειναν",
+          "έμεινε",
+          "μένω",
+          "μένουν"
+        ],
+        "hint": "remained / stayed (3pl aorist)"
+      }
+    ]
   }
 ]
