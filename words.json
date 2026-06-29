@@ -3640,5 +3640,119 @@
         "english": "to be sorry / sad",
         "group": "Common verbs",
         "marked": true
+    },
+    {
+        "greek": "το αεροδρόμιο",
+        "english": "airport",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η πτήση",
+        "english": "flight",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η αναχώρηση",
+        "english": "departure",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η πύλη",
+        "english": "gate",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η επιβίβαση",
+        "english": "boarding",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η κάρτα επιβίβασης",
+        "english": "boarding pass",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "το διαβατήριο",
+        "english": "passport",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "ο έλεγχος ασφαλείας",
+        "english": "security check",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η αεροσυνοδός",
+        "english": "flight attendant (fem)",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "ο πιλότος",
+        "english": "pilot",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η ανακοίνωση",
+        "english": "announcement",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "η καθυστέρηση",
+        "english": "delay",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "οι αποσκευές",
+        "english": "luggage",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "το γκισέ",
+        "english": "counter / desk",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "το τελωνείο",
+        "english": "customs",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "αναχωρώ",
+        "english": "to depart",
+        "group": "Transport & travel",
+        "marked": true
+    },
+    {
+        "greek": "επιβιβάζομαι",
+        "english": "to board",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "κουβαλάω",
+        "english": "to carry",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ακυρώνω",
+        "english": "to cancel",
+        "group": "Common verbs",
+        "marked": true
     }
 ]

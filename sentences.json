@@ -2108,5 +2108,351 @@
         "hint": "abstract noun from ελεύθερος (adj → -ία)"
       }
     ]
+  },
+  {
+    "id": "prep-airport-001",
+    "topic": "Prep: Airport",
+    "en": "The passenger is carrying his suitcase toward the boarding gate.",
+    "template": "Ο επιβάτης {0} τη βαλίτσα του προς την {1} επιβίβασης.",
+    "blanks": [
+      {
+        "answer": "κουβαλάει",
+        "options": [
+          "κουβαλάει",
+          "κουβαλάω",
+          "κουβαλάς",
+          "κουβαλάμε"
+        ],
+        "hint": "he is carrying (3sg)"
+      },
+      {
+        "answer": "πύλη",
+        "options": [
+          "πύλη",
+          "πόρτα",
+          "έξοδο",
+          "είσοδο"
+        ],
+        "hint": "gate (airport boarding gate)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-002",
+    "topic": "Prep: Airport",
+    "en": "The flight to Athens has a half-hour delay.",
+    "template": "Η {0} για την Αθήνα έχει {1} μισή ώρα.",
+    "blanks": [
+      {
+        "answer": "πτήση",
+        "options": [
+          "πτήση",
+          "πτήσεις",
+          "άφιξη",
+          "αναχώρηση"
+        ],
+        "hint": "flight (sg.)"
+      },
+      {
+        "answer": "καθυστέρηση",
+        "options": [
+          "καθυστέρηση",
+          "ακύρωση",
+          "ανακοίνωση",
+          "επιβίβαση"
+        ],
+        "hint": "delay"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-003",
+    "topic": "Prep: Airport",
+    "en": "Some passengers are carefully listening to the announcements.",
+    "template": "Μερικοί επιβάτες {0} προσεκτικά τις {1}.",
+    "blanks": [
+      {
+        "answer": "ακούνε",
+        "options": [
+          "ακούνε",
+          "ακούει",
+          "ακούω",
+          "άκουσαν"
+        ],
+        "hint": "they listen (3pl present)"
+      },
+      {
+        "answer": "ανακοινώσεις",
+        "options": [
+          "ανακοινώσεις",
+          "ανακοίνωση",
+          "ανακοινώσεων",
+          "αφίξεις"
+        ],
+        "hint": "announcements (acc. pl.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-004",
+    "topic": "Prep: Airport",
+    "en": "On the board appear all the departures and arrivals of the day.",
+    "template": "Στον πίνακα {0} όλες οι {1} και {2} της ημέρας.",
+    "blanks": [
+      {
+        "answer": "φαίνονται",
+        "options": [
+          "φαίνονται",
+          "φαίνεται",
+          "φαίνομαι",
+          "έδειχνε"
+        ],
+        "hint": "they appear (3pl middle-passive)"
+      },
+      {
+        "answer": "αναχωρήσεις",
+        "options": [
+          "αναχωρήσεις",
+          "αναχώρηση",
+          "αφίξεις",
+          "πτήσεις"
+        ],
+        "hint": "departures (nom. pl. fem.)"
+      },
+      {
+        "answer": "αφίξεις",
+        "options": [
+          "αφίξεις",
+          "άφιξη",
+          "αναχωρήσεις",
+          "πτήσεις"
+        ],
+        "hint": "arrivals (nom. pl. fem.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-005",
+    "topic": "Prep: Airport",
+    "en": "The flight attendant checks the boarding passes at the airplane's entrance.",
+    "template": "Η αεροσυνοδός {0} τις κάρτες επιβίβασης στην είσοδο {1} αεροπλάνου.",
+    "blanks": [
+      {
+        "answer": "ελέγχει",
+        "options": [
+          "ελέγχει",
+          "ελέγχουν",
+          "ελέγχω",
+          "έλεγχα"
+        ],
+        "hint": "she checks (3sg present)"
+      },
+      {
+        "answer": "του",
+        "options": [
+          "του",
+          "της",
+          "τον",
+          "τα"
+        ],
+        "hint": "of the (gen. neut. sg.)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-006",
+    "topic": "Prep: Airport",
+    "en": "A child is running in the corridor and his mom is running after him.",
+    "template": "Ένα παιδί {0} μέσα στον διάδρομο και η μαμά του {1} από πίσω.",
+    "blanks": [
+      {
+        "answer": "τρέχει",
+        "options": [
+          "τρέχει",
+          "τρέχουν",
+          "τρέχω",
+          "έτρεξε"
+        ],
+        "hint": "runs (3sg present)"
+      },
+      {
+        "answer": "τρέχει",
+        "options": [
+          "τρέχει",
+          "τρέχουν",
+          "τρέχει",
+          "έτρεξε"
+        ],
+        "hint": "runs (3sg, same form)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-007",
+    "topic": "Prep: Airport",
+    "en": "At the security check you have to take off your shoes and your belt.",
+    "template": "Στον έλεγχο ασφαλείας {0} να βγάλεις τα παπούτσια και {1} ζώνη σου.",
+    "blanks": [
+      {
+        "answer": "πρέπει",
+        "options": [
+          "πρέπει",
+          "μπορείς",
+          "χρειάζεσαι",
+          "θέλεις"
+        ],
+        "hint": "you must (impersonal)"
+      },
+      {
+        "answer": "τη",
+        "options": [
+          "τη",
+          "την",
+          "το",
+          "τις"
+        ],
+        "hint": "the (acc. fem. sg. — short form before ζώνη)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-008",
+    "topic": "Prep: Airport",
+    "en": "Before boarding, the passengers show their boarding cards.",
+    "template": "Πριν {0} επιβίβαση, οι επιβάτες {1} τις κάρτες επιβίβασης.",
+    "blanks": [
+      {
+        "answer": "την",
+        "options": [
+          "την",
+          "τη",
+          "τον",
+          "τα"
+        ],
+        "hint": "the (acc. fem. sg.)"
+      },
+      {
+        "answer": "δείχνουν",
+        "options": [
+          "δείχνουν",
+          "δείχνει",
+          "δείχνω",
+          "έδειξαν"
+        ],
+        "hint": "they show (3pl present)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-009",
+    "topic": "Prep: Airport",
+    "en": "My flight departs from gate B12 at 14:30.",
+    "template": "Η πτήση μου {0} από την {1} Β12 στις 14:30.",
+    "blanks": [
+      {
+        "answer": "αναχωρεί",
+        "options": [
+          "αναχωρεί",
+          "αναχωρούν",
+          "φτάνει",
+          "φεύγω"
+        ],
+        "hint": "departs (3sg present)"
+      },
+      {
+        "answer": "πύλη",
+        "options": [
+          "πύλη",
+          "πόρτα",
+          "είσοδο",
+          "έξοδο"
+        ],
+        "hint": "gate"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-010",
+    "topic": "Prep: Airport",
+    "en": "Two tourists are looking at the airport map and searching for the check-in desk.",
+    "template": "Δύο τουρίστες {0} τον χάρτη του αεροδρομίου και {1} για το γκισέ.",
+    "blanks": [
+      {
+        "answer": "κοιτάνε",
+        "options": [
+          "κοιτάνε",
+          "κοιτάει",
+          "κοιτάω",
+          "κοίταξαν"
+        ],
+        "hint": "they look at (3pl present)"
+      },
+      {
+        "answer": "ψάχνουν",
+        "options": [
+          "ψάχνουν",
+          "ψάχνει",
+          "ψάχνω",
+          "έψαξαν"
+        ],
+        "hint": "they are searching (3pl present)"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-011",
+    "topic": "Prep: Airport",
+    "en": "The passengers are waiting in line to show their passports.",
+    "template": "Οι επιβάτες {0} στην ουρά για να {1} τα διαβατήριά τους.",
+    "blanks": [
+      {
+        "answer": "περιμένουν",
+        "options": [
+          "περιμένουν",
+          "περιμένει",
+          "περιμένω",
+          "περίμεναν"
+        ],
+        "hint": "they wait (3pl present)"
+      },
+      {
+        "answer": "δείξουν",
+        "options": [
+          "δείξουν",
+          "δείχνουν",
+          "δείχνει",
+          "έδειξαν"
+        ],
+        "hint": "they show (3pl perfective subjunctive — with 'για να')"
+      }
+    ]
+  },
+  {
+    "id": "prep-airport-012",
+    "topic": "Prep: Airport",
+    "en": "An old woman is sitting on the chair and is holding her suitcase in her hand.",
+    "template": "Μια ηλικιωμένη κυρία {0} στην καρέκλα και {1} τη βαλίτσα της στο χέρι.",
+    "blanks": [
+      {
+        "answer": "κάθεται",
+        "options": [
+          "κάθεται",
+          "κάθονται",
+          "κάθομαι",
+          "καθόταν"
+        ],
+        "hint": "sits (3sg deponent present)"
+      },
+      {
+        "answer": "κρατάει",
+        "options": [
+          "κρατάει",
+          "κρατάω",
+          "κρατάς",
+          "κράτησε"
+        ],
+        "hint": "holds (3sg present)"
+      }
+    ]
   }
 ]
