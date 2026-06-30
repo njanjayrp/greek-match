@@ -3766,5 +3766,11 @@
         "english": "to disturb / agitate / upset",
         "group": "Common verbs",
         "marked": true
+    },
+    {
+        "greek": "ελέγχω",
+        "english": "to check",
+        "group": "Common verbs",
+        "marked": true
     }
 ]
