@@ -897,7 +897,7 @@
         "greek": "αποφασίζω",
         "english": "to decide",
         "group": "Common verbs",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ετοιμάζομαι",
@@ -1293,7 +1293,7 @@
         "greek": "από τη μία (πλευρά)... από την άλλη πλευρά",
         "english": "on the one hand... on the other hand",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ή... ή",
@@ -1305,13 +1305,13 @@
         "greek": "είτε... είτε",
         "english": "either... or (formal)",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ούτε... ούτε",
         "english": "neither... nor",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "άρα",
@@ -2757,7 +2757,7 @@
         "greek": "η βαλίτσα",
         "english": "suitcase",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η έκπτωση",
@@ -3237,7 +3237,7 @@
         "greek": "νιώθω",
         "english": "to feel (colloquial)",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κρατάω κακία",
@@ -3249,7 +3249,7 @@
         "greek": "στα δύσκολα",
         "english": "in tough times",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ακονίζω",
@@ -3357,7 +3357,7 @@
         "greek": "αδύνατος",
         "english": "slim / weak",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "παχύς",
@@ -3369,19 +3369,19 @@
         "greek": "χοντρός",
         "english": "fat / chubby",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ψηλός",
         "english": "tall",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κοντός",
         "english": "short (height)",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το κιλό",
@@ -3405,7 +3405,7 @@
         "greek": "ξανθός",
         "english": "blonde",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μελαχρινός",
@@ -3555,7 +3555,7 @@
         "greek": "φτηνός",
         "english": "cheap",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μαλακός",
@@ -3597,7 +3597,7 @@
         "greek": "αγαπημένος",
         "english": "favorite (adj.)",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "οδηγώ",
@@ -3615,7 +3615,7 @@
         "greek": "σκέφτομαι",
         "english": "to think",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ονειρεύομαι",
@@ -3645,13 +3645,13 @@
         "greek": "το αεροδρόμιο",
         "english": "airport",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η πτήση",
         "english": "flight",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η αναχώρηση",
@@ -3663,7 +3663,7 @@
         "greek": "η πύλη",
         "english": "gate",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η επιβίβαση",
@@ -3681,7 +3681,7 @@
         "greek": "το διαβατήριο",
         "english": "passport",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο έλεγχος ασφαλείας",
@@ -3699,7 +3699,7 @@
         "greek": "ο πιλότος",
         "english": "pilot",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η ανακοίνωση",
@@ -3752,6 +3752,18 @@
     {
         "greek": "ακυρώνω",
         "english": "to cancel",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "φωνάζω",
+        "english": "to shout / call out",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ταράζω",
+        "english": "to disturb / agitate / upset",
         "group": "Common verbs",
         "marked": true
     }
