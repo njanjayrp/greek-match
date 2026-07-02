@@ -477,7 +477,7 @@
         "greek": "κάθομαι",
         "english": "to sit",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το παγκάκι",
@@ -789,7 +789,7 @@
         "greek": "κρατώ",
         "english": "to hold / to keep / to last",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ξεραίνω",
@@ -1095,7 +1095,7 @@
         "greek": "πατάω",
         "english": "to step on / to press",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο ελεγκτής",
@@ -1119,7 +1119,7 @@
         "greek": "βουρτσίζω",
         "english": "to brush (teeth)",
         "group": "Daily life & school",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τα δόντια",
@@ -1131,7 +1131,7 @@
         "greek": "από χρυσό",
         "english": "made of gold",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στους φίλους μου",
@@ -1209,7 +1209,7 @@
         "greek": "κατά τη γνώμη μου",
         "english": "in my opinion",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τα αλμυρά",
@@ -1239,7 +1239,7 @@
         "greek": "πετάω",
         "english": "to throw / to fly",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο χρυσός",
@@ -1251,7 +1251,7 @@
         "greek": "το υλικό",
         "english": "material",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο τόπος",
@@ -1275,19 +1275,19 @@
         "greek": "όχι μόνο... αλλά και",
         "english": "not only... but also",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ωστόσο",
         "english": "nevertheless",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αντίθετα",
         "english": "on the contrary",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "από τη μία (πλευρά)... από την άλλη πλευρά",
@@ -1317,7 +1317,7 @@
         "greek": "άρα",
         "english": "so",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "επομένως",
@@ -1365,13 +1365,13 @@
         "greek": "δηλαδή",
         "english": "in other words",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ακόμα",
         "english": "still",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "επιπλέον",
@@ -1401,7 +1401,7 @@
         "greek": "επειδή",
         "english": "because",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αφού",
@@ -1413,19 +1413,19 @@
         "greek": "μόλις",
         "english": "as soon as",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "πριν (να)",
         "english": "before",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μέχρι (να)",
         "english": "until",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "καθώς",
@@ -1449,7 +1449,7 @@
         "greek": "παρόλο που",
         "english": "even though / despite the fact that",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ενώ",
@@ -1533,7 +1533,7 @@
         "greek": "θυμώνω",
         "english": "to get angry",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τόσο",
@@ -2745,7 +2745,7 @@
         "greek": "διψάω",
         "english": "to be thirsty",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η γραβάτα",
@@ -2769,7 +2769,7 @@
         "greek": "ξεχνάω",
         "english": "to forget",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "εξάλλου",
@@ -3219,7 +3219,7 @@
         "greek": "πραγματικός",
         "english": "real / true",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "βγάζω",
@@ -3231,7 +3231,7 @@
         "greek": "υποστηρίζω",
         "english": "to support",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "νιώθω",
@@ -3243,7 +3243,7 @@
         "greek": "κρατάω κακία",
         "english": "to hold a grudge",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στα δύσκολα",
@@ -3351,7 +3351,7 @@
         "greek": "κανονικός",
         "english": "normal / regular (build)",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αδύνατος",
@@ -3561,7 +3561,7 @@
         "greek": "μαλακός",
         "english": "soft",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το νούμερο",
