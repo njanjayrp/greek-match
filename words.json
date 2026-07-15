@@ -2859,7 +2859,7 @@
         "greek": "ανοίγω",
         "english": "to open",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το κερί",
@@ -3171,7 +3171,7 @@
         "greek": "σηκώνομαι",
         "english": "to get up / stand up",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κουράζομαι",
@@ -3189,7 +3189,7 @@
         "greek": "ο εαυτός",
         "english": "self / oneself",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "διαφορετικός",
@@ -3201,7 +3201,7 @@
         "greek": "η κακία",
         "english": "malice / spite",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "συγχωρώ",
@@ -3543,7 +3543,7 @@
         "greek": "φαλακρός",
         "english": "bald",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η βιτρίνα",
@@ -3771,6 +3771,66 @@
         "greek": "ελέγχω",
         "english": "to check",
         "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ρίχνω μια ματιά",
+        "english": "to take a look / glance at",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "σκούρος",
+        "english": "dark (color shade)",
+        "group": "Body, Wardrobe and Colors",
+        "marked": false
+    },
+    {
+        "greek": "η πωλήτρια",
+        "english": "saleswoman / shop assistant (fem)",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "θέλει κόντεμα",
+        "english": "it needs shortening / hemming",
+        "group": "Body, Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "θέλει σιδέρωμα",
+        "english": "it needs ironing",
+        "group": "Body, Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "θέλει πλύσιμο",
+        "english": "it needs washing",
+        "group": "Body, Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "κοντύνω",
+        "english": "to shorten",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "η καρφίτσα",
+        "english": "pin / safety pin",
+        "group": "Body, Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "προπληρωμένος",
+        "english": "prepaid",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "η περίπτωση",
+        "english": "case / instance / situation",
+        "group": "General",
         "marked": true
     }
 ]
