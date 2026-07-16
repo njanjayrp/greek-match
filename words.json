@@ -1107,7 +1107,7 @@
         "greek": "συνδέω",
         "english": "to connect",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "διαφωνώ",
@@ -3195,7 +3195,7 @@
         "greek": "διαφορετικός",
         "english": "different",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η κακία",
@@ -3417,13 +3417,13 @@
         "greek": "κοκκινομάλλης",
         "english": "red-haired",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ασπρομάλλης",
         "english": "white-haired",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "γκριζομάλλης",
@@ -3435,7 +3435,7 @@
         "greek": "μακρύς",
         "english": "long",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ίσιος",
@@ -3627,7 +3627,7 @@
         "greek": "βρίσκομαι",
         "english": "to be located",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "βιάζομαι",
@@ -3693,7 +3693,7 @@
         "greek": "η αεροσυνοδός",
         "english": "flight attendant (fem)",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο πιλότος",
