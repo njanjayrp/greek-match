@@ -3832,5 +3832,107 @@
         "english": "case / instance / situation",
         "group": "General",
         "marked": true
+    },
+    {
+        "greek": "η φασαρία",
+        "english": "noise / commotion",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "ιδανικός",
+        "english": "ideal",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η ξεκούραση",
+        "english": "rest / relaxation",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "παραδοσιακός",
+        "english": "traditional",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "ο τοίχος",
+        "english": "wall",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το πουλί",
+        "english": "bird",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "τεράστιος",
+        "english": "huge",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η σοφίτα",
+        "english": "attic / loft",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "άγριος",
+        "english": "wild",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "προχωράω",
+        "english": "to move on / advance",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "προβάλλω",
+        "english": "to project / display",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "προβάρω",
+        "english": "to try on / rehearse",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "απολαμβάνω",
+        "english": "to enjoy / savor",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "πώς περνάτε",
+        "english": "how are you getting on",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "κερνάω",
+        "english": "to treat someone (buy drink/food)",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "το χωριό",
+        "english": "village",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "κοινός",
+        "english": "common / public",
+        "group": "General",
+        "marked": true
     }
 ]
