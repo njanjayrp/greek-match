@@ -897,7 +897,7 @@
         "greek": "αποφασίζω",
         "english": "to decide",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ετοιμάζομαι",
@@ -1035,7 +1035,7 @@
         "greek": "συζητάω",
         "english": "to chat / to discuss",
         "group": "Social & communication",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "έπειτα",
@@ -1065,13 +1065,13 @@
         "greek": "κλείνω",
         "english": "to close / to book",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σύντομη",
         "english": "brief / short",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "απλό",
@@ -1179,25 +1179,25 @@
         "greek": "εξαιτίας της βροχής",
         "english": "because of the rain",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αντί της Μαρίας",
         "english": "instead of Maria",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "εκτός του Αχιλλέα",
         "english": "except Achilles",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "υπέρ του Νίκου",
         "english": "in favour of Nikos",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κατά τις δέκα",
@@ -1329,7 +1329,7 @@
         "greek": "πρώτον",
         "english": "firstly",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αρχικά",
@@ -1341,19 +1341,19 @@
         "greek": "καταρχάς",
         "english": "first of all",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "δεύτερον",
         "english": "secondly",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ύστερα",
         "english": "afterwards",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στη συνέχεια",
@@ -2739,7 +2739,7 @@
         "greek": "η διεύθυνση",
         "english": "address",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "διψάω",
@@ -2763,7 +2763,7 @@
         "greek": "η έκπτωση",
         "english": "discount",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ξεχνάω",
@@ -2841,7 +2841,7 @@
         "greek": "η διαδρομή",
         "english": "route / journey",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "έχει ανταπόκριση",
@@ -2865,7 +2865,7 @@
         "greek": "το κερί",
         "english": "candle",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η μπλούζα",
@@ -3159,7 +3159,7 @@
         "greek": "ζεσταίνομαι",
         "english": "to feel warm / warm up",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αισθάνομαι",
@@ -3177,13 +3177,13 @@
         "greek": "κουράζομαι",
         "english": "to get tired",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο πυρετός",
         "english": "fever",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο εαυτός",
@@ -3207,13 +3207,13 @@
         "greek": "συγχωρώ",
         "english": "to forgive",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η αξία",
         "english": "value",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "πραγματικός",
@@ -3225,7 +3225,7 @@
         "greek": "βγάζω",
         "english": "to take out / bring out",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "υποστηρίζω",
@@ -3363,7 +3363,7 @@
         "greek": "παχύς",
         "english": "fat",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "χοντρός",
@@ -3621,7 +3621,7 @@
         "greek": "ονειρεύομαι",
         "english": "to dream",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "βρίσκομαι",
@@ -3633,7 +3633,7 @@
         "greek": "βιάζομαι",
         "english": "to be in a hurry",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "λυπάμαι",
@@ -3729,7 +3729,7 @@
         "greek": "το τελωνείο",
         "english": "customs",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αναχωρώ",
