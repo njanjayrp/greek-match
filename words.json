@@ -1461,7 +1461,7 @@
         "greek": "μήπως",
         "english": "in case",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ώστε",
@@ -1497,7 +1497,7 @@
         "greek": "λήγω",
         "english": "to expire",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σύντομα",
@@ -2793,7 +2793,7 @@
         "greek": "η μετακίνηση",
         "english": "move / commute",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "αλλιώς",
@@ -3429,7 +3429,7 @@
         "greek": "γκριζομάλλης",
         "english": "grey-haired",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μακρύς",
@@ -3489,7 +3489,7 @@
         "greek": "γαλανός",
         "english": "blue (eyes)",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η μύτη",
@@ -3501,13 +3501,13 @@
         "greek": "μυτερός",
         "english": "pointed",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στραβός",
         "english": "crooked",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ξυρισμένος",
@@ -3639,7 +3639,7 @@
         "greek": "λυπάμαι",
         "english": "to be sorry / sad",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το αεροδρόμιο",
@@ -3669,13 +3669,13 @@
         "greek": "η επιβίβαση",
         "english": "boarding",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η κάρτα επιβίβασης",
         "english": "boarding pass",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το διαβατήριο",
@@ -3741,7 +3741,7 @@
         "greek": "επιβιβάζομαι",
         "english": "to board",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κουβαλάω",
@@ -3789,7 +3789,7 @@
         "greek": "η πωλήτρια",
         "english": "saleswoman / shop assistant (fem)",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "θέλει κόντεμα",
