@@ -1,7 +1,7 @@
 {
-    "name": "Greek Match",
-    "short_name": "Greek",
-    "description": "Learn Greek vocabulary with match and quiz games",
+    "name": "Serbian Match",
+    "short_name": "Serbian",
+    "description": "Learn Serbian vocabulary with match and quiz games",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#f0f2f5",

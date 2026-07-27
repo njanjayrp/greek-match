@@ -1,7 +1,5 @@
-// Words loaded from words.json
+// Words loaded from words.js (which sets window.WORDS)
 let allWords = [];
-// Sentences loaded from sentences.json (lazy)
-let allSentences = [];
 
 // ── Touch drag state ────────────────────────────────────────────────────────
 let touchDragChip   = null;
@@ -12,29 +10,28 @@ let touchTarget     = null;
 function initApp(words) {
     allWords = words;
 
-    // Register service worker
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js').catch(() => {});
-    }
-
     // Resolve URL params / localStorage for mode and lang
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
-    const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["quiz", "xmatch", "type", "fill"].includes(urlMode)) mode = urlMode;
+    const urlLang   = urlParams.get("lang") || localStorage.getItem("serbian_lang");
+    if (["quiz", "xmatch", "type"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
     populateGroupSelect();
-    group = localStorage.getItem("greek_group") || "__all__";
+    group = localStorage.getItem("serbian_group") || "__all__";
     if (!groupExists(group)) group = "__all__";
     document.getElementById("group-select").value = group;
 
     round = selectRound();
 
     // Event listeners
-    document.getElementById("btn-check").addEventListener("click", dispatchCheck);
-    document.getElementById("btn-retry").addEventListener("click", dispatchRetry);
+    document.getElementById("btn-check").addEventListener("click", checkMatchAnswers);
+    document.getElementById("btn-retry").addEventListener("click", () => {
+        if (mode === "quiz") buildQuiz();
+        else if (mode === "type") buildTyping();
+        else buildMatch();
+    });
     document.getElementById("btn-new").addEventListener("click", () => {
         const url = new URL(location.href);
         url.searchParams.set("mode", mode);
@@ -44,11 +41,11 @@ function initApp(words) {
     document.getElementById("mode-select").addEventListener("change", e => switchMode(e.target.value));
     document.getElementById("group-select").addEventListener("change", e => switchGroup(e.target.value));
     document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
-    document.getElementById("lang-gr").addEventListener("click", () => setLang("greek"));
+    document.getElementById("lang-sr").addEventListener("click", () => setLang("serbian"));
     document.getElementById("lang-en").addEventListener("click", () => setLang("english"));
 
     if (lang === "english") {
-        document.getElementById("lang-gr").classList.remove("active");
+        document.getElementById("lang-sr").classList.remove("active");
         document.getElementById("lang-en").classList.add("active");
     }
     document.getElementById("mode-select").value = mode;
@@ -60,12 +57,10 @@ function populateGroupSelect() {
     select.innerHTML = "";
     const allOpt = document.createElement("option");
     allOpt.value = "__all__";
-    allOpt.textContent = mode === "fill" ? "All topics" : "All groups";
+    allOpt.textContent = "All groups";
     select.appendChild(allOpt);
 
-    const items = mode === "fill"
-        ? [...new Set(allSentences.map(s => s.topic).filter(Boolean))].sort()
-        : [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
+    const items = [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
     for (const g of items) {
         const opt = document.createElement("option");
         opt.value = g;
@@ -76,72 +71,52 @@ function populateGroupSelect() {
 
 function groupExists(g) {
     if (g === "__all__") return true;
-    if (mode === "fill") return allSentences.some(s => s.topic === g);
     return allWords.some(w => w.group === g);
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 function modePool() {
-    if (mode === "fill") {
-        return group === "__all__" ? allSentences : allSentences.filter(s => s.topic === group);
-    }
     if (mode === "xmatch") return allWords.filter(w => w.marked);
     if (group === "__all__") return allWords;
     return allWords.filter(w => w.group === group);
 }
 
 function selectRound() {
-    if (mode === "fill") {
-        const pool = modePool().slice();
-        for (let i = pool.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [pool[i], pool[j]] = [pool[j], pool[i]];
-        }
-        return pool.slice(0, Math.min(10, pool.length));
-    }
-    return selectWordRound();
-}
-
-function selectWordRound() {
-    const weights  = JSON.parse(localStorage.getItem("greek_weights")  || "{}");
-    const streaks  = JSON.parse(localStorage.getItem("greek_streaks")  || "{}");
-    const mastered = new Set(JSON.parse(localStorage.getItem("greek_mastered") || "[]"));
-    const seen2    = JSON.parse(localStorage.getItem("greek_seen")     || "[]");
+    const weights  = JSON.parse(localStorage.getItem("serbian_weights")  || "{}");
+    const streaks  = JSON.parse(localStorage.getItem("serbian_streaks")  || "{}");
+    const mastered = new Set(JSON.parse(localStorage.getItem("serbian_mastered") || "[]"));
+    const seen2    = JSON.parse(localStorage.getItem("serbian_seen")     || "[]");
     // In Marked mode use a wider recent window (4 rounds) for spacing across a curated pool.
     const recentWindow = mode === "xmatch" ? 4 : 2;
     const recent   = new Set(seen2.slice(0, recentWindow).flat());
-    const exposure = JSON.parse(localStorage.getItem("greek_exposure") || "{}");
+    const exposure = JSON.parse(localStorage.getItem("serbian_exposure") || "{}");
 
     const pool     = modePool();
-    // In Marked mode, user explicitly chose what to review — don't filter out "mastered"
-    // (after enough repetitions, the entire marked pool was getting excluded and only ~15
-    // recently-marked words kept cycling).
-    let active     = mode === "xmatch" ? pool.slice() : pool.filter(w => !mastered.has(w.greek));
+    // In Marked mode, user explicitly chose what to review — don't filter out "mastered".
+    let active     = mode === "xmatch" ? pool.slice() : pool.filter(w => !mastered.has(w.serbian));
     if (active.length < 6) active = pool.slice();
-    const eligible = active.filter(w => !recent.has(w.greek));
-    const fallback = active.filter(w =>  recent.has(w.greek));
+    const eligible = active.filter(w => !recent.has(w.serbian));
+    const fallback = active.filter(w =>  recent.has(w.serbian));
 
-    // Boost recently-added vocab: only words within the last 60 entries of words.json
-    // that also have no prior state. Older unseen words fall back to baseline so they
-    // don't crowd the bonus pool.
+    // Boost recently-added vocab: only words within the last 60 entries of words.js
+    // that also have no prior state. Older unseen words fall back to baseline.
     const allCount = allWords.length;
-    const idxByGreek = new Map(allWords.map((w, i) => [w.greek, i]));
+    const idxByKey = new Map(allWords.map((w, i) => [w.serbian, i]));
     function newnessBonus(w) {
-        // In Marked mode the user has explicitly chosen the pool — no position-based boost
         if (mode === "xmatch") return 1;
-        if (weights[w.greek] || streaks[w.greek]) return 1;
-        const fromEnd = allCount - 1 - (idxByGreek.get(w.greek) ?? 0);
+        if (weights[w.serbian] || streaks[w.serbian]) return 1;
+        const fromEnd = allCount - 1 - (idxByKey.get(w.serbian) ?? 0);
         if (fromEnd >= 60) return 1;
-        const exp = exposure[w.greek] || 0;
+        const exp = exposure[w.serbian] || 0;
         return exp >= 5 ? 1 : 1 + (1 - exp / 5) * 7;
     }
     function effectiveWeight(w) {
-        return (weights[w.greek] || 1) * newnessBonus(w);
+        return (weights[w.serbian] || 1) * newnessBonus(w);
     }
 
     function weightedPick(pool, exclude) {
-        const avail = pool.filter(w => !exclude.has(w.greek));
+        const avail = pool.filter(w => !exclude.has(w.serbian));
         if (!avail.length) return null;
         const total = avail.reduce((s, w) => s + effectiveWeight(w), 0);
         let r = Math.random() * total;
@@ -149,7 +124,7 @@ function selectWordRound() {
         return avail[avail.length - 1];
     }
     function randomPick(pool, exclude) {
-        const avail = pool.filter(w => !exclude.has(w.greek));
+        const avail = pool.filter(w => !exclude.has(w.serbian));
         return avail.length ? avail[Math.floor(Math.random() * avail.length)] : null;
     }
 
@@ -158,40 +133,38 @@ function selectWordRound() {
     const weightedCount = mode === "xmatch" ? 0 : 6;
     for (let i = 0; i < weightedCount; i++) {
         const w = weightedPick(eligible, picked) || weightedPick(fallback, picked);
-        if (w) { round.push(w); picked.add(w.greek); }
+        if (w) { round.push(w); picked.add(w.serbian); }
     }
     for (let i = round.length; i < 6; i++) {
         const w = randomPick(eligible, picked) || randomPick(fallback, picked);
-        if (w) { round.push(w); picked.add(w.greek); }
+        if (w) { round.push(w); picked.add(w.serbian); }
     }
     return round;
 }
 
 let mode    = "match";
 let group   = "__all__";
-let lang    = "greek";
+let lang    = "serbian";
 let checked = false;
 let round   = [];
 
 function setLang(l) {
     lang = l;
-    localStorage.setItem("greek_lang", l);
-    document.getElementById("lang-gr").classList.toggle("active", l === "greek");
+    localStorage.setItem("serbian_lang", l);
+    document.getElementById("lang-sr").classList.toggle("active", l === "serbian");
     document.getElementById("lang-en").classList.toggle("active", l === "english");
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
-    else if (mode === "fill") buildFill();
     else buildMatch();
 }
 
 function updateSubtitle() {
     const subtitles = {
-        match:  { greek: "Tap or drag the Greek word to its English meaning",        english: "Tap or drag the English word to its Greek meaning" },
-        quiz:   { greek: "Choose the correct Greek word",                            english: "Choose the correct English word" },
-        type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
-        fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
-        xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
+        match:  { serbian: "Tap or drag the Serbian word to its English meaning",        english: "Tap or drag the English word to its Serbian meaning" },
+        quiz:   { serbian: "Choose the correct Serbian word",                            english: "Choose the correct English word" },
+        type:   { serbian: "Type the Serbian translation",                               english: "Type the English translation" },
+        xmatch: { serbian: "Marked words only — drag the Serbian to its English meaning", english: "Marked words only — drag the English to its Serbian meaning" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
 }
@@ -215,8 +188,8 @@ function buildMatch() {
     document.getElementById("btn-retry").style.display    = "none";
     document.getElementById("btn-new").style.display      = "";
 
-    const roundGreek = new Set(round.map(w => w.greek));
-    let decoyPool = modePool().filter(w => !roundGreek.has(w.greek));
+    const roundKeys = new Set(round.map(w => w.serbian));
+    let decoyPool = modePool().filter(w => !roundKeys.has(w.serbian));
     const decoys = decoyPool
         .sort(() => Math.random() - 0.5)
         .slice(0, 4);
@@ -231,7 +204,7 @@ function buildMatch() {
         pair.className = "pair";
         const label = document.createElement("div");
         label.className = "english";
-        label.textContent = lang === "greek" ? item.english : item.greek;
+        label.textContent = lang === "serbian" ? item.english : item.serbian;
         const zone  = document.createElement("div");
         zone.className = "dropzone empty-hint";
         if (realIndex !== null) zone.dataset.realIndex = realIndex;
@@ -251,11 +224,11 @@ function buildMatch() {
 
 function makeChip(item) {
     const chip = document.createElement("div");
-    const weights = JSON.parse(localStorage.getItem("greek_weights") || "{}");
-    chip.className = "chip" + ((weights[item.greek] || 1) > 1 ? " repeat" : "");
+    const weights = JSON.parse(localStorage.getItem("serbian_weights") || "{}");
+    chip.className = "chip" + ((weights[item.serbian] || 1) > 1 ? " repeat" : "");
     chip.draggable = true;
-    chip.dataset.greek = item.greek;
-    chip.textContent = lang === "greek" ? item.greek : item.english;
+    chip.dataset.key = item.serbian;
+    chip.textContent = lang === "serbian" ? item.serbian : item.english;
 
     // Desktop drag
     chip.addEventListener("dragstart", () => {
@@ -296,11 +269,9 @@ function handleTouchStart(e) {
     const chip = e.currentTarget;
     const touch = e.touches[0];
 
-    // Start a drag after a brief hold — distinguish from tap
     touchDragChip   = chip;
     touchDragSource = chip.parentElement;
 
-    // Create a floating clone
     touchClone = chip.cloneNode(true);
     touchClone.className = "chip touch-dragging";
     const rect = chip.getBoundingClientRect();
@@ -321,11 +292,9 @@ function handleTouchMove(e) {
     touchClone.style.left = (touch.clientX - rect.width / 2) + "px";
     touchClone.style.top  = (touch.clientY - rect.height / 2) + "px";
 
-    // Highlight the drop target under the finger
     const el = document.elementFromPoint(touch.clientX, touch.clientY);
     const zone = el ? (el.closest(".dropzone") || (el.closest("#bank") ? document.getElementById("bank") : null)) : null;
 
-    // Clear previous highlights
     document.querySelectorAll(".dropzone.over, #bank.over").forEach(z => z.classList.remove("over"));
     if (zone) zone.classList.add("over");
     touchTarget = zone;
@@ -335,12 +304,10 @@ function handleTouchEnd(e) {
     if (!touchClone) return;
     e.preventDefault();
 
-    // Clean up clone
     touchClone.remove();
     touchClone = null;
     touchDragChip.style.opacity = "";
 
-    // Clear highlights
     document.querySelectorAll(".dropzone.over, #bank.over").forEach(z => z.classList.remove("over"));
 
     if (touchTarget && touchDragChip) {
@@ -410,9 +377,9 @@ function checkMatchAnswers() {
         const i       = parseInt(zone.dataset.realIndex);
         const inner   = zone.querySelector(".dropzone-inner");
         const chip    = inner?.querySelector(".chip");
-        const answer  = round[i].greek;
-        const display = lang === "greek" ? round[i].greek : round[i].english;
-        const isRight = chip?.dataset.greek === answer;
+        const answer  = round[i].serbian;
+        const display = lang === "serbian" ? round[i].serbian : round[i].english;
+        const isRight = chip?.dataset.key === answer;
         inner.querySelectorAll(".answer-hint").forEach(h => h.remove());
         if (isRight) {
             zone.classList.add("correct");
@@ -422,7 +389,7 @@ function checkMatchAnswers() {
             wrongWords.push(answer);
             const hint = document.createElement("span");
             hint.className = "answer-hint";
-            hint.textContent = "\u2713 " + display;
+            hint.textContent = "✓ " + display;
             inner.appendChild(hint);
         }
     });
@@ -466,13 +433,13 @@ function showQuizQuestion() {
     const item = round[quizIndex];
 
     document.getElementById("quiz-progress").textContent   = (quizIndex + 1) + " / 6";
-    document.getElementById("quiz-word").textContent       = lang === "greek" ? item.english : item.greek;
+    document.getElementById("quiz-word").textContent       = lang === "serbian" ? item.english : item.serbian;
     document.getElementById("quiz-timer-text").textContent = QUIZ_TIME;
 
-    const answerKey  = lang === "greek" ? "greek" : "english";
+    const answerKey  = lang === "serbian" ? "serbian" : "english";
     const correctOpt = item[answerKey];
     const distractors = allWords
-        .filter(w => w.greek !== item.greek && !round.some(r => r.greek === w.greek))
+        .filter(w => w.serbian !== item.serbian && !round.some(r => r.serbian === w.serbian))
         .sort(() => Math.random() - 0.5)
         .slice(0, 3)
         .map(w => w[answerKey]);
@@ -506,7 +473,7 @@ function showQuizQuestion() {
 
 function answerQuiz(chosen) {
     clearInterval(quizTimer);
-    const correctDisplay = lang === "greek" ? round[quizIndex].greek : round[quizIndex].english;
+    const correctDisplay = lang === "serbian" ? round[quizIndex].serbian : round[quizIndex].english;
     const isRight = chosen === correctDisplay;
 
     document.querySelectorAll(".quiz-opt").forEach(btn => {
@@ -515,7 +482,7 @@ function answerQuiz(chosen) {
         else if (btn.textContent === chosen)    btn.classList.add("wrong");
     });
 
-    if (!isRight) quizWrong.push(round[quizIndex].greek);
+    if (!isRight) quizWrong.push(round[quizIndex].serbian);
     else quizScore++;
 
     setTimeout(() => {
@@ -546,16 +513,16 @@ function showScoreBanner(correct, total) {
     }
 }
 
-function updateWeights(wrongGreekWords) {
-    const wrongSet    = new Set(wrongGreekWords);
-    const correctKeys = round.map(w => w.greek).filter(g => !wrongSet.has(g));
-    const weights     = JSON.parse(localStorage.getItem("greek_weights") || "{}");
-    const streaks     = JSON.parse(localStorage.getItem("greek_streaks") || "{}");
+function updateWeights(wrongWords) {
+    const wrongSet    = new Set(wrongWords);
+    const correctKeys = round.map(w => w.serbian).filter(g => !wrongSet.has(g));
+    const weights     = JSON.parse(localStorage.getItem("serbian_weights") || "{}");
+    const streaks     = JSON.parse(localStorage.getItem("serbian_streaks") || "{}");
 
-    const mastered    = JSON.parse(localStorage.getItem("greek_mastered") || "[]");
+    const mastered    = JSON.parse(localStorage.getItem("serbian_mastered") || "[]");
     const masteredSet = new Set(mastered);
 
-    wrongGreekWords.forEach(g => {
+    wrongWords.forEach(g => {
         weights[g] = Math.min(5, (weights[g] || 1) + 1);
         streaks[g] = 0;
     });
@@ -572,16 +539,16 @@ function updateWeights(wrongGreekWords) {
         }
     });
 
-    localStorage.setItem("greek_weights",  JSON.stringify(weights));
-    localStorage.setItem("greek_streaks",  JSON.stringify(streaks));
-    localStorage.setItem("greek_mastered", JSON.stringify([...masteredSet]));
+    localStorage.setItem("serbian_weights",  JSON.stringify(weights));
+    localStorage.setItem("serbian_streaks",  JSON.stringify(streaks));
+    localStorage.setItem("serbian_mastered", JSON.stringify([...masteredSet]));
 
-    const seen = JSON.parse(localStorage.getItem("greek_seen") || "[]");
-    localStorage.setItem("greek_seen", JSON.stringify([round.map(w => w.greek), ...seen].slice(0, 4)));
+    const seen = JSON.parse(localStorage.getItem("serbian_seen") || "[]");
+    localStorage.setItem("serbian_seen", JSON.stringify([round.map(w => w.serbian), ...seen].slice(0, 4)));
 
-    const exposure = JSON.parse(localStorage.getItem("greek_exposure") || "{}");
-    round.forEach(w => { exposure[w.greek] = (exposure[w.greek] || 0) + 1; });
-    localStorage.setItem("greek_exposure", JSON.stringify(exposure));
+    const exposure = JSON.parse(localStorage.getItem("serbian_exposure") || "{}");
+    round.forEach(w => { exposure[w.serbian] = (exposure[w.serbian] || 0) + 1; });
+    localStorage.setItem("serbian_exposure", JSON.stringify(exposure));
 }
 
 function applyMode() {
@@ -589,16 +556,12 @@ function applyMode() {
     document.getElementById("match-container").style.display  = isMatchLike ? "" : "none";
     document.getElementById("quiz-container").style.display   = mode === "quiz" ? "" : "none";
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
-    document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
     document.getElementById("mode-select").value = mode;
-    // Lang toggle has no role in Fill mode
-    document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
     // Marked mode ignores the group filter — disable the dropdown so it doesn't mislead
     document.getElementById("group-select").disabled = (mode === "xmatch");
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
-    else if (mode === "fill") buildFill();
     else buildMatch();
 }
 
@@ -607,31 +570,18 @@ function switchMode(target) {
     clearInterval(quizTimer);
     const prev = mode;
     mode = target;
-    // Rebuild dropdown — Fill uses sentence topics, others use word groups
     populateGroupSelect();
-    if (mode === "fill") {
-        group = localStorage.getItem("greek_topic") || "__all__";
-    } else {
-        group = localStorage.getItem("greek_group") || "__all__";
-    }
+    group = localStorage.getItem("serbian_group") || "__all__";
     if (!groupExists(group)) group = "__all__";
     document.getElementById("group-select").value = group;
-    // Always re-pick the round when entering or leaving fill (different data shape)
-    if (mode === "fill" || prev === "fill" || (prev === "xmatch") !== (mode === "xmatch")) {
-        round = selectRound();
-    }
+    if ((prev === "xmatch") !== (mode === "xmatch")) round = selectRound();
     applyMode();
 }
 
 function switchGroup(target) {
     if (target === group) return;
     group = target;
-    if (mode === "fill") {
-        localStorage.setItem("greek_topic", group);
-    } else {
-        localStorage.setItem("greek_group", group);
-    }
-    // xmatch ignores group, so don't re-pick the round in that case
+    localStorage.setItem("serbian_group", group);
     if (mode !== "xmatch") {
         clearInterval(quizTimer);
         round = selectRound();
@@ -663,37 +613,38 @@ function showTypingQuestion() {
     const input = document.getElementById("typing-input");
     const feedback = document.getElementById("typing-feedback");
     document.getElementById("typing-progress").textContent = (typingIndex + 1) + " / 6";
-    document.getElementById("typing-word").textContent     = lang === "greek" ? item.english : item.greek;
+    document.getElementById("typing-word").textContent     = lang === "serbian" ? item.english : item.serbian;
     input.value       = "";
     input.disabled    = false;
-    input.lang        = lang === "greek" ? "el" : "en";
-    input.placeholder = lang === "greek" ? "\u03b3\u03c1\u03ac\u03c8\u03b5 \u03c3\u03c4\u03b1 \u03b5\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac\u2026" : "type in English\u2026";
+    input.lang        = lang === "serbian" ? "sr" : "en";
+    input.placeholder = lang === "serbian" ? "napiši na srpskom…" : "type in English…";
     feedback.textContent = "";
     feedback.className   = "";
     input.focus();
 }
 
-function stripAccents(s) {
-    return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").normalize("NFC");
+function stripDiacritics(s) {
+    // Serbian č, ć, š, ž, đ have combining characters after NFD
+    return s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D").normalize("NFC");
 }
 
-function normalizeAnswer(s, isGreek) {
+function normalizeAnswer(s) {
     s = (s || "").toLowerCase().trim();
     s = s.replace(/\([^)]*\)/g, " ").trim();
-    if (isGreek) s = s.replace(/^(ο|η|το|οι|τα|τον|την|τους|τις|του|της|των)\s+/, "");
     return s.replace(/\s+/g, " ").trim();
 }
 
-function answerVariants(raw, isGreek) {
-    return raw.split(/\s*[\/\u2192]\s*/).map(s => normalizeAnswer(s, isGreek)).filter(Boolean);
+function answerVariants(raw) {
+    return raw.split(/\s*[\/→]\s*/).map(s => normalizeAnswer(s)).filter(Boolean);
 }
 
-function checkTypedAnswer(typed, correctRaw, isGreek) {
-    const t = normalizeAnswer(typed, isGreek);
-    const variants = answerVariants(correctRaw, isGreek);
-    if (isGreek) {
-        const tNoAcc = stripAccents(t);
-        return variants.map(stripAccents).includes(tNoAcc) ? "correct" : "wrong";
+function checkTypedAnswer(typed, correctRaw, isSerbian) {
+    const t = normalizeAnswer(typed);
+    const variants = answerVariants(correctRaw);
+    if (isSerbian) {
+        // Accept answers with or without diacritics (so typing "sto" matches "što")
+        const tNoAcc = stripDiacritics(t);
+        return variants.map(stripDiacritics).includes(tNoAcc) ? "correct" : "wrong";
     }
     return variants.includes(t) ? "correct" : "wrong";
 }
@@ -704,27 +655,26 @@ function submitTypingAnswer(e) {
     const input = document.getElementById("typing-input");
     const submit = document.getElementById("typing-submit");
     if (input.disabled) {
-        // Second press: advance
         advanceTyping();
         return;
     }
-    const isGreekAnswer = lang === "greek";
-    const correctRaw    = isGreekAnswer ? item.greek : item.english;
-    const result        = checkTypedAnswer(input.value, correctRaw, isGreekAnswer);
-    const feedback      = document.getElementById("typing-feedback");
-    input.disabled      = true;
+    const isSerbianAnswer = lang === "serbian";
+    const correctRaw      = isSerbianAnswer ? item.serbian : item.english;
+    const result          = checkTypedAnswer(input.value, correctRaw, isSerbianAnswer);
+    const feedback        = document.getElementById("typing-feedback");
+    input.disabled        = true;
 
     const typedValue = input.value.trim();
     if (result === "correct") {
-        feedback.textContent = "\u2713 " + correctRaw;
+        feedback.textContent = "✓ " + correctRaw;
         feedback.className   = "correct";
         typingScore++;
         appendTypingHistory(result, correctRaw, typedValue);
         setTimeout(advanceTyping, 900);
     } else {
-        feedback.textContent = "\u2717 " + correctRaw;
+        feedback.textContent = "✗ " + correctRaw;
         feedback.className   = "wrong";
-        typingWrong.push(item.greek);
+        typingWrong.push(item.serbian);
         appendTypingHistory(result, correctRaw, typedValue);
         submit.textContent = "Next";
     }
@@ -733,7 +683,7 @@ function submitTypingAnswer(e) {
 function appendTypingHistory(result, correctRaw, typed) {
     const li = document.createElement("li");
     li.className = "typing-history-" + result;
-    const symbol = result === "correct" ? "\u2713" : "\u2717";
+    const symbol = result === "correct" ? "✓" : "✗";
     const mark   = document.createElement("span");
     mark.className = "mark";
     mark.textContent = symbol;
@@ -745,7 +695,7 @@ function appendTypingHistory(result, correctRaw, typed) {
     if (result !== "correct" && typed) {
         const typedSpan = document.createElement("span");
         typedSpan.className = "typed";
-        typedSpan.textContent = "\u2190 " + typed;
+        typedSpan.textContent = "← " + typed;
         li.appendChild(typedSpan);
     }
     document.getElementById("typing-history").appendChild(li);
@@ -766,185 +716,9 @@ function finishTyping() {
     document.getElementById("typing-input").disabled   = true;
 }
 
-// ── Fill (sentence-blank) game ──────────────────────────────────────────────
-
-let fillIndex   = 0;
-let fillScore   = 0;
-let fillTotal   = 0;
-let fillChecked = false;
-let fillState   = []; // per-blank: { selected: string|null }
-
-function buildFill() {
-    fillIndex = 0;
-    fillScore = 0;
-    fillTotal = 0;
-    document.getElementById("score-banner").style.display = "none";
-    document.getElementById("btn-check").style.display    = "";
-    document.getElementById("btn-retry").style.display    = "none";
-    document.getElementById("btn-new").style.display      = "none";
-    if (!round.length) {
-        document.getElementById("fill-prompt").textContent   = "No sentences for this topic.";
-        document.getElementById("fill-sentence").innerHTML   = "";
-        document.getElementById("fill-blanks").innerHTML     = "";
-        document.getElementById("btn-check").style.display   = "none";
-        return;
-    }
-    showFillQuestion();
-}
-
-function showFillQuestion() {
-    const item = round[fillIndex];
-    fillChecked = false;
-    fillState   = item.blanks.map(() => ({ selected: null }));
-
-    document.getElementById("fill-progress").textContent = (fillIndex + 1) + " / " + round.length;
-    document.getElementById("fill-topic").textContent    = item.topic || "";
-    document.getElementById("fill-prompt").textContent   = item.en;
-
-    renderFillSentence();
-    renderFillBlanks();
-    document.getElementById("btn-check").textContent = "Check";
-    document.getElementById("btn-check").style.display = "";
-}
-
-function renderFillSentence() {
-    const item    = round[fillIndex];
-    const sentEl  = document.getElementById("fill-sentence");
-    sentEl.innerHTML = "";
-
-    // Split template on placeholders {0}, {1}, ... and render slots inline
-    const parts = item.template.split(/(\{\d+\})/);
-    parts.forEach(part => {
-        const m = part.match(/^\{(\d+)\}$/);
-        if (m) {
-            const idx = parseInt(m[1], 10);
-            const slot = document.createElement("span");
-            slot.className = "fill-slot";
-            slot.dataset.idx = idx;
-            const sel = fillState[idx] && fillState[idx].selected;
-            const correctVal = item.blanks[idx].answer;
-            if (sel) {
-                slot.textContent = sel;
-                slot.classList.add("filled");
-                if (fillChecked) {
-                    slot.classList.add(sel === correctVal ? "correct" : "wrong");
-                    if (sel !== correctVal) {
-                        const fix = document.createElement("span");
-                        fix.className = "fill-fix";
-                        fix.textContent = correctVal;
-                        slot.appendChild(fix);
-                    }
-                }
-            } else if (fillChecked) {
-                // Empty slot after check: show correct answer in green, no strikethrough placeholder
-                slot.textContent = correctVal;
-                slot.classList.add("missed");
-            } else {
-                slot.textContent = "___";
-            }
-            sentEl.appendChild(slot);
-        } else if (part) {
-            sentEl.appendChild(document.createTextNode(part));
-        }
-    });
-}
-
-function renderFillBlanks() {
-    const item     = round[fillIndex];
-    const wrap     = document.getElementById("fill-blanks");
-    wrap.innerHTML = "";
-
-    item.blanks.forEach((b, idx) => {
-        const group = document.createElement("div");
-        group.className = "fill-blank-group";
-
-        const hint = document.createElement("div");
-        hint.className = "fill-hint";
-        hint.textContent = "▸ " + b.hint;
-        group.appendChild(hint);
-
-        const opts = document.createElement("div");
-        opts.className = "fill-options";
-        b.options.forEach(opt => {
-            const btn = document.createElement("button");
-            btn.type = "button";
-            btn.className = "fill-opt";
-            btn.textContent = opt;
-            if (fillState[idx].selected === opt) btn.classList.add("selected");
-            if (fillChecked) {
-                btn.disabled = true;
-                if (opt === b.answer) btn.classList.add("correct");
-                else if (opt === fillState[idx].selected) btn.classList.add("wrong");
-            } else {
-                btn.addEventListener("click", () => {
-                    // No toggle-off: clicking the same option is a no-op.
-                    // To change choice, click a different option.
-                    if (fillState[idx].selected === opt) return;
-                    fillState[idx].selected = opt;
-                    renderFillSentence();
-                    renderFillBlanks();
-                });
-            }
-            opts.appendChild(btn);
-        });
-        group.appendChild(opts);
-        wrap.appendChild(group);
-    });
-}
-
-function checkFillAnswers() {
-    if (fillChecked) { advanceFill(); return; }
-    const item = round[fillIndex];
-    let correct = 0;
-    item.blanks.forEach((b, idx) => {
-        if (fillState[idx].selected === b.answer) correct++;
-    });
-    fillScore += correct;
-    fillTotal += item.blanks.length;
-    fillChecked = true;
-    renderFillSentence();
-    renderFillBlanks();
-    document.getElementById("btn-check").textContent =
-        fillIndex < round.length - 1 ? "Next" : "Finish";
-}
-
-function advanceFill() {
-    fillIndex++;
-    if (fillIndex < round.length) {
-        showFillQuestion();
-    } else {
-        finishFill();
-    }
-}
-
-function finishFill() {
-    showScoreBanner(fillScore, fillTotal);
-    document.getElementById("btn-check").style.display = "none";
-    document.getElementById("btn-retry").style.display = "";
-    document.getElementById("btn-new").style.display   = "";
-}
-
-// Wire Check/Retry buttons for Fill mode too
-function dispatchCheck() {
-    if (mode === "fill") checkFillAnswers();
-    else checkMatchAnswers();
-}
-function dispatchRetry() {
-    if (mode === "quiz") buildQuiz();
-    else if (mode === "type") buildTyping();
-    else if (mode === "fill") { round = selectRound(); buildFill(); }
-    else buildMatch();
-}
-
 // ── Boot ─────────────────────────────────────────────────────────────────────
-Promise.all([
-    fetch('./words.json').then(r => r.json()),
-    fetch('./sentences.json').then(r => r.json()).catch(() => [])
-])
-    .then(([words, sentences]) => {
-        allSentences = sentences;
-        initApp(words);
-    })
-    .catch(err => {
-        document.body.innerHTML = '<h1>Failed to load words</h1><p>' + err.message + '</p>';
-    });
+if (window.WORDS && Array.isArray(window.WORDS)) {
+    initApp(window.WORDS);
+} else {
+    document.body.innerHTML = '<h1>Failed to load words</h1><p>words.js not found or malformed.</p>';
+}
