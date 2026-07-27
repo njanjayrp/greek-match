@@ -3934,5 +3934,377 @@
         "english": "common / public",
         "group": "General",
         "marked": true
+    },
+    {
+        "greek": "η ντουλάπα",
+        "english": "wardrobe / closet",
+        "group": "Body, Wardrobe and Colors",
+        "marked": true
+    },
+    {
+        "greek": "η γκαρσονιέρα",
+        "english": "studio apartment",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το δυάρι",
+        "english": "one-bedroom apartment",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το τριάρι",
+        "english": "two-bedroom apartment",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το ρετιρέ",
+        "english": "top-floor apartment / penthouse",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το υπνοδωμάτιο",
+        "english": "bedroom",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η κρεβατοκάμαρα",
+        "english": "bedroom",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η κουζίνα",
+        "english": "kitchen",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το σαλόνι",
+        "english": "living room",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το καθιστικό",
+        "english": "sitting room / lounge",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η τραπεζαρία",
+        "english": "dining room",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το μπάνιο",
+        "english": "bathroom",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η τουαλέτα",
+        "english": "toilet",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "ο διάδρομος",
+        "english": "corridor / hallway",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το μπαλκόνι",
+        "english": "balcony",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η βεράντα",
+        "english": "veranda / terrace",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το παράθυρο",
+        "english": "window",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το ασανσέρ",
+        "english": "elevator",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το κουδούνι",
+        "english": "doorbell",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η θέση πάρκινγκ",
+        "english": "parking space",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η θέρμανση",
+        "english": "heating",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "κεντρικός",
+        "english": "central",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "αυτόνομος",
+        "english": "autonomous / independent",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το έπιπλο",
+        "english": "furniture (single)",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η οικιακή συσκευή",
+        "english": "household appliance",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "επιπλωμένος",
+        "english": "furnished",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "φρεσκοβαμμένος",
+        "english": "freshly painted",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το ενοίκιο",
+        "english": "rent",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η σκεπή",
+        "english": "roof",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η στέγη",
+        "english": "roof (formal)",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "το γκαράζ",
+        "english": "garage",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η αποθήκη",
+        "english": "storage / pantry",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "ο κήπος",
+        "english": "garden",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η αυλή",
+        "english": "yard / courtyard",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η πισίνα",
+        "english": "pool",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η μεζονέτα",
+        "english": "maisonette",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "βράζω",
+        "english": "to boil",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "τηγανίζω",
+        "english": "to fry",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ψήνω",
+        "english": "to bake / roast / grill",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "λαδώνω",
+        "english": "to oil / grease",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "λιώνω",
+        "english": "to melt / mash",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ανακατεύω",
+        "english": "to mix / stir",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "κόβω",
+        "english": "to cut",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ψιλοκόβω",
+        "english": "to chop finely",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "τρίβω",
+        "english": "to grate / rub",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "στείβω",
+        "english": "to squeeze / wring",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "μαγειρεύω",
+        "english": "to cook",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "πλέκω",
+        "english": "to knit",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "διδάσκω",
+        "english": "to teach",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "σφίγγω",
+        "english": "to tighten / squeeze",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ανακαλύπτω",
+        "english": "to discover",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "παύω",
+        "english": "to stop / cease",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "η κατσαρόλα",
+        "english": "pot",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το τηγάνι",
+        "english": "frying pan",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το ταψί",
+        "english": "baking tray",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το μαχαίρι",
+        "english": "knife",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το πιρούνι",
+        "english": "fork",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το κουτάλι",
+        "english": "spoon",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "η κούπα",
+        "english": "cup",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "το αλεύρι",
+        "english": "flour",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "η κουταλιά",
+        "english": "spoonful",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "το γραμμάριο",
+        "english": "gram",
+        "group": "Commerce & delivery",
+        "marked": true
     }
 ]
