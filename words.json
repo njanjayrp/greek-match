@@ -2730,12 +2730,6 @@
         "marked": false
     },
     {
-        "greek": "το όνειρο",
-        "english": "dream",
-        "group": "Feelings & emotions",
-        "marked": false
-    },
-    {
         "greek": "η διεύθυνση",
         "english": "address",
         "group": "General",
@@ -4231,7 +4225,7 @@
     },
     {
         "greek": "σφίγγω (σφίξω)",
-        "english": "to tighten / squeeze",
+        "english": "to tighten",
         "group": "Common verbs",
         "marked": true
     },
