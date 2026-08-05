@@ -654,13 +654,13 @@
         "marked": false
     },
     {
-        "greek": "συμφωνώ",
+        "greek": "συμφωνώ (συμφωνήσω)",
         "english": "to agree",
         "group": "Social & communication",
         "marked": false
     },
     {
-        "greek": "προσπαθώ",
+        "greek": "προσπαθώ (προσπαθήσω)",
         "english": "to try",
         "group": "Common verbs",
         "marked": false
@@ -786,14 +786,14 @@
         "marked": false
     },
     {
-        "greek": "κρατώ",
+        "greek": "κρατώ (κρατήσω)",
         "english": "to hold / to keep / to last",
         "group": "Common verbs",
         "marked": false
     },
     {
         "greek": "ξεραίνω (ξεράνω)",
-        "english": "to dry",
+        "english": "to dry out / wither",
         "group": "Common verbs",
         "marked": false
     },
@@ -846,7 +846,7 @@
         "marked": false
     },
     {
-        "greek": "φιλώ",
+        "greek": "φιλώ (φιλήσω)",
         "english": "to kiss",
         "group": "Social & communication",
         "marked": false
@@ -1110,7 +1110,7 @@
         "marked": false
     },
     {
-        "greek": "διαφωνώ",
+        "greek": "διαφωνώ (διαφωνήσω)",
         "english": "to disagree",
         "group": "Social & communication",
         "marked": false
@@ -1380,7 +1380,7 @@
         "marked": true
     },
     {
-        "greek": "κατοικώ",
+        "greek": "κατοικώ (κατοικήσω)",
         "english": "to inhabit",
         "group": "Common verbs",
         "marked": false
@@ -1554,7 +1554,7 @@
         "marked": false
     },
     {
-        "greek": "ξαναμιλώ",
+        "greek": "ξαναμιλώ (ξαναμιλήσω)",
         "english": "to speak again",
         "group": "Common verbs",
         "marked": false
@@ -1662,7 +1662,7 @@
         "marked": false
     },
     {
-        "greek": "χτυπώ",
+        "greek": "χτυπώ (χτυπήσω)",
         "english": "to hit / to knock / to ring (a bell)",
         "group": "Feelings & emotions",
         "marked": false
@@ -1734,7 +1734,7 @@
         "marked": false
     },
     {
-        "greek": "κυκλοφορώ",
+        "greek": "κυκλοφορώ (κυκλοφορήσω)",
         "english": "to circulate",
         "group": "Common verbs",
         "marked": false
@@ -1902,7 +1902,7 @@
         "marked": false
     },
     {
-        "greek": "δημιουργώ",
+        "greek": "δημιουργώ (δημιουργήσω)",
         "english": "to create",
         "group": "Social & communication",
         "marked": false
@@ -3198,7 +3198,7 @@
         "marked": false
     },
     {
-        "greek": "συγχωρώ",
+        "greek": "συγχωρώ (συγχωρήσω)",
         "english": "to forgive",
         "group": "Common verbs",
         "marked": false
@@ -3594,7 +3594,7 @@
         "marked": false
     },
     {
-        "greek": "οδηγώ",
+        "greek": "οδηγώ (οδηγήσω)",
         "english": "to drive",
         "group": "Common verbs",
         "marked": false
@@ -3726,7 +3726,7 @@
         "marked": false
     },
     {
-        "greek": "αναχωρώ",
+        "greek": "αναχωρώ (αναχωρήσω)",
         "english": "to depart",
         "group": "Transport & travel",
         "marked": true
@@ -4299,6 +4299,18 @@
         "greek": "το γραμμάριο",
         "english": "gram",
         "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "στεγνώνω (στεγνώσω)",
+        "english": "to dry off (clothes, hair)",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "εξαντλημένος",
+        "english": "exhausted",
+        "group": "Feelings & emotions",
         "marked": true
     }
 ]
