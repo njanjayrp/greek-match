@@ -387,7 +387,7 @@
         "greek": "συναντάω (συναντήσω)",
         "english": "to meet",
         "group": "Common verbs",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "χαιρετάω (χαιρετήσω)",
@@ -1035,7 +1035,7 @@
         "greek": "συζητάω (συζητήσω)",
         "english": "to chat / to discuss",
         "group": "Social & communication",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "έπειτα",
@@ -4311,6 +4311,42 @@
         "greek": "εξαντλημένος",
         "english": "exhausted",
         "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "γνωρίζω (γνωρίσω)",
+        "english": "to meet / get to know",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "διαρκώ (διαρκέσω)",
+        "english": "to last / endure",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "εξηγώ (εξηγήσω)",
+        "english": "to explain",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "πληροφορώ (πληροφορήσω)",
+        "english": "to inform",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ο άνεμος",
+        "english": "wind",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "ακούγομαι (ακουστώ)",
+        "english": "to be heard / to sound",
+        "group": "Common verbs",
         "marked": true
     }
 ]
