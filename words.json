@@ -1041,7 +1041,7 @@
         "greek": "έπειτα",
         "english": "then",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η διακοπή / οι διακοπές",
@@ -1323,7 +1323,7 @@
         "greek": "επομένως",
         "english": "consequently",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "πρώτον",
@@ -1377,7 +1377,7 @@
         "greek": "επιπλέον",
         "english": "furthermore",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κατοικώ (κατοικήσω)",
@@ -1407,7 +1407,7 @@
         "greek": "αφού",
         "english": "after / since / given that",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μόλις",
@@ -1431,7 +1431,7 @@
         "greek": "καθώς",
         "english": "as / while",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "όποτε",
@@ -2769,19 +2769,19 @@
         "greek": "εξάλλου",
         "english": "besides / moreover",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το εκδοτήριο",
         "english": "ticket office",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η απεργία",
         "english": "strike",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η μετακίνηση",
@@ -2793,7 +2793,7 @@
         "greek": "αλλιώς",
         "english": "otherwise",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ευγενικός",
@@ -2823,7 +2823,7 @@
         "greek": "θαυμάζω (θαυμάσω)",
         "english": "to admire",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η αφετηρία",
@@ -3405,7 +3405,7 @@
         "greek": "μελαχρινός",
         "english": "dark-haired",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κοκκινομάλλης",
@@ -3441,13 +3441,13 @@
         "greek": "σγουρός",
         "english": "curly",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σπαστός",
         "english": "wavy",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τα ράστα",
@@ -3507,7 +3507,7 @@
         "greek": "ξυρισμένος",
         "english": "clean-shaven",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το μουστάκι",
@@ -3717,7 +3717,7 @@
         "greek": "το γκισέ",
         "english": "counter / desk",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το τελωνείο",
@@ -3771,7 +3771,7 @@
         "greek": "ρίχνω μια ματιά",
         "english": "to take a look / glance at",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σκούρος",
@@ -3789,7 +3789,7 @@
         "greek": "θέλει κόντεμα",
         "english": "it needs shortening / hemming",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "θέλει σιδέρωμα",
@@ -3801,7 +3801,7 @@
         "greek": "θέλει πλύσιμο",
         "english": "it needs washing",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κοντύνω (κοντύνω)",
@@ -3831,19 +3831,19 @@
         "greek": "η φασαρία",
         "english": "noise / commotion",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ιδανικός",
         "english": "ideal",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η ξεκούραση",
         "english": "rest / relaxation",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "παραδοσιακός",
@@ -4251,13 +4251,13 @@
         "greek": "το τηγάνι",
         "english": "frying pan",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το ταψί",
         "english": "baking tray",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το μαχαίρι",
@@ -4347,6 +4347,36 @@
         "greek": "ακούγομαι (ακουστώ)",
         "english": "to be heard / to sound",
         "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "η επιβεβαίωση",
+        "english": "confirmation",
+        "group": "Commerce & delivery",
+        "marked": true
+    },
+    {
+        "greek": "η ενημέρωση",
+        "english": "update / briefing",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "παραμένω (παραμείνω)",
+        "english": "to remain / stay",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "εύχομαι (ευχηθώ)",
+        "english": "to wish",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "ελπίζω (ελπίσω)",
+        "english": "to hope",
+        "group": "Feelings & emotions",
         "marked": true
     }
 ]
