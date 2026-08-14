@@ -2475,7 +2475,7 @@
         "greek": "διώχνω (διώξω)",
         "english": "I chase away",
         "group": "Irregular verbs",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "έδιωχνα",
@@ -4377,6 +4377,108 @@
         "greek": "ελπίζω (ελπίσω)",
         "english": "to hope",
         "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "ξαφνικά",
+        "english": "suddenly",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "υπέροχος",
+        "english": "wonderful",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η έκπληξη",
+        "english": "surprise",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "σώζω (σώσω)",
+        "english": "to save",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "πρώην",
+        "english": "former / ex-",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "εντυπωσιακός",
+        "english": "impressive",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "εξαιρετικός",
+        "english": "exceptional",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η λογική",
+        "english": "logic / reason",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "το συναίσθημα",
+        "english": "emotion",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "η σχέση",
+        "english": "relationship",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "το παρελθόν",
+        "english": "the past",
+        "group": "Time & frequency",
+        "marked": true
+    },
+    {
+        "greek": "η αγωνία",
+        "english": "suspense / anxiety",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "ο τρόμος",
+        "english": "terror",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "δυστυχισμένος",
+        "english": "unhappy",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "η εξοχή",
+        "english": "countryside",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "το ημερολόγιο",
+        "english": "diary / calendar",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "νεαρός",
+        "english": "young / young man",
+        "group": "General",
         "marked": true
     }
 ]

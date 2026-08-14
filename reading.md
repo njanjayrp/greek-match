@@ -1,6 +1,6 @@
 # Reading practice
 
-Two short texts using vocabulary from `words.json`. Words are inflected
+Short texts using vocabulary from `words.json`. Words are inflected
 naturally (case, number, tense, gender) — the goal is to see the base
 forms you know in real use.
 
@@ -189,3 +189,103 @@ Common transformations you'll see (base form → what appears in text):
 If a word ending looks unfamiliar, that's the point — try to identify
 which base word (from `words.json`) it came from and what grammatical
 role the ending is playing.
+
+---
+
+## 3. Movie descriptions (film genres)
+
+### ΑΙΣΘΗΜΑΤΙΚΗ (Romantic)
+«Απόφαση για μια ζωή» (Αγγλία, 2011). Η Κάρολ, μία γυναίκα 50
+χρονών, είναι δυστυχισμένη σε έναν γάμο χωρίς έρωτα. Ένας νεαρός
+άντρας μπαίνει ξαφνικά στη ζωή της και αλλάζει τα πάντα, εκείνη,
+όμως, δεν ξέρει τι να διαλέξει: τη λογική ή το συναίσθημα; Μία
+υπέροχη ταινία για τις ανθρώπινες σχέσεις.
+
+> **"A Decision for a Lifetime" (England, 2011).** Carol, a
+> 50-year-old woman, is unhappy in a loveless marriage. A young
+> man suddenly enters her life and changes everything, but she
+> doesn't know what to choose: reason or emotion? A wonderful
+> film about human relationships.
+
+### ΣΙΝΕΦΙΛ (Arthouse)
+«Ο δρόμος για το παρελθόν» (Κίνα, 2005). Ένα μικρό αγόρι ξεκινάει
+από το Πεκίνο για τη Νότια Κίνα και ψάχνει την ιστορία της
+οικογένειάς του, με μόνη παρέα το ημερολόγιο του παππού του.
+Συγκινητικό ταξίδι στην ασιατική χώρα, υπέροχη φωτογραφία,
+εντυπωσιακός ο μικρός πρωταγωνιστής.
+
+> **"The Road to the Past" (China, 2005).** A little boy sets off
+> from Beijing for southern China and searches for his family's
+> history, with only his grandfather's diary as company. A moving
+> journey through the Asian country, wonderful cinematography, an
+> impressive young protagonist.
+
+### ΔΡΑΣΗΣ (Action)
+«Ώρα μηδέν» (Η.Π.Α., 2009). Ο Τζεφ, πρώην αστυνομικός, κάνει
+ήρεμες διακοπές με την οικογένειά του στην εξοχή. Μία ομάδα από
+δραπέτες μπαίνει ξαφνικά στο σπίτι. Ο Τζεφ, μόνος απέναντί τους,
+θα προσπαθήσει να σώσει την οικογένειά του. Αγωνία και τρόμος σε
+μία χαρακτηριστική ταινία δράσης.
+
+> **"Zero Hour" (USA, 2009).** Jeff, a former police officer, is
+> having a quiet holiday with his family in the countryside. A
+> group of escapees suddenly breaks into the house. Jeff, alone
+> against them, will try to save his family. Suspense and terror
+> in a typical action film.
+
+### ΚΩΜΩΔΙΑ (Comedy)
+«Αγάπη μου, η μαμά θα μείνει μαζί μας!» (Ελλάδα, 1977). Ο Τάσος,
+ένας πενηντάρης τραπεζικός υπάλληλος, είναι παντρεμένος με την
+Ελένη και ζει μία ήρεμη ζωή, μέχρι που η πεθερά του έρχεται να
+μείνει μαζί τους. Η ζωή του γίνεται δύσκολη και ψάχνει τρόπους
+να διώξει την γκρινιάρα κυρία Λούλα. Οι προσπάθειές του, όμως,
+δεν έχουν αποτέλεσμα! Χιούμορ και έκπληξη σε μία παλιά ελληνική
+ταινία.
+
+> **"My Love, Mom is Going to Stay with Us!" (Greece, 1977).**
+> Tasos, a fifty-something bank clerk, is married to Eleni and
+> lives a quiet life, until his mother-in-law comes to stay with
+> them. His life becomes difficult and he looks for ways to drive
+> out the nagging Mrs. Loula. But his efforts have no result!
+> Humor and surprise in an old Greek film.
+
+### ΕΠΟΧΗΣ (Period)
+«Μάλιστα, κυρία» (Γαλλία, 1996). Οι τελευταίες μέρες της
+βασιλικής οικογένειας στις Βερσαλλίες λίγο πριν τη Γαλλική
+Επανάσταση, μέσα από τα μάτια μιας καμαριέρας που ζει και
+δουλεύει στο παλάτι. Ρομαντική και ρεαλιστική η ατμοσφαιρική
+αυτή ταινία, εξαιρετικά κοστούμια, καταπληκτική η νεαρή
+πρωταγωνίστρια.
+
+> **"Yes, Madam" (France, 1996).** The last days of the royal
+> family at Versailles just before the French Revolution, through
+> the eyes of a maid who lives and works at the palace. Romantic
+> and realistic, this atmospheric film with exceptional costumes,
+> a stunning young lead.
+
+---
+
+## 4. Το αγαπημένο μου καρτούν (Kiki's Delivery Service)
+
+Προς το παρόν, η πιο αγαπημένη μου ταινία είναι μία ιαπωνική
+ταινία κινουμένων σχεδίων — "Kiki's Delivery Service".
+
+Η Κίκι είναι μία δεκατριών χρόνων μάγισσα που μετακομίζει σε μια
+παραθαλάσσια πόλη μαζί με τον γάτο της που μιλάει. Ξεκινάει την
+υπηρεσία παραδόσεών της, συναντάει καινούργιους φίλους και βρίσκει
+ελπίδα για αύριο στην περιπέτειά της.
+
+> **My favorite cartoon.** At the moment, my favorite film is a
+> Japanese animated movie — "Kiki's Delivery Service". Kiki is a
+> thirteen-year-old witch who moves to a seaside town together with
+> her talking cat. She starts her delivery service, meets new
+> friends, and finds hope for tomorrow in her adventure.
+
+**Corrections from the handwritten draft:**
+- γυναίκα → **ταινία** (you wrote "woman" instead of "movie")
+- μία ιαπωνική κινούμενα σχέδια → **μία ιαπωνική ταινία κινουμένων σχεδίων** (an animation film — needs "movie of animated drawings"; κινούμενα σχέδια is fixed neuter plural)
+- δεκα-τρία χρόνων → **δεκατριών χρόνων** (13 in genitive is δεκατριών, no hyphen)
+- τον γάτο του που μιλάει → **τον γάτο της** (Kiki is female → her cat, της not του)
+- υπηρεσία παραδόσεων της → **υπηρεσία παραδόσεών της** (possessive `της` goes after the noun, with accent shift)
+- κεινούριους / καινούριους → **καινούργιους** (spelled with γ)
+- στην περιπέτεια της → **στην περιπέτειά της** (accent shift + `της` after noun)
