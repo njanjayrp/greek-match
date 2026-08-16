@@ -596,8 +596,8 @@ function applyMode() {
     document.getElementById("mode-select").value = mode;
     // Lang toggle has no role in Fill mode
     document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
-    // Marked mode ignores the group filter — disable the dropdown so it doesn't mislead
-    document.getElementById("group-select").disabled = (mode === "xmatch");
+    // Marked & Conjugate modes ignore the group filter — disable the dropdown so it doesn't mislead
+    document.getElementById("group-select").disabled = (mode === "xmatch" || mode === "conj");
     updateSubtitle();
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
@@ -1000,8 +1000,8 @@ function showConjQuestion() {
     const input = document.getElementById("conj-input");
     document.getElementById("conj-progress").textContent = (conjIndex + 1) + " / " + conjRound.length;
     document.getElementById("conj-prompt").innerHTML =
-        `<div style="font-size:22px;font-weight:700;margin-bottom:6px">${q.lemma} <span style="color:#888;font-weight:500;font-size:14px">(${q.english})</span></div>` +
-        `<div style="color:#4a6cf7;font-size:14px">${TENSE_LABELS[q.tense]} — ${PERSON_LABELS[q.person]}</div>`;
+        `<span class="verb">${q.lemma} <span class="verb-en">(${q.english})</span></span>` +
+        `<span class="target">${TENSE_LABELS[q.tense]} — ${PERSON_LABELS[q.person]}</span>`;
     input.value = "";
     input.disabled = false;
     input.lang = "el";
