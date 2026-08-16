@@ -21,7 +21,7 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["quiz", "xmatch", "type", "fill"].includes(urlMode)) mode = urlMode;
+    if (["quiz", "xmatch", "type", "fill", "conj"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
@@ -44,6 +44,7 @@ function initApp(words) {
     document.getElementById("mode-select").addEventListener("change", e => switchMode(e.target.value));
     document.getElementById("group-select").addEventListener("change", e => switchGroup(e.target.value));
     document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
+    document.getElementById("conj-form").addEventListener("submit", submitConjAnswer);
     document.getElementById("lang-gr").addEventListener("click", () => setLang("greek"));
     document.getElementById("lang-en").addEventListener("click", () => setLang("english"));
 
@@ -191,6 +192,7 @@ function updateSubtitle() {
         quiz:   { greek: "Choose the correct Greek word",                            english: "Choose the correct English word" },
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
         fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
+        conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
         xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
@@ -590,6 +592,7 @@ function applyMode() {
     document.getElementById("quiz-container").style.display   = mode === "quiz" ? "" : "none";
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
     document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
+    document.getElementById("conj-container").style.display   = mode === "conj" ? "" : "none";
     document.getElementById("mode-select").value = mode;
     // Lang toggle has no role in Fill mode
     document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
@@ -599,6 +602,7 @@ function applyMode() {
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
     else if (mode === "fill") buildFill();
+    else if (mode === "conj") buildConj();
     else buildMatch();
 }
 
@@ -933,7 +937,134 @@ function dispatchRetry() {
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
     else if (mode === "fill") { round = selectRound(); buildFill(); }
+    else if (mode === "conj") buildConj();
     else buildMatch();
+}
+
+// ── Conjugation Drill mode ──────────────────────────────────────────────────
+
+let conjRound   = [];   // array of {lemma, english, tense, person, answer}
+let conjIndex   = 0;
+let conjScore   = 0;
+let conjWrong   = 0;
+
+const TENSE_LABELS = {
+    present:   "present",
+    imperfect: "imperfect (was V-ing / used to V)",
+    aorist:    "aorist (past, one-time)",
+    future:    "future (θα V)"
+};
+const PERSON_LABELS = ["1sg (I)", "2sg (you)", "3sg (he/she/it)", "1pl (we)", "2pl (you all)", "3pl (they)"];
+
+function buildConjRound() {
+    // Build 6 random (verb, tense, person) prompts, skipping null cells.
+    const verbs = window.CONJUGATIONS || [];
+    if (!verbs.length) return [];
+    const tenses = ["present","imperfect","aorist","future"];
+    const round = [];
+    let attempts = 0;
+    while (round.length < 6 && attempts < 300) {
+        attempts++;
+        const v = verbs[Math.floor(Math.random() * verbs.length)];
+        const t = tenses[Math.floor(Math.random() * tenses.length)];
+        const p = Math.floor(Math.random() * 6);
+        if (!v[t]) continue;                  // skip verbs missing a tense
+        const answer = v[t][p];
+        if (!answer) continue;
+        // avoid same verb-tense-person twice in a round
+        if (round.some(q => q.lemma===v.lemma && q.tense===t && q.person===p)) continue;
+        round.push({ lemma: v.lemma, english: v.english, tense: t, person: p, answer });
+    }
+    return round;
+}
+
+function buildConj() {
+    conjRound  = buildConjRound();
+    conjIndex  = 0;
+    conjScore  = 0;
+    conjWrong  = 0;
+    document.getElementById("score-banner").style.display = "none";
+    document.getElementById("btn-check").style.display    = "none";
+    document.getElementById("btn-retry").style.display    = "none";
+    document.getElementById("btn-new").style.display      = "none";
+    document.getElementById("conj-history").innerHTML     = "";
+    if (!conjRound.length) {
+        document.getElementById("conj-prompt").textContent = "No verbs loaded.";
+        return;
+    }
+    showConjQuestion();
+}
+
+function showConjQuestion() {
+    const q = conjRound[conjIndex];
+    const input = document.getElementById("conj-input");
+    document.getElementById("conj-progress").textContent = (conjIndex + 1) + " / " + conjRound.length;
+    document.getElementById("conj-prompt").innerHTML =
+        `<div style="font-size:22px;font-weight:700;margin-bottom:6px">${q.lemma} <span style="color:#888;font-weight:500;font-size:14px">(${q.english})</span></div>` +
+        `<div style="color:#4a6cf7;font-size:14px">${TENSE_LABELS[q.tense]} — ${PERSON_LABELS[q.person]}</div>`;
+    input.value = "";
+    input.disabled = false;
+    input.lang = "el";
+    input.placeholder = "γράψε τη μορφή…";
+    const fb = document.getElementById("conj-feedback");
+    fb.textContent = ""; fb.className = "";
+    document.getElementById("conj-submit").textContent = "Check";
+    input.focus();
+}
+
+function submitConjAnswer(e) {
+    if (e) e.preventDefault();
+    const q = conjRound[conjIndex];
+    const input = document.getElementById("conj-input");
+    const submit = document.getElementById("conj-submit");
+    if (input.disabled) { advanceConj(); return; }
+    const typed = (input.value || "").trim();
+    const result = checkTypedAnswer(typed, q.answer, true);
+    const fb = document.getElementById("conj-feedback");
+    input.disabled = true;
+    if (result === "correct") {
+        fb.textContent = "✓ " + q.answer;
+        fb.className = "correct";
+        conjScore++;
+        appendConjHistory("correct", q, typed);
+        setTimeout(advanceConj, 900);
+    } else {
+        fb.textContent = "✗ " + q.answer;
+        fb.className = "wrong";
+        conjWrong++;
+        appendConjHistory("wrong", q, typed);
+        submit.textContent = "Next";
+    }
+}
+
+function appendConjHistory(result, q, typed) {
+    const li = document.createElement("li");
+    li.className = "typing-history-" + result;
+    const mark = document.createElement("span");
+    mark.className = "mark"; mark.textContent = result === "correct" ? "✓" : "✗";
+    const word = document.createElement("span");
+    word.className = "word"; word.textContent = `${q.answer}  (${q.lemma}, ${q.tense} ${PERSON_LABELS[q.person].split(' ')[0]})`;
+    li.appendChild(mark); li.appendChild(word);
+    if (result !== "correct" && typed) {
+        const t = document.createElement("span");
+        t.className = "typed"; t.textContent = "← " + typed;
+        li.appendChild(t);
+    }
+    document.getElementById("conj-history").appendChild(li);
+}
+
+function advanceConj() {
+    document.getElementById("conj-submit").textContent = "Check";
+    conjIndex++;
+    if (conjIndex < conjRound.length) showConjQuestion();
+    else finishConj();
+}
+
+function finishConj() {
+    showScoreBanner(conjScore, conjRound.length);
+    document.getElementById("btn-retry").style.display = "";
+    document.getElementById("btn-new").style.display   = "";
+    document.getElementById("conj-input").disabled     = true;
 }
 
 // ── Boot ─────────────────────────────────────────────────────────────────────

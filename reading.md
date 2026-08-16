@@ -272,20 +272,11 @@ role the ending is playing.
 
 Η Κίκι είναι μία δεκατριών χρόνων μάγισσα που μετακομίζει σε μια
 παραθαλάσσια πόλη μαζί με τον γάτο της που μιλάει. Ξεκινάει την
-υπηρεσία παραδόσεών της, συναντάει καινούργιους φίλους και βρίσκει
-ελπίδα για αύριο στην περιπέτειά της.
+ιπτάμενη υπηρεσία παραδόσεών της, συναντάει καινούργιους φίλους
+και βρίσκει ελπίδα για αύριο στην περιπέτειά της.
 
 > **My favorite cartoon.** At the moment, my favorite film is a
 > Japanese animated movie — "Kiki's Delivery Service". Kiki is a
 > thirteen-year-old witch who moves to a seaside town together with
-> her talking cat. She starts her delivery service, meets new
-> friends, and finds hope for tomorrow in her adventure.
-
-**Corrections from the handwritten draft:**
-- γυναίκα → **ταινία** (you wrote "woman" instead of "movie")
-- μία ιαπωνική κινούμενα σχέδια → **μία ιαπωνική ταινία κινουμένων σχεδίων** (an animation film — needs "movie of animated drawings"; κινούμενα σχέδια is fixed neuter plural)
-- δεκα-τρία χρόνων → **δεκατριών χρόνων** (13 in genitive is δεκατριών, no hyphen)
-- τον γάτο του που μιλάει → **τον γάτο της** (Kiki is female → her cat, της not του)
-- υπηρεσία παραδόσεων της → **υπηρεσία παραδόσεών της** (possessive `της` goes after the noun, with accent shift)
-- κεινούριους / καινούριους → **καινούργιους** (spelled with γ)
-- στην περιπέτεια της → **στην περιπέτειά της** (accent shift + `της` after noun)
+> her talking cat. She starts her flying delivery service, meets
+> new friends, and finds hope for tomorrow in her adventure.

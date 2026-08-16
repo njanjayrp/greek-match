@@ -27,6 +27,7 @@
                 <option value="quiz">Quiz</option>
                 <option value="type">Type</option>
                 <option value="fill">Fill</option>
+                <option value="conj">Conjugate</option>
                 <option value="xmatch">Marked</option>
             </select>
             <select class="mode-select" id="group-select" aria-label="Group">
@@ -51,6 +52,19 @@
         <div id="quiz-word"></div>
         <div class="quiz-timer-bar"><div id="quiz-timer-fill"></div></div>
         <div id="quiz-options"></div>
+    </div>
+
+    <div id="conj-container" style="display:none">
+        <div class="typing-header">
+            <span id="conj-progress">1 / 6</span>
+        </div>
+        <div id="conj-prompt"></div>
+        <form id="conj-form" autocomplete="off">
+            <input type="text" id="conj-input" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false">
+            <button type="submit" id="conj-submit">Check</button>
+        </form>
+        <div id="conj-feedback"></div>
+        <ul id="conj-history"></ul>
     </div>
 
     <div id="fill-container" style="display:none">
@@ -83,6 +97,7 @@
     </div>
 </div>
 
-<script src="js/game.js?v=17"></script>
+<script src="js/conjugations.js?v=1"></script>
+<script src="js/game.js?v=18"></script>
 </body>
 </html>
