@@ -4480,5 +4480,29 @@
         "english": "young / young man",
         "group": "General",
         "marked": true
+    },
+    {
+        "greek": "βαριέμαι (βαρεθώ)",
+        "english": "to be bored",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "προτείνω (προτείνω)",
+        "english": "to suggest / propose",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ακολουθώ (ακολουθήσω)",
+        "english": "to follow",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "η υπηρεσία",
+        "english": "service",
+        "group": "General",
+        "marked": true
     }
 ]
