@@ -2811,7 +2811,7 @@
         "greek": "ως",
         "english": "as",
         "group": "Connectors & logic",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σαν",
@@ -3435,7 +3435,7 @@
         "greek": "ίσιος",
         "english": "straight",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σγουρός",
@@ -3651,7 +3651,7 @@
         "greek": "η αναχώρηση",
         "english": "departure",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η πύλη",
@@ -3681,7 +3681,7 @@
         "greek": "ο έλεγχος ασφαλείας",
         "english": "security check",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η αεροσυνοδός",
@@ -3699,13 +3699,13 @@
         "greek": "η ανακοίνωση",
         "english": "announcement",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η καθυστέρηση",
         "english": "delay",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "οι αποσκευές",
@@ -3747,19 +3747,19 @@
         "greek": "ακυρώνω (ακυρώσω)",
         "english": "to cancel",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "φωνάζω (φωνάξω)",
         "english": "to shout / call out",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ταράζω (ταράξω)",
         "english": "to disturb / agitate / upset",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ελέγχω (ελέγξω)",
@@ -3819,13 +3819,13 @@
         "greek": "προπληρωμένος",
         "english": "prepaid",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η περίπτωση",
         "english": "case / instance / situation",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η φασαρία",
@@ -3855,13 +3855,13 @@
         "greek": "ο τοίχος",
         "english": "wall",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το πουλί",
         "english": "bird",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τεράστιος",
@@ -3873,13 +3873,13 @@
         "greek": "η σοφίτα",
         "english": "attic / loft",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "άγριος",
         "english": "wild",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "προχωράω (προχωρήσω)",
@@ -3921,13 +3921,13 @@
         "greek": "το χωριό",
         "english": "village",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κοινός",
         "english": "common / public",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η ντουλάπα",
@@ -4155,7 +4155,7 @@
         "greek": "τηγανίζω (τηγανίσω)",
         "english": "to fry",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ψήνω (ψήσω)",
@@ -4179,13 +4179,13 @@
         "greek": "ανακατεύω (ανακατέψω)",
         "english": "to mix / stir",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κόβω (κόψω)",
         "english": "to cut",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ψιλοκόβω (ψιλοκόψω)",
@@ -4239,13 +4239,13 @@
         "greek": "παύω (πάψω)",
         "english": "to stop / cease",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η κατσαρόλα",
         "english": "pot",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το τηγάνι",
@@ -4263,37 +4263,37 @@
         "greek": "το μαχαίρι",
         "english": "knife",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το πιρούνι",
         "english": "fork",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το κουτάλι",
         "english": "spoon",
         "group": "Home, places & nature",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η κούπα",
         "english": "cup",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το αλεύρι",
         "english": "flour",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η κουταλιά",
         "english": "spoonful",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το γραμμάριο",
