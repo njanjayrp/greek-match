@@ -1035,7 +1035,7 @@
         "greek": "συζητάω (συζητήσω)",
         "english": "to chat / to discuss",
         "group": "Social & communication",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "έπειτα",
@@ -2829,7 +2829,7 @@
         "greek": "η αφετηρία",
         "english": "starting point / bus terminus",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η διαδρομή",
@@ -3711,7 +3711,7 @@
         "greek": "οι αποσκευές",
         "english": "luggage",
         "group": "Transport & travel",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το γκισέ",
@@ -3795,7 +3795,7 @@
         "greek": "θέλει σιδέρωμα",
         "english": "it needs ironing",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "θέλει πλύσιμο",
@@ -3807,13 +3807,13 @@
         "greek": "κοντύνω (κοντύνω)",
         "english": "to shorten",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η καρφίτσα",
         "english": "pin / safety pin",
         "group": "Body, Wardrobe and Colors",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "προπληρωμένος",
@@ -3849,7 +3849,7 @@
         "greek": "παραδοσιακός",
         "english": "traditional",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ο τοίχος",
@@ -3867,7 +3867,7 @@
         "greek": "τεράστιος",
         "english": "huge",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "η σοφίτα",
@@ -3909,7 +3909,7 @@
         "greek": "πώς περνάτε",
         "english": "how are you getting on",
         "group": "Social & communication",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "κερνάω (κεράσω)",
@@ -4209,7 +4209,7 @@
         "greek": "μαγειρεύω (μαγειρέψω)",
         "english": "to cook",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "πλέκω (πλέξω)",
@@ -4299,7 +4299,7 @@
         "greek": "το γραμμάριο",
         "english": "gram",
         "group": "Commerce & delivery",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στεγνώνω (στεγνώσω)",
@@ -4311,7 +4311,7 @@
         "greek": "εξαντλημένος",
         "english": "exhausted",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "γνωρίζω (γνωρίσω)",
@@ -4377,7 +4377,7 @@
         "greek": "ελπίζω (ελπίσω)",
         "english": "to hope",
         "group": "Feelings & emotions",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "ξαφνικά",
