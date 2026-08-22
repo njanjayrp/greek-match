@@ -963,7 +963,7 @@ function buildConjRound() {
     const tenses = ["present","imperfect","aorist","future"];
     const round = [];
     let attempts = 0;
-    while (round.length < 6 && attempts < 300) {
+    while (round.length < 10 && attempts < 500) {
         attempts++;
         const v = verbs[Math.floor(Math.random() * verbs.length)];
         const t = tenses[Math.floor(Math.random() * tenses.length)];
