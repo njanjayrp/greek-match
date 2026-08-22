@@ -44,8 +44,8 @@ where the grammar lives.
 > ticket at the **ticket office** — I didn't need to pay the driver.
 > The clerk informed me there was a **connection** to my village from
 > Thessaloniki, **otherwise** I would've had to take a taxi. As we
-> **moved on** toward the north, I admired the mountains. **After**
-> five hours we arrived.
+> **were moving on** toward the north, I was admiring the mountains.
+> **After** five hours we arrived.
 
 Στο **χωριό** με περίμενε ο θείος μου. Έχει **σγουρά** μαλλιά, είναι
 **μελαχρινός**, ψηλός και **ξυρισμένος** — δεν είχε αλλάξει καθόλου

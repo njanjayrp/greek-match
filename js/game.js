@@ -969,6 +969,7 @@ function buildConjRound() {
         const t = tenses[Math.floor(Math.random() * tenses.length)];
         const p = Math.floor(Math.random() * 6);
         if (!v[t]) continue;                  // skip verbs missing a tense
+        if (t === "present" && p === 0) continue;  // skip present 1sg (equals lemma)
         const answer = v[t][p];
         if (!answer) continue;
         // avoid same verb-tense-person twice in a round
