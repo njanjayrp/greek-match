@@ -280,3 +280,43 @@ role the ending is playing.
 > thirteen-year-old witch who moves to a seaside town together with
 > her talking cat. She starts her flying delivery service, meets
 > new friends, and finds hope for tomorrow in her adventure.
+
+---
+
+## 5. Η καθημερινή ζωή (Ερωτήσεις & απαντήσεις)
+
+**— Πού μένεις;**
+Μένω στην Ελάνη, ένα όμορφο παραθαλάσσιο χωριό στη Χαλκιδική.
+
+**— Τι ώρα ξυπνάς συνήθως;**
+Συνήθως ξυπνάω γύρω στις 7:30 το πρωί.
+
+**— Τι κάνεις το πρωί;**
+Το πρωί πίνω πράσινο τσάι και διαβάζω στη βεράντα, ενώ κοιτάζω τη
+θάλασσα και τον Όλυμπο. Μετά ετοιμάζω το πρωινό μου.
+
+**— Τι κάνεις μέσα στη μέρα;**
+Συνήθως δουλεύω και μαθαίνω μια ξένη γλώσσα. Το απόγευμα κάνω
+γυμναστική και καθαρίζω την τουαλέτα της γάτας μου.
+
+**— Τι κάνεις το απόγευμα;**
+Πηγαίνουμε στην παραλία και κάνουμε μια βόλτα.
+
+**— Και τα βράδια;**
+Το βράδυ μερικές φορές πηγαίνουμε στο σουπερμάρκετ να ψωνίσουμε
+τρόφιμα, μαγειρεύουμε ένα καλύτερο δείπνο, παίζω βιντεοπαιχνίδια
+και βλέπουμε καμιά σειρά ή ταινία.
+
+> **Translation.** — Where do you live? — I live in Elani, a
+> beautiful seaside village in Halkidiki. — What time do you
+> usually wake up? — I usually wake up around 7:30 in the
+> morning. — What do you do in the morning? — In the morning I
+> drink green tea and read on the balcony, while I look at the sea
+> and Mount Olympus. Then I prepare my breakfast. — What do you
+> do during the day? — I usually work and learn a foreign
+> language. In the afternoon I do exercise and clean my cat's
+> litter box. — What do you do in the afternoon? — We go to
+> the beach and take a walk. — And in the evenings? — In the
+> evening we sometimes go to the supermarket to buy groceries,
+> we cook a better dinner, I play video games, and we watch
+> some series or a movie.
