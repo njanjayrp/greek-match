@@ -4504,5 +4504,65 @@
         "english": "service",
         "group": "General",
         "marked": true
+    },
+    {
+        "greek": "η κολλητή",
+        "english": "best friend (female)",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "τρομερός",
+        "english": "terrific",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η συλλογή",
+        "english": "collection",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "η έκθεση",
+        "english": "exhibition",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "σχεδιάζω (σχεδιάσω)",
+        "english": "to design",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ο καλλιτέχνης",
+        "english": "artist",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "οπωσδήποτε",
+        "english": "definitely",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "η ανάγκη",
+        "english": "need",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "εικοστός",
+        "english": "twentieth",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "αλλού",
+        "english": "elsewhere",
+        "group": "General",
+        "marked": true
     }
 ]
