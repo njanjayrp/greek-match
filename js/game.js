@@ -21,7 +21,7 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["quiz", "xmatch", "type", "fill", "conj"].includes(urlMode)) mode = urlMode;
+    if (["quiz", "xmatch", "type", "fill", "conj", "dates"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
@@ -61,12 +61,14 @@ function populateGroupSelect() {
     select.innerHTML = "";
     const allOpt = document.createElement("option");
     allOpt.value = "__all__";
-    allOpt.textContent = mode === "fill" ? "All topics" : "All groups";
+    allOpt.textContent = (mode === "fill" || mode === "dates") ? "All topics" : "All groups";
     select.appendChild(allOpt);
 
-    const items = mode === "fill"
-        ? [...new Set(allSentences.map(s => s.topic).filter(Boolean))].sort()
-        : [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
+    const items = mode === "dates"
+        ? (window.DATETIME ? window.DATETIME.TOPICS : [])
+        : mode === "fill"
+            ? [...new Set(allSentences.map(s => s.topic).filter(Boolean))].sort()
+            : [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
     for (const g of items) {
         const opt = document.createElement("option");
         opt.value = g;
@@ -77,6 +79,7 @@ function populateGroupSelect() {
 
 function groupExists(g) {
     if (g === "__all__") return true;
+    if (mode === "dates") return !!window.DATETIME && window.DATETIME.TOPICS.includes(g);
     if (mode === "fill") return allSentences.some(s => s.topic === g);
     return allWords.some(w => w.group === g);
 }
@@ -93,6 +96,7 @@ function modePool() {
 }
 
 function selectRound() {
+    if (mode === "dates") return [];
     if (mode === "fill") {
         const pool = modePool().slice();
         for (let i = pool.length - 1; i > 0; i--) {
@@ -193,6 +197,7 @@ function updateSubtitle() {
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
         fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
         conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
+        dates:  { greek: "Read the clock, date, age or duration",                    english: "Read the clock, date, age or duration" },
         xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
@@ -593,9 +598,10 @@ function applyMode() {
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
     document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
     document.getElementById("conj-container").style.display   = mode === "conj" ? "" : "none";
+    document.getElementById("dates-container").style.display  = mode === "dates" ? "" : "none";
     document.getElementById("mode-select").value = mode;
-    // Lang toggle has no role in Fill mode
-    document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
+    // Lang toggle has no role in Fill or Dates mode
+    document.querySelector(".lang-toggle").style.display = (mode === "fill" || mode === "dates") ? "none" : "";
     // Marked & Conjugate modes ignore the group filter — disable the dropdown so it doesn't mislead
     document.getElementById("group-select").disabled = (mode === "xmatch" || mode === "conj");
     updateSubtitle();
@@ -603,6 +609,7 @@ function applyMode() {
     else if (mode === "type") buildTyping();
     else if (mode === "fill") buildFill();
     else if (mode === "conj") buildConj();
+    else if (mode === "dates") buildDates();
     else buildMatch();
 }
 
@@ -615,13 +622,16 @@ function switchMode(target) {
     populateGroupSelect();
     if (mode === "fill") {
         group = localStorage.getItem("greek_topic") || "__all__";
+    } else if (mode === "dates") {
+        group = localStorage.getItem("greek_dates_topic") || "__all__";
     } else {
         group = localStorage.getItem("greek_group") || "__all__";
     }
     if (!groupExists(group)) group = "__all__";
     document.getElementById("group-select").value = group;
-    // Always re-pick the round when entering or leaving fill (different data shape)
-    if (mode === "fill" || prev === "fill" || (prev === "xmatch") !== (mode === "xmatch")) {
+    // Always re-pick the round when entering or leaving a mode with a different data shape
+    if (mode === "fill" || prev === "fill" || mode === "dates" || prev === "dates" ||
+        (prev === "xmatch") !== (mode === "xmatch")) {
         round = selectRound();
     }
     applyMode();
@@ -632,6 +642,8 @@ function switchGroup(target) {
     group = target;
     if (mode === "fill") {
         localStorage.setItem("greek_topic", group);
+    } else if (mode === "dates") {
+        localStorage.setItem("greek_dates_topic", group);
     } else {
         localStorage.setItem("greek_group", group);
     }
@@ -938,6 +950,7 @@ function dispatchRetry() {
     else if (mode === "type") buildTyping();
     else if (mode === "fill") { round = selectRound(); buildFill(); }
     else if (mode === "conj") buildConj();
+    else if (mode === "dates") buildDates();
     else buildMatch();
 }
 
@@ -1066,6 +1079,79 @@ function finishConj() {
     document.getElementById("btn-retry").style.display = "";
     document.getElementById("btn-new").style.display   = "";
     document.getElementById("conj-input").disabled     = true;
+}
+
+// ── Dates / time drill ──────────────────────────────────────────────────────
+// Questions are generated in js/datetime.js — nothing here comes from words.json.
+
+let datesRound = [];
+let datesIndex = 0;
+let datesScore = 0;
+let datesTimer = null;
+
+function buildDates() {
+    // Drop any answer-reveal timer still pending from the round being replaced
+    clearTimeout(datesTimer);
+    datesRound = window.DATETIME
+        ? window.DATETIME.buildRound(group === "__all__" ? null : group, 10)
+        : [];
+    datesIndex = 0;
+    datesScore = 0;
+    checked    = false;
+    document.getElementById("score-banner").style.display = "none";
+    document.getElementById("btn-check").style.display    = "none";
+    document.getElementById("btn-retry").style.display    = "none";
+    document.getElementById("btn-new").style.display      = "none";
+    if (!datesRound.length) {
+        document.getElementById("dates-prompt").textContent = "No questions available.";
+        document.getElementById("dates-options").innerHTML  = "";
+        return;
+    }
+    showDatesQuestion();
+}
+
+function showDatesQuestion() {
+    const q = datesRound[datesIndex];
+    document.getElementById("dates-progress").textContent = (datesIndex + 1) + " / " + datesRound.length;
+    document.getElementById("dates-topic").textContent    = q.topic;
+    document.getElementById("dates-sub").textContent      = q.sub;
+    document.getElementById("dates-prompt").textContent   = q.prompt;
+
+    const box = document.getElementById("dates-options");
+    box.innerHTML = "";
+    // Long options (spelled-out Greek) need the full width to stay readable
+    box.classList.toggle("wide", q.options.some(o => o.length > 18));
+    q.options.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.className   = "quiz-opt";
+        btn.textContent = opt;
+        btn.addEventListener("click", () => answerDates(btn, opt));
+        box.appendChild(btn);
+    });
+}
+
+function answerDates(btn, chosen) {
+    const q = datesRound[datesIndex];
+    const buttons = [...document.querySelectorAll("#dates-options .quiz-opt")];
+    buttons.forEach(b => {
+        b.disabled = true;
+        if (b.textContent === q.answer) b.classList.add("correct");
+    });
+    if (chosen === q.answer) datesScore++;
+    else btn.classList.add("wrong");
+    datesTimer = setTimeout(advanceDates, chosen === q.answer ? 700 : 1600);
+}
+
+function advanceDates() {
+    datesIndex++;
+    if (datesIndex < datesRound.length) showDatesQuestion();
+    else finishDates();
+}
+
+function finishDates() {
+    showScoreBanner(datesScore, datesRound.length);
+    document.getElementById("btn-retry").style.display = "";
+    document.getElementById("btn-new").style.display   = "";
 }
 
 // ── Boot ─────────────────────────────────────────────────────────────────────

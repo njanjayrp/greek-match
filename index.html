@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon-192.png?v=2">
     <link rel="apple-touch-icon" href="icons/icon-192.png?v=2">
-    <link rel="stylesheet" href="css/game.css?v=6">
+    <link rel="stylesheet" href="css/game.css?v=7">
 </head>
 <body>
 <h1>Greek Match</h1>
@@ -28,6 +28,7 @@
                 <option value="type">Type</option>
                 <option value="fill">Fill</option>
                 <option value="conj">Conjugate</option>
+                <option value="dates">Dates</option>
                 <option value="xmatch">Marked</option>
             </select>
             <select class="mode-select" id="group-select" aria-label="Group">
@@ -67,6 +68,16 @@
         <ul id="conj-history"></ul>
     </div>
 
+    <div id="dates-container" style="display:none">
+        <div class="quiz-header">
+            <span id="dates-progress">1 / 10</span>
+            <span id="dates-topic"></span>
+        </div>
+        <div id="dates-sub"></div>
+        <div id="dates-prompt"></div>
+        <div id="dates-options"></div>
+    </div>
+
     <div id="fill-container" style="display:none">
         <div class="fill-header">
             <span id="fill-progress">1 / 6</span>
@@ -98,6 +109,7 @@
 </div>
 
 <script src="js/conjugations.js?v=2"></script>
-<script src="js/game.js?v=18"></script>
+<script src="js/datetime.js?v=1"></script>
+<script src="js/game.js?v=19"></script>
 </body>
 </html>

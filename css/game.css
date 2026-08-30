@@ -236,6 +236,22 @@ h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2
 .fill-opt.wrong    { border-color: #ef4444; background: #fef2f2; color: #dc2626; }
 .fill-opt:disabled { cursor: default; }
 
+/* -- Dates / time drill -- */
+#dates-container { margin-bottom: 24px; }
+#dates-topic { font-size: 12px; color: #4a6cf7; text-transform: uppercase; letter-spacing: 0.5px; }
+#dates-sub {
+    background: #fff; border: 1.5px solid #e2e5ea; border-bottom: none; border-radius: 10px 10px 0 0;
+    padding: 12px 20px; text-align: center; font-size: 13px; color: #666; font-style: italic;
+}
+#dates-prompt {
+    background: #fff; border: 1.5px solid #e2e5ea; border-radius: 0 0 10px 10px;
+    padding: 26px 20px; text-align: center; font-size: 21px; font-weight: 700;
+    margin-bottom: 16px; letter-spacing: -0.3px; line-height: 1.4;
+    -webkit-user-select: text; user-select: text;
+}
+#dates-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#dates-options.wide { grid-template-columns: 1fr; }
+
 /* -- Shared -- */
 .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
@@ -305,5 +321,7 @@ button:active { transform: scale(0.97); }
     #typing-word { padding: 20px 16px; font-size: 18px; }
     #fill-sentence { padding: 18px 14px; font-size: 18px; }
     #fill-prompt   { padding: 12px 14px; font-size: 13px; }
+    #dates-prompt  { padding: 20px 14px; font-size: 18px; }
+    #dates-sub     { padding: 10px 14px; font-size: 12px; }
     .fill-opt      { padding: 9px 10px; font-size: 13px; }
 }

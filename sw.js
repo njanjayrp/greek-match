@@ -1,10 +1,11 @@
-const CACHE_NAME = 'greek-match-v29';
+const CACHE_NAME = 'greek-match-v30';
 const ASSETS = [
     './',
     './index.html',
     './css/game.css',
     './js/game.js',
     './js/conjugations.js',
+    './js/datetime.js',
     './words.json',
     './sentences.json',
     './icons/icon-192.png',
