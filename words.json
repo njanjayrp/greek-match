@@ -387,7 +387,7 @@
         "greek": "συναντάω (συναντήσω)",
         "english": "to meet",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "χαιρετάω (χαιρετήσω)",
@@ -4149,7 +4149,7 @@
         "greek": "βράζω (βράσω)",
         "english": "to boil",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τηγανίζω (τηγανίσω)",
@@ -4191,19 +4191,19 @@
         "greek": "ψιλοκόβω (ψιλοκόψω)",
         "english": "to chop finely",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "τρίβω (τρίψω)",
         "english": "to grate / rub",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "στείβω (στείψω)",
         "english": "to squeeze / wring",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "μαγειρεύω (μαγειρέψω)",
@@ -4221,7 +4221,7 @@
         "greek": "διδάσκω (διδάξω)",
         "english": "to teach",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "σφίγγω (σφίξω)",
@@ -4317,7 +4317,7 @@
         "greek": "γνωρίζω (γνωρίσω)",
         "english": "to meet / get to know",
         "group": "Social & communication",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "διαρκώ (διαρκέσω)",
@@ -4401,7 +4401,7 @@
         "greek": "σώζω (σώσω)",
         "english": "to save",
         "group": "Common verbs",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "πρώην",
@@ -4425,7 +4425,7 @@
         "greek": "η λογική",
         "english": "logic / reason",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "το συναίσθημα",
