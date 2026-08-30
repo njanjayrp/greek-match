@@ -969,27 +969,51 @@ const TENSE_LABELS = {
 };
 const PERSON_LABELS = ["1sg (I)", "2sg (you)", "3sg (he/she/it)", "1pl (we)", "2pl (you all)", "3pl (they)"];
 
+const CONJ_TENSES = ["present", "imperfect", "aorist", "future"];
+const CONJ_RECENT_KEY = "greek_conj_recent";
+
+function shuffleArr(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
 function buildConjRound() {
-    // Build 6 random (verb, tense, person) prompts, skipping null cells.
     const verbs = window.CONJUGATIONS || [];
     if (!verbs.length) return [];
-    const tenses = ["present","imperfect","aorist","future"];
+    const size = Math.min(10, verbs.length);
+
+    // One question per verb, and verbs drilled in the previous round go to the
+    // back of the queue — otherwise 10 independent draws from 16 verbs keep
+    // landing on the same handful.
+    const recent = new Set(JSON.parse(localStorage.getItem(CONJ_RECENT_KEY) || "[]"));
+    const order = shuffleArr(verbs.filter(v => !recent.has(v.lemma)))
+        .concat(shuffleArr(verbs.filter(v => recent.has(v.lemma))))
+        .slice(0, size);
+
+    // Deal tenses from a shuffled deck so every four questions cover all four
+    // tenses, instead of a round coming out all-present by chance.
+    let deck = [];
     const round = [];
-    let attempts = 0;
-    while (round.length < 10 && attempts < 500) {
-        attempts++;
-        const v = verbs[Math.floor(Math.random() * verbs.length)];
-        const t = tenses[Math.floor(Math.random() * tenses.length)];
-        const p = Math.floor(Math.random() * 6);
-        if (!v[t]) continue;                  // skip verbs missing a tense
-        if (t === "present" && p === 0) continue;  // skip present 1sg (equals lemma)
-        const answer = v[t][p];
-        if (!answer) continue;
-        // avoid same verb-tense-person twice in a round
-        if (round.some(q => q.lemma===v.lemma && q.tense===t && q.person===p)) continue;
-        round.push({ lemma: v.lemma, english: v.english, tense: t, person: p, answer });
+    for (const v of order) {
+        if (!deck.length) deck = shuffleArr(CONJ_TENSES);
+        let ti = deck.findIndex(t => v[t]);
+        if (ti === -1) { deck = shuffleArr(CONJ_TENSES); ti = deck.findIndex(t => v[t]); }
+        if (ti === -1) continue;                       // verb has no usable tense
+        const tense = deck.splice(ti, 1)[0];
+
+        // present 1sg is skipped — it is identical to the lemma being shown
+        const person = shuffleArr([0, 1, 2, 3, 4, 5])
+            .find(p => v[tense][p] && !(tense === "present" && p === 0));
+        if (person === undefined) continue;
+
+        round.push({ lemma: v.lemma, english: v.english, tense, person, answer: v[tense][person] });
     }
-    return round;
+    localStorage.setItem(CONJ_RECENT_KEY, JSON.stringify(round.map(q => q.lemma)));
+    return shuffleArr(round);
 }
 
 function buildConj() {
