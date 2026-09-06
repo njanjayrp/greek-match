@@ -1026,12 +1026,6 @@
         "marked": false
     },
     {
-        "greek": "έτος",
-        "english": "year (formal)",
-        "group": "General",
-        "marked": false
-    },
-    {
         "greek": "συζητάω (συζητήσω)",
         "english": "to chat / to discuss",
         "group": "Social & communication",
@@ -1298,12 +1292,6 @@
     {
         "greek": "ή... ή",
         "english": "either... or",
-        "group": "Connectors & logic",
-        "marked": false
-    },
-    {
-        "greek": "είτε... είτε",
-        "english": "either... or (formal)",
         "group": "Connectors & logic",
         "marked": false
     },
@@ -3156,12 +3144,6 @@
         "marked": false
     },
     {
-        "greek": "αισθάνομαι (αισθανθώ)",
-        "english": "to feel (formal)",
-        "group": "Common verbs",
-        "marked": false
-    },
-    {
         "greek": "σηκώνομαι (σηκωθώ)",
         "english": "to get up / stand up",
         "group": "Common verbs",
@@ -4094,12 +4076,6 @@
     {
         "greek": "η σκεπή",
         "english": "roof",
-        "group": "Home, places & nature",
-        "marked": false
-    },
-    {
-        "greek": "η στέγη",
-        "english": "roof (formal)",
         "group": "Home, places & nature",
         "marked": false
     },
