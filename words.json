@@ -4534,5 +4534,83 @@
         "english": "elsewhere",
         "group": "General",
         "marked": true
+    },
+    {
+        "greek": "ο βορράς",
+        "english": "north",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "ο νότος",
+        "english": "south",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "η ανατολή",
+        "english": "east",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "η δύση",
+        "english": "west",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "αριστερά",
+        "english": "left",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "δεξιά",
+        "english": "right",
+        "group": "Home, places & nature",
+        "marked": true
+    },
+    {
+        "greek": "ενοχλώ (ενοχλήσω)",
+        "english": "to bother",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "κατηγορώ τον εαυτό μου",
+        "english": "to blame oneself",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ανύπαντρος",
+        "english": "single / unmarried",
+        "group": "Social & communication",
+        "marked": false
+    },
+    {
+        "greek": "χωρισμένος",
+        "english": "separated",
+        "group": "Social & communication",
+        "marked": false
+    },
+    {
+        "greek": "μετανιώνω (μετανιώσω)",
+        "english": "to regret",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ό,τι (οτιδήποτε)",
+        "english": "whatever",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "υποψιάζομαι (υποψιαστώ)",
+        "english": "to suspect",
+        "group": "Common verbs",
+        "marked": false
     }
 ]
