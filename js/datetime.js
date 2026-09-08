@@ -408,6 +408,65 @@ function genQuestionWord() {
     return q("When", "Τι ρωτάει;", w[0], w[1], QUESTION_WORDS.filter(x => x !== w).map(x => x[1]));
 }
 
+// ── Generators: Ordinals ──────────────────────────────────────────────
+
+// Ordinals are adjectives, so they agree with the noun. The masculine
+// accusative (στον τρίτο όροφο) is spelled like the neuter.
+const ORDINALS = [
+    { n:1,  masc:"πρώτος",   fem:"πρώτη",   neut:"πρώτο",   en:"first",   ord:"1st"  },
+    { n:2,  masc:"δεύτερος", fem:"δεύτερη", neut:"δεύτερο", en:"second",  ord:"2nd"  },
+    { n:3,  masc:"τρίτος",   fem:"τρίτη",   neut:"τρίτο",   en:"third",   ord:"3rd"  },
+    { n:4,  masc:"τέταρτος", fem:"τέταρτη", neut:"τέταρτο", en:"fourth",  ord:"4th"  },
+    { n:5,  masc:"πέμπτος",  fem:"πέμπτη",  neut:"πέμπτο",  en:"fifth",   ord:"5th"  },
+    { n:6,  masc:"έκτος",    fem:"έκτη",    neut:"έκτο",    en:"sixth",   ord:"6th"  },
+    { n:7,  masc:"έβδομος",  fem:"έβδομη",  neut:"έβδομο",  en:"seventh", ord:"7th"  },
+    { n:8,  masc:"όγδοος",   fem:"όγδοη",   neut:"όγδοο",   en:"eighth",  ord:"8th"  },
+    { n:9,  masc:"ένατος",   fem:"ένατη",   neut:"ένατο",   en:"ninth",   ord:"9th"  },
+    { n:10, masc:"δέκατος",  fem:"δέκατη",  neut:"δέκατο",  en:"tenth",   ord:"10th" }
+];
+
+const ORD_NOUNS = [
+    { gr:"φορά",    art:"η",  g:"fem",  en:"time"   },
+    { gr:"μέρα",    art:"η",  g:"fem",  en:"day"    },
+    { gr:"όροφος", art:"ο",  g:"masc", en:"floor"  },
+    { gr:"μήνας",   art:"ο",  g:"masc", en:"month"  },
+    { gr:"μάθημα", art:"το", g:"neut", en:"lesson" },
+    { gr:"παιδί",   art:"το", g:"neut", en:"child"  }
+];
+
+function ordNeighbours(o) {
+    return ORDINALS.filter(x => Math.abs(x.n - o.n) <= 2 && x !== o);
+}
+
+function genOrdRead() {
+    const o = pick(ORDINALS);
+    return q("Ordinals", "Τι σημαίνει;", o.masc, o.en, otherGlosses(ORDINALS, o.en, "en"));
+}
+
+function genOrdSay() {
+    const o = pick(ORDINALS);
+    const g = pick(["masc", "fem", "neut"]);
+    const hint = { masc:"(ο …)", fem:"(η …)", neut:"(το …)" }[g];
+    return q("Ordinals", "Πώς το λέμε στα ελληνικά;", o.en + " " + hint, o[g],
+        [ o.masc, o.fem, o.neut ].concat(ordNeighbours(o).map(x => x[g])));
+}
+
+function genOrdAgree() {
+    const o = pick(ORDINALS), noun = pick(ORD_NOUNS);
+    const right = noun.art + " " + o[noun.g] + " " + noun.gr;
+    const wrongForms = ["masc", "fem", "neut"].filter(g => g !== noun.g)
+        .map(g => noun.art + " " + o[g] + " " + noun.gr);
+    return q("Ordinals", "Ποια συμφωνία;", "the " + o.ord + " " + noun.en, right,
+        wrongForms.concat(ordNeighbours(o).map(x => noun.art + " " + x[noun.g] + " " + noun.gr)));
+}
+
+function genOrdFloor() {
+    const o = pick(ORDINALS);
+    return q("Ordinals", "Πού;", "Μένω στον " + o.neut + " όροφο.",
+        "I live on the " + o.ord + " floor",
+        ordNeighbours(o).map(x => "I live on the " + x.ord + " floor"));
+}
+
 // ── Round assembly ──────────────────────────────────────────────────────────
 
 const GENERATORS = {
@@ -415,6 +474,7 @@ const GENERATORS = {
     Dates:    [genDateRead, genDateSay, genYearRead, genYearSay, genMonthVocab, genDayVocab],
     Age:      [genAgeRead, genAgeSay, genBornIn, genAgeTurns],
     Duration: [genDurRead, genDurRead, genDurSay, genDurSince],
+    Ordinals: [genOrdRead, genOrdSay, genOrdSay, genOrdAgree, genOrdFloor],
     When:     [genWhenRead, genWhenSay, genAgo, genIn, genQuestionWord]
 };
 
