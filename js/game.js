@@ -970,7 +970,7 @@ const TENSE_LABELS = {
 const PERSON_LABELS = ["1sg (I)", "2sg (you)", "3sg (he/she/it)", "1pl (we)", "2pl (you all)", "3pl (they)"];
 
 const CONJ_TENSES = ["present", "imperfect", "aorist", "future"];
-const CONJ_RECENT_KEY = "greek_conj_recent";
+const CONJ_QUEUE_KEY = "greek_conj_queue";
 
 function shuffleArr(arr) {
     const a = arr.slice();
@@ -981,18 +981,33 @@ function shuffleArr(arr) {
     return a;
 }
 
+// Verbs are dealt from a shuffled queue that survives page reloads, so every
+// verb comes up once before any verb comes up twice.
+function takeFromConjQueue(verbs, size) {
+    const byLemma = new Map(verbs.map(v => [v.lemma, v]));
+    let queue = [];
+    try { queue = JSON.parse(localStorage.getItem(CONJ_QUEUE_KEY) || "[]"); } catch (e) { queue = []; }
+    queue = queue.filter(l => byLemma.has(l));
+
+    const taken = [];
+    while (taken.length < size) {
+        if (!queue.length) {
+            // Reshuffle the whole list, keeping the verbs just drilled to the back.
+            const fresh = shuffleArr(verbs.map(v => v.lemma).filter(l => !taken.includes(l)));
+            if (!fresh.length) break;
+            queue = fresh;
+        }
+        taken.push(queue.shift());
+    }
+    try { localStorage.setItem(CONJ_QUEUE_KEY, JSON.stringify(queue)); } catch (e) { /* private mode */ }
+    return taken.map(l => byLemma.get(l));
+}
+
 function buildConjRound() {
     const verbs = window.CONJUGATIONS || [];
     if (!verbs.length) return [];
     const size = Math.min(10, verbs.length);
-
-    // One question per verb, and verbs drilled in the previous round go to the
-    // back of the queue — otherwise 10 independent draws from 16 verbs keep
-    // landing on the same handful.
-    const recent = new Set(JSON.parse(localStorage.getItem(CONJ_RECENT_KEY) || "[]"));
-    const order = shuffleArr(verbs.filter(v => !recent.has(v.lemma)))
-        .concat(shuffleArr(verbs.filter(v => recent.has(v.lemma))))
-        .slice(0, size);
+    const order = takeFromConjQueue(verbs, size);
 
     // Deal tenses from a shuffled deck so every four questions cover all four
     // tenses, instead of a round coming out all-present by chance.
@@ -1012,7 +1027,6 @@ function buildConjRound() {
 
         round.push({ lemma: v.lemma, english: v.english, tense, person, answer: v[tense][person] });
     }
-    localStorage.setItem(CONJ_RECENT_KEY, JSON.stringify(round.map(q => q.lemma)));
     return shuffleArr(round);
 }
 
