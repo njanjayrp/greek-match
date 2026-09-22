@@ -4606,5 +4606,107 @@
         "english": "to suspect",
         "group": "Common verbs",
         "marked": false
+    },
+    {
+        "greek": "προηγούμενος",
+        "english": "previous",
+        "group": "Time & frequency",
+        "marked": true
+    },
+    {
+        "greek": "περασμένος",
+        "english": "last / past",
+        "group": "Time & frequency",
+        "marked": true
+    },
+    {
+        "greek": "αλλάζω (αλλάξω)",
+        "english": "to change",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "προσέχω (προσέξω)",
+        "english": "to pay attention / be careful",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "φτιάχνω (φτιάξω)",
+        "english": "to make / fix",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "παίζω (παίξω)",
+        "english": "to play",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ταξιδεύω (ταξιδέψω)",
+        "english": "to travel",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "αγγίζω (αγγίξω)",
+        "english": "to touch",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "πειράζω (πειράξω)",
+        "english": "to tease",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "τρομάζω (τρομάξω)",
+        "english": "to get scared",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "νυστάζω (νυστάξω)",
+        "english": "to be sleepy",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "βάφω (βάψω)",
+        "english": "to paint / dye",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "ράβω (ράψω)",
+        "english": "to sew",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "καθυστερώ (καθυστερήσω)",
+        "english": "to be delayed",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "χαζεύω (χαζέψω)",
+        "english": "to wander around / browse",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "τσιμπάω (τσιμπήσω)",
+        "english": "to grab a bite",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "αγκαλιάζω (αγκαλιάσω)",
+        "english": "to hug",
+        "group": "Common verbs",
+        "marked": true
     }
 ]
