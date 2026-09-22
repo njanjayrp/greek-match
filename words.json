@@ -4599,7 +4599,7 @@
         "greek": "προηγούμενος",
         "english": "previous",
         "group": "Time & frequency",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "περασμένος",
