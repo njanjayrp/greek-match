@@ -4425,7 +4425,7 @@
         "greek": "το ημερολόγιο",
         "english": "diary / calendar",
         "group": "General",
-        "marked": true
+        "marked": false
     },
     {
         "greek": "νεαρός",
