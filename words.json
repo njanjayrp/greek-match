@@ -4672,5 +4672,17 @@
         "english": "to hug",
         "group": "Common verbs",
         "marked": true
+    },
+    {
+        "greek": "ξαφνικά",
+        "english": "suddenly",
+        "group": "Time & frequency",
+        "marked": false
+    },
+    {
+        "greek": "ελέγχω (ελέγξω)",
+        "english": "to check",
+        "group": "Common verbs",
+        "marked": false
     }
 ]
