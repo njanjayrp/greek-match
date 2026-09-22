@@ -4684,5 +4684,41 @@
         "english": "to check",
         "group": "Common verbs",
         "marked": false
+    },
+    {
+        "greek": "έτος",
+        "english": "year (formal)",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "είτε... είτε",
+        "english": "either... or (formal)",
+        "group": "Connectors & logic",
+        "marked": false
+    },
+    {
+        "greek": "αισθάνομαι (αισθανθώ)",
+        "english": "to feel (formal)",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "το ρετιρέ",
+        "english": "top-floor apartment / penthouse",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η κρεβατοκάμαρα",
+        "english": "bedroom",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η στέγη",
+        "english": "roof (formal)",
+        "group": "Home, places & nature",
+        "marked": false
     }
 ]
