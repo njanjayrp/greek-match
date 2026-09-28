@@ -196,6 +196,8 @@ function setLang(l) {
     if (mode === "quiz") buildQuiz();
     else if (mode === "type") buildTyping();
     else if (mode === "fill") buildFill();
+    else if (mode === "conj") buildConj();
+    else if (mode === "dates") buildDates();
     else buildMatch();
 }
 
@@ -206,7 +208,7 @@ function updateSubtitle() {
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
         fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
         conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
-        dates:  { greek: "Read the clock, date, age or duration",                    english: "Read the clock, date, age or duration" },
+        dates:  { greek: "Say the clock, date, age or duration in Greek",            english: "Read the clock, date, age or duration" },
         xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
@@ -610,7 +612,7 @@ function applyMode() {
     document.getElementById("dates-container").style.display  = mode === "dates" ? "" : "none";
     document.getElementById("mode-select").value = mode;
     // Lang toggle has no role in Fill or Dates mode
-    document.querySelector(".lang-toggle").style.display = (mode === "fill" || mode === "dates") ? "none" : "";
+    document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
     // Marked & Conjugate modes ignore the group filter — disable the dropdown so it doesn't mislead
     document.getElementById("group-select").disabled = (mode === "xmatch" || mode === "conj");
     updateSubtitle();
@@ -1140,7 +1142,8 @@ function buildDates() {
     // Drop any answer-reveal timer still pending from the round being replaced
     clearTimeout(datesTimer);
     datesRound = window.DATETIME
-        ? window.DATETIME.buildRound(group === "__all__" ? null : group, 10)
+        ? window.DATETIME.buildRound(group === "__all__" ? null : group, 10,
+                                     lang === "english" ? "en" : "gr")
         : [];
     datesIndex = 0;
     datesScore = 0;
