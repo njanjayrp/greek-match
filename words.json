@@ -4720,5 +4720,107 @@
         "english": "roof (formal)",
         "group": "Home, places & nature",
         "marked": false
+    },
+    {
+        "greek": "ο ηθοποιός",
+        "english": "actor",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "το σενάριο",
+        "english": "screenplay",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "η σκηνοθεσία",
+        "english": "directing",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "ο κινηματογράφος",
+        "english": "cinema (the venue)",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η αίθουσα προβολής",
+        "english": "screening room",
+        "group": "Home, places & nature",
+        "marked": false
+    },
+    {
+        "greek": "η οθόνη",
+        "english": "screen",
+        "group": "General",
+        "marked": true
+    },
+    {
+        "greek": "οι υπότιτλοι",
+        "english": "subtitles",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "το έργο",
+        "english": "film / play (a work)",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "η κωμωδία",
+        "english": "comedy",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "το αναψυκτικό",
+        "english": "soft drink",
+        "group": "Commerce & delivery",
+        "marked": false
+    },
+    {
+        "greek": "χαλαρώνω (χαλαρώσω)",
+        "english": "to relax",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "βοηθάω (βοηθήσω)",
+        "english": "to help",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "παρατηρώ (παρατηρήσω)",
+        "english": "to observe",
+        "group": "Common verbs",
+        "marked": true
+    },
+    {
+        "greek": "τελειώνω (τελειώσω)",
+        "english": "to finish",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "γεμάτος",
+        "english": "full",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "σύγχρονος",
+        "english": "contemporary",
+        "group": "General",
+        "marked": false
+    },
+    {
+        "greek": "παγκόσμιος",
+        "english": "worldwide",
+        "group": "General",
+        "marked": false
     }
 ]
