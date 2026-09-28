@@ -609,7 +609,7 @@
         "greek": "η σειρά",
         "english": "turn / queue / series",
         "group": "General",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "δυστυχώς",
@@ -1635,7 +1635,7 @@
         "greek": "η ουρά",
         "english": "queue",
         "group": "Commerce & delivery",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "ο / η συνάδελφος",
