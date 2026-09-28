@@ -986,7 +986,7 @@
     {
         "greek": "όμως",
         "english": "however / but",
-        "group": "Commerce, transport & travel",
+        "group": "Connectors & logic",
         "marked": false
     },
     {
@@ -4822,5 +4822,11 @@
         "english": "worldwide",
         "group": "General",
         "marked": false
+    },
+    {
+        "greek": "εννοείται",
+        "english": "it goes without saying",
+        "group": "General",
+        "marked": true
     }
 ]
