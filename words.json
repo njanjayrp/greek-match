@@ -416,7 +416,7 @@
     {
         "greek": "το κυλικείο",
         "english": "canteen / school cafeteria",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -590,19 +590,19 @@
     {
         "greek": "τα σταφύλια",
         "english": "grapes",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το αχλάδι",
         "english": "pear",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το καλάθι",
         "english": "basket",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -620,7 +620,7 @@
     {
         "greek": "η γεύση",
         "english": "taste / flavour",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -716,7 +716,7 @@
     {
         "greek": "ο μανάβης",
         "english": "greengrocer",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -782,7 +782,7 @@
     {
         "greek": "το μήνυμα",
         "english": "message",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -800,7 +800,7 @@
     {
         "greek": "τα ψώνια",
         "english": "shopping",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -830,7 +830,7 @@
     {
         "greek": "ο χορός",
         "english": "dance",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -842,7 +842,7 @@
     {
         "greek": "το ποτό",
         "english": "drink",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -938,55 +938,55 @@
     {
         "greek": "ο επιβάτης",
         "english": "passenger",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η αποβάθρα",
         "english": "platform",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το μετρό",
         "english": "metro / underground",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο προαστιακός",
         "english": "suburban train",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο σταθμός",
         "english": "station",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η στάση",
         "english": "stop (bus/tram stop)",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το τρόλεϊ",
         "english": "trolleybus",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο ηλεκτρικός",
         "english": "electric railway / metro (old Athens term)",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "όμως",
         "english": "however / but",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1208,7 +1208,7 @@
     {
         "greek": "τα αλμυρά",
         "english": "salty snacks",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1226,7 +1226,7 @@
     {
         "greek": "το κουλούρι",
         "english": "sesame bread ring",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1484,7 +1484,7 @@
     {
         "greek": "λήγω (λήξω)",
         "english": "to expire",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1496,7 +1496,7 @@
     {
         "greek": "η ταινία",
         "english": "movie",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1562,7 +1562,7 @@
     {
         "greek": "χορεύω (χορέψω)",
         "english": "to dance",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1586,7 +1586,7 @@
     {
         "greek": "η γιορτή",
         "english": "name day",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1634,7 +1634,7 @@
     {
         "greek": "η ουρά",
         "english": "queue",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": true
     },
     {
@@ -1742,7 +1742,7 @@
     {
         "greek": "η ειδοποίηση",
         "english": "notification",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1754,43 +1754,43 @@
     {
         "greek": "η παράδοση",
         "english": "delivery",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η αποστολή",
         "english": "shipment",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το κατάστημα",
         "english": "store",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η δυνατότητα",
         "english": "possibility",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η παραλαβή",
         "english": "pickup",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η άφιξη",
         "english": "arrival",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο πίνακας",
         "english": "table (chart) / board",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1814,19 +1814,19 @@
     {
         "greek": "το γυμναστήριο",
         "english": "gym",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "τα μέσα κοινωνικής δικτύωσης",
         "english": "social media",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το ταξίδι",
         "english": "trip",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1844,13 +1844,13 @@
     {
         "greek": "το χόμπι",
         "english": "hobby",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το ενδιαφέρον",
         "english": "interest",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1910,49 +1910,49 @@
     {
         "greek": "ο αναπτήρας",
         "english": "lighter",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "τα ψιλά",
         "english": "small change",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το κουτάκι",
         "english": "small can",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το πακέτο",
         "english": "pack",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "τα πατατάκια",
         "english": "chips",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το περίπτερο",
         "english": "kiosk",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η λαϊκή",
         "english": "farmer's market",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η θερμίδα",
         "english": "calorie",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2390,7 +2390,7 @@
     {
         "greek": "παραλαμβάνω (παραλάβω)",
         "english": "I pick up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2486,7 +2486,7 @@
     {
         "greek": "παραδίδω (παραδώσω)",
         "english": "I deliver",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2498,7 +2498,7 @@
     {
         "greek": "να παραδώσω",
         "english": "let me deliver",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2534,7 +2534,7 @@
     {
         "greek": "παραγγέλνω (παραγγείλω)",
         "english": "I order",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2546,7 +2546,7 @@
     {
         "greek": "να παραγγείλω",
         "english": "let me order",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2582,7 +2582,7 @@
     {
         "greek": "τα γενέθλια",
         "english": "birthday",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2594,19 +2594,19 @@
     {
         "greek": "το βερίκοκο",
         "english": "apricot",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο λωτός",
         "english": "persimmon",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η καρύδα",
         "english": "coconut",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2654,7 +2654,7 @@
     {
         "greek": "το εισιτήριο",
         "english": "ticket",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2666,25 +2666,25 @@
     {
         "greek": "ψωνίζω (ψωνίσω)",
         "english": "to shop",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "αγοράζω (αγοράσω)",
         "english": "to buy",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "πληρώνω (πληρώσω)",
         "english": "to pay",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "κοστίζω (κοστίσω)",
         "english": "to cost",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2696,7 +2696,7 @@
     {
         "greek": "το φανάρι",
         "english": "traffic light",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2738,13 +2738,13 @@
     {
         "greek": "η βαλίτσα",
         "english": "suitcase",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η έκπτωση",
         "english": "discount",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2762,7 +2762,7 @@
     {
         "greek": "το εκδοτήριο",
         "english": "ticket office",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2774,7 +2774,7 @@
     {
         "greek": "η μετακίνηση",
         "english": "move / commute",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2816,25 +2816,25 @@
     {
         "greek": "η αφετηρία",
         "english": "starting point / bus terminus",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η διαδρομή",
         "english": "route / journey",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έχει ανταπόκριση",
         "english": "it has a connection / transfer",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το πρόστιμο",
         "english": "fine / penalty",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -3524,55 +3524,55 @@
     {
         "greek": "η βιτρίνα",
         "english": "window display",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "φτηνός",
         "english": "cheap",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "μαλακός",
         "english": "soft",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το νούμερο",
         "english": "size (clothing/shoe)",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η τιμή",
         "english": "price",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το ταμείο",
         "english": "checkout / register",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "οι προσφορές",
         "english": "offers / promotions",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το αγαπημένο",
         "english": "favorite (n., neut.)",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "αγαπημένος",
         "english": "favorite (adj.)",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -3620,97 +3620,97 @@
     {
         "greek": "το αεροδρόμιο",
         "english": "airport",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η πτήση",
         "english": "flight",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η αναχώρηση",
         "english": "departure",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η πύλη",
         "english": "gate",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η επιβίβαση",
         "english": "boarding",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η κάρτα επιβίβασης",
         "english": "boarding pass",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το διαβατήριο",
         "english": "passport",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο έλεγχος ασφαλείας",
         "english": "security check",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η αεροσυνοδός",
         "english": "flight attendant (fem)",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ο πιλότος",
         "english": "pilot",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η ανακοίνωση",
         "english": "announcement",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η καθυστέρηση",
         "english": "delay",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "οι αποσκευές",
         "english": "luggage",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το γκισέ",
         "english": "counter / desk",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το τελωνείο",
         "english": "customs",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "αναχωρώ (αναχωρήσω)",
         "english": "to depart",
-        "group": "Transport & travel",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -3758,7 +3758,7 @@
     {
         "greek": "η πωλήτρια",
         "english": "saleswoman / shop assistant (fem)",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -3794,7 +3794,7 @@
     {
         "greek": "προπληρωμένος",
         "english": "prepaid",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -4238,25 +4238,25 @@
     {
         "greek": "η κούπα",
         "english": "cup",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το αλεύρι",
         "english": "flour",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "η κουταλιά",
         "english": "spoonful",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "το γραμμάριο",
         "english": "gram",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -4310,7 +4310,7 @@
     {
         "greek": "η επιβεβαίωση",
         "english": "confirmation",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -4778,7 +4778,7 @@
     {
         "greek": "το αναψυκτικό",
         "english": "soft drink",
-        "group": "Commerce & delivery",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {

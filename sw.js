@@ -1,4 +1,4 @@
-const CACHE_NAME = 'greek-match-v35';
+const CACHE_NAME = 'greek-match-v36';
 const ASSETS = [
     './',
     './index.html',

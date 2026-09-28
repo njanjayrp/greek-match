@@ -113,9 +113,6 @@ function selectWordRound() {
     const streaks  = JSON.parse(localStorage.getItem("greek_streaks")  || "{}");
     const mastered = new Set(JSON.parse(localStorage.getItem("greek_mastered") || "[]"));
     const seen2    = JSON.parse(localStorage.getItem("greek_seen")     || "[]");
-    // In Marked mode use a wider recent window (4 rounds) for spacing across a curated pool.
-    const recentWindow = mode === "xmatch" ? 4 : 2;
-    const recent   = new Set(seen2.slice(0, recentWindow).flat());
     const exposure = JSON.parse(localStorage.getItem("greek_exposure") || "{}");
 
     const pool     = modePool();
@@ -124,6 +121,18 @@ function selectWordRound() {
     // recently-marked words kept cycling).
     let active     = mode === "xmatch" ? pool.slice() : pool.filter(w => !mastered.has(w.greek));
     if (active.length < 6) active = pool.slice();
+
+    // Hold back as many past rounds as the pool can afford, instead of a fixed
+    // 2–4 round window: with 70 marked words that window still brought the same
+    // handful back every few rounds. Stop once too few words would be left.
+    let recent = new Set();
+    for (const past of seen2) {
+        const trial = new Set(recent);
+        for (const g of past) trial.add(g);
+        if (active.filter(w => !trial.has(w.greek)).length < 12) break;
+        recent = trial;
+    }
+
     const eligible = active.filter(w => !recent.has(w.greek));
     const fallback = active.filter(w =>  recent.has(w.greek));
 
@@ -584,7 +593,7 @@ function updateWeights(wrongGreekWords) {
     localStorage.setItem("greek_mastered", JSON.stringify([...masteredSet]));
 
     const seen = JSON.parse(localStorage.getItem("greek_seen") || "[]");
-    localStorage.setItem("greek_seen", JSON.stringify([round.map(w => w.greek), ...seen].slice(0, 4)));
+    localStorage.setItem("greek_seen", JSON.stringify([round.map(w => w.greek), ...seen].slice(0, 30)));
 
     const exposure = JSON.parse(localStorage.getItem("greek_exposure") || "{}");
     round.forEach(w => { exposure[w.greek] = (exposure[w.greek] || 0) + 1; });
