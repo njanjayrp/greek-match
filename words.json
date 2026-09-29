@@ -4828,5 +4828,251 @@
         "english": "it goes without saying",
         "group": "General",
         "marked": true
+    },
+    {
+        "greek": "φέρνω (φέρω)",
+        "english": "to bring",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "πέφτω (πέσω)",
+        "english": "to fall",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "καταλαβαίνω (καταλάβω)",
+        "english": "to understand",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "παθαίνω (πάθω)",
+        "english": "to suffer / undergo",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "πεθαίνω (πεθάνω)",
+        "english": "to die",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "αρρωσταίνω (αρρωστήσω)",
+        "english": "to get sick",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "παχαίνω (παχύνω)",
+        "english": "to gain weight",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "αγαπάω (αγαπήσω)",
+        "english": "to love",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "ρωτάω (ρωτήσω)",
+        "english": "to ask",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "σταματάω (σταματήσω)",
+        "english": "to stop",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "τραγουδάω (τραγουδήσω)",
+        "english": "to sing",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "περπατάω (περπατήσω)",
+        "english": "to walk",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "ζητάω (ζητήσω)",
+        "english": "to ask for",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "τηλεφωνώ (τηλεφωνήσω)",
+        "english": "to phone",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "χρησιμοποιώ (χρησιμοποιήσω)",
+        "english": "to use",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "αργώ (αργήσω)",
+        "english": "to be late",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "ζω (ζήσω)",
+        "english": "to live",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "μισώ (μισήσω)",
+        "english": "to hate",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "λειτουργώ (λειτουργήσω)",
+        "english": "to function",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "χωράω (χωρέσω)",
+        "english": "to fit",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "καλώ (καλέσω)",
+        "english": "to summon",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "παρακαλώ (παρακαλέσω)",
+        "english": "to plead",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "προσκαλώ (προσκαλέσω)",
+        "english": "to invite",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "προκαλώ (προκαλέσω)",
+        "english": "to cause / provoke",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "στενοχωρώ (στενοχωρέσω)",
+        "english": "to upset",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "αφαιρώ (αφαιρέσω)",
+        "english": "to subtract",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "διαιρώ (διαιρέσω)",
+        "english": "to divide",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "εξαιρώ (εξαιρέσω)",
+        "english": "to exclude",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "επαινώ (επαινέσω)",
+        "english": "to praise",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "εκτελώ (εκτελέσω)",
+        "english": "to carry out",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "χαμογελάω (χαμογελάσω)",
+        "english": "to smile",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "κρεμάω (κρεμάσω)",
+        "english": "to hang",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "χαλάω (χαλάσω)",
+        "english": "to spoil / break",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "γερνάω (γεράσω)",
+        "english": "to grow old",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "ξεπερνάω (ξεπεράσω)",
+        "english": "to overcome",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "τραβάω (τραβήξω)",
+        "english": "to pull",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "βουτάω (βουτήξω)",
+        "english": "to dive",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "πηδάω (πηδήξω)",
+        "english": "to jump",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "ρουφάω (ρουφήξω)",
+        "english": "to slurp",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "φυσάω (φυσήξω)",
+        "english": "to blow",
+        "group": "Common verbs",
+        "marked": false
+    },
+    {
+        "greek": "φυλάω (φυλάξω)",
+        "english": "to guard",
+        "group": "Common verbs",
+        "marked": false
     }
 ]
