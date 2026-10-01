@@ -211,7 +211,10 @@ function fromDrill(lemma) {
 function forms(entry) {
     const parts = split(entry);
     if (!parts || !isVerbLemma(parts.lemma)) return null;
-    return fromDrill(parts.lemma) || build(entry);
+    const hand = fromDrill(parts.lemma);
+    if (hand) return hand;
+    if (!parts.dep) return null;     // ενώ, εγώ … look like verbs but conjugate into nothing
+    return build(entry);
 }
 
 return { forms, isVerb: e => !!forms(e), accentFromEnd, syllables };

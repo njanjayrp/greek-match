@@ -581,6 +581,7 @@ function switchMode(target) {
     if (target === mode) return;
     const prev = mode;
     mode = target;
+    section = sectionOf(mode);
     // Rebuild dropdown — Fill uses sentence topics, others use word groups
     populateGroupSelect();
     if (mode === "fill") {
