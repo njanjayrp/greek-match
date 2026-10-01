@@ -421,9 +421,11 @@ button:active { transform: scale(0.97); }
     font: inherit;
     font-size: 13px;
     font-weight: 600;
-    padding: 6px 2px 8px;
+    padding: 7px 2px 9px;
+    border-radius: 0;          /* the generic button rule rounds the underline */
     cursor: pointer;
 }
+.tab:active { transform: none; }
 .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* ── Browse / dictionary ─────────────────────────────────────────────────── */
