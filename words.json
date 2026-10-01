@@ -164,31 +164,31 @@
     {
         "greek": "σκουπίζουμε → σκουπίζαμε",
         "english": "we vacuum → we were vacuuming",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "γυρίζω → γύριζα",
         "english": "I return → I was returning",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "διασκεδάζουν → διασκέδαζαν",
         "english": "they have fun → they were having fun",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "πλένεις → έπλενες",
         "english": "you wash → you were washing",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "χτίζω → έχτιζα",
         "english": "I build → I was building",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -374,19 +374,19 @@
     {
         "greek": "μελετάω (μελετήσω)",
         "english": "to study / to research",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "περνάω (περάσω)",
         "english": "to pass / to drop by",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "συναντάω (συναντήσω)",
         "english": "to meet",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
@@ -404,7 +404,7 @@
     {
         "greek": "φοράω (φορέσω)",
         "english": "to wear",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -662,7 +662,7 @@
     {
         "greek": "προσπαθώ (προσπαθήσω)",
         "english": "to try",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -788,13 +788,13 @@
     {
         "greek": "κρατώ (κρατήσω)",
         "english": "to hold / to keep / to last",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "ξεραίνω (ξεράνω)",
         "english": "to dry out / wither",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -890,13 +890,13 @@
     {
         "greek": "προτιμάω (προτιμήσω)",
         "english": "to prefer",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "αποφασίζω (αποφασίσω)",
         "english": "to decide",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -908,7 +908,7 @@
     {
         "greek": "ξεκινάω (ξεκινήσω)",
         "english": "to start / to set off",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": false
     },
     {
@@ -920,13 +920,13 @@
     {
         "greek": "κοιτάω (κοιτάξω)",
         "english": "to look / to watch",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "κανονίζω (κανονίσω)",
         "english": "to arrange / to organise",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
@@ -992,7 +992,7 @@
     {
         "greek": "επιλέγω (επιλέξω)",
         "english": "select",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -1058,7 +1058,7 @@
     {
         "greek": "κλείνω (κλείσω)",
         "english": "to close / to book",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1088,7 +1088,7 @@
     {
         "greek": "πατάω (πατήσω)",
         "english": "to step on / to press",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -1100,7 +1100,7 @@
     {
         "greek": "συνδέω (συνδέσω)",
         "english": "to connect",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -1232,7 +1232,7 @@
     {
         "greek": "πετάω (πετάξω)",
         "english": "to throw / to fly",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -1256,13 +1256,13 @@
     {
         "greek": "φεύγω → έφυγα",
         "english": "to leave → I left",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "φτάνω → έφτασα",
         "english": "to arrive → I arrived",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1370,7 +1370,7 @@
     {
         "greek": "κατοικώ (κατοικήσω)",
         "english": "to inhabit",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -1502,7 +1502,7 @@
     {
         "greek": "νομίζω (νομίσω)",
         "english": "to think",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -1544,7 +1544,7 @@
     {
         "greek": "ξαναμιλώ (ξαναμιλήσω)",
         "english": "to speak again",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
@@ -1556,7 +1556,7 @@
     {
         "greek": "λείπω (λείψω)",
         "english": "to be absent",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -1694,13 +1694,13 @@
     {
         "greek": "μετράω (μετρήσω)",
         "english": "to count",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "κρίνω (κρίνω)",
         "english": "to judge",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
@@ -1724,7 +1724,7 @@
     {
         "greek": "κυκλοφορώ (κυκλοφορήσω)",
         "english": "to circulate",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -1748,7 +1748,7 @@
     {
         "greek": "η προσπάθεια",
         "english": "attempt",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -1958,433 +1958,433 @@
     {
         "greek": "βλέπω (δω)",
         "english": "I see",
-        "group": "Irregular verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "έβλεπα",
         "english": "I was seeing",
-        "group": "Irregular verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "να δω",
         "english": "let me see",
-        "group": "Irregular verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "είδα",
         "english": "I saw",
-        "group": "Irregular verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "λέω (πω)",
         "english": "I say",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "έλεγα",
         "english": "I was saying",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "να πω",
         "english": "let me say",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "είπα",
         "english": "I said",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "τρώω (φάω)",
         "english": "I eat",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "έτρωγα",
         "english": "I was eating",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "να φάω",
         "english": "let me eat",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "έφαγα",
         "english": "I ate",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "πίνω (πιω)",
         "english": "I drink",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "έπινα",
         "english": "I was drinking",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "να πιω",
         "english": "let me drink",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "ήπια",
         "english": "I drank",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "παίρνω (πάρω)",
         "english": "I take",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έπαιρνα",
         "english": "I was taking",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να πάρω",
         "english": "let me take",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "πήρα",
         "english": "I took",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "δίνω (δώσω)",
         "english": "I give",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έδινα",
         "english": "I was giving",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να δώσω",
         "english": "let me give",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έδωσα",
         "english": "I gave",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "βάζω (βάλω)",
         "english": "I put",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έβαζα",
         "english": "I was putting",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "να βάλω",
         "english": "let me put",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έβαλα",
         "english": "I put",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έρχομαι (έρθω)",
         "english": "I come",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ερχόμουν",
         "english": "I was coming",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να έρθω",
         "english": "let me come",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ήρθα",
         "english": "I came",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "βρίσκω (βρω)",
         "english": "I find",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έβρισκα",
         "english": "I was finding",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "να βρω",
         "english": "let me find",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "βρήκα",
         "english": "I found",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "μπαίνω (μπω)",
         "english": "I enter",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έμπαινα",
         "english": "I was entering",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να μπω",
         "english": "let me enter",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "μπήκα",
         "english": "I entered",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "βγαίνω (βγω)",
         "english": "I go out",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έβγαινα",
         "english": "I was going out",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να βγω",
         "english": "let me go out",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "βγήκα",
         "english": "I went out",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ανεβαίνω (ανέβω)",
         "english": "I go up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ανέβαινα",
         "english": "I was going up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να ανέβω",
         "english": "let me go up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ανέβηκα",
         "english": "I went up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "κατεβαίνω (κατέβω)",
         "english": "I go down",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "κατέβαινα",
         "english": "I was going down",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να κατέβω",
         "english": "let me go down",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "κατέβηκα",
         "english": "I went down",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "πηγαίνω (πάω)",
         "english": "I go",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "πήγαινα",
         "english": "I was going",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να πάω",
         "english": "let me go",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "πήγα",
         "english": "I went",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "μαθαίνω (μάθω)",
         "english": "I learn",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "μάθαινα",
         "english": "I was learning",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "να μάθω",
         "english": "let me learn",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "έμαθα",
         "english": "I learned",
-        "group": "Irregular verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "αφήνω (αφήσω)",
         "english": "I leave",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "άφηνα",
         "english": "I was leaving",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "να αφήσω",
         "english": "let me leave",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "άφησα",
         "english": "I left",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "κλαίω (κλάψω)",
         "english": "I cry",
-        "group": "Irregular verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "έκλαιγα",
         "english": "I was crying",
-        "group": "Irregular verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "να κλάψω",
         "english": "let me cry",
-        "group": "Irregular verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "έκλαψα",
         "english": "I cried",
-        "group": "Irregular verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "καίω (κάψω)",
         "english": "I burn",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έκαιγα",
         "english": "I was burning",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "να κάψω",
         "english": "let me burn",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έκαψα",
         "english": "I burned",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -2396,91 +2396,91 @@
     {
         "greek": "παραλάμβανα",
         "english": "I was picking up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να παραλάβω",
         "english": "let me pick up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "παρέλαβα",
         "english": "I picked up",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "λαμβάνω (λάβω)",
         "english": "I receive",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "λάμβανα",
         "english": "I was receiving",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "να λάβω",
         "english": "let me receive",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "έλαβα",
         "english": "I received",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "αποφεύγω (αποφύγω)",
         "english": "I avoid",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "απέφευγα",
         "english": "I was avoiding",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "να αποφύγω",
         "english": "let me avoid",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "απέφυγα",
         "english": "I avoided",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "διώχνω (διώξω)",
         "english": "I chase away",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
         "greek": "έδιωχνα",
         "english": "I was chasing away",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "να διώξω",
         "english": "let me chase away",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "έδιωξα",
         "english": "I chased away",
-        "group": "Irregular verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
@@ -2492,7 +2492,7 @@
     {
         "greek": "παρέδιδα",
         "english": "I was delivering",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2504,31 +2504,31 @@
     {
         "greek": "παρέδωσα",
         "english": "I delivered",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ψάχνω (ψάξω)",
         "english": "I search",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έψαχνα",
         "english": "I was searching",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "να ψάξω",
         "english": "let me search",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "έψαξα",
         "english": "I searched",
-        "group": "Irregular verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -2540,7 +2540,7 @@
     {
         "greek": "παράγγελνα",
         "english": "I was ordering",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2552,7 +2552,7 @@
     {
         "greek": "παρήγγειλα",
         "english": "I ordered",
-        "group": "Irregular verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
@@ -2750,7 +2750,7 @@
     {
         "greek": "ξεχνάω (ξεχάσω)",
         "english": "to forget",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -2840,7 +2840,7 @@
     {
         "greek": "ανοίγω (ανοίξω)",
         "english": "to open",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -3140,19 +3140,19 @@
     {
         "greek": "ζεσταίνομαι (ζεσταθώ)",
         "english": "to feel warm / warm up",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "σηκώνομαι (σηκωθώ)",
         "english": "to get up / stand up",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "κουράζομαι (κουραστώ)",
         "english": "to get tired",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -3182,7 +3182,7 @@
     {
         "greek": "συγχωρώ (συγχωρήσω)",
         "english": "to forgive",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
@@ -3200,13 +3200,13 @@
     {
         "greek": "βγάζω (βγάλω)",
         "english": "to take out / bring out",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "υποστηρίζω (υποστηρίξω)",
         "english": "to support",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
@@ -3230,7 +3230,7 @@
     {
         "greek": "ακονίζω (ακονίσω)",
         "english": "to sharpen",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
@@ -3578,43 +3578,43 @@
     {
         "greek": "οδηγώ (οδηγήσω)",
         "english": "to drive",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "πλένομαι (πλυθώ)",
         "english": "to wash oneself",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "σκέφτομαι (σκεφτώ)",
         "english": "to think",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "ονειρεύομαι (ονειρευτώ)",
         "english": "to dream",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "βρίσκομαι (βρεθώ)",
         "english": "to be located",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "βιάζομαι (βιαστώ)",
         "english": "to be in a hurry",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "λυπάμαι (λυπηθώ)",
         "english": "to be sorry / sad",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -3716,37 +3716,37 @@
     {
         "greek": "επιβιβάζομαι (επιβιβαστώ)",
         "english": "to board",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "κουβαλάω (κουβαλήσω)",
         "english": "to carry",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "ακυρώνω (ακυρώσω)",
         "english": "to cancel",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "φωνάζω (φωνάξω)",
         "english": "to shout / call out",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "ταράζω (ταράξω)",
         "english": "to disturb / agitate / upset",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "ρίχνω μια ματιά",
         "english": "to take a look / glance at",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -3782,7 +3782,7 @@
     {
         "greek": "κοντύνω (κοντύνω)",
         "english": "to shorten",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
@@ -3860,25 +3860,25 @@
     {
         "greek": "προχωράω (προχωρήσω)",
         "english": "to move on / advance",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": true
     },
     {
         "greek": "προβάλλω (προβάλω)",
         "english": "to project / display",
-        "group": "Common verbs",
+        "group": "General",
         "marked": true
     },
     {
         "greek": "προβάρω (προβάρω)",
         "english": "to try on / rehearse",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "απολαμβάνω (απολαύσω)",
         "english": "to enjoy / savor",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
@@ -3890,7 +3890,7 @@
     {
         "greek": "κερνάω (κεράσω)",
         "english": "to treat someone (buy drink/food)",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
@@ -4106,97 +4106,97 @@
     {
         "greek": "βράζω (βράσω)",
         "english": "to boil",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "τηγανίζω (τηγανίσω)",
         "english": "to fry",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ψήνω (ψήσω)",
         "english": "to bake / roast / grill",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": true
     },
     {
         "greek": "λαδώνω (λαδώσω)",
         "english": "to oil / grease",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": true
     },
     {
         "greek": "λιώνω (λιώσω)",
         "english": "to melt / mash",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ανακατεύω (ανακατέψω)",
         "english": "to mix / stir",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "κόβω (κόψω)",
         "english": "to cut",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "ψιλοκόβω (ψιλοκόψω)",
         "english": "to chop finely",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "τρίβω (τρίψω)",
         "english": "to grate / rub",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "στείβω (στείψω)",
         "english": "to squeeze / wring",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "μαγειρεύω (μαγειρέψω)",
         "english": "to cook",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "πλέκω (πλέξω)",
         "english": "to knit",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "διδάσκω (διδάξω)",
         "english": "to teach",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "σφίγγω (σφίξω)",
         "english": "to tighten",
-        "group": "Common verbs",
+        "group": "General",
         "marked": true
     },
     {
         "greek": "ανακαλύπτω (ανακαλύψω)",
         "english": "to discover",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "παύω (πάψω)",
         "english": "to stop / cease",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": false
     },
     {
@@ -4262,7 +4262,7 @@
     {
         "greek": "στεγνώνω (στεγνώσω)",
         "english": "to dry off (clothes, hair)",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": true
     },
     {
@@ -4280,19 +4280,19 @@
     {
         "greek": "διαρκώ (διαρκέσω)",
         "english": "to last / endure",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": true
     },
     {
         "greek": "εξηγώ (εξηγήσω)",
         "english": "to explain",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
         "greek": "πληροφορώ (πληροφορήσω)",
         "english": "to inform",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
@@ -4304,7 +4304,7 @@
     {
         "greek": "ακούγομαι (ακουστώ)",
         "english": "to be heard / to sound",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
@@ -4322,7 +4322,7 @@
     {
         "greek": "παραμένω (παραμείνω)",
         "english": "to remain / stay",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": true
     },
     {
@@ -4352,7 +4352,7 @@
     {
         "greek": "σώζω (σώσω)",
         "english": "to save",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -4442,13 +4442,13 @@
     {
         "greek": "προτείνω (προτείνω)",
         "english": "to suggest / propose",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
         "greek": "ακολουθώ (ακολουθήσω)",
         "english": "to follow",
-        "group": "Common verbs",
+        "group": "General",
         "marked": true
     },
     {
@@ -4484,7 +4484,7 @@
     {
         "greek": "σχεδιάζω (σχεδιάσω)",
         "english": "to design",
-        "group": "Common verbs",
+        "group": "General",
         "marked": true
     },
     {
@@ -4556,13 +4556,13 @@
     {
         "greek": "ενοχλώ (ενοχλήσω)",
         "english": "to bother",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
         "greek": "φταίω (φταίξω)",
         "english": "to be to blame / at fault",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
@@ -4580,7 +4580,7 @@
     {
         "greek": "μετανιώνω (μετανιώσω)",
         "english": "to regret",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
@@ -4592,7 +4592,7 @@
     {
         "greek": "υποψιάζομαι (υποψιαστώ)",
         "english": "to suspect",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -4610,67 +4610,67 @@
     {
         "greek": "προσέχω (προσέξω)",
         "english": "to pay attention / be careful",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
         "greek": "αγγίζω (αγγίξω)",
         "english": "to touch",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "πειράζω (πειράξω)",
         "english": "to tease",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
         "greek": "τρομάζω (τρομάξω)",
         "english": "to get scared",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
         "greek": "νυστάζω (νυστάξω)",
         "english": "to be sleepy",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": true
     },
     {
         "greek": "βάφω (βάψω)",
         "english": "to paint / dye",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": true
     },
     {
         "greek": "ράβω (ράψω)",
         "english": "to sew",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": true
     },
     {
         "greek": "καθυστερώ (καθυστερήσω)",
         "english": "to be delayed",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": true
     },
     {
         "greek": "χαζεύω (χαζέψω)",
         "english": "to wander around / browse",
-        "group": "Common verbs",
+        "group": "General",
         "marked": true
     },
     {
         "greek": "τσιμπάω (τσιμπήσω)",
         "english": "to grab a bite",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": true
     },
     {
         "greek": "αγκαλιάζω (αγκαλιάσω)",
         "english": "to hug",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": true
     },
     {
@@ -4682,7 +4682,7 @@
     {
         "greek": "ελέγχω (ελέγξω)",
         "english": "to check",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
@@ -4700,7 +4700,7 @@
     {
         "greek": "αισθάνομαι (αισθανθώ)",
         "english": "to feel (formal)",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
@@ -4784,25 +4784,25 @@
     {
         "greek": "χαλαρώνω (χαλαρώσω)",
         "english": "to relax",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
         "greek": "βοηθάω (βοηθήσω)",
         "english": "to help",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "παρατηρώ (παρατηρήσω)",
         "english": "to observe",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": true
     },
     {
         "greek": "τελειώνω (τελειώσω)",
         "english": "to finish",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": false
     },
     {
@@ -4832,247 +4832,247 @@
     {
         "greek": "φέρνω (φέρω)",
         "english": "to bring",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "πέφτω (πέσω)",
         "english": "to fall",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "καταλαβαίνω (καταλάβω)",
         "english": "to understand",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "παθαίνω (πάθω)",
         "english": "to suffer / undergo",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "πεθαίνω (πεθάνω)",
         "english": "to die",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "αρρωσταίνω (αρρωστήσω)",
         "english": "to get sick",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "παχαίνω (παχύνω)",
         "english": "to gain weight",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "αγαπάω (αγαπήσω)",
         "english": "to love",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "ρωτάω (ρωτήσω)",
         "english": "to ask",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "σταματάω (σταματήσω)",
         "english": "to stop",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "τραγουδάω (τραγουδήσω)",
         "english": "to sing",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "περπατάω (περπατήσω)",
         "english": "to walk",
-        "group": "Common verbs",
+        "group": "Commerce, transport & travel",
         "marked": false
     },
     {
         "greek": "ζητάω (ζητήσω)",
         "english": "to ask for",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "τηλεφωνώ (τηλεφωνήσω)",
         "english": "to phone",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "χρησιμοποιώ (χρησιμοποιήσω)",
         "english": "to use",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "αργώ (αργήσω)",
         "english": "to be late",
-        "group": "Common verbs",
+        "group": "Time & frequency",
         "marked": false
     },
     {
         "greek": "ζω (ζήσω)",
         "english": "to live",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "μισώ (μισήσω)",
         "english": "to hate",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "λειτουργώ (λειτουργήσω)",
         "english": "to function",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "χωράω (χωρέσω)",
         "english": "to fit",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "καλώ (καλέσω)",
         "english": "to summon",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "παρακαλώ (παρακαλέσω)",
         "english": "to plead",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "προσκαλώ (προσκαλέσω)",
         "english": "to invite",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "προκαλώ (προκαλέσω)",
         "english": "to cause / provoke",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "στενοχωρώ (στενοχωρέσω)",
         "english": "to upset",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "αφαιρώ (αφαιρέσω)",
         "english": "to subtract",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "διαιρώ (διαιρέσω)",
         "english": "to divide",
-        "group": "Common verbs",
+        "group": "Daily life & school",
         "marked": false
     },
     {
         "greek": "εξαιρώ (εξαιρέσω)",
         "english": "to exclude",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "επαινώ (επαινέσω)",
         "english": "to praise",
-        "group": "Common verbs",
+        "group": "Social & communication",
         "marked": false
     },
     {
         "greek": "εκτελώ (εκτελέσω)",
         "english": "to carry out",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "χαμογελάω (χαμογελάσω)",
         "english": "to smile",
-        "group": "Common verbs",
+        "group": "Feelings & emotions",
         "marked": false
     },
     {
         "greek": "κρεμάω (κρεμάσω)",
         "english": "to hang",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "χαλάω (χαλάσω)",
         "english": "to spoil / break",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "γερνάω (γεράσω)",
         "english": "to grow old",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "ξεπερνάω (ξεπεράσω)",
         "english": "to overcome",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "τραβάω (τραβήξω)",
         "english": "to pull",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     },
     {
         "greek": "βουτάω (βουτήξω)",
         "english": "to dive",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "πηδάω (πηδήξω)",
         "english": "to jump",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "ρουφάω (ρουφήξω)",
         "english": "to slurp",
-        "group": "Common verbs",
+        "group": "Body, Wardrobe and Colors",
         "marked": false
     },
     {
         "greek": "φυσάω (φυσήξω)",
         "english": "to blow",
-        "group": "Common verbs",
+        "group": "Home, places & nature",
         "marked": false
     },
     {
         "greek": "φυλάω (φυλάξω)",
         "english": "to guard",
-        "group": "Common verbs",
+        "group": "General",
         "marked": false
     }
 ]
