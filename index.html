@@ -6,15 +6,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Greek">
-    <meta name="theme-color" content="#f0f2f5">
+    <meta name="theme-color" content="#0d5eaf">
     <title>Greek Match</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon-192.png?v=2">
     <link rel="apple-touch-icon" href="icons/icon-192.png?v=2">
-    <link rel="stylesheet" href="css/game.css?v=7">
+    <link rel="stylesheet" href="css/game.css?v=8">
 </head>
 <body>
-<h1>Greek Match</h1>
+<header class="topbar">
+    <nav class="sections" id="sections" aria-label="Section">
+        <button class="section active" data-section="words">Words</button>
+        <button class="section" data-section="practice">Practice</button>
+    </nav>
+</header>
+<div class="tabrow">
+    <nav class="tabs" id="tabs" aria-label="Mode"></nav>
+</div>
+
 <p class="subtitle" id="subtitle">Drag the Greek word to its English meaning</p>
 
 <div id="score-banner"></div>
@@ -22,15 +31,6 @@
 <div class="game">
     <div class="game-header">
         <div class="header-left">
-            <select class="mode-select" id="mode-select" aria-label="Mode">
-                <option value="match">Match</option>
-                <option value="quiz">Quiz</option>
-                <option value="type">Type</option>
-                <option value="fill">Fill</option>
-                <option value="conj">Conjugate</option>
-                <option value="dates">Dates</option>
-                <option value="xmatch">Marked</option>
-            </select>
             <select class="mode-select" id="group-select" aria-label="Group">
                 <option value="__all__">All groups</option>
             </select>
@@ -43,16 +43,6 @@
     <div id="match-container">
         <div class="bank" id="bank"></div>
         <div class="pairs" id="pairs"></div>
-    </div>
-
-    <div id="quiz-container" style="display:none">
-        <div class="quiz-header">
-            <span id="quiz-progress">1 / 6</span>
-            <span id="quiz-timer-text">15</span>
-        </div>
-        <div id="quiz-word"></div>
-        <div class="quiz-timer-bar"><div id="quiz-timer-fill"></div></div>
-        <div id="quiz-options"></div>
     </div>
 
     <div id="conj-container" style="display:none">
@@ -101,6 +91,13 @@
         <ul id="typing-history"></ul>
     </div>
 
+    <div id="browse-container" style="display:none">
+        <input type="search" id="browse-search" placeholder="Search Greek or English"
+               autocomplete="off" autocorrect="off" spellcheck="false">
+        <div class="browse-count" id="browse-count"></div>
+        <ul class="word-list" id="browse-list"></ul>
+    </div>
+
     <div class="actions">
         <button id="btn-check">Check Answers</button>
         <button id="btn-retry" style="display:none">Try Again</button>
@@ -109,7 +106,9 @@
 </div>
 
 <script src="js/conjugations.js?v=12"></script>
+<script src="js/conjugator.js?v=1"></script>
 <script src="js/datetime.js?v=3"></script>
-<script src="js/game.js?v=23"></script>
+<script src="js/game.js?v=24"></script>
+<script src="js/browse.js?v=1"></script>
 </body>
 </html>

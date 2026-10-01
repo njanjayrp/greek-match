@@ -21,7 +21,7 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["quiz", "xmatch", "type", "fill", "conj", "dates"].includes(urlMode)) mode = urlMode;
+    if (["match", "type", "browse", "fill", "conj", "dates"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
@@ -41,7 +41,9 @@ function initApp(words) {
         url.searchParams.set("lang", lang);
         location.href = url.toString();
     });
-    document.getElementById("mode-select").addEventListener("change", e => switchMode(e.target.value));
+    for (const btn of document.querySelectorAll("#sections .section")) {
+        btn.addEventListener("click", () => switchSection(btn.dataset.section));
+    }
     document.getElementById("group-select").addEventListener("change", e => switchGroup(e.target.value));
     document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
     document.getElementById("conj-form").addEventListener("submit", submitConjAnswer);
@@ -52,8 +54,41 @@ function initApp(words) {
         document.getElementById("lang-gr").classList.remove("active");
         document.getElementById("lang-en").classList.add("active");
     }
-    document.getElementById("mode-select").value = mode;
+    section = sectionOf(mode);
+    BrowseMode.init(allWords);
     applyMode();
+}
+
+const MARKED = "__marked__";
+
+const SECTIONS = {
+    words:    [["match", "Match"], ["type", "Type"], ["browse", "Browse"]],
+    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["dates", "Dates"]]
+};
+
+function sectionOf(m) {
+    return Object.keys(SECTIONS).find(s => SECTIONS[s].some(([id]) => id === m)) || "words";
+}
+
+function renderTabs() {
+    const bar = document.getElementById("tabs");
+    bar.innerHTML = "";
+    for (const [id, label] of SECTIONS[section]) {
+        const b = document.createElement("button");
+        b.className = "tab" + (id === mode ? " active" : "");
+        b.textContent = label;
+        b.addEventListener("click", () => switchMode(id));
+        bar.appendChild(b);
+    }
+    for (const btn of document.querySelectorAll("#sections .section")) {
+        btn.classList.toggle("active", btn.dataset.section === section);
+    }
+}
+
+function switchSection(target) {
+    if (target === section) return;
+    section = target;
+    switchMode(SECTIONS[section][0][0]);
 }
 
 function populateGroupSelect() {
@@ -63,6 +98,13 @@ function populateGroupSelect() {
     allOpt.value = "__all__";
     allOpt.textContent = (mode === "fill" || mode === "dates") ? "All topics" : "All groups";
     select.appendChild(allOpt);
+
+    if (mode !== "fill" && mode !== "dates" && allWords.some(w => w.marked)) {
+        const marked = document.createElement("option");
+        marked.value = MARKED;
+        marked.textContent = "\u2605 Marked";
+        select.appendChild(marked);
+    }
 
     const items = mode === "dates"
         ? (window.DATETIME ? window.DATETIME.TOPICS : [])
@@ -79,6 +121,7 @@ function populateGroupSelect() {
 
 function groupExists(g) {
     if (g === "__all__") return true;
+    if (g === MARKED) return mode !== "fill" && mode !== "dates" && allWords.some(w => w.marked);
     if (mode === "dates") return !!window.DATETIME && window.DATETIME.TOPICS.includes(g);
     if (mode === "fill") return allSentences.some(s => s.topic === g);
     return allWords.some(w => w.group === g);
@@ -90,7 +133,7 @@ function modePool() {
     if (mode === "fill") {
         return group === "__all__" ? allSentences : allSentences.filter(s => s.topic === group);
     }
-    if (mode === "xmatch") return allWords.filter(w => w.marked);
+    if (group === MARKED) return allWords.filter(w => w.marked);
     if (group === "__all__") return allWords;
     return allWords.filter(w => w.group === group);
 }
@@ -119,7 +162,7 @@ function selectWordRound() {
     // In Marked mode, user explicitly chose what to review — don't filter out "mastered"
     // (after enough repetitions, the entire marked pool was getting excluded and only ~15
     // recently-marked words kept cycling).
-    let active     = mode === "xmatch" ? pool.slice() : pool.filter(w => !mastered.has(w.greek));
+    let active     = group === MARKED ? pool.slice() : pool.filter(w => !mastered.has(w.greek));
     if (active.length < 6) active = pool.slice();
 
     // Hold back as many past rounds as the pool can afford, instead of a fixed
@@ -143,7 +186,7 @@ function selectWordRound() {
     const idxByGreek = new Map(allWords.map((w, i) => [w.greek, i]));
     function newnessBonus(w) {
         // In Marked mode the user has explicitly chosen the pool — no position-based boost
-        if (mode === "xmatch") return 1;
+        if (group === MARKED) return 1;
         if (weights[w.greek] || streaks[w.greek]) return 1;
         const fromEnd = allCount - 1 - (idxByGreek.get(w.greek) ?? 0);
         if (fromEnd >= 60) return 1;
@@ -169,7 +212,7 @@ function selectWordRound() {
 
     const picked = new Set();
     const round  = [];
-    const weightedCount = mode === "xmatch" ? 0 : 6;
+    const weightedCount = group === MARKED ? 0 : 6;
     for (let i = 0; i < weightedCount; i++) {
         const w = weightedPick(eligible, picked) || weightedPick(fallback, picked);
         if (w) { round.push(w); picked.add(w.greek); }
@@ -182,6 +225,7 @@ function selectWordRound() {
 }
 
 let mode    = "match";
+let section = "words";
 let group   = "__all__";
 let lang    = "greek";
 let checked = false;
@@ -193,8 +237,7 @@ function setLang(l) {
     document.getElementById("lang-gr").classList.toggle("active", l === "greek");
     document.getElementById("lang-en").classList.toggle("active", l === "english");
     updateSubtitle();
-    if (mode === "quiz") buildQuiz();
-    else if (mode === "type") buildTyping();
+    if (mode === "type") buildTyping();
     else if (mode === "fill") buildFill();
     else if (mode === "conj") buildConj();
     else if (mode === "dates") buildDates();
@@ -204,12 +247,11 @@ function setLang(l) {
 function updateSubtitle() {
     const subtitles = {
         match:  { greek: "Tap or drag the Greek word to its English meaning",        english: "Tap or drag the English word to its Greek meaning" },
-        quiz:   { greek: "Choose the correct Greek word",                            english: "Choose the correct English word" },
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
         fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
         conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
         dates:  { greek: "Say the clock, date, age or duration in Greek",            english: "Read the clock, date, age or duration" },
-        xmatch: { greek: "Marked words only \u2014 drag the Greek to its English meaning", english: "Marked words only \u2014 drag the English to its Greek meaning" }
+        browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
 }
@@ -458,98 +500,6 @@ function checkMatchAnswers() {
     document.getElementById("btn-new").style.display   = "";
 }
 
-// ── Quiz game ────────────────────────────────────────────────────────────────
-
-let quizIndex    = 0;
-let quizScore    = 0;
-let quizWrong    = [];
-let quizTimer    = null;
-let quizSeconds  = 10;
-const QUIZ_TIME  = 15;
-
-function buildQuiz() {
-    quizIndex  = 0;
-    quizScore  = 0;
-    quizWrong  = [];
-    checked    = false;
-    document.getElementById("score-banner").style.display = "none";
-    document.getElementById("btn-check").style.display    = "none";
-    document.getElementById("btn-retry").style.display    = "none";
-    document.getElementById("btn-new").style.display      = "none";
-    showQuizQuestion();
-}
-
-function showQuizQuestion() {
-    clearInterval(quizTimer);
-    const item = round[quizIndex];
-
-    document.getElementById("quiz-progress").textContent   = (quizIndex + 1) + " / 6";
-    document.getElementById("quiz-word").textContent       = lang === "greek" ? item.english : item.greek;
-    document.getElementById("quiz-timer-text").textContent = QUIZ_TIME;
-
-    const answerKey  = lang === "greek" ? "greek" : "english";
-    const correctOpt = item[answerKey];
-    const distractors = allWords
-        .filter(w => w.greek !== item.greek && !round.some(r => r.greek === w.greek))
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3)
-        .map(w => w[answerKey]);
-    const options = [correctOpt, ...distractors].sort(() => Math.random() - 0.5);
-
-    const container = document.getElementById("quiz-options");
-    container.innerHTML = "";
-    options.forEach(opt => {
-        const btn = document.createElement("button");
-        btn.className = "quiz-opt";
-        btn.textContent = opt;
-        btn.addEventListener("click", () => answerQuiz(opt));
-        container.appendChild(btn);
-    });
-
-    quizSeconds = QUIZ_TIME;
-    const fill = document.getElementById("quiz-timer-fill");
-    fill.style.background = "#4a6cf7";
-    fill.style.width = "100%";
-
-    quizTimer = setInterval(() => {
-        quizSeconds -= 0.1;
-        const pct = Math.max(0, (quizSeconds / QUIZ_TIME) * 100);
-        fill.style.width = pct + "%";
-        const secs = Math.ceil(quizSeconds);
-        document.getElementById("quiz-timer-text").textContent = secs;
-        if (quizSeconds <= 3) fill.style.background = "#ef4444";
-        if (quizSeconds <= 0) answerQuiz(null);
-    }, 100);
-}
-
-function answerQuiz(chosen) {
-    clearInterval(quizTimer);
-    const correctDisplay = lang === "greek" ? round[quizIndex].greek : round[quizIndex].english;
-    const isRight = chosen === correctDisplay;
-
-    document.querySelectorAll(".quiz-opt").forEach(btn => {
-        btn.disabled = true;
-        if (btn.textContent === correctDisplay) btn.classList.add("correct");
-        else if (btn.textContent === chosen)    btn.classList.add("wrong");
-    });
-
-    if (!isRight) quizWrong.push(round[quizIndex].greek);
-    else quizScore++;
-
-    setTimeout(() => {
-        quizIndex++;
-        if (quizIndex < 6) showQuizQuestion();
-        else finishQuiz();
-    }, isRight ? 700 : 1300);
-}
-
-function finishQuiz() {
-    updateWeights(quizWrong);
-    showScoreBanner(quizScore, 6);
-    document.getElementById("btn-retry").style.display = "";
-    document.getElementById("btn-new").style.display   = "";
-}
-
 // ── Shared ───────────────────────────────────────────────────────────────────
 
 function showScoreBanner(correct, total) {
@@ -603,30 +553,30 @@ function updateWeights(wrongGreekWords) {
 }
 
 function applyMode() {
-    const isMatchLike = (mode === "match" || mode === "xmatch");
+    const isMatchLike = (mode === "match");
     document.getElementById("match-container").style.display  = isMatchLike ? "" : "none";
-    document.getElementById("quiz-container").style.display   = mode === "quiz" ? "" : "none";
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
     document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
     document.getElementById("conj-container").style.display   = mode === "conj" ? "" : "none";
     document.getElementById("dates-container").style.display  = mode === "dates" ? "" : "none";
-    document.getElementById("mode-select").value = mode;
-    // Lang toggle has no role in Fill or Dates mode
-    document.querySelector(".lang-toggle").style.display = mode === "fill" ? "none" : "";
-    // Marked & Conjugate modes ignore the group filter — disable the dropdown so it doesn't mislead
-    document.getElementById("group-select").disabled = (mode === "xmatch" || mode === "conj");
+    document.getElementById("browse-container").style.display = mode === "browse" ? "" : "none";
+    renderTabs();
+    // Lang toggle has no role in Fill or Browse mode
+    document.querySelector(".lang-toggle").style.display =
+        (mode === "fill" || mode === "browse") ? "none" : "";
+    // Conjugate drills its own verb list — the group filter has nothing to say there
+    document.getElementById("group-select").disabled = (mode === "conj");
     updateSubtitle();
-    if (mode === "quiz") buildQuiz();
-    else if (mode === "type") buildTyping();
+    if (mode === "type") buildTyping();
     else if (mode === "fill") buildFill();
     else if (mode === "conj") buildConj();
     else if (mode === "dates") buildDates();
+    else if (mode === "browse") BrowseMode.show();
     else buildMatch();
 }
 
 function switchMode(target) {
     if (target === mode) return;
-    clearInterval(quizTimer);
     const prev = mode;
     mode = target;
     // Rebuild dropdown — Fill uses sentence topics, others use word groups
@@ -641,8 +591,7 @@ function switchMode(target) {
     if (!groupExists(group)) group = "__all__";
     document.getElementById("group-select").value = group;
     // Always re-pick the round when entering or leaving a mode with a different data shape
-    if (mode === "fill" || prev === "fill" || mode === "dates" || prev === "dates" ||
-        (prev === "xmatch") !== (mode === "xmatch")) {
+    if (mode === "fill" || prev === "fill" || mode === "dates" || prev === "dates") {
         round = selectRound();
     }
     applyMode();
@@ -658,12 +607,8 @@ function switchGroup(target) {
     } else {
         localStorage.setItem("greek_group", group);
     }
-    // xmatch ignores group, so don't re-pick the round in that case
-    if (mode !== "xmatch") {
-        clearInterval(quizTimer);
-        round = selectRound();
-        applyMode();
-    }
+    round = selectRound();
+    applyMode();
 }
 
 // ── Typing (recall) game ────────────────────────────────────────────────────
@@ -957,8 +902,7 @@ function dispatchCheck() {
     else checkMatchAnswers();
 }
 function dispatchRetry() {
-    if (mode === "quiz") buildQuiz();
-    else if (mode === "type") buildTyping();
+    if (mode === "type") buildTyping();
     else if (mode === "fill") { round = selectRound(); buildFill(); }
     else if (mode === "conj") buildConj();
     else if (mode === "dates") buildDates();
