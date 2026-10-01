@@ -560,6 +560,8 @@ function applyMode() {
     document.getElementById("conj-container").style.display   = mode === "conj" ? "" : "none";
     document.getElementById("dates-container").style.display  = mode === "dates" ? "" : "none";
     document.getElementById("browse-container").style.display = mode === "browse" ? "" : "none";
+    document.getElementById("browse-search").style.display    = mode === "browse" ? "" : "none";
+    document.querySelector(".actions").style.display          = mode === "browse" ? "none" : "";
     renderTabs();
     // Lang toggle has no role in Fill or Browse mode
     document.querySelector(".lang-toggle").style.display =

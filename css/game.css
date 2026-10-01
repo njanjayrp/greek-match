@@ -57,11 +57,8 @@ body {
     background: var(--bg);
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 20px;
-    padding: max(env(safe-area-inset-top, 8px), 12px) 20px env(safe-area-inset-bottom, 12px);
+    padding: max(env(safe-area-inset-top, 8px), 12px) 16px
+             calc(env(safe-area-inset-bottom, 12px) + 20px);
     color: var(--text);
     -webkit-user-select: none;
     user-select: none;
@@ -72,7 +69,7 @@ body {
 h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2px; }
 .subtitle { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
 
-.game { width: 100%; max-width: 720px; }
+.game { width: 100%; max-width: 640px; margin: 0 auto; }
 
 /* -- Match game -- */
 .pairs { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
@@ -381,6 +378,7 @@ button:active { transform: scale(0.97); }
 /* ── Sections and tabs ──────────────────────────────────────────────────── */
 
 .topbar { max-width: 640px; margin: 0 auto 10px; }
+.subtitle { max-width: 640px; margin: 0 auto 10px; }
 
 .sections {
     display: flex;
@@ -467,15 +465,16 @@ button:active { transform: scale(0.97); }
     padding: 1px 6px;
 }
 
+/* Four tenses never fit a phone, so the table scrolls inside the row. */
+.conj-wrap { margin-top: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .conj-table {
-    width: 100%;
-    margin-top: 10px;
     border-collapse: collapse;
-    font-size: 13px;
+    font-size: 12px;
+    white-space: nowrap;
 }
 .conj-table th, .conj-table td {
     border: 1px solid var(--border);
-    padding: 5px 7px;
+    padding: 4px 8px;
     text-align: left;
 }
 .conj-table thead th { background: var(--accent-bg); color: var(--accent-dk); font-size: 11px; }
@@ -489,3 +488,91 @@ button:active { transform: scale(0.97); }
     color: var(--text);
 }
 body { color: var(--text); }
+
+/* ── One card per practice mode, the way the Japanese app frames a round ── */
+
+#typing-container, #conj-container, #dates-container, #fill-container {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius, 12px);
+    padding: 14px 16px 18px;
+    margin-bottom: 16px;
+}
+
+/* the inner prompt boxes are already inside the card, so they lose their frame */
+#typing-word, #conj-prompt, #dates-prompt, #fill-prompt, #fill-sentence, #dates-sub {
+    background: transparent;
+    border: none;
+    padding: 18px 4px;
+    margin-bottom: 8px;
+    border-radius: 0;
+}
+#fill-prompt { padding-bottom: 0; }
+#fill-sentence { padding-top: 8px; }
+
+.typing-header, .quiz-header, .fill-header {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ── Controls row ───────────────────────────────────────────────────────── */
+
+.game-header { gap: 8px; margin-bottom: 12px; }
+.header-left { flex: 1; min-width: 0; }
+.mode-select { width: 100%; }
+
+.lang-toggle {
+    display: flex;
+    gap: 2px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 3px;
+}
+.lang-btn {
+    font-size: 15px;
+    line-height: 1;
+    opacity: 1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    filter: grayscale(1);
+}
+.lang-btn.active { background: var(--accent-bg); filter: none; }
+
+/* ── Browse sits in the same column, no card around the list ────────────── */
+#browse-container { margin-bottom: 16px; }
+
+/* ── Polish: primary buttons in the flag blue, a text language switch ───── */
+
+#typing-submit, #conj-submit, #btn-check {
+    background: var(--accent);
+    color: #fff;
+}
+#typing-submit:hover, #conj-submit:hover, #btn-check:hover { background: var(--accent-dk); }
+
+.lang-btn {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--muted);
+    filter: none;
+    padding: 6px 9px;
+}
+.lang-btn.active { background: var(--accent); color: #fff; }
+
+.header-left { display: flex; gap: 8px; }
+#group-select { flex: 1 1 50%; }
+#browse-search {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    padding: 7px 12px;
+    border-width: 1.5px;
+    border-radius: 7px;
+}
+
+/* the dictionary rows carry their own group label, so hide the repeat when
+   a single group is being shown */
+.word-row .row-group:empty { display: none; }

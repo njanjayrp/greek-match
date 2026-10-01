@@ -36,13 +36,13 @@ const BrowseMode = (() => {
         const cols = [["present", "ενεστώτας"], ["imperfect", "παρατατικός"],
                       ["aorist", "αόριστος"], ["future", "μέλλοντας"]]
             .filter(([k]) => forms[k] && forms[k].length === 6);
-        let html = '<table class="conj-table"><thead><tr><th></th>' +
+        let html = '<div class="conj-wrap"><table class="conj-table"><thead><tr><th></th>' +
             cols.map(([, label]) => `<th>${label}</th>`).join("") + "</tr></thead><tbody>";
         for (let i = 0; i < 6; i++) {
             html += `<tr><th>${PERSONS[i]}</th>` +
                 cols.map(([k]) => `<td>${esc(forms[k][i])}</td>`).join("") + "</tr>";
         }
-        html += "</tbody></table>";
+        html += "</tbody></table></div>";
         if (forms.derived) html += '<div class="conj-note">generated from the aorist stem</div>';
         return html;
     }
