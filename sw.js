@@ -1,4 +1,4 @@
-const CACHE_NAME = 'greek-match-v52';
+const CACHE_NAME = 'greek-match-v54';
 const ASSETS = [
     './',
     './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
     './js/conjugator.js',
     './js/browse.js',
     './js/datetime.js',
+    './js/compare.js',
     './words.json',
     './sentences.json',
     './icons/icon-192.png',

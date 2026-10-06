@@ -14,7 +14,7 @@ export function readSrc(name) {
 // conjugations.js / conjugator.js / datetime.js only touch `window`.
 export function loadLibs() {
     const win = {};
-    for (const f of ["conjugations.js", "conjugator.js", "datetime.js"]) {
+    for (const f of ["conjugations.js", "conjugator.js", "datetime.js", "compare.js"]) {
         new Function("window", readSrc(f))(win);
     }
     return win;
@@ -68,7 +68,7 @@ export async function bootApp() {
         json: async () => JSON.parse(Deno.readTextFileSync(ROOT + url.replace("./", ""))),
     });
 
-    const src = ["conjugations.js", "conjugator.js", "datetime.js", "game.js", "browse.js"]
+    const src = ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "game.js", "browse.js"]
         .map(readSrc).join("\n");
     const api = new Function(
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",

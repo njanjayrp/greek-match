@@ -1,7 +1,7 @@
 import { assert, assertEquals } from "jsr:@std/assert@1";
 import { bootApp } from "./helpers.js";
 
-const MODES = ["match", "type", "browse", "fill", "conj", "dates"];
+const MODES = ["match", "type", "browse", "fill", "conj", "dates", "manual", "compare"];
 
 Deno.test("the app boots into Match with the whole word list", async () => {
     const app = await bootApp();
@@ -70,6 +70,26 @@ Deno.test("the language toggle rebuilds the round instead of throwing", async ()
         app.setLang("english");
         app.setLang("greek");
     }
+});
+
+Deno.test("Grammar is its own section, with the manual and the drill", async () => {
+    const app = await bootApp();
+    app.switchMode("manual");
+    assertEquals(app.state().section, "grammar");
+    app.switchMode("compare");
+    assertEquals(app.state().section, "grammar");
+    assertEquals(app.el("dates-progress").textContent, "1 / 10");
+});
+
+Deno.test("Compare and Dates keep separate topic filters", async () => {
+    const app = await bootApp();
+    app.switchMode("dates");
+    app.switchGroup("Ordinals");
+    app.switchMode("compare");
+    assertEquals(app.state().group, "__all__");
+    app.switchGroup("Υπερθετικός");
+    app.switchMode("dates");
+    assertEquals(app.state().group, "Ordinals");
 });
 
 Deno.test("Conjugate deals ten questions, one per verb", async () => {

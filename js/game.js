@@ -21,7 +21,7 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["match", "type", "browse", "fill", "conj", "dates"].includes(urlMode)) mode = urlMode;
+    if (["match", "type", "browse", "fill", "conj", "dates", "manual", "compare"].includes(urlMode)) mode = urlMode;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
@@ -63,7 +63,8 @@ const MARKED = "__marked__";
 
 const SECTIONS = {
     words:    [["match", "Match"], ["type", "Type"], ["browse", "Browse"]],
-    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["dates", "Dates"]]
+    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["dates", "Dates"]],
+    grammar:  [["manual", "Manual"], ["compare", "Compare"]]
 };
 
 function sectionOf(m) {
@@ -96,18 +97,18 @@ function populateGroupSelect() {
     select.innerHTML = "";
     const allOpt = document.createElement("option");
     allOpt.value = "__all__";
-    allOpt.textContent = (mode === "fill" || mode === "dates") ? "All topics" : "All groups";
+    allOpt.textContent = (mode === "fill" || quizSource()) ? "All topics" : "All groups";
     select.appendChild(allOpt);
 
-    if (mode !== "fill" && mode !== "dates" && allWords.some(w => w.marked)) {
+    if (!quizSource() && mode !== "fill" && allWords.some(w => w.marked)) {
         const marked = document.createElement("option");
         marked.value = MARKED;
         marked.textContent = "\u2605 Marked";
         select.appendChild(marked);
     }
 
-    const items = mode === "dates"
-        ? (window.DATETIME ? window.DATETIME.TOPICS : [])
+    const items = quizSource()
+        ? quizSource().TOPICS
         : mode === "fill"
             ? [...new Set(allSentences.map(s => s.topic).filter(Boolean))].sort()
             : [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
@@ -119,10 +120,17 @@ function populateGroupSelect() {
     }
 }
 
+// Dates and Compare are the same kind of drill over different generators.
+function quizSource() {
+    if (mode === "dates")   return window.DATETIME || null;
+    if (mode === "compare") return window.COMPARE || null;
+    return null;
+}
+
 function groupExists(g) {
     if (g === "__all__") return true;
-    if (g === MARKED) return mode !== "fill" && mode !== "dates" && allWords.some(w => w.marked);
-    if (mode === "dates") return !!window.DATETIME && window.DATETIME.TOPICS.includes(g);
+    if (g === MARKED) return !quizSource() && mode !== "fill" && allWords.some(w => w.marked);
+    if (quizSource()) return quizSource().TOPICS.includes(g);
     if (mode === "fill") return allSentences.some(s => s.topic === g);
     return allWords.some(w => w.group === g);
 }
@@ -139,7 +147,7 @@ function modePool() {
 }
 
 function selectRound() {
-    if (mode === "dates") return [];
+    if (quizSource() || mode === "manual") return [];
     if (mode === "fill") {
         const pool = modePool().slice();
         for (let i = pool.length - 1; i > 0; i--) {
@@ -251,7 +259,9 @@ function updateSubtitle() {
         fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
         conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
         dates:  { greek: "Say the clock, date, age or duration in Greek",            english: "Read the clock, date, age or duration" },
-        browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" }
+        browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" },
+        manual: { greek: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things",            english: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things" },
+        compare:{ greek: "Build the comparison \u2014 mind the gender",                english: "Build the comparison \u2014 mind the gender" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
 }
@@ -558,22 +568,26 @@ function applyMode() {
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
     document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
     document.getElementById("conj-container").style.display   = mode === "conj" ? "" : "none";
-    document.getElementById("dates-container").style.display  = mode === "dates" ? "" : "none";
+    document.getElementById("dates-container").style.display  = quizSource() ? "" : "none";
+    document.getElementById("manual-container").style.display = mode === "manual" ? "" : "none";
     document.getElementById("browse-container").style.display = mode === "browse" ? "" : "none";
     document.getElementById("browse-search").style.display    = mode === "browse" ? "" : "none";
-    document.querySelector(".actions").style.display          = mode === "browse" ? "none" : "";
+    document.querySelector(".actions").style.display =
+        (mode === "browse" || mode === "manual") ? "none" : "";
+    document.querySelector(".game-header").style.display      = mode === "manual" ? "none" : "";
     renderTabs();
     // Lang toggle has no role in Fill or Browse mode
     document.querySelector(".lang-toggle").style.display =
-        (mode === "fill" || mode === "browse") ? "none" : "";
+        (mode === "fill" || mode === "browse" || mode === "compare") ? "none" : "";
     // Conjugate drills its own verb list — the group filter has nothing to say there
     document.getElementById("group-select").disabled = (mode === "conj");
     updateSubtitle();
     if (mode === "type") buildTyping();
     else if (mode === "fill") buildFill();
     else if (mode === "conj") buildConj();
-    else if (mode === "dates") buildDates();
+    else if (quizSource()) buildDates();
     else if (mode === "browse") BrowseMode.show();
+    else if (mode === "manual") { /* static page */ }
     else buildMatch();
 }
 
@@ -586,15 +600,15 @@ function switchMode(target) {
     populateGroupSelect();
     if (mode === "fill") {
         group = localStorage.getItem("greek_topic") || "__all__";
-    } else if (mode === "dates") {
-        group = localStorage.getItem("greek_dates_topic") || "__all__";
+    } else if (quizSource()) {
+        group = localStorage.getItem("greek_topic_" + mode) || "__all__";
     } else {
         group = localStorage.getItem("greek_group") || "__all__";
     }
     if (!groupExists(group)) group = "__all__";
     document.getElementById("group-select").value = group;
     // Always re-pick the round when entering or leaving a mode with a different data shape
-    if (mode === "fill" || prev === "fill" || mode === "dates" || prev === "dates") {
+    if (mode === "fill" || prev === "fill" || quizSource() || ["dates", "compare"].includes(prev)) {
         round = selectRound();
     }
     applyMode();
@@ -605,8 +619,8 @@ function switchGroup(target) {
     group = target;
     if (mode === "fill") {
         localStorage.setItem("greek_topic", group);
-    } else if (mode === "dates") {
-        localStorage.setItem("greek_dates_topic", group);
+    } else if (quizSource()) {
+        localStorage.setItem("greek_topic_" + mode, group);
     } else {
         localStorage.setItem("greek_group", group);
     }
@@ -1088,9 +1102,10 @@ let datesTimer = null;
 function buildDates() {
     // Drop any answer-reveal timer still pending from the round being replaced
     clearTimeout(datesTimer);
-    datesRound = window.DATETIME
-        ? window.DATETIME.buildRound(group === "__all__" ? null : group, 10,
-                                     lang === "english" ? "en" : "gr")
+    const source = quizSource();
+    datesRound = source
+        ? source.buildRound(group === "__all__" ? null : group, 10,
+                            lang === "english" ? "en" : "gr")
         : [];
     datesIndex = 0;
     datesScore = 0;

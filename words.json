@@ -5074,5 +5074,467 @@
         "english": "to guard",
         "group": "Everyday verbs",
         "marked": false
+    },
+    {
+        "greek": "το νησί",
+        "english": "island",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το παραθαλάσσιο μέρος",
+        "english": "seaside place",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η παραλία",
+        "english": "beach",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η ακρογιαλιά",
+        "english": "shore",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το κύμα",
+        "english": "wave",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η αμμουδιά",
+        "english": "sandy beach",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η ακτή",
+        "english": "coast",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το κοχύλι",
+        "english": "seashell",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "ψάχνω για κοχύλια",
+        "english": "to hunt for shells",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η ξαπλώστρα",
+        "english": "sunbed",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η ηλιοθεραπεία",
+        "english": "sunbathing",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "κάνω ηλιοθεραπεία",
+        "english": "to sunbathe",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το αντηλιακό",
+        "english": "sunscreen",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "βάζω αντηλιακό",
+        "english": "to put on sunscreen",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "τα γυαλιά ηλίου",
+        "english": "sunglasses",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το κολύμπι",
+        "english": "swimming",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "κολυμπάω (κολυμπήσω)",
+        "english": "to swim",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "ο κολυμβητής",
+        "english": "swimmer",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η βάρκα",
+        "english": "rowing boat",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "κάνω βαρκάδα",
+        "english": "to go for a boat ride",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το θαλάσσιο σκι",
+        "english": "water skiing",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η ιστιοσανίδα",
+        "english": "windsurf board",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το ελεύθερο κάμπινγκ",
+        "english": "wild camping",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το οργανωμένο κάμπινγκ",
+        "english": "campsite",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "το μαγιό",
+        "english": "swimsuit",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "τα θαλασσινά",
+        "english": "seafood",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η σκηνή",
+        "english": "tent",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το βουνό",
+        "english": "mountain",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το ορεινό χωριό",
+        "english": "mountain village",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το δάσος",
+        "english": "forest",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το ποτάμι",
+        "english": "river",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το γεφύρι",
+        "english": "stone bridge",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το καγιάκ",
+        "english": "kayak",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "η πεζοπορία",
+        "english": "hiking",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το καταφύγιο",
+        "english": "mountain refuge",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το χιονοδρομικό κέντρο",
+        "english": "ski resort",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "το σκι",
+        "english": "skiing",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "η ορειβασία",
+        "english": "mountaineering",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "ο ορειβάτης / η ορειβάτισσα",
+        "english": "climber",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "η φύση",
+        "english": "nature",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "οι καλοκαιρινές διακοπές",
+        "english": "summer holidays",
+        "group": "Free time, film & arts",
+        "marked": false
+    },
+    {
+        "greek": "οι χειμερινές διακοπές",
+        "english": "winter holidays",
+        "group": "Free time, film & arts",
+        "marked": false
+    },
+    {
+        "greek": "κάνω διακοπές",
+        "english": "to take a holiday",
+        "group": "Free time, film & arts",
+        "marked": false
+    },
+    {
+        "greek": "η εκδρομή",
+        "english": "day trip",
+        "group": "Free time, film & arts",
+        "marked": false
+    },
+    {
+        "greek": "η κρουαζιέρα",
+        "english": "cruise",
+        "group": "Free time, film & arts",
+        "marked": false
+    },
+    {
+        "greek": "πιο",
+        "english": "more (comparative marker)",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "ο πιο / η πιο / το πιο",
+        "english": "the most (superlative)",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "τόσο... όσο",
+        "english": "as... as",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "λιγότερο",
+        "english": "less",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "περισσότερο",
+        "english": "more (quantity)",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "λίγο πιο",
+        "english": "a little more",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "πολύ πιο",
+        "english": "far more",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "καλύτερος",
+        "english": "better",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "χειρότερος",
+        "english": "worse",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "μεγαλύτερος",
+        "english": "bigger / older",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "μικρότερος",
+        "english": "smaller / younger",
+        "group": "Comparing things",
+        "marked": false
+    },
+    {
+        "greek": "μεγάλος",
+        "english": "big",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "μικρός",
+        "english": "small",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "καλός",
+        "english": "good",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "κακός",
+        "english": "bad",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "όμορφος",
+        "english": "good-looking",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "γρήγορος",
+        "english": "fast",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "αργός",
+        "english": "slow",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "παλιός",
+        "english": "old (thing)",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "δύσκολος",
+        "english": "difficult",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "εύκολος",
+        "english": "easy",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "νόστιμος",
+        "english": "tasty",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "ωραίος",
+        "english": "lovely",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "το αυτοκίνητο",
+        "english": "car",
+        "group": "City transport",
+        "marked": false
+    },
+    {
+        "greek": "το ποδήλατο",
+        "english": "bicycle",
+        "group": "City transport",
+        "marked": false
+    },
+    {
+        "greek": "η μηχανή",
+        "english": "motorbike",
+        "group": "City transport",
+        "marked": false
+    },
+    {
+        "greek": "το πλοίο",
+        "english": "ship",
+        "group": "Travel & airport",
+        "marked": false
+    },
+    {
+        "greek": "το αεροπλάνο",
+        "english": "aeroplane",
+        "group": "Travel & airport",
+        "marked": false
+    },
+    {
+        "greek": "το δίκλινο δωμάτιο",
+        "english": "double room",
+        "group": "Travel & airport",
+        "marked": false
+    },
+    {
+        "greek": "το τρίκλινο δωμάτιο",
+        "english": "triple room",
+        "group": "Travel & airport",
+        "marked": false
+    },
+    {
+        "greek": "το παγωτό",
+        "english": "ice cream",
+        "group": "Commerce & shopping",
+        "marked": false
+    },
+    {
+        "greek": "η γειτονιά",
+        "english": "neighbourhood",
+        "group": "Nature, weather & outdoors",
+        "marked": false
     }
 ]
