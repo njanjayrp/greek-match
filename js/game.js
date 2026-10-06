@@ -57,6 +57,8 @@ function initApp(words) {
     section = sectionOf(mode);
     BrowseMode.init(allWords);
     applyMode();
+    // grammar drills load on demand; redraw once they are in
+    window.GRAMMAR.load().then(() => { if (section === "grammar") { populateGroupSelect(); applyMode(); } });
 }
 
 const MARKED = "__marked__";
@@ -89,6 +91,9 @@ function renderTabs() {
 function switchSection(target) {
     if (target === section) return;
     section = target;
+    if (section === "grammar") {
+        window.GRAMMAR.load().then(() => { populateGroupSelect(); applyMode(); });
+    }
     switchMode(SECTIONS[section][0][0]);
 }
 

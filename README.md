@@ -21,17 +21,20 @@ Everything grammar-related hangs off one list, `TOPICS` in
     title: "Αντωνυμίες",              // shown in the Manual dropdown
     blurb: "Weak pronouns and where they sit",
     manual: `<article class="manual"> … </article>`,
-    drill: () => window.PRONOUNS || null   // optional
+    drill: { src: "js/pronouns.js", global: "PRONOUNS" }   // optional
 }
 ```
 
 - The **Manual** tab's dropdown lists every topic and renders `manual`.
 - The **Drill** tab's dropdown groups each topic's sub-topics under its title,
   so a second topic simply adds a second group; "All topics" mixes them.
-- `drill` returns a module shaped like `js/compare.js` or `js/datetime.js`:
-  `{ TOPICS: [...], buildRound(topic, n) }` where each question is
-  `{ topic, sub, prompt, answer, options }`. Drop the file in `js/`, add it to
-  `index.html` and to `ASSETS` in `sw.js`, and bump the `?v=` query string.
+- `drill` names a script and the global it defines; the app pulls it in the
+  first time the Grammar section opens. The script is shaped like
+  `js/compare.js` or `js/datetime.js`: `{ TOPICS: [...], buildRound(topic, n) }`
+  with questions `{ topic, sub, prompt, answer, options }`. Drop the file in
+  `js/` — there is no `<script>` tag to add, no service-worker list to extend
+  and no version to bump: the worker is network-first and caches whatever it
+  serves.
 
 `tests/grammar_test.js` holds the registry to this contract, so a topic that
 forgets its manual or ships a malformed drill fails the suite.

@@ -1,5 +1,5 @@
 import { assert, assertEquals } from "jsr:@std/assert@1";
-import { loadLibs } from "./helpers.js";
+import { loadLibs, ROOT } from "./helpers.js";
 
 const { GRAMMAR } = loadLibs();
 
@@ -18,11 +18,23 @@ Deno.test("every topic has an id, a title and a manual", () => {
     }
 });
 
-Deno.test("a topic's drill, if it has one, is shaped like the other drills", () => {
+Deno.test("a declared drill names a script that exists and a global it defines", () => {
     for (const t of GRAMMAR.TOPICS) {
         if (!t.drill) continue;
-        const source = t.drill();
-        assert(source, t.id + ": drill() returned nothing");
+        assert(t.drill.src && t.drill.global, t.id + ": drill needs { src, global }");
+        const stat = Deno.statSync(ROOT + t.drill.src);   // throws if the file is missing
+        assert(stat.isFile, t.id + ": " + t.drill.src + " is not a file");
+        const src = Deno.readTextFileSync(ROOT + t.drill.src);
+        assert(src.includes("window." + t.drill.global),
+               t.drill.src + " never assigns window." + t.drill.global);
+    }
+});
+
+Deno.test("a loaded drill is shaped like the other drills", () => {
+    for (const t of GRAMMAR.TOPICS) {
+        if (!t.drill) continue;
+        const source = GRAMMAR.sourceOf(t);
+        assert(source, t.id + ": drill script did not define its global");
         assert(Array.isArray(source.TOPICS) && source.TOPICS.length, t.id + ": no sub-topics");
         assertEquals(typeof source.buildRound, "function", t.id + ": no buildRound");
     }

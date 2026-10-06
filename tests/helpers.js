@@ -14,6 +14,7 @@ export function readSrc(name) {
 // conjugations.js / conjugator.js / datetime.js only touch `window`.
 export function loadLibs() {
     const win = {};
+    win.window = win;
     for (const f of ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "grammar.js"]) {
         new Function("window", readSrc(f))(win);
     }

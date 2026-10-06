@@ -2,9 +2,10 @@
 // and, where there is one, the drill that practises it.
 //
 // Adding a topic means adding an entry here — a title, the manual markup, and
-// optionally `drill`, a module shaped like COMPARE/DATETIME
-// ({ TOPICS, buildRound(topic, n) }). Everything else (the topic dropdown, the
-// drill's sub-topic list, the tests) reads this list.
+// optionally `drill: { src, global }` naming a script shaped like
+// compare.js / datetime.js ({ TOPICS, buildRound(topic, n) }). The script is
+// pulled in on demand, so a new topic needs no <script> tag, no service-worker
+// entry and no cache-busting: one entry here and the file itself.
 
 window.GRAMMAR = (function () {
 
@@ -81,9 +82,28 @@ const TOPICS = [
         <li><s>Είναι πιο ψηλός από ο Ηλίας.</s> → από <b>τον Ηλία</b></li>
     </ul>
 </article>`,
-        drill: () => window.COMPARE || null
+        drill: { src: "js/compare.js", global: "COMPARE" }
     }
 ];
+
+// Scripts are fetched once, the first time the Grammar section is opened.
+const loaded = {};
+function load() {
+    return Promise.all(TOPICS.filter(t => t.drill).map(t => {
+        const { src, global } = t.drill;
+        if (window[global]) return Promise.resolve();
+        if (loaded[src]) return loaded[src];
+        loaded[src] = new Promise(resolve => {
+            const el = document.createElement("script");
+            el.src = src;
+            el.onload = el.onerror = () => resolve();
+            document.head.appendChild(el);
+        });
+        return loaded[src];
+    }));
+}
+
+function sourceOf(t) { return t.drill ? (window[t.drill.global] || null) : null; }
 
 function byId(id) { return TOPICS.find(t => t.id === id) || TOPICS[0]; }
 
@@ -92,7 +112,7 @@ function byId(id) { return TOPICS.find(t => t.id === id) || TOPICS[0]; }
 function drills() {
     const out = [];
     for (const t of TOPICS) {
-        const source = t.drill && t.drill();
+        const source = sourceOf(t);
         if (!source) continue;
         for (const sub of source.TOPICS) {
             out.push({ topicId: t.id, topicTitle: t.title, sub, source });
@@ -123,6 +143,6 @@ function buildRound(value, n) {
     return round;
 }
 
-return { TOPICS, byId, drills, resolve, buildRound };
+return { TOPICS, byId, drills, resolve, buildRound, load, sourceOf };
 
 })();
