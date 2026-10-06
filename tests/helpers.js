@@ -14,7 +14,7 @@ export function readSrc(name) {
 // conjugations.js / conjugator.js / datetime.js only touch `window`.
 export function loadLibs() {
     const win = {};
-    for (const f of ["conjugations.js", "conjugator.js", "datetime.js", "compare.js"]) {
+    for (const f of ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "grammar.js"]) {
         new Function("window", readSrc(f))(win);
     }
     return win;
@@ -68,7 +68,7 @@ export async function bootApp() {
         json: async () => JSON.parse(Deno.readTextFileSync(ROOT + url.replace("./", ""))),
     });
 
-    const src = ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "game.js", "browse.js"]
+    const src = ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "grammar.js", "game.js", "browse.js"]
         .map(readSrc).join("\n");
     const api = new Function(
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",
@@ -76,6 +76,7 @@ export async function bootApp() {
         return {
             switchMode, switchGroup, selectRound, modePool, setLang,
             state: () => ({ mode, section, group, round, lang, words: allWords.length }),
+            grammar: () => window.GRAMMAR,
             el: id => document.getElementById(id),
         };`
     )(win, doc, localStorage, fetch, {}, { search: "", href: "http://test/" }, setTimeout);

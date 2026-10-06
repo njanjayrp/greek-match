@@ -1,7 +1,7 @@
 import { assert, assertEquals } from "jsr:@std/assert@1";
 import { bootApp } from "./helpers.js";
 
-const MODES = ["match", "type", "browse", "fill", "conj", "dates", "manual", "compare"];
+const MODES = ["match", "type", "browse", "fill", "conj", "dates", "manual", "drill"];
 
 Deno.test("the app boots into Match with the whole word list", async () => {
     const app = await bootApp();
@@ -76,18 +76,36 @@ Deno.test("Grammar is its own section, with the manual and the drill", async () 
     const app = await bootApp();
     app.switchMode("manual");
     assertEquals(app.state().section, "grammar");
-    app.switchMode("compare");
+    assert(app.el("manual-container").innerHTML.includes("Παραθετικά"));
+    app.switchMode("drill");
     assertEquals(app.state().section, "grammar");
     assertEquals(app.el("dates-progress").textContent, "1 / 10");
 });
 
-Deno.test("Compare and Dates keep separate topic filters", async () => {
+Deno.test("the manual opens the topic picked in its dropdown", async () => {
+    const app = await bootApp();
+    app.switchMode("manual");
+    for (const t of app.grammar().TOPICS) {
+        app.switchGroup(t.id);
+        assert(app.el("manual-container").innerHTML.includes(t.title), t.id);
+    }
+});
+
+Deno.test("a drill sub-topic can be picked from any grammar topic", async () => {
+    const app = await bootApp();
+    app.switchMode("drill");
+    for (const d of app.grammar().drills()) {
+        app.switchGroup(d.topicId + "::" + d.sub);
+        assertEquals(app.el("dates-progress").textContent, "1 / 10");
+    }
+});
+
+Deno.test("the drill and Dates keep separate topic filters", async () => {
     const app = await bootApp();
     app.switchMode("dates");
     app.switchGroup("Ordinals");
-    app.switchMode("compare");
+    app.switchMode("drill");
     assertEquals(app.state().group, "__all__");
-    app.switchGroup("Υπερθετικός");
     app.switchMode("dates");
     assertEquals(app.state().group, "Ordinals");
 });
