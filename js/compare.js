@@ -401,6 +401,19 @@ function genSuperlative() {
             .concat([`πιο ${FORM_OF[s.g](s.a)}`, `${art} ${FORM_OF[s.g](s.a)}`]));
 }
 
+// The one-word superlative is the same form with the article in front:
+// ο καλύτερος, η μεγαλύτερη, τα περισσότερα.
+function genSynthSuperlative() {
+    const s = single(SYN_PLAIN);
+    if (!s) return null;
+    const art = ARTICLE[s.g];
+    return q("Υπερθετικός", "Ο μονολεκτικός υπερθετικός",
+        `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.  (${s.a.m} → ${s.a.syn})`,
+        `${art} ${synOf(s.a, s.g)}`,
+        OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} ${synOf(s.a, g)}`)
+            .concat([synOf(s.a, s.g), `${art} πιο ${synOf(s.a, s.g)}`]));
+}
+
 // ── Ίδιο και λιγότερο: τόσο… όσο, λιγότερο ───────────────────────────────────
 
 function genEquality() {
@@ -474,7 +487,7 @@ function genMore() {
 
 const GENERATORS = {
     "Συγκριτικός":    [genComparative, genComparative, genDegreeWord],
-    "Υπερθετικός":    [genSuperlative],
+    "Υπερθετικός":    [genSuperlative, genSynthSuperlative],
     "Ίδιο & λιγότερο":[genEquality, genLess],
     "Μονολεκτικά":    [genSynthetic, genSyntheticUse, genSyntheticAgree, genMore]
 };
@@ -483,14 +496,17 @@ const TOPICS = Object.keys(GENERATORS);
 
 function buildRound(topic, n) {
     n = n || 10;
+    // Without a topic, draw the topic first and the question shape second —
+    // flattening the generators would hand the drill with the most shapes
+    // nearly half the round.
     const gens = (topic && GENERATORS[topic])
         ? GENERATORS[topic]
-        : TOPICS.reduce((acc, t) => acc.concat(GENERATORS[t]), []);
+        : null;
     const round = [], seen = new Set();
     let attempts = 0;
     while (round.length < n && attempts < 600) {
         attempts++;
-        const item = pick(gens)();
+        const item = pick(gens || GENERATORS[pick(TOPICS)])();
         if (!item || item.options.length < 2) continue;
         if (seen.has(item.prompt)) continue;
         seen.add(item.prompt);

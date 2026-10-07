@@ -43,12 +43,17 @@ Deno.test("the comparative answer agrees with its subject", () => {
     }
 });
 
+// A superlative is the article plus either πιο + adjective or the one-word form.
 Deno.test("the superlative answer carries the right article", () => {
     for (let i = 0; i < 200; i++) {
         for (const q of COMPARE.buildRound("Υπερθετικός", 4)) {
-            const [art, pio] = q.answer.split(" ");
+            const [art, second] = q.answer.split(" ");
             assert(["ο", "η", "το", "οι", "τα"].includes(art), q.answer);
-            assertEquals(pio, "πιο", q.answer);
+            if (q.sub.includes("μονολεκτικός"))
+                assert(COMPARE.SYN.some(a => ["m","f","n","pm","pf","pn"]
+                        .some(g => COMPARE.synOf(a, g) === second)), q.answer);
+            else
+                assertEquals(second, "πιο", q.answer);
         }
     }
 });

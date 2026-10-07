@@ -137,15 +137,29 @@ function buildRound(value, n) {
         const d = resolve(value);
         return d ? d.source.buildRound(d.sub, n) : [];
     }
-    // "All topics" shuffles every grammar drill together
-    const sources = [...new Set(drills().map(d => d.source))];
-    const round = [];
-    for (let i = 0; i < n * 3 && round.length < n; i++) {
-        const s = sources[Math.floor(Math.random() * sources.length)];
-        const [q] = s.buildRound(null, 1);
-        if (q && !round.some(r => r.prompt === q.prompt)) round.push(q);
+    // "All topics" deals the sub-topics round-robin out of a reshuffled queue, so
+    // ten questions cover them evenly instead of favouring whichever drill
+    // happens to have the most question shapes behind it.
+    const all = drills();
+    if (!all.length) return [];
+    const round = [], seen = new Set();
+    let queue = [];
+    for (let i = 0; i < n * 5 && round.length < n; i++) {
+        if (!queue.length) queue = shuffle(all);
+        const d = queue.shift();
+        const [q] = d.source.buildRound(d.sub, 1);
+        if (q && !seen.has(q.prompt)) { seen.add(q.prompt); round.push(q); }
     }
     return round;
+}
+
+function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
 }
 
 return { TOPICS, byId, drills, resolve, buildRound, load, sourceOf };

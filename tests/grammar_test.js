@@ -62,3 +62,19 @@ Deno.test("All topics mixes the grammar drills", () => {
     assertEquals(round.length, 10);
     assertEquals(new Set(round.map(q => q.prompt)).size, 10);
 });
+
+Deno.test("All topics spreads a round over the sub-topics", () => {
+    const G = loadLibs().GRAMMAR;
+    const subs = G.drills().map(d => d.sub);
+    const count = {};
+    for (let r = 0; r < 40; r++)
+        for (const q of G.buildRound("__all__", 10))
+            count[q.topic] = (count[q.topic] || 0) + 1;
+    const total = Object.values(count).reduce((a, b) => a + b, 0);
+    const fair = total / subs.length;
+    for (const sub of subs) {
+        assert(count[sub], sub + " never came up in 400 questions");
+        assert(count[sub] > fair * 0.5 && count[sub] < fair * 1.6,
+               sub + " got " + count[sub] + " of " + total + " (fair share " + Math.round(fair) + ")");
+    }
+});
