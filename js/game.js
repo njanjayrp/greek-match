@@ -1159,7 +1159,8 @@ function buildDates() {
     document.getElementById("btn-retry").style.display    = "none";
     document.getElementById("btn-new").style.display      = "none";
     if (!datesRound.length) {
-        document.getElementById("dates-prompt").textContent = "No questions available.";
+        document.getElementById("dates-prompt-text").textContent = "No questions available.";
+        document.getElementById("dates-gloss").textContent  = "";
         document.getElementById("dates-options").innerHTML  = "";
         return;
     }
@@ -1171,7 +1172,8 @@ function showDatesQuestion() {
     document.getElementById("dates-progress").textContent = (datesIndex + 1) + " / " + datesRound.length;
     document.getElementById("dates-topic").textContent    = q.topic;
     document.getElementById("dates-sub").textContent      = q.sub;
-    document.getElementById("dates-prompt").textContent   = q.prompt;
+    document.getElementById("dates-prompt-text").textContent = q.prompt;
+    document.getElementById("dates-gloss").textContent       = q.gloss || "";
 
     const box = document.getElementById("dates-options");
     box.innerHTML = "";

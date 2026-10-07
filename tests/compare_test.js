@@ -204,3 +204,26 @@ Deno.test("the drill survives being loaded before the dictionary", () => {
     assert(round.length, "no questions at all without words.json");
     for (const q of round) assert(q.options.includes(q.answer));
 });
+
+Deno.test("a question never shows its own answer, and never in brackets", () => {
+    for (const t of COMPARE.TOPICS)
+        for (let r = 0; r < 30; r++)
+            for (const q of COMPARE.buildRound(t, 10)) {
+                assert(!q.prompt.includes(q.answer), "the prompt gives it away: " + q.prompt);
+                assert(!/[()]/.test(q.prompt), "bracketed hint in: " + q.prompt);
+            }
+});
+
+Deno.test("every question carries an English gloss that agrees in number", () => {
+    const plural = new Set(COMPARE.nouns().filter(n => n.g[0] === "p").map(n => n.nom));
+    for (const t of COMPARE.TOPICS)
+        for (let r = 0; r < 30; r++)
+            for (const q of COMPARE.buildRound(t, 10)) {
+                assert(q.gloss, t + ": no gloss for " + q.prompt);
+                assert(!/[\u0370-\u03ff]/.test(q.gloss), "Greek leaked into the gloss: " + q.gloss);
+                assert(!/\bundefined\b|\bthe the\b/.test(q.gloss), "broken gloss: " + q.gloss);
+                const subject = q.prompt.split(/ \/ | είναι /)[0];
+                if (plural.has(subject))
+                    assert(!/ is /.test(q.gloss), "plural subject with \"is\": " + q.gloss);
+            }
+});

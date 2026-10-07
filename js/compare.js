@@ -109,6 +109,37 @@ const ADJ = ADJ_SRC.map(([m, en, kinds, syn]) => {
 
 const SYN = ADJ.filter(a => a.syn);
 
+// For the English gloss under each question. Anything not listed takes "more X".
+const EN_CMP = {
+    good:"better", bad:"worse", much:"more", big:"bigger", small:"smaller",
+    tall:"taller", short:"shorter", slim:"slimmer", skinny:"skinnier", fat:"fatter",
+    strict:"stricter", happy:"happier", sad:"sadder", young:"younger",
+    clever:"cleverer", long:"longer", full:"fuller", soft:"softer", heavy:"heavier",
+    strong:"stronger", cheap:"cheaper", fast:"faster", slow:"slower", tasty:"tastier",
+    sweet:"sweeter", salty:"saltier", warm:"warmer", cold:"colder", fresh:"fresher",
+    old:"older", new:"newer", quiet:"quieter", calm:"calmer", clean:"cleaner",
+    dirty:"dirtier", ugly:"uglier", dark:"darker", lovely:"lovelier",
+    friendly:"friendlier", polite:"politer"
+};
+const EN_SUP = { better:"best", worse:"worst", more:"most" };
+
+function cmpEn(a) { return EN_CMP[a.en] || "more " + a.en; }
+function supEn(a) {
+    const c = cmpEn(a);
+    if (c.startsWith("more ")) return "most " + c.slice(5);
+    return EN_SUP[c] || c.replace(/er$/, "est");
+}
+function cap(t) { return t.charAt(0).toUpperCase() + t.slice(1); }
+function isAre(g) { return g[0] === "p" ? "are" : "is"; }
+
+// "country / holiday house" shares its head word, so the shortest alternative is
+// usually the broken one — take the wordiest, and drop "(female)" and friends.
+function englishOf(text) {
+    const parts = text.replace(/\s*\(.*?\)/g, "").split(" / ").map(t => t.trim()).filter(Boolean);
+    return parts.reduce((best, t) =>
+        t.split(" ").length > best.split(" ").length ? t : best, parts[0] || text);
+}
+
 // One-word comparatives are plain -ος/-η/-ο adjectives with a fixed accent, so
 // every gender and number comes off the same stem: περισσότερ-ος/-η/-ο/-οι…
 const SYN_ENDING = { m:"ος", f:"η", n:"ο", pm:"οι", pf:"ες", pn:"α" };
@@ -265,7 +296,8 @@ function buildNouns() {
         out.push({
             nom: greek.charAt(0).toUpperCase() + greek.slice(1),
             acc: accOf(m[1], m[2], slot),
-            g: slot, kinds, group: w.group, en: w.english
+            g: slot, kinds, group: w.group,
+            en: "the " + englishOf(w.english)
         });
     }
     return out;
@@ -273,34 +305,34 @@ function buildNouns() {
 
 // Names are not dictionary vocabulary, but person comparisons need subjects.
 const PEOPLE = [
-    { nom:"Ο Χρήστος", acc:"τον Χρήστο", g:"m" },
-    { nom:"Ο Νίκος", acc:"τον Νίκο", g:"m" },
-    { nom:"Ο Δημήτρης", acc:"τον Δημήτρη", g:"m" },
-    { nom:"Ο Ηλίας", acc:"τον Ηλία", g:"m" },
-    { nom:"Ο Κώστας", acc:"τον Κώστα", g:"m" },
-    { nom:"Ο Αντώνης", acc:"τον Αντώνη", g:"m" },
-    { nom:"Ο αδερφός μου", acc:"τον αδερφό μου", g:"m" },
-    { nom:"Ο γείτονάς μου", acc:"τον γείτονά μου", g:"m" },
-    { nom:"Ο φίλος μου", acc:"τον φίλο μου", g:"m" },
-    { nom:"Η Άννα", acc:"την Άννα", g:"f" },
-    { nom:"Η Μαρία", acc:"τη Μαρία", g:"f" },
-    { nom:"Η Ελένη", acc:"την Ελένη", g:"f" },
-    { nom:"Η Εύη", acc:"την Εύη", g:"f" },
-    { nom:"Η Σοφία", acc:"τη Σοφία", g:"f" },
-    { nom:"Η Κατερίνα", acc:"την Κατερίνα", g:"f" },
-    { nom:"Η αδερφή μου", acc:"την αδερφή μου", g:"f" },
-    { nom:"Η φίλη μου", acc:"τη φίλη μου", g:"f" },
-    { nom:"Η γειτόνισσά μου", acc:"τη γειτόνισσά μου", g:"f" },
-    { nom:"Ο Χρήστος και ο Νίκος", acc:"τον Χρήστο και τον Νίκο", g:"pm" },
-    { nom:"Οι φίλοι μου", acc:"τους φίλους μου", g:"pm" },
-    { nom:"Οι γείτονές μου", acc:"τους γείτονές μου", g:"pm" },
-    { nom:"Η Άννα και η Εύη", acc:"την Άννα και την Εύη", g:"pf" },
-    { nom:"Οι φίλες μου", acc:"τις φίλες μου", g:"pf" },
-    { nom:"Οι ξαδέλφες μου", acc:"τις ξαδέλφες μου", g:"pf" },
-    { nom:"Τα αδέρφια μου", acc:"τα αδέρφια μου", g:"pn" },
-    { nom:"Τα ξαδέρφια μου", acc:"τα ξαδέρφια μου", g:"pn" },
-    { nom:"Τα παιδιά τους", acc:"τα παιδιά τους", g:"pn" }
-].map(p => ({ ...p, kinds:["person"], group:"People & relationships", en:"" }));
+    { nom:"Ο Χρήστος", acc:"τον Χρήστο", g:"m", en:"Christos" },
+    { nom:"Ο Νίκος", acc:"τον Νίκο", g:"m", en:"Nikos" },
+    { nom:"Ο Δημήτρης", acc:"τον Δημήτρη", g:"m", en:"Dimitris" },
+    { nom:"Ο Ηλίας", acc:"τον Ηλία", g:"m", en:"Ilias" },
+    { nom:"Ο Κώστας", acc:"τον Κώστα", g:"m", en:"Kostas" },
+    { nom:"Ο Αντώνης", acc:"τον Αντώνη", g:"m", en:"Antonis" },
+    { nom:"Ο αδερφός μου", acc:"τον αδερφό μου", g:"m", en:"my brother" },
+    { nom:"Ο γείτονάς μου", acc:"τον γείτονά μου", g:"m", en:"my neighbour" },
+    { nom:"Ο φίλος μου", acc:"τον φίλο μου", g:"m", en:"my friend" },
+    { nom:"Η Άννα", acc:"την Άννα", g:"f", en:"Anna" },
+    { nom:"Η Μαρία", acc:"τη Μαρία", g:"f", en:"Maria" },
+    { nom:"Η Ελένη", acc:"την Ελένη", g:"f", en:"Eleni" },
+    { nom:"Η Εύη", acc:"την Εύη", g:"f", en:"Evi" },
+    { nom:"Η Σοφία", acc:"τη Σοφία", g:"f", en:"Sofia" },
+    { nom:"Η Κατερίνα", acc:"την Κατερίνα", g:"f", en:"Katerina" },
+    { nom:"Η αδερφή μου", acc:"την αδερφή μου", g:"f", en:"my sister" },
+    { nom:"Η φίλη μου", acc:"τη φίλη μου", g:"f", en:"my friend" },
+    { nom:"Η γειτόνισσά μου", acc:"τη γειτόνισσά μου", g:"f", en:"my neighbour" },
+    { nom:"Ο Χρήστος και ο Νίκος", acc:"τον Χρήστο και τον Νίκο", g:"pm", en:"Christos and Nikos" },
+    { nom:"Οι φίλοι μου", acc:"τους φίλους μου", g:"pm", en:"my friends" },
+    { nom:"Οι γείτονές μου", acc:"τους γείτονές μου", g:"pm", en:"my neighbours" },
+    { nom:"Η Άννα και η Εύη", acc:"την Άννα και την Εύη", g:"pf", en:"Anna and Evi" },
+    { nom:"Οι φίλες μου", acc:"τις φίλες μου", g:"pf", en:"my friends" },
+    { nom:"Οι ξαδέλφες μου", acc:"τις ξαδέλφες μου", g:"pf", en:"my cousins" },
+    { nom:"Τα αδέρφια μου", acc:"τα αδέρφια μου", g:"pn", en:"my siblings" },
+    { nom:"Τα ξαδέρφια μου", acc:"τα ξαδέρφια μου", g:"pn", en:"my cousins" },
+    { nom:"Τα παιδιά τους", acc:"τα παιδιά τους", g:"pn", en:"their children" }
+].map(p => ({ ...p, kinds:["person"], group:"People & relationships" }));
 
 function nouns() {
     // Never cache an empty pool: the dictionary may not have landed yet.
@@ -323,13 +355,13 @@ function shuffle(arr) {
     }
     return a;
 }
-function q(topic, sub, prompt, answer, distractors) {
+function q(topic, sub, prompt, answer, distractors, gloss) {
     const opts = [answer];
     for (const d of shuffle(distractors)) {
         if (opts.length >= 4) break;
         if (d && !opts.includes(d)) opts.push(d);
     }
-    return { topic, sub, prompt, answer, options: shuffle(opts) };
+    return { topic, sub, prompt, answer, options: shuffle(opts), gloss: gloss || "" };
 }
 function others(arr, x, k) { return shuffle(arr.filter(v => v !== x)).slice(0, k); }
 
@@ -361,6 +393,8 @@ function single(adjPool) {
 
 const PLAIN = ADJ.filter(a => a.m !== "πολύς");
 const SYN_PLAIN = SYN.filter(a => a.m !== "πολύς");
+// Greek insists on the one-word form for these four, so πιο never asks for them.
+const PERIPHRASTIC = ADJ.filter(a => !a.syn);
 
 // ── Συγκριτικός: πιο + adjective + από + accusative ──────────────────────────
 
@@ -372,7 +406,8 @@ function genComparative() {
     return q("Συγκριτικός", "Φτιάξε τη σύγκριση",
         `${s.first.nom} / ${s.a.m} / ${s.second.acc}`, right,
         OTHER_GENDERS[s.g].map(g => `${s.first.nom} είναι πιο ${FORM_OF[g](s.a)} από ${s.second.acc}.`)
-            .concat([`${s.first.nom} είναι ${form} από ${s.second.acc}.`]));
+            .concat([`${s.first.nom} είναι ${form} από ${s.second.acc}.`]),
+        `${cap(s.first.en)} ${isAre(s.g)} ${cmpEn(s.a)} than ${s.second.en}.`);
 }
 
 function genDegreeWord() {
@@ -385,20 +420,22 @@ function genDegreeWord() {
         `${s.first.nom} / ${word} / ${s.a.m} / ${s.second.acc}`, right,
         [`${s.first.nom} είναι πιο ${word} ${form} από ${s.second.acc}.`,
          `${s.first.nom} είναι ${word} ${form} πιο από ${s.second.acc}.`,
-         `${s.first.nom} είναι ${word} ${form} από ${s.second.acc}.`]);
+         `${s.first.nom} είναι ${word} ${form} από ${s.second.acc}.`],
+        `${cap(s.first.en)} ${isAre(s.g)} ${word === "λίγο" ? "a little" : "much"} ${cmpEn(s.a)} than ${s.second.en}.`);
 }
 
 // ── Υπερθετικός: article + πιο + adjective ───────────────────────────────────
 
 function genSuperlative() {
-    const s = single(PLAIN);
+    const s = single(PERIPHRASTIC);
     if (!s) return null;
     const art = ARTICLE[s.g];
     const right = `${art} πιο ${FORM_OF[s.g](s.a)}`;
     return q("Υπερθετικός", "Βάλε τον υπερθετικό",
-        `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.  (${s.a.m})`, right,
+        `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.`, right,
         OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} πιο ${FORM_OF[g](s.a)}`)
-            .concat([`πιο ${FORM_OF[s.g](s.a)}`, `${art} ${FORM_OF[s.g](s.a)}`]));
+            .concat([`πιο ${FORM_OF[s.g](s.a)}`, `${art} ${FORM_OF[s.g](s.a)}`]),
+        `${cap(s.n.en)} ${isAre(s.g)} the ${supEn(s.a)} of all.`);
 }
 
 // The one-word superlative is the same form with the article in front:
@@ -408,10 +445,11 @@ function genSynthSuperlative() {
     if (!s) return null;
     const art = ARTICLE[s.g];
     return q("Υπερθετικός", "Ο μονολεκτικός υπερθετικός",
-        `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.  (${s.a.m} → ${s.a.syn})`,
+        `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.`,
         `${art} ${synOf(s.a, s.g)}`,
         OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} ${synOf(s.a, g)}`)
-            .concat([synOf(s.a, s.g), `${art} πιο ${synOf(s.a, s.g)}`]));
+            .concat([synOf(s.a, s.g), `${art} πιο ${synOf(s.a, s.g)}`]),
+        `${cap(s.n.en)} ${isAre(s.g)} the ${supEn(s.a)} of all.`);
 }
 
 // ── Ίδιο και λιγότερο: τόσο… όσο, λιγότερο ───────────────────────────────────
@@ -426,7 +464,8 @@ function genEquality() {
         `τόσο ${form} όσο ${asNom}`,
         [`τόσο ${form} από ${s.first.acc}`,
          `πιο ${form} όσο ${asNom}`,
-         `λιγότερο ${form} όσο ${asNom}`]);
+         `λιγότερο ${form} όσο ${asNom}`],
+        `${cap(s.second.en)} ${isAre(s.g)} not as ${s.a.en} as ${s.first.en}.`);
 }
 
 function genLess() {
@@ -438,15 +477,18 @@ function genLess() {
         `${s.second.nom} είναι λιγότερο ${form} από ${s.first.acc}.`,
         [`${s.second.nom} είναι πιο ${form} από ${s.first.acc}.`,
          `${s.second.nom} είναι λιγότερο ${form} όσο ${s.first.acc}.`,
-         `${s.second.nom} δεν είναι τόσο ${form} από ${s.first.acc}.`]);
+         `${s.second.nom} δεν είναι τόσο ${form} από ${s.first.acc}.`],
+        `${cap(s.second.en)} ${isAre(s.g)} less ${s.a.en} than ${s.first.en}.`);
 }
 
 // ── Μονολεκτικά: καλός → καλύτερος ───────────────────────────────────────────
+// Note: from here on the prompt no longer names the adjective — the English
+// gloss under the sentence does, so the drill asks for the form, not the word.
 
 function genSynthetic() {
     const a = pick(SYN);
     return q("Μονολεκτικά", "Ο μονολεκτικός συγκριτικός", a.m, a.syn,
-        others(SYN, a, 3).map(x => x.syn).concat(["πιο " + a.m]));
+        others(SYN, a, 3).map(x => x.syn).concat(["πιο " + a.m]), a.en);
 }
 
 function genSyntheticUse() {
@@ -454,9 +496,10 @@ function genSyntheticUse() {
     if (!s) return null;
     const right = `${s.first.nom} είναι ${synOf(s.a, s.g)} από ${s.second.acc}.`;
     return q("Μονολεκτικά", "Με τον μονολεκτικό τύπο",
-        `${s.first.nom} / ${s.a.syn} / ${s.second.acc}`, right,
+        `${s.first.nom} / ${s.a.m} / ${s.second.acc}`, right,
         OTHER_GENDERS[s.g].map(g => `${s.first.nom} είναι ${synOf(s.a, g)} από ${s.second.acc}.`)
-            .concat([`${s.first.nom} είναι πιο ${synOf(s.a, s.g)} από ${s.second.acc}.`]));
+            .concat([`${s.first.nom} είναι πιο ${synOf(s.a, s.g)} από ${s.second.acc}.`]),
+        `${cap(s.first.en)} ${isAre(s.g)} ${cmpEn(s.a)} than ${s.second.en}.`);
 }
 
 // Pure agreement: the sentence is given, only the ending is in question.
@@ -464,13 +507,16 @@ function genSyntheticAgree() {
     const s = subject(SYN_PLAIN);
     if (!s) return null;
     return q("Μονολεκτικά", "Ταίριαξε την κατάληξη",
-        `${s.first.nom} είναι ______ από ${s.second.acc}.  (${s.a.m})`, synOf(s.a, s.g),
+        `${s.first.nom} είναι ______ από ${s.second.acc}.`, synOf(s.a, s.g),
         OTHER_GENDERS[s.g].map(g => synOf(s.a, g))
-            .concat([FORM_OF[s.g](s.a), "πιο " + synOf(s.a, s.g)]));
+            .concat([FORM_OF[s.g](s.a), "πιο " + synOf(s.a, s.g)]),
+        `${cap(s.first.en)} ${isAre(s.g)} ${cmpEn(s.a)} than ${s.second.en}.`);
 }
 
 // πολύς compares amounts, not single things, so it gets its own frame.
 const MORE_TAILS = ["από πέρυσι", "από χθες", "από ό,τι περίμενα", "από πριν"];
+const EN_TAIL = { "από πέρυσι":"last year", "από χθες":"yesterday",
+                  "από ό,τι περίμενα":"I expected", "από πριν":"before" };
 
 function genMore() {
     const polys = SYN.find(a => a.m === "πολύς");
@@ -478,9 +524,10 @@ function genMore() {
     if (!pool.length) return null;
     const n = pick(pool), tail = pick(MORE_TAILS);
     return q("Μονολεκτικά", "Περισσότερος ή περισσότερα;",
-        `${n.nom} είναι ______ ${tail}.  (πολύς)`, synOf(polys, n.g),
+        `${n.nom} είναι ______ ${tail}.`, synOf(polys, n.g),
         OTHER_GENDERS[n.g].map(g => synOf(polys, g))
-            .concat([FORM_OF[n.g](polys), "πιο " + synOf(polys, n.g)]));
+            .concat([FORM_OF[n.g](polys), "πιο " + synOf(polys, n.g)]),
+        `More ${n.en.replace(/^the /, "")} than ${EN_TAIL[tail]}.`);
 }
 
 // ── Round assembly ───────────────────────────────────────────────────────────
