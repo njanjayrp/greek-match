@@ -15,6 +15,7 @@ export function readSrc(name) {
 export function loadLibs() {
     const win = {};
     win.window = win;
+    win.WORDS = readWords();        // js/compare.js builds its sentences from the dictionary
     for (const f of ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "grammar.js"]) {
         new Function("window", readSrc(f))(win);
     }
@@ -58,6 +59,7 @@ export async function bootApp() {
         querySelector: () => makeEl(),
         querySelectorAll: () => [],
         addEventListener() {},
+        removeEventListener() {},
         body: makeEl(),
     };
     const localStorage = {
@@ -75,7 +77,8 @@ export async function bootApp() {
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",
         src + `
         return {
-            switchMode, switchGroup, selectRound, modePool, setLang,
+            switchMode, switchGroup, selectRound, modePool, setLang, answerDates,
+            dates: () => ({ index: datesIndex, score: datesScore, question: datesRound[datesIndex] }),
             state: () => ({ mode, section, group, round, lang, words: allWords.length }),
             grammar: () => window.GRAMMAR,
             el: id => document.getElementById(id),

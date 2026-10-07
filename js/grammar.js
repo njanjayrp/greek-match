@@ -72,6 +72,11 @@ const TOPICS = [
             <tr><td>πολύς</td><td>περισσότερος</td><td>ο περισσότερος</td></tr>
         </tbody>
     </table>
+    <p class="manual-note">These are ordinary <b>-ος / -η / -ο</b> adjectives and the accent never
+    moves, so every gender and number comes off the same stem:
+    περισσότερ<b>ος</b> · περισσότερ<b>η</b> · περισσότερ<b>ο</b> ·
+    περισσότερ<b>οι</b> · περισσότερ<b>ες</b> · περισσότερ<b>α</b>.
+    Only <b>πολύς</b> is irregular in the positive: πολύς / πολλή / πολύ, πολλοί / πολλές / πολλά.</p>
     <p class="manual-note manual-warn">Never both at once: <s>πιο καλύτερος</s> → <b>καλύτερος</b>
     or <b>πιο καλός</b>. Both are fine on their own.</p>
 

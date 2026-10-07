@@ -11,6 +11,9 @@ let touchTarget     = null;
 
 function initApp(words) {
     allWords = words;
+    // On-demand drills (js/compare.js and friends) build their sentences out of
+    // the dictionary, so they need it reachable without being wired into boot.
+    window.WORDS = words;
 
     // Register service worker
     if ('serviceWorker' in navigator) {
@@ -1140,8 +1143,9 @@ let datesScore = 0;
 let datesTimer = null;
 
 function buildDates() {
-    // Drop any answer-reveal timer still pending from the round being replaced
+    // Drop any answer-reveal timer or Continue listener left by the previous round
     clearTimeout(datesTimer);
+    clearDatesContinue();
     const source = quizSource();
     datesRound = source
         ? source.buildRound(group === "__all__" ? null : group, 10,
@@ -1189,9 +1193,44 @@ function answerDates(btn, chosen) {
         b.disabled = true;
         if (b.textContent === q.answer) b.classList.add("correct");
     });
-    if (chosen === q.answer) datesScore++;
-    else btn.classList.add("wrong");
-    datesTimer = setTimeout(advanceDates, chosen === q.answer ? 700 : 1600);
+    if (chosen === q.answer) {
+        datesScore++;
+        datesTimer = setTimeout(advanceDates, 700);
+        return;
+    }
+    btn.classList.add("wrong");
+    // A mistake never auto-advances: the answer stays on screen until you move on
+    waitForDatesContinue();
+}
+
+// Holds the teardown for the "Continue" state, so a new round can cancel it
+let datesContinue = null;
+
+function waitForDatesContinue() {
+    clearDatesContinue();
+    const next = document.createElement("button");
+    next.className   = "quiz-next";
+    next.textContent = "Continue \u2192";
+    document.getElementById("dates-options").appendChild(next);
+
+    let used = false;
+    const goOn = () => {
+        if (used) return;
+        used = true;
+        clearDatesContinue();
+        advanceDates();
+    };
+    const onKey = e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); goOn(); }
+    };
+    next.addEventListener("click", goOn);
+    document.addEventListener("keydown", onKey);
+    datesContinue = () => document.removeEventListener("keydown", onKey);
+    next.focus();
+}
+
+function clearDatesContinue() {
+    if (datesContinue) { datesContinue(); datesContinue = null; }
 }
 
 function advanceDates() {

@@ -162,32 +162,32 @@
         "marked": false
     },
     {
-        "greek": "σκουπίζουμε → σκουπίζαμε",
-        "english": "we vacuum → we were vacuuming",
+        "greek": "σκουπίζω (σκουπίσω)",
+        "english": "to sweep",
         "group": "Home, buildings & rooms",
         "marked": false
     },
     {
-        "greek": "γυρίζω → γύριζα",
-        "english": "I return → I was returning",
+        "greek": "γυρίζω (γυρίσω)",
+        "english": "to return",
         "group": "City transport",
         "marked": false
     },
     {
-        "greek": "διασκεδάζουν → διασκέδαζαν",
-        "english": "they have fun → they were having fun",
+        "greek": "διασκεδάζω (διασκεδάσω)",
+        "english": "to have fun",
         "group": "Social & communication",
         "marked": false
     },
     {
-        "greek": "πλένεις → έπλενες",
-        "english": "you wash → you were washing",
+        "greek": "πλένω (πλύνω)",
+        "english": "to wash",
         "group": "Home, buildings & rooms",
         "marked": false
     },
     {
-        "greek": "χτίζω → έχτιζα",
-        "english": "I build → I was building",
+        "greek": "χτίζω (χτίσω)",
+        "english": "to build",
         "group": "Home, buildings & rooms",
         "marked": false
     },
@@ -1254,14 +1254,14 @@
         "marked": false
     },
     {
-        "greek": "φεύγω → έφυγα",
-        "english": "to leave → I left",
+        "greek": "φεύγω (φύγω)",
+        "english": "to leave (go away)",
         "group": "Travel & airport",
         "marked": false
     },
     {
-        "greek": "φτάνω → έφτασα",
-        "english": "to arrive → I arrived",
+        "greek": "φτάνω (φτάσω)",
+        "english": "to arrive",
         "group": "Travel & airport",
         "marked": false
     },

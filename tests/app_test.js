@@ -116,3 +116,30 @@ Deno.test("Conjugate deals ten questions, one per verb", async () => {
     const progress = app.el("conj-progress").textContent;
     assertEquals(progress, "1 / 10");
 });
+
+Deno.test("a wrong drill answer waits for Continue instead of skipping past", async () => {
+    const app = await bootApp();
+    app.switchMode("drill");
+    const q = app.dates().question;
+    const box = app.el("dates-options");
+    box.children = [];
+    app.answerDates({ classList: { add() {} } }, q.answer + " (wrong)");
+
+    await new Promise(r => setTimeout(r, 80));
+    assertEquals(app.dates().index, 0, "a mistake must not advance on its own");
+    const next = box.children.find(c => c.className === "quiz-next");
+    assert(next, "no Continue button was offered");
+
+    next._on.click();
+    assertEquals(app.dates().index, 1, "Continue did not move to the next question");
+});
+
+Deno.test("a correct drill answer scores and moves on by itself", async () => {
+    const app = await bootApp();
+    app.switchMode("drill");
+    const q = app.dates().question;
+    app.answerDates({ classList: { add() {} } }, q.answer);
+    assertEquals(app.dates().score, 1);
+    await new Promise(r => setTimeout(r, 900));
+    assertEquals(app.dates().index, 1);
+});

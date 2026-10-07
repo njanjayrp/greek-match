@@ -151,6 +151,11 @@ h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2
 .quiz-opt.correct { border-color: var(--good); background: var(--good-bg); color: var(--good); font-weight: 700; }
 .quiz-opt.wrong   { border-color: var(--bad); background: var(--bad-bg); color: var(--bad); }
 .quiz-opt:disabled { cursor: default; }
+.quiz-next {
+    grid-column: 1 / -1; margin-top: 4px;
+    background: var(--chip); color: var(--chip-text);
+}
+.quiz-next:hover { background: var(--chip-hover); }
 
 /* -- Typing game -- */
 #typing-container { margin-bottom: 24px; }
