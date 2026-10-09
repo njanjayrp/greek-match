@@ -51,3 +51,41 @@ Deno.test("numbers and years read out correctly", () => {
     assertEquals(DATETIME.yearWords(2024), "δύο χιλιάδες είκοσι τέσσερα");
     assertEquals(DATETIME.timeWords(9, 45), "δέκα παρά τέταρτο");
 });
+
+// 9 p.m. is το βράδυ, never το απόγευμα: the part of the day follows the clock.
+const PART_OF = {
+    "a.m.": h => (h <= 4 ? "τη νύχτα" : "το πρωί"),
+    "p.m.": h => (h <= 3 ? "το μεσημέρι" : h <= 7 ? "το απόγευμα" : "το βράδυ")
+};
+
+Deno.test("the part of the day matches the hour, and only one option does", () => {
+    const seen = new Set();
+    for (let i = 0; i < 3000; i++)
+        for (const q of DATETIME.buildRound("Time", 1)) {
+            const m = /^(\d+) (a\.m\.|p\.m\.)$/.exec(q.prompt);
+            if (!m) continue;
+            const [, h, half] = m;
+            seen.add(q.prompt);
+            const want = PART_OF[half](+h);
+            assert(q.answer.endsWith(" " + want),
+                   `${q.prompt} answered "${q.answer}", wanted ${want}`);
+            // A distractor may reuse the part with another hour; what it must
+            // never do is pair this hour with a part that also fits it.
+            const hour = q.answer.slice(0, q.answer.lastIndexOf(" " + want));
+            const alsoRight = q.options.filter(o => o !== q.answer && o.startsWith(hour + " "));
+            assertEquals(alsoRight.filter(o => o.endsWith(" " + want)).length, 0,
+                         `${q.prompt} offers two right answers: ${q.options.join(" / ")}`);
+        }
+    assert(seen.size >= 20, "only " + seen.size + " distinct hours came up");
+});
+
+Deno.test("reading a Greek hour back gives one unambiguous time of day", () => {
+    for (let i = 0; i < 2000; i++)
+        for (const q of DATETIME.buildRound("Time", 1, "en")) {
+            if (q.sub !== "Πότε;") continue;
+            const m = /(\d+) (a\.m\.|p\.m\.)$/.exec(q.answer);
+            assert(m, q.answer);
+            const want = PART_OF[m[2]](+m[1]);
+            assert(q.prompt.endsWith(want), `"${q.prompt}" answered ${q.answer}`);
+        }
+});

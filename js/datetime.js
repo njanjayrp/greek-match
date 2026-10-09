@@ -95,6 +95,23 @@ function timeWords(h, m) {
 
 function atHour(h) { return h === 1 ? "στη μία" : "στις " + UNITS.fem[h]; }
 
+// Greek names the part of the day from the clock, so 9 p.m. is το βράδυ and
+// never το απόγευμα. Picking the two independently made the question both
+// wrong and ambiguous — the right answer sat among the distractors.
+const DAY_PARTS = [
+    { part: "τη νύχτα",    half: "a.m.", hours: [1, 2, 3, 4] },
+    { part: "το πρωί",     half: "a.m.", hours: [5, 6, 7, 8, 9, 10, 11] },
+    { part: "το μεσημέρι", half: "p.m.", hours: [1, 2, 3] },
+    { part: "το απόγευμα", half: "p.m.", hours: [4, 5, 6, 7] },
+    { part: "το βράδυ",    half: "p.m.", hours: [8, 9, 10, 11] }
+];
+const ALL_PARTS = DAY_PARTS.map(d => d.part);
+
+function someHour() {
+    const d = pick(DAY_PARTS);
+    return { h: pick(d.hours), part: d.part, half: d.half };
+}
+
 function fmtClock(h, m) { return h + ":" + String(m).padStart(2, "0"); }
 
 // ── Durations ───────────────────────────────────────────────────────────────
@@ -245,11 +262,11 @@ function genTimeSay() {
 }
 
 function genTimeAt() {
-    const h = randInt(1, 11);
-    const dp = pick([["το πρωί","a.m."], ["το απόγευμα","p.m."], ["το βράδυ","p.m."]]);
-    const per = dp[1], other = per === "a.m." ? "p.m." : "a.m.";
-    return q("Time", "Πότε;", atHour(h) + " " + dp[0], h + " " + per,
-        [h + " " + other, (h % 12 + 1) + " " + per, (h === 1 ? 12 : h - 1) + " " + per, (h % 12 + 1) + " " + other]);
+    const { h, part, half } = someHour();
+    const other = half === "a.m." ? "p.m." : "a.m.";
+    return q("Time", "Πότε;", atHour(h) + " " + part, h + " " + half,
+        [h + " " + other, (h % 12 + 1) + " " + half,
+         (h === 1 ? 12 : h - 1) + " " + half, (h % 12 + 1) + " " + other]);
 }
 
 function genTimeRange() {
@@ -473,14 +490,11 @@ function genOrdFloor() {
 // numbers alone, so every topic also has a version that asks for the Greek.
 
 function genTimeAtSay() {
-    const h = randInt(1, 11);
-    const dp = pick([["το πρωί","a.m."], ["το απόγευμα","p.m."], ["το βράδυ","p.m."]]);
-    const other = pick(["το πρωί","το απόγευμα","το βράδυ"].filter(x => x !== dp[0]));
-    return q("Time", "Πώς το λέμε στα ελληνικά;", h + " " + dp[1],
-        atHour(h) + " " + dp[0],
-        [ atHour(h) + " " + other,
-          atHour((h % 12) + 1) + " " + dp[0],
-          atHour(h === 1 ? 12 : h - 1) + " " + dp[0] ]);
+    const { h, part, half } = someHour();
+    return q("Time", "Πώς το λέμε στα ελληνικά;", h + " " + half,
+        atHour(h) + " " + part,
+        others(ALL_PARTS, part, 2).map(p => atHour(h) + " " + p)
+            .concat([atHour((h % 12) + 1) + " " + part]));
 }
 
 function grRange(a, b) {
