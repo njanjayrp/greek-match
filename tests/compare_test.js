@@ -227,3 +227,23 @@ Deno.test("every question carries an English gloss that agrees in number", () =>
                     assert(!/ is /.test(q.gloss), "plural subject with \"is\": " + q.gloss);
             }
 });
+
+// The gloss is a translation of the sentence on screen, not of the answer — so
+// it must open with the subject that sentence opens with.
+Deno.test("the gloss translates the sentence the question prints", () => {
+    const byNom = {};
+    for (const n of COMPARE.nouns()) byNom[n.nom] = n;
+    for (const t of COMPARE.TOPICS)
+        for (let r = 0; r < 30; r++)
+            for (const q of COMPARE.buildRound(t, 10)) {
+                const printed = q.prompt.split("\n")[0];
+                const subject = printed.includes(" είναι ")
+                    ? printed.split(" είναι ")[0]
+                    : printed.split(" / ")[0];
+                const noun = byNom[subject];
+                if (!noun) continue;                     // the bare-lemma question
+                const want = noun.en.charAt(0).toUpperCase() + noun.en.slice(1);
+                assert(q.gloss.startsWith(want) || q.gloss.startsWith("More "),
+                       `"${printed}" is glossed "${q.gloss}"`);
+            }
+});

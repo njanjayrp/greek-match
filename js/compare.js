@@ -30,8 +30,8 @@ const ADJ_SRC = [
     ["δύσκολος",     "difficult",     "activity abstract"],
     ["εύκολος",      "easy",          "activity abstract"],
     ["νόστιμος",     "tasty",         "food"],
-    ["γλυκός",       "sweet",         "food"],
-    ["αλμυρός",      "salty",         "food"],
+    ["γλυκός",       "sweet",         "sweet"],
+    ["αλμυρός",      "salty",         "savoury"],
     ["ζεστός",       "warm",          "food clothes"],
     ["κρύος",        "cold",          "food"],
     ["φρέσκος",      "fresh",         "food"],
@@ -204,9 +204,10 @@ const KINDS = {
         το ποδήλατο, η μηχανή, το βαγόνι, το αεροπλάνο, το πλοίο, το καράβι,
         η βάρκα, η ιστιοσανίδα, το καγιάκ`,
 
-    food: `το αχλάδι, το βερίκοκο, ο λωτός, η καρύδα, το κουλούρι, το ποτό,
-        το αναψυκτικό, το παγωτό, τα σταφύλια, τα αλμυρά, τα πατατάκια,
-        τα θαλασσινά, το αλεύρι`,
+    food: `το ποτό, το αναψυκτικό, το αλεύρι`,
+    "food sweet": `το αχλάδι, το βερίκοκο, ο λωτός, η καρύδα, το κουλούρι,
+        το παγωτό, τα σταφύλια`,
+    "food savoury": `τα αλμυρά, τα πατατάκια, τα θαλασσινά`,
 
     activity: `η ηλιοθεραπεία, το κολύμπι, το θαλάσσιο σκι, το ελεύθερο κάμπινγκ,
         το οργανωμένο κάμπινγκ, η πεζοπορία, η ορειβασία, το σκι, ο χορός, η ταινία,
@@ -465,7 +466,7 @@ function genEquality() {
         [`τόσο ${form} από ${s.first.acc}`,
          `πιο ${form} όσο ${asNom}`,
          `λιγότερο ${form} όσο ${asNom}`],
-        `${cap(s.second.en)} ${isAre(s.g)} not as ${s.a.en} as ${s.first.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g)} ${cmpEn(s.a)} than ${s.second.en}.`);
 }
 
 function genLess() {
@@ -478,7 +479,7 @@ function genLess() {
         [`${s.second.nom} είναι πιο ${form} από ${s.first.acc}.`,
          `${s.second.nom} είναι λιγότερο ${form} όσο ${s.first.acc}.`,
          `${s.second.nom} δεν είναι τόσο ${form} από ${s.first.acc}.`],
-        `${cap(s.second.en)} ${isAre(s.g)} less ${s.a.en} than ${s.first.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g)} ${cmpEn(s.a)} than ${s.second.en}.`);
 }
 
 // ── Μονολεκτικά: καλός → καλύτερος ───────────────────────────────────────────
