@@ -247,3 +247,27 @@ Deno.test("the gloss translates the sentence the question prints", () => {
                        `"${printed}" is glossed "${q.gloss}"`);
             }
 });
+
+// Greek says καλύτερος and χειρότερος, never πιο καλός / πιο κακός.
+Deno.test("πιο is never offered as the answer for καλός or κακός", () => {
+    const banned = [];
+    for (const m of ["καλός", "κακός"]) {
+        const a = COMPARE.ADJ.find(x => x.m === m);
+        for (const g of ["m","f","n","pm","pf","pn"]) banned.push("πιο " + COMPARE.FORM_OF[g](a));
+    }
+    for (const t of COMPARE.TOPICS)
+        for (let r = 0; r < 30; r++)
+            for (const q of COMPARE.buildRound(t, 10))
+                for (const bad of banned) {
+                    assert(!q.answer.includes(bad), "answer says " + bad + ": " + q.answer);
+                    assert(!q.prompt.includes(bad), "prompt says " + bad + ": " + q.prompt);
+                }
+});
+
+Deno.test("the English comparative is the real one, not \"more big\"", () => {
+    const clumsy = /\bmore (big|small|good|bad|tall|short|old|new|easy|cheap|fast|slow|warm|cold|clean|quiet|calm|young|long|full|soft|heavy|strong|fresh|sweet|salty|tasty|dark|happy|sad|ugly|dirty)(?![-\w])/;
+    for (const t of COMPARE.TOPICS)
+        for (let r = 0; r < 30; r++)
+            for (const q of COMPARE.buildRound(t, 10))
+                assert(!clumsy.test(q.gloss), "clumsy English: " + q.gloss);
+});

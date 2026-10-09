@@ -77,8 +77,9 @@ const TOPICS = [
     περισσότερ<b>ος</b> · περισσότερ<b>η</b> · περισσότερ<b>ο</b> ·
     περισσότερ<b>οι</b> · περισσότερ<b>ες</b> · περισσότερ<b>α</b>.
     Only <b>πολύς</b> is irregular in the positive: πολύς / πολλή / πολύ, πολλοί / πολλές / πολλά.</p>
-    <p class="manual-note manual-warn">Never both at once: <s>πιο καλύτερος</s> → <b>καλύτερος</b>
-    or <b>πιο καλός</b>. Both are fine on their own.</p>
+    <p class="manual-note manual-warn">Never both at once: <s>πιο καλύτερος</s> → <b>καλύτερος</b>.
+    And for <b>καλός</b> and <b>κακός</b> the one-word form is the normal one — πιο καλός
+    is heard, but καλύτερος is what you write. <b>Μεγάλος</b> and <b>μικρός</b> take either.</p>
 
     <h3>6. Λάθη που κοστίζουν</h3>
     <ul class="manual-examples manual-bad">
