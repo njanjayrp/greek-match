@@ -37,7 +37,7 @@ const ADJ_SRC = [
     ["φρέσκος",      "fresh",         "food"],
     ["παλιός",       "old",           "thing clothes vehicle place"],
     ["καινούργιος",  "new",           "thing clothes vehicle"],
-    ["μοντέρνος",    "modern",        "thing clothes place"],
+    ["μοντέρνος",    "modern",        "clothes place"],
     ["παραδοσιακός", "traditional",   "food place"],
     ["άνετος",       "comfortable",   "clothes vehicle place"],
     ["ευρύχωρος",    "spacious",      "place vehicle"],
@@ -66,7 +66,7 @@ const ADJ_SRC = [
     ["μαλακός",      "soft",          "clothes food"],
     ["βαρύς",        "heavy",         "thing clothes food"],
     ["δυνατός",      "strong",        "person"],
-    ["χρήσιμος",     "useful",        "thing abstract"],
+    ["χρήσιμος",     "useful",        "thing"],
     ["επικίνδυνος",  "dangerous",     "place activity"],
     ["κουραστικός",  "tiring",        "activity"],
     ["διασκεδαστικός", "fun",         "activity place"]
@@ -253,7 +253,8 @@ const KINDS = {
 // a measure has no degree, and ο αλκοολικός is nobody to compare politeness with.
 const NOT_COMPARABLE = new Set([
     "ο εαυτός", "ο βορράς", "ο νότος", "η ανατολή", "η δύση", "η πρώτη φορά",
-    "η κουταλιά", "η φαλάκρα", "η θερμίδα", "ο αλκοολικός", "η ηλικία"
+    "η κουταλιά", "η φαλάκρα", "η θερμίδα", "ο αλκοολικός", "η ηλικία",
+    "ο πυρετός", "ο πονοκέφαλος"
 ]);
 
 // Colour names and units are nouns in the dictionary, but nothing is "a cheaper beige".
