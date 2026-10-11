@@ -17,18 +17,18 @@ const ADJ_SRC = [
     ["καλός",        "good",          "thing place vehicle clothes food activity person abstract", "καλύτερος"],
     ["κακός",        "bad",           "thing place vehicle clothes food activity person abstract", "χειρότερος"],
     ["πολύς",        "much",          "mass", "περισσότερος"],
-    ["ωραίος",       "lovely",        "thing place clothes food activity person"],
-    ["όμορφος",      "good-looking",  "person place clothes thing"],
-    ["άσχημος",      "ugly",          "person place clothes thing"],
-    ["υπέροχος",     "wonderful",     "place food activity thing"],
-    ["εντυπωσιακός", "impressive",    "place thing activity"],
-    ["εξαιρετικός",  "exceptional",   "food thing activity"],
+    ["ωραίος",       "lovely",        "place clothes food activity person nature"],
+    ["όμορφος",      "good-looking",  "person place clothes nature"],
+    ["άσχημος",      "ugly",          "person place clothes"],
+    ["υπέροχος",     "wonderful",     "place food activity nature"],
+    ["εντυπωσιακός", "impressive",    "place activity nature"],
+    ["εξαιρετικός",  "exceptional",   "food activity"],
     ["ακριβός",      "expensive",     "thing clothes food vehicle activity place"],
     ["φτηνός",       "cheap",         "thing clothes food vehicle activity place"],
     ["γρήγορος",     "fast",          "vehicle person"],
     ["αργός",        "slow",          "vehicle person"],
-    ["δύσκολος",     "difficult",     "activity abstract"],
-    ["εύκολος",      "easy",          "activity abstract"],
+    ["δύσκολος",     "difficult",     "activity"],
+    ["εύκολος",      "easy",          "activity"],
     ["νόστιμος",     "tasty",         "food"],
     ["γλυκός",       "sweet",         "sweet"],
     ["αλμυρός",      "salty",         "savoury"],
@@ -38,7 +38,7 @@ const ADJ_SRC = [
     ["παλιός",       "old",           "thing clothes vehicle place"],
     ["καινούργιος",  "new",           "thing clothes vehicle"],
     ["μοντέρνος",    "modern",        "thing clothes place"],
-    ["παραδοσιακός", "traditional",   "food place thing"],
+    ["παραδοσιακός", "traditional",   "food place"],
     ["άνετος",       "comfortable",   "clothes vehicle place"],
     ["ευρύχωρος",    "spacious",      "place vehicle"],
     ["φωτεινός",     "bright",        "place"],
@@ -117,15 +117,20 @@ const EN_CMP = {
     clever:"cleverer", long:"longer", full:"fuller", soft:"softer", heavy:"heavier",
     strong:"stronger", cheap:"cheaper", fast:"faster", slow:"slower", tasty:"tastier",
     sweet:"sweeter", salty:"saltier", warm:"warmer", cold:"colder", fresh:"fresher",
-    old:"older", new:"newer", easy:"easier", quiet:"quieter", calm:"calmer", clean:"cleaner",
+    old:"older", new:"newer", easy:"easier", bright:"brighter", quiet:"quieter", calm:"calmer", clean:"cleaner",
     dirty:"dirtier", ugly:"uglier", dark:"darker", lovely:"lovelier",
     friendly:"friendlier", polite:"politer"
 };
 const EN_SUP = { better:"best", worse:"worst", more:"most" };
 
-function cmpEn(a) { return EN_CMP[a.en] || "more " + a.en; }
-function supEn(a) {
-    const c = cmpEn(a);
+// About a person, μεγάλος and μικρός are about age, not size.
+const EN_OF_PERSON = { big: "old", small: "young", lovely: "good-looking" };
+function enOf(a, n) {
+    return (n && n.kinds.includes("person") && EN_OF_PERSON[a.en]) || a.en;
+}
+function cmpEn(a, n) { const en = enOf(a, n); return EN_CMP[en] || "more " + en; }
+function supEn(a, n) {
+    const c = cmpEn(a, n);
     if (c.startsWith("more ")) return "most " + c.slice(5);
     return EN_SUP[c] || c.replace(/er$/, "est");
 }
@@ -199,7 +204,7 @@ const KINDS = {
         η αίθουσα προβολής, το κυλικείο, το κατάστημα, το περίπτερο, η λαϊκή,
         το ανθοπωλείο, το ψιλικατζίδικο, η κουζίνα, η λίμνη, η πλατεία, η περιοχή,
         ο τόπος, η γέφυρα, το γεφύρι, το χωριό, η εξοχή, η γειτονιά, το αεροδρόμιο,
-        το τελωνείο, ο σταθμός, η στάση, η αποβάθρα, η αφετηρία`,
+        το τελωνείο, ο σταθμός, η στάση, η αποβάθρα, η αφετηρία, η γωνία`,
 
     "place indoors": `το διαμέρισμα, το οροφοδιαμέρισμα, το εξοχικό σπίτι,
         η γκαρσονιέρα, το δυάρι, το τριάρι, η μεζονέτα, το ρετιρέ,
@@ -222,20 +227,20 @@ const KINDS = {
 
     person: `ο οικοδόμος, ο μανάβης, η πωλήτρια, ο κολυμβητής, ο καλλιτέχνης,
         ο ηθοποιός, η καθηγήτρια, η συμμαθήτρια, ο επιβάτης, ο ελεγκτής,
-        η αεροσυνοδός, ο πιλότος, ο υπάλληλος, ο αλκοολικός, η παρέα, η κολλητή,
-        η ξαδέλφη, οι γονείς`,
+        η αεροσυνοδός, ο πιλότος, ο υπάλληλος, η κολλητή, η ξαδέλφη, οι γονείς`,
+
+    body: `η πλάτη`,
+    thing: `το παγκάκι, το γρασίδι, το κύμα, το κοχύλι, το άρωμα, το ημερολόγιο`,
 
     abstract: `η θέρμανση, το ενοίκιο, η εταιρεία, η συμπεριφορά, η φιλία, η εμπειρία,
         η σχέση, η κουλτούρα, η γνωριμία, η καθημερινότητα, το αποτέλεσμα, η τιμή,
         η αξία, η έκπτωση, η θερμίδα, η υπηρεσία, η σειρά, η ουρά, η απεργία,
-        η καθυστέρηση, η διαδρομή, η σκηνοθεσία, το σενάριο, ο πονοκέφαλος,
-        ο πυρετός, το εξάμηνο, το πτυχίο, η πλάτη, η φαλάκρα, η θέση,
-        η επιβίβαση, η αναχώρηση, η ανακοίνωση, ο έλεγχος ασφαλείας, η στάση,
-        η άνοιξη, το καλοκαίρι, το φθινόπωρο, ο χειμώνας,
-        ο βορράς, ο νότος, η ανατολή, η δύση`,
+        η καθυστέρηση, η διαδρομή, η σκηνοθεσία, ο πονοκέφαλος, το μήνυμα,
+        ο πυρετός, το εξάμηνο, το πτυχίο, η θέση,
+        η επιβίβαση, η αναχώρηση, η ανακοίνωση, ο έλεγχος ασφαλείας,
+        η άνοιξη, το καλοκαίρι, το φθινόπωρο, ο χειμώνας, η γεύση, η παρέα`,
 
-    // Nature's group also holds benches and grass; only living things stay "nature".
-    thing: `το παγκάκι, το γρασίδι, το κύμα, το κοχύλι`,
+
 
     // πολύς compares an amount. Being plural is not enough — there is no "more
     // eyes than yesterday" — so each of these is here because it can grow.
@@ -243,6 +248,13 @@ const KINDS = {
         η θέρμανση, η αγωνία, τα σύννεφα, τα ψώνια, οι εξετάσεις, οι προσφορές,
         οι αποσκευές, τα σταφύλια, τα αλμυρά, τα πατατάκια, τα θαλασσινά`
 };
+
+// Never a comparand: ο εαυτός only lives in "ο εαυτός μου", a compass point or
+// a measure has no degree, and ο αλκοολικός is nobody to compare politeness with.
+const NOT_COMPARABLE = new Set([
+    "ο εαυτός", "ο βορράς", "ο νότος", "η ανατολή", "η δύση", "η πρώτη φορά",
+    "η κουταλιά", "η φαλάκρα", "η θερμίδα", "ο αλκοολικός", "η ηλικία"
+]);
 
 // Colour names and units are nouns in the dictionary, but nothing is "a cheaper beige".
 const NOT_A_THING = /^(το|ο|τα) (καφέ|μπλε|ροζ|μπορντό|μουσταρδί|λαχανί|γκρι|μπεζ|εκρού|κρεμ|μοβ|πορτοκαλί|πετρόλ|λαδί|χακί|τιρκουάζ|φούξια|χρυσός|αγαπημένο|νούμερο|γραμμάριο|κιλό|ύψος|βήμα|άρθρα|ουσιαστικά|ψιλά|εκδοτήριο|τέρμα)$/;
@@ -290,7 +302,7 @@ function buildNouns() {
     for (const w of (window.WORDS || [])) {
         const greek = w.greek.trim();
         if (greek.includes("/")) continue;          // "η βροχή / βρέχει" — two headwords
-        if (NOT_A_THING.test(greek)) continue;
+        if (NOT_A_THING.test(greek) || NOT_COMPARABLE.has(greek)) continue;
         const m = /^(ο|η|το|οι|τα) (.+)$/.exec(greek);
         if (!m) continue;
         const slot = slotOf(m[1], m[2]);
@@ -332,6 +344,9 @@ const PEOPLE = [
     { nom:"Ο Χρήστος και ο Νίκος", acc:"τον Χρήστο και τον Νίκο", g:"pm", en:"Christos and Nikos" },
     { nom:"Οι φίλοι μου", acc:"τους φίλους μου", g:"pm", en:"my friends" },
     { nom:"Οι γείτονές μου", acc:"τους γείτονές μου", g:"pm", en:"my neighbours" },
+    { nom:"Οι συμμαθητές μου", acc:"τους συμμαθητές μου", g:"pm", en:"my classmates" },
+    { nom:"Οι καθηγητές μας", acc:"τους καθηγητές μας", g:"pm", en:"our teachers" },
+    { nom:"Οι φίλοι του Νίκου", acc:"τους φίλους του Νίκου", g:"pm", en:"Nikos's friends" },
     { nom:"Η Άννα και η Εύη", acc:"την Άννα και την Εύη", g:"pf", en:"Anna and Evi" },
     { nom:"Οι φίλες μου", acc:"τις φίλες μου", g:"pf", en:"my friends" },
     { nom:"Οι ξαδέλφες μου", acc:"τις ξαδέλφες μου", g:"pf", en:"my cousins" },
@@ -420,7 +435,7 @@ function genComparative() {
         `${s.first.nom} / ${s.a.m} / ${s.second.acc}`, right,
         OTHER_GENDERS[s.g].map(g => `${s.first.nom} είναι πιο ${FORM_OF[g](s.a)} από ${s.second.acc}.`)
             .concat([`${s.first.nom} είναι ${form} από ${s.second.acc}.`]),
-        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a)} than ${s.second.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a, s.first)} than ${s.second.en}.`);
 }
 
 function genDegreeWord() {
@@ -434,7 +449,7 @@ function genDegreeWord() {
         [`${s.first.nom} είναι πιο ${word} ${form} από ${s.second.acc}.`,
          `${s.first.nom} είναι ${word} ${form} πιο από ${s.second.acc}.`,
          `${s.first.nom} είναι ${word} ${form} από ${s.second.acc}.`],
-        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${word === "λίγο" ? "a little" : "much"} ${cmpEn(s.a)} than ${s.second.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${word === "λίγο" ? "a little" : "much"} ${cmpEn(s.a, s.first)} than ${s.second.en}.`);
 }
 
 // ── Υπερθετικός: article + πιο + adjective ───────────────────────────────────
@@ -448,7 +463,7 @@ function genSuperlative() {
         `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.`, right,
         OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} πιο ${FORM_OF[g](s.a)}`)
             .concat([`πιο ${FORM_OF[s.g](s.a)}`, `${art} ${FORM_OF[s.g](s.a)}`]),
-        `${cap(s.n.en)} ${isAre(s.g, s.n.en)} the ${supEn(s.a)} of all.`);
+        `${cap(s.n.en)} ${isAre(s.g, s.n.en)} the ${supEn(s.a, s.n)} of all.`);
 }
 
 // The one-word superlative is the same form with the article in front:
@@ -462,7 +477,7 @@ function genSynthSuperlative() {
         `${art} ${synOf(s.a, s.g)}`,
         OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} ${synOf(s.a, g)}`)
             .concat([synOf(s.a, s.g), `${art} πιο ${synOf(s.a, s.g)}`]),
-        `${cap(s.n.en)} ${isAre(s.g, s.n.en)} the ${supEn(s.a)} of all.`);
+        `${cap(s.n.en)} ${isAre(s.g, s.n.en)} the ${supEn(s.a, s.n)} of all.`);
 }
 
 // ── Ίδιο και λιγότερο: τόσο… όσο, λιγότερο ───────────────────────────────────
@@ -478,7 +493,7 @@ function genEquality() {
         [`τόσο ${form} από ${s.first.acc}`,
          `πιο ${form} όσο ${asNom}`,
          `λιγότερο ${form} όσο ${asNom}`],
-        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a)} than ${s.second.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a, s.first)} than ${s.second.en}.`);
 }
 
 function genLess() {
@@ -491,7 +506,7 @@ function genLess() {
         [`${s.second.nom} είναι πιο ${form} από ${s.first.acc}.`,
          `${s.second.nom} είναι λιγότερο ${form} όσο ${s.first.acc}.`,
          `${s.second.nom} δεν είναι τόσο ${form} από ${s.first.acc}.`],
-        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a)} than ${s.second.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a, s.first)} than ${s.second.en}.`);
 }
 
 // ── Μονολεκτικά: καλός → καλύτερος ───────────────────────────────────────────
@@ -512,7 +527,7 @@ function genSyntheticUse() {
         `${s.first.nom} / ${s.a.m} / ${s.second.acc}`, right,
         OTHER_GENDERS[s.g].map(g => `${s.first.nom} είναι ${synOf(s.a, g)} από ${s.second.acc}.`)
             .concat([`${s.first.nom} είναι πιο ${synOf(s.a, s.g)} από ${s.second.acc}.`]),
-        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a)} than ${s.second.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a, s.first)} than ${s.second.en}.`);
 }
 
 // Pure agreement: the sentence is given, only the ending is in question.
@@ -523,7 +538,7 @@ function genSyntheticAgree() {
         `${s.first.nom} είναι ______ από ${s.second.acc}.`, synOf(s.a, s.g),
         OTHER_GENDERS[s.g].map(g => synOf(s.a, g))
             .concat([FORM_OF[s.g](s.a), "πιο " + synOf(s.a, s.g)]),
-        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a)} than ${s.second.en}.`);
+        `${cap(s.first.en)} ${isAre(s.g, s.first.en)} ${cmpEn(s.a, s.first)} than ${s.second.en}.`);
 }
 
 // πολύς compares amounts, not single things, so it gets its own frame.

@@ -161,7 +161,7 @@ Deno.test("every form of every adjective is derived, accents included", () => {
 Deno.test("the one-word comparative is drilled in all six gender/number slots", () => {
     const C = loadLibs().COMPARE;
     const slots = new Set(["m", "f", "n", "pm", "pf", "pn"]);
-    for (let i = 0; i < 600 && slots.size; i++) {
+    for (let i = 0; i < 6000 && slots.size; i++) {
         const q = C.buildRound("Μονολεκτικά", 1)[0];
         for (const g of [...slots])
             if (C.SYN.some(a => q.answer === C.synOf(a, g))) slots.delete(g);
