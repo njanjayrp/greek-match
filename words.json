@@ -1641,7 +1641,7 @@
         "greek": "ο / η συνάδελφος",
         "english": "colleague",
         "group": "People & relationships",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "φοβάμαι (φοβηθώ)",
@@ -4458,6 +4458,12 @@
         "marked": true
     },
     {
+        "greek": "ο κολλητός",
+        "english": "best friend (male)",
+        "group": "People & relationships",
+        "marked": true
+    },
+    {
         "greek": "η κολλητή",
         "english": "best friend (female)",
         "group": "People & relationships",
@@ -5536,5 +5542,77 @@
         "english": "neighbourhood",
         "group": "Nature, weather & outdoors",
         "marked": false
+    },
+    {
+        "greek": "η διανυκτέρευση",
+        "english": "overnight stay",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "η ημιδιατροφή",
+        "english": "half board",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "το τετράκλινο δωμάτιο",
+        "english": "quadruple room",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "ο κλιματισμός",
+        "english": "air conditioning",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "η προκαταβολή",
+        "english": "advance payment",
+        "group": "Commerce & shopping",
+        "marked": true
+    },
+    {
+        "greek": "η επιλογή",
+        "english": "choice",
+        "group": "Commerce & shopping",
+        "marked": true
+    },
+    {
+        "greek": "η φιλοξενία",
+        "english": "hospitality",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "από κοντά",
+        "english": "in person",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
+        "greek": "τα στοιχεία",
+        "english": "personal details",
+        "group": "Orders & delivery",
+        "marked": true
+    },
+    {
+        "greek": "διαθέτω (διαθέσω)",
+        "english": "to have available",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "υπάρχω (υπάρξω)",
+        "english": "to exist",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "ήσυχος",
+        "english": "quiet",
+        "group": "Adjectives & qualities",
+        "marked": true
     }
 ]
