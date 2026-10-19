@@ -151,12 +151,12 @@ Deno.test("Choose is a Practice drill with its own tense filter", async () => {
     assertEquals(app.el("dates-progress").textContent, "1 / 10");
     assert(app.el("dates-gloss").textContent, "the verb's English is missing");
 
-    app.switchGroup("Αόριστος");
-    assertEquals(app.el("dates-topic").textContent, "Αόριστος");
+    app.switchGroup("Αόριστος — past");
+    assertEquals(app.el("dates-topic").textContent, "Αόριστος — past");
 
     // Dates, Choose and the grammar drill each remember their own filter
     app.switchMode("dates");
     assertEquals(app.state().group, "__all__");
     app.switchMode("pick");
-    assertEquals(app.state().group, "Αόριστος");
+    assertEquals(app.state().group, "Αόριστος — past");
 });

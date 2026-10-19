@@ -8,13 +8,16 @@
 
 window.CONJCHOICE = (function () {
 
+// Every label carries its English: knowing what "Παρατατικός" means is not
+// what the drill is testing, and having to work it out first is the slow part.
 const TENSES = [
-    ["Ενεστώτας",   "present"],
-    ["Παρατατικός", "imperfect"],
-    ["Αόριστος",    "aorist"],
-    ["Μέλλοντας",   "future"]
+    ["Ενεστώτας — present",   "present",   "now"],
+    ["Παρατατικός — imperfect", "imperfect", "was …-ing / used to"],
+    ["Αόριστος — past",       "aorist",    "did it once"],
+    ["Μέλλοντας — future",    "future",    "will (θα)"]
 ];
-const TENSE_OF = Object.fromEntries(TENSES);
+const TENSE_OF = Object.fromEntries(TENSES.map(([gr, t]) => [gr, t]));
+const HINT_OF  = Object.fromEntries(TENSES.map(([, t, hint]) => [t, hint]));
 const TOPICS   = TENSES.map(([gr]) => gr);
 
 const PRONOUNS = [
@@ -88,7 +91,7 @@ function question(v, tense, person) {
     const options = shuffle([answer, ...wrong.slice(0, 3)]);
     return {
         topic:   TENSES.find(([, t]) => t === tense)[0],
-        sub:     PRONOUNS[person] + " — " + PERSON_EN[person],
+        sub:     PRONOUNS[person] + " (" + PERSON_EN[person] + ") · " + HINT_OF[tense],
         prompt:  v.lemma,
         gloss:   v.english,
         answer, options

@@ -82,7 +82,7 @@ Deno.test("the part of the day matches the hour, and only one option does", () =
 Deno.test("reading a Greek hour back gives one unambiguous time of day", () => {
     for (let i = 0; i < 2000; i++)
         for (const q of DATETIME.buildRound("Time", 1, "en")) {
-            if (q.sub !== "Πότε;") continue;
+            if (q.sub !== "When?") continue;
             const m = /(\d+) (a\.m\.|p\.m\.)$/.exec(q.answer);
             assert(m, q.answer);
             const want = PART_OF[m[2]](+m[1]);

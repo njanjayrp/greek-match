@@ -433,7 +433,7 @@ function genComparative() {
     if (!s) return null;
     const form = FORM_OF[s.g](s.a);
     const right = `${s.first.nom} είναι πιο ${form} από ${s.second.acc}.`;
-    return q("Συγκριτικός", "Φτιάξε τη σύγκριση",
+    return q("Συγκριτικός — comparative", "Build the comparison with πιο",
         `${s.first.nom} / ${s.a.m} / ${s.second.acc}`, right,
         OTHER_GENDERS[s.g].map(g => `${s.first.nom} είναι πιο ${FORM_OF[g](s.a)} από ${s.second.acc}.`)
             .concat([`${s.first.nom} είναι ${form} από ${s.second.acc}.`]),
@@ -446,7 +446,7 @@ function genDegreeWord() {
     const word = pick(["λίγο", "πολύ"]);
     const form = FORM_OF[s.g](s.a);
     const right = `${s.first.nom} είναι ${word} πιο ${form} από ${s.second.acc}.`;
-    return q("Συγκριτικός", "Πού μπαίνει το λίγο / πολύ;",
+    return q("Συγκριτικός — comparative", "Where does λίγο / πολύ go?",
         `${s.first.nom} / ${word} / ${s.a.m} / ${s.second.acc}`, right,
         [`${s.first.nom} είναι πιο ${word} ${form} από ${s.second.acc}.`,
          `${s.first.nom} είναι ${word} ${form} πιο από ${s.second.acc}.`,
@@ -461,7 +461,7 @@ function genSuperlative() {
     if (!s) return null;
     const art = ARTICLE[s.g];
     const right = `${art} πιο ${FORM_OF[s.g](s.a)}`;
-    return q("Υπερθετικός", "Βάλε τον υπερθετικό",
+    return q("Υπερθετικός — superlative", "Put in the superlative",
         `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.`, right,
         OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} πιο ${FORM_OF[g](s.a)}`)
             .concat([`πιο ${FORM_OF[s.g](s.a)}`, `${art} ${FORM_OF[s.g](s.a)}`]),
@@ -474,7 +474,7 @@ function genSynthSuperlative() {
     const s = single(SYN_PLAIN);
     if (!s) return null;
     const art = ARTICLE[s.g];
-    return q("Υπερθετικός", "Ο μονολεκτικός υπερθετικός",
+    return q("Υπερθετικός — superlative", "The one-word superlative",
         `${s.n.nom} είναι ______ από ${ALL_OF[s.g]}.`,
         `${art} ${synOf(s.a, s.g)}`,
         OTHER_GENDERS[s.g].map(g => `${ARTICLE[g]} ${synOf(s.a, g)}`)
@@ -489,7 +489,7 @@ function genEquality() {
     if (!s) return null;
     const form = FORM_OF[s.g](s.a);
     const asNom = s.first.nom.charAt(0).toLowerCase() + s.first.nom.slice(1);
-    return q("Ίδιο & λιγότερο", "Γράψ' το με τόσο… όσο",
+    return q("Ίδιο & λιγότερο — same & less", "Say it again with τόσο… όσο",
         `${s.first.nom} είναι πιο ${form} από ${s.second.acc}.\n${s.second.nom} δεν είναι ______`,
         `τόσο ${form} όσο ${asNom}`,
         [`τόσο ${form} από ${s.first.acc}`,
@@ -502,7 +502,7 @@ function genLess() {
     const s = subject(PIO);
     if (!s) return null;
     const form = FORM_OF[s.g](s.a);
-    return q("Ίδιο & λιγότερο", "Πες το ανάποδα, με λιγότερο",
+    return q("Ίδιο & λιγότερο — same & less", "Turn it around with λιγότερο",
         `${s.first.nom} είναι πιο ${form} από ${s.second.acc}.`,
         `${s.second.nom} είναι λιγότερο ${form} από ${s.first.acc}.`,
         [`${s.second.nom} είναι πιο ${form} από ${s.first.acc}.`,
@@ -517,7 +517,7 @@ function genLess() {
 
 function genSynthetic() {
     const a = pick(SYN);
-    return q("Μονολεκτικά", "Ο μονολεκτικός συγκριτικός", a.m, a.syn,
+    return q("Μονολεκτικά — one-word forms", "The one-word comparative", a.m, a.syn,
         others(SYN, a, 3).map(x => x.syn).concat(["πιο " + a.m]), a.en);
 }
 
@@ -525,7 +525,7 @@ function genSyntheticUse() {
     const s = subject(SYN_PLAIN);
     if (!s) return null;
     const right = `${s.first.nom} είναι ${synOf(s.a, s.g)} από ${s.second.acc}.`;
-    return q("Μονολεκτικά", "Με τον μονολεκτικό τύπο",
+    return q("Μονολεκτικά — one-word forms", "Use the one-word form",
         `${s.first.nom} / ${s.a.m} / ${s.second.acc}`, right,
         OTHER_GENDERS[s.g].map(g => `${s.first.nom} είναι ${synOf(s.a, g)} από ${s.second.acc}.`)
             .concat([`${s.first.nom} είναι πιο ${synOf(s.a, s.g)} από ${s.second.acc}.`]),
@@ -536,7 +536,7 @@ function genSyntheticUse() {
 function genSyntheticAgree() {
     const s = subject(SYN_PLAIN);
     if (!s) return null;
-    return q("Μονολεκτικά", "Ταίριαξε την κατάληξη",
+    return q("Μονολεκτικά — one-word forms", "Match the ending",
         `${s.first.nom} είναι ______ από ${s.second.acc}.`, synOf(s.a, s.g),
         OTHER_GENDERS[s.g].map(g => synOf(s.a, g))
             .concat([FORM_OF[s.g](s.a), "πιο " + synOf(s.a, s.g)]),
@@ -553,7 +553,7 @@ function genMore() {
     const pool = nouns().filter(n => n.kinds.includes("mass"));
     if (!pool.length) return null;
     const n = pick(pool), tail = pick(MORE_TAILS);
-    return q("Μονολεκτικά", "Περισσότερος ή περισσότερα;",
+    return q("Μονολεκτικά — one-word forms", "περισσότερος or περισσότερα?",
         `${n.nom} είναι ______ ${tail}.`, synOf(polys, n.g),
         OTHER_GENDERS[n.g].map(g => synOf(polys, g))
             .concat([FORM_OF[n.g](polys), "πιο " + synOf(polys, n.g)]),
@@ -563,10 +563,10 @@ function genMore() {
 // ── Round assembly ───────────────────────────────────────────────────────────
 
 const GENERATORS = {
-    "Συγκριτικός":    [genComparative, genComparative, genDegreeWord],
-    "Υπερθετικός":    [genSuperlative, genSynthSuperlative],
-    "Ίδιο & λιγότερο":[genEquality, genLess],
-    "Μονολεκτικά":    [genSynthetic, genSyntheticUse, genSyntheticAgree, genMore]
+    "Συγκριτικός — comparative":    [genComparative, genComparative, genDegreeWord],
+    "Υπερθετικός — superlative":    [genSuperlative, genSynthSuperlative],
+    "Ίδιο & λιγότερο — same & less":[genEquality, genLess],
+    "Μονολεκτικά — one-word forms":    [genSynthetic, genSyntheticUse, genSyntheticAgree, genMore]
 };
 
 const TOPICS = Object.keys(GENERATORS);

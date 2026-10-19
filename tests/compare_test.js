@@ -30,7 +30,7 @@ Deno.test("the comparative answer agrees with its subject", () => {
     const byName = {};
     for (const n of COMPARE.nouns()) byName[n.nom] = n;
     for (let i = 0; i < 200; i++) {
-        for (const q of COMPARE.buildRound("Συγκριτικός", 4)) {
+        for (const q of COMPARE.buildRound("Συγκριτικός — comparative", 4)) {
             assert(/ είναι (λίγο |πολύ )?πιο \S+ από /.test(q.answer), q.answer);
             const subject = q.answer.split(" είναι ")[0];
             const used    = q.answer.match(/πιο (\S+) από/)[1];
@@ -46,10 +46,10 @@ Deno.test("the comparative answer agrees with its subject", () => {
 // A superlative is the article plus either πιο + adjective or the one-word form.
 Deno.test("the superlative answer carries the right article", () => {
     for (let i = 0; i < 200; i++) {
-        for (const q of COMPARE.buildRound("Υπερθετικός", 4)) {
+        for (const q of COMPARE.buildRound("Υπερθετικός — superlative", 4)) {
             const [art, second] = q.answer.split(" ");
             assert(["ο", "η", "το", "οι", "τα"].includes(art), q.answer);
-            if (q.sub.includes("μονολεκτικός"))
+            if (q.sub.includes("one-word"))
                 assert(COMPARE.SYN.some(a => ["m","f","n","pm","pf","pn"]
                         .some(g => COMPARE.synOf(a, g) === second)), q.answer);
             else
@@ -60,7 +60,7 @@ Deno.test("the superlative answer carries the right article", () => {
 
 Deno.test("τόσο pairs with όσο, λιγότερο with από", () => {
     for (let i = 0; i < 200; i++) {
-        for (const q of COMPARE.buildRound("Ίδιο & λιγότερο", 4)) {
+        for (const q of COMPARE.buildRound("Ίδιο & λιγότερο — same & less", 4)) {
             if (q.answer.startsWith("τόσο")) assert(q.answer.includes(" όσο "), q.answer);
             else assert(/λιγότερο .+ από /.test(q.answer), q.answer);
         }
@@ -74,7 +74,7 @@ Deno.test("the one-word comparatives are the real ones", () => {
         assertEquals(COMPARE.ADJ.find(a => a.m === plain).syn, comp);
     }
     for (let i = 0; i < 100; i++) {
-        for (const q of COMPARE.buildRound("Μονολεκτικά", 4)) {
+        for (const q of COMPARE.buildRound("Μονολεκτικά — one-word forms", 4)) {
             assert(!/πιο \S*τερ/.test(q.answer), "double comparative: " + q.answer);
         }
     }
@@ -101,7 +101,7 @@ Deno.test("a round of ten repeats neither a sentence nor a noun pair much", () =
     const C = loadLibs().COMPARE;
     const subjects = new Set(), prompts = new Set();
     for (let r = 0; r < 20; r++)
-        for (const q of C.buildRound("Συγκριτικός", 10)) {
+        for (const q of C.buildRound("Συγκριτικός — comparative", 10)) {
             prompts.add(q.prompt);
             subjects.add(q.prompt.split(" / ")[0]);
         }
@@ -114,7 +114,7 @@ Deno.test("both sides of a comparison are the same kind of thing", () => {
     const byName = {};
     for (const n of C.nouns()) byName[n.nom] = n;
     for (let i = 0; i < 400; i++) {
-        const q = C.buildRound("Συγκριτικός", 1)[0];
+        const q = C.buildRound("Συγκριτικός — comparative", 1)[0];
         const subj = byName[q.prompt.split(" / ")[0]];
         assert(subj, "unknown subject: " + q.prompt);
         const other = C.nouns().filter(n => q.answer.endsWith("από " + n.acc + "."));
@@ -162,7 +162,7 @@ Deno.test("the one-word comparative is drilled in all six gender/number slots", 
     const C = loadLibs().COMPARE;
     const slots = new Set(["m", "f", "n", "pm", "pf", "pn"]);
     for (let i = 0; i < 6000 && slots.size; i++) {
-        const q = C.buildRound("Μονολεκτικά", 1)[0];
+        const q = C.buildRound("Μονολεκτικά — one-word forms", 1)[0];
         for (const g of [...slots])
             if (C.SYN.some(a => q.answer === C.synOf(a, g))) slots.delete(g);
     }
@@ -185,8 +185,8 @@ Deno.test("the agreement question offers one right ending and three wrong ones",
     const C = loadLibs().COMPARE;
     let agree = 0;
     for (let i = 0; i < 300; i++) {
-        const q = C.buildRound("Μονολεκτικά", 1)[0];
-        if (q.sub !== "Ταίριαξε την κατάληξη") continue;
+        const q = C.buildRound("Μονολεκτικά — one-word forms", 1)[0];
+        if (q.sub !== "Match the ending") continue;
         agree++;
         assert(q.options.includes(q.answer));
         assertEquals(new Set(q.options).size, q.options.length, "duplicate option: " + q.prompt);
@@ -200,7 +200,7 @@ Deno.test("the drill survives being loaded before the dictionary", () => {
     const win = { WORDS: undefined };
     win.window = win;
     new Function("window", Deno.readTextFileSync(ROOT + "js/compare.js"))(win);
-    const round = win.COMPARE.buildRound("Συγκριτικός", 10);
+    const round = win.COMPARE.buildRound("Συγκριτικός — comparative", 10);
     assert(round.length, "no questions at all without words.json");
     for (const q of round) assert(q.options.includes(q.answer));
 });

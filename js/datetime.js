@@ -251,20 +251,20 @@ function timeAlternatives(h, m) {
 
 function genTimeRead() {
     const h = randInt(1, 12), m = pick(MINUTES);
-    return q("Time", "Τι ώρα είναι;", "Είναι " + timeWords(h, m) + ".",
+    return q("Time", "What time is it?", "Είναι " + timeWords(h, m) + ".",
         fmtClock(h, m), timeAlternatives(h, m).map(a => fmtClock(a[0], a[1])));
 }
 
 function genTimeSay() {
     const h = randInt(1, 12), m = pick(MINUTES);
-    return q("Time", "Πώς το λέμε στα ελληνικά;", fmtClock(h, m),
+    return q("Time", "Say it in Greek", fmtClock(h, m),
         timeWords(h, m), timeAlternatives(h, m).map(a => timeWords(a[0], a[1])));
 }
 
 function genTimeAt() {
     const { h, part, half } = someHour();
     const other = half === "a.m." ? "p.m." : "a.m.";
-    return q("Time", "Πότε;", atHour(h) + " " + part, h + " " + half,
+    return q("Time", "When?", atHour(h) + " " + part, h + " " + half,
         [h + " " + other, (h % 12 + 1) + " " + half,
          (h === 1 ? 12 : h - 1) + " " + half, (h % 12 + 1) + " " + other]);
 }
@@ -273,7 +273,7 @@ function genTimeRange() {
     const a = randInt(1, 6), b = a + randInt(1, 4);
     const gr = "από " + (a === 1 ? "τη μία" : "τις " + UNITS.fem[a]) +
                " μέχρι " + (b === 1 ? "τη μία" : "τις " + UNITS.fem[b]);
-    return q("Time", "Από πότε μέχρι πότε;", gr, "from " + a + " to " + b,
+    return q("Time", "From when to when?", gr, "from " + a + " to " + b,
         ["from " + b + " to " + a, "from " + a + " to " + (b + 1), "from " + (a + 1) + " to " + b, "at " + a + " for " + b + " hours"]);
 }
 
@@ -286,7 +286,7 @@ function datePhrase(d, mo) { return (d === 1 ? "την " : "στις ") + dayOfM
 function genDateRead() {
     const d = randInt(1, 28), mo = pick(MONTHS), om = others(MONTHS, mo, 3);
     const d2 = d === 28 ? d - 1 : d + 1, d3 = d <= 2 ? d + 10 : d - 1;
-    return q("Dates", "Ποια ημερομηνία;", datePhrase(d, mo), d + " " + mo.en,
+    return q("Dates", "Which date?", datePhrase(d, mo), d + " " + mo.en,
         [ d2 + " " + mo.en, d3 + " " + mo.en,
           d + " " + om[0].en, d + " " + om[1].en, d2 + " " + om[2].en ]);
 }
@@ -294,38 +294,38 @@ function genDateRead() {
 function genDateSay() {
     const d = randInt(1, 28), mo = pick(MONTHS), om = others(MONTHS, mo, 3);
     const d2 = d === 28 ? d - 1 : d + 1, d3 = d <= 2 ? d + 10 : d - 1;
-    return q("Dates", "Πώς το λέμε στα ελληνικά;", d + " " + mo.en, datePhrase(d, mo),
+    return q("Dates", "Say it in Greek", d + " " + mo.en, datePhrase(d, mo),
         [ datePhrase(d2, mo), datePhrase(d3, mo),
           datePhrase(d, om[0]), datePhrase(d, om[1]), datePhrase(d2, om[2]) ]);
 }
 
 function genYearRead() {
     const y = pick([randInt(1900, 1999), randInt(2000, 2030)]);
-    return q("Dates", "Ποια χρονιά;", "το " + yearWords(y), String(y),
+    return q("Dates", "Which year?", "το " + yearWords(y), String(y),
         [String(y + 1), String(y - 1), String(y + 10), String(y - 10), String(y + 100 > 2100 ? y - 100 : y + 100)]);
 }
 
 function genYearSay() {
     const y = pick([randInt(1900, 1999), randInt(2000, 2030)]);
-    return q("Dates", "Πώς το λέμε στα ελληνικά;", "το " + y,
+    return q("Dates", "Say it in Greek", "το " + y,
         yearWords(y), [yearWords(y + 1), yearWords(y - 1), yearWords(y + 10), yearWords(y - 10)]);
 }
 
 function genMonthVocab() {
     const mo = pick(MONTHS);
     if (Math.random() < 0.5) {
-        return q("Dates", "Ποιος μήνας;", mo.nom, mo.en, otherGlosses(MONTHS, mo.en, "en"));
+        return q("Dates", "Which month?", mo.nom, mo.en, otherGlosses(MONTHS, mo.en, "en"));
     }
-    return q("Dates", "Πότε;", "τον " + mo.acc, "in " + mo.en,
+    return q("Dates", "When?", "τον " + mo.acc, "in " + mo.en,
         MONTHS.filter(x => x !== mo).map(x => "in " + x.en));
 }
 
 function genDayVocab() {
     const d = pick(DAYS);
     if (Math.random() < 0.5) {
-        return q("Dates", "Ποια μέρα;", d.gr, d.en, otherGlosses(DAYS, d.en, "en"));
+        return q("Dates", "Which day?", d.gr, d.en, otherGlosses(DAYS, d.en, "en"));
     }
-    return q("Dates", "Πότε;", d.art + " " + d.gr, "on " + d.en,
+    return q("Dates", "When?", d.art + " " + d.gr, "on " + d.en,
         DAYS.filter(x => x !== d).map(x => "on " + x.en));
 }
 
@@ -337,25 +337,25 @@ function ageDistractors(n) {
 
 function genAgeRead() {
     const n = randInt(2, 79), p = pick(PEOPLE);
-    return q("Age", "Πόσων χρονών;", p.name + " είναι " + num(n, "gen") + " χρονών.",
+    return q("Age", "How old?", p.name + " είναι " + num(n, "gen") + " χρονών.",
         n + " years old", ageDistractors(n).map(x => x + " years old"));
 }
 
 function genAgeSay() {
     const n = randInt(2, 79), p = pick(PEOPLE);
-    return q("Age", "Πώς το λέμε στα ελληνικά;", p.he + " is " + n + ".",
+    return q("Age", "Say it in Greek", p.he + " is " + n + ".",
         num(n, "gen") + " χρονών", ageDistractors(n).map(x => num(x, "gen") + " χρονών"));
 }
 
 function genBornIn() {
     const y = randInt(1950, 2015);
-    return q("Age", "Πότε;", "Γεννήθηκα το " + yearWords(y) + ".", "I was born in " + y,
+    return q("Age", "When?", "Γεννήθηκα το " + yearWords(y) + ".", "I was born in " + y,
         ["I was born in " + (y + 1), "I was born in " + (y - 1), "I was born in " + (y + 10), "I am " + y + " years old"]);
 }
 
 function genAgeTurns() {
     const n = randInt(6, 60), p = pick(PEOPLE);
-    return q("Age", "Πόσων χρονών;", p.name + " κλείνει τα " + num(n, "neut") + " τον " + pick(MONTHS).acc + ".",
+    return q("Age", "How old?", p.name + " κλείνει τα " + num(n, "neut") + " τον " + pick(MONTHS).acc + ".",
         "turns " + n, ageDistractors(n).map(x => "turns " + x).concat(["is " + n + " already"]));
 }
 
@@ -364,12 +364,12 @@ function genAgeTurns() {
 function genDurRead() {
     if (Math.random() < 0.25) {
         const h = pick(HALF_HOURS);
-        return q("Duration", "Πόση ώρα;", pick(DUR_FRAMES) + h.gr + ".", h.en,
+        return q("Duration", "How long?", pick(DUR_FRAMES) + h.gr + ".", h.en,
             otherGlosses(HALF_HOURS, h.en, "en").concat(["2 hours", "3 hours"]));
     }
     const u = pick(DUR_UNITS), n = randInt(1, 11);
     const [a, b] = nearCounts(n), ou = others(DUR_UNITS, u, 2);
-    return q("Duration", "Πόσο κρατάει;", pick(DUR_FRAMES) + durPhrase(n, u) + ".",
+    return q("Duration", "How long does it last?", pick(DUR_FRAMES) + durPhrase(n, u) + ".",
         durEnglish(n, u),
         [ durEnglish(a, u), durEnglish(b, u), durEnglish(n, ou[0]), durEnglish(n, ou[1]) ]);
 }
@@ -377,13 +377,13 @@ function genDurRead() {
 function genDurSay() {
     const u = pick(DUR_UNITS), n = randInt(1, 11);
     const [a, b] = nearCounts(n), ou = others(DUR_UNITS, u, 2);
-    return q("Duration", "Πώς το λέμε στα ελληνικά;", durEnglish(n, u), durPhrase(n, u),
+    return q("Duration", "Say it in Greek", durEnglish(n, u), durPhrase(n, u),
         [ durPhrase(a, u), durPhrase(b, u), durPhrase(n, ou[0]), durPhrase(n, ou[1]) ]);
 }
 
 function genDurSince() {
     const u = pick(DUR_UNITS.slice(2)), n = randInt(2, 9), ou = others(DUR_UNITS, u, 1);
-    return q("Duration", "Πόσο καιρό;", "Μένω στην Αθήνα εδώ και " + durPhrase(n, u) + ".",
+    return q("Duration", "For how long?", "Μένω στην Αθήνα εδώ και " + durPhrase(n, u) + ".",
         "I have lived in Athens for " + durEnglish(n, u),
         [ "I will live in Athens for " + durEnglish(n, u),
           "I lived in Athens " + durEnglish(n, u) + " ago",
@@ -395,17 +395,17 @@ function genDurSince() {
 
 function genWhenRead() {
     const a = pick(WHEN_ADV);
-    return q("When", "Τι σημαίνει;", a[0], a[1], WHEN_ADV.filter(x => x !== a).map(x => x[1]));
+    return q("When", "What does it mean?", a[0], a[1], WHEN_ADV.filter(x => x !== a).map(x => x[1]));
 }
 
 function genWhenSay() {
     const a = pick(WHEN_ADV);
-    return q("When", "Πώς το λέμε στα ελληνικά;", a[1], a[0], WHEN_ADV.filter(x => x !== a).map(x => x[0]));
+    return q("When", "Say it in Greek", a[1], a[0], WHEN_ADV.filter(x => x !== a).map(x => x[0]));
 }
 
 function genAgo() {
     const u = pick(DUR_UNITS), n = randInt(2, 9), ou = others(DUR_UNITS, u, 1);
-    return q("When", "Πότε;", "πριν από " + durPhrase(n, u), durEnglish(n, u) + " ago",
+    return q("When", "When?", "πριν από " + durPhrase(n, u), durEnglish(n, u) + " ago",
         [ "in " + durEnglish(n, u),
           "for " + durEnglish(n, u),
           durEnglish(n + 1, u) + " ago",
@@ -414,7 +414,7 @@ function genAgo() {
 
 function genIn() {
     const u = pick(DUR_UNITS), n = randInt(2, 9), ou = others(DUR_UNITS, u, 1);
-    return q("When", "Πότε;", "σε " + durPhrase(n, u), "in " + durEnglish(n, u),
+    return q("When", "When?", "σε " + durPhrase(n, u), "in " + durEnglish(n, u),
         [ durEnglish(n, u) + " ago",
           "for " + durEnglish(n, u),
           "in " + durEnglish(n + 1, u),
@@ -423,7 +423,7 @@ function genIn() {
 
 function genQuestionWord() {
     const w = pick(QUESTION_WORDS);
-    return q("When", "Τι ρωτάει;", w[0], w[1], QUESTION_WORDS.filter(x => x !== w).map(x => x[1]));
+    return q("When", "What is being asked?", w[0], w[1], QUESTION_WORDS.filter(x => x !== w).map(x => x[1]));
 }
 
 // ── Generators: Ordinals ──────────────────────────────────────────────
@@ -458,14 +458,14 @@ function ordNeighbours(o) {
 
 function genOrdRead() {
     const o = pick(ORDINALS);
-    return q("Ordinals", "Τι σημαίνει;", o.masc, o.en, otherGlosses(ORDINALS, o.en, "en"));
+    return q("Ordinals", "What does it mean?", o.masc, o.en, otherGlosses(ORDINALS, o.en, "en"));
 }
 
 function genOrdSay() {
     const o = pick(ORDINALS);
     const g = pick(["masc", "fem", "neut"]);
     const hint = { masc:"(ο …)", fem:"(η …)", neut:"(το …)" }[g];
-    return q("Ordinals", "Πώς το λέμε στα ελληνικά;", o.en + " " + hint, o[g],
+    return q("Ordinals", "Say it in Greek", o.en + " " + hint, o[g],
         [ o.masc, o.fem, o.neut ].concat(ordNeighbours(o).map(x => x[g])));
 }
 
@@ -474,13 +474,13 @@ function genOrdAgree() {
     const right = noun.art + " " + o[noun.g] + " " + noun.gr;
     const wrongForms = ["masc", "fem", "neut"].filter(g => g !== noun.g)
         .map(g => noun.art + " " + o[g] + " " + noun.gr);
-    return q("Ordinals", "Ποια συμφωνία;", "the " + o.ord + " " + noun.en, right,
+    return q("Ordinals", "Make it agree", "the " + o.ord + " " + noun.en, right,
         wrongForms.concat(ordNeighbours(o).map(x => noun.art + " " + x[noun.g] + " " + noun.gr)));
 }
 
 function genOrdFloor() {
     const o = pick(ORDINALS);
-    return q("Ordinals", "Πού;", "Μένω στον " + o.neut + " όροφο.",
+    return q("Ordinals", "Where?", "Μένω στον " + o.neut + " όροφο.",
         "I live on the " + o.ord + " floor",
         ordNeighbours(o).map(x => "I live on the " + x.ord + " floor"));
 }
@@ -491,7 +491,7 @@ function genOrdFloor() {
 
 function genTimeAtSay() {
     const { h, part, half } = someHour();
-    return q("Time", "Πώς το λέμε στα ελληνικά;", h + " " + half,
+    return q("Time", "Say it in Greek", h + " " + half,
         atHour(h) + " " + part,
         others(ALL_PARTS, part, 2).map(p => atHour(h) + " " + p)
             .concat([atHour((h % 12) + 1) + " " + part]));
@@ -504,31 +504,31 @@ function grRange(a, b) {
 
 function genTimeRangeSay() {
     const a = randInt(1, 6), b = a + randInt(1, 4);
-    return q("Time", "Πώς το λέμε στα ελληνικά;", "from " + a + " to " + b,
+    return q("Time", "Say it in Greek", "from " + a + " to " + b,
         grRange(a, b), [ grRange(b, a), grRange(a, b + 1), grRange(a + 1, b) ]);
 }
 
 function genMonthVocabSay() {
     const mo = pick(MONTHS), om = others(MONTHS, mo, 3);
     if (Math.random() < 0.5) {
-        return q("Dates", "Ποιος μήνας;", mo.en, mo.nom, om.map(x => x.nom));
+        return q("Dates", "Which month?", mo.en, mo.nom, om.map(x => x.nom));
     }
-    return q("Dates", "Πώς το λέμε στα ελληνικά;", "in " + mo.en,
+    return q("Dates", "Say it in Greek", "in " + mo.en,
         "τον " + mo.acc, om.map(x => "τον " + x.acc));
 }
 
 function genDayVocabSay() {
     const d = pick(DAYS), od = others(DAYS, d, 3);
     if (Math.random() < 0.5) {
-        return q("Dates", "Ποια μέρα;", d.en, d.gr, od.map(x => x.gr));
+        return q("Dates", "Which day?", d.en, d.gr, od.map(x => x.gr));
     }
-    return q("Dates", "Πώς το λέμε στα ελληνικά;", "on " + d.en,
+    return q("Dates", "Say it in Greek", "on " + d.en,
         d.art + " " + d.gr, od.map(x => x.art + " " + x.gr));
 }
 
 function genBornInSay() {
     const y = randInt(1950, 2015);
-    return q("Age", "Πώς το λέμε στα ελληνικά;", "I was born in " + y + ".",
+    return q("Age", "Say it in Greek", "I was born in " + y + ".",
         "Γεννήθηκα το " + yearWords(y) + ".",
         [ "Γεννήθηκα το " + yearWords(y + 1) + ".",
           "Γεννήθηκα το " + yearWords(y - 1) + ".",
@@ -538,7 +538,7 @@ function genBornInSay() {
 function genAgeTurnsSay() {
     const n = randInt(6, 60), p = pick(PEOPLE), mo = pick(MONTHS);
     const turns = x => p.name + " κλείνει τα " + num(x, "neut") + " τον " + mo.acc + ".";
-    return q("Age", "Πώς το λέμε στα ελληνικά;",
+    return q("Age", "Say it in Greek",
         p.he + " turns " + n + " in " + mo.en + ".", turns(n),
         ageDistractors(n).map(turns));
 }
@@ -546,14 +546,14 @@ function genAgeTurnsSay() {
 function genDurSinceSay() {
     const u = pick(DUR_UNITS.slice(2)), n = randInt(2, 9), ou = others(DUR_UNITS, u, 1);
     const since = (k, unit) => "Μένω στην Αθήνα εδώ και " + durPhrase(k, unit) + ".";
-    return q("Duration", "Πώς το λέμε στα ελληνικά;",
+    return q("Duration", "Say it in Greek",
         "I have lived in Athens for " + durEnglish(n, u) + ".", since(n, u),
         [ since(n + 1, u), since(n - 1, u), since(n, ou[0]) ]);
 }
 
 function genAgoSay() {
     const u = pick(DUR_UNITS), n = randInt(2, 9), ou = others(DUR_UNITS, u, 1);
-    return q("When", "Πώς το λέμε στα ελληνικά;", durEnglish(n, u) + " ago",
+    return q("When", "Say it in Greek", durEnglish(n, u) + " ago",
         "πριν από " + durPhrase(n, u),
         [ "σε " + durPhrase(n, u),
           "για " + durPhrase(n, u),
@@ -563,7 +563,7 @@ function genAgoSay() {
 
 function genInSay() {
     const u = pick(DUR_UNITS), n = randInt(2, 9), ou = others(DUR_UNITS, u, 1);
-    return q("When", "Πώς το λέμε στα ελληνικά;", "in " + durEnglish(n, u),
+    return q("When", "Say it in Greek", "in " + durEnglish(n, u),
         "σε " + durPhrase(n, u),
         [ "πριν από " + durPhrase(n, u),
           "για " + durPhrase(n, u),
@@ -573,12 +573,12 @@ function genInSay() {
 
 function genQuestionWordSay() {
     const w = pick(QUESTION_WORDS);
-    return q("When", "Πώς ρωτάμε;", w[1], w[0], QUESTION_WORDS.filter(x => x !== w).map(x => x[0]));
+    return q("When", "How do you ask it?", w[1], w[0], QUESTION_WORDS.filter(x => x !== w).map(x => x[0]));
 }
 
 function genOrdFloorSay() {
     const o = pick(ORDINALS);
-    return q("Ordinals", "Πώς το λέμε στα ελληνικά;", "I live on the " + o.ord + " floor",
+    return q("Ordinals", "Say it in Greek", "I live on the " + o.ord + " floor",
         "Μένω στον " + o.neut + " όροφο.",
         ordNeighbours(o).map(x => "Μένω στον " + x.neut + " όροφο."));
 }

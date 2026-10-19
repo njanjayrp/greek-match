@@ -2,8 +2,8 @@ import { assert, assertEquals } from "jsr:@std/assert@1";
 import { loadLibs } from "./helpers.js";
 
 const { CONJCHOICE, CONJUGATIONS } = loadLibs();
-const TENSE_OF = { "Ενεστώτας":"present", "Παρατατικός":"imperfect",
-                   "Αόριστος":"aorist", "Μέλλοντας":"future" };
+const TENSE_OF = { "Ενεστώτας — present":"present", "Παρατατικός — imperfect":"imperfect",
+                   "Αόριστος — past":"aorist", "Μέλλοντας — future":"future" };
 const byLemma = Object.fromEntries(CONJUGATIONS.map(v => [v.lemma, v]));
 
 Deno.test("every tense fills a round of ten", () => {
@@ -26,7 +26,7 @@ Deno.test("the answer is that verb's form for the tense and person asked", () =>
             assert(v, "unknown verb " + q.prompt);
             const tense = TENSE_OF[q.topic];
             const person = ["εγώ","εσύ","αυτός / αυτή","εμείς","εσείς","αυτοί / αυτές"]
-                .indexOf(q.sub.split(" — ")[0]);
+                .indexOf(q.sub.split(" (")[0]);
             assert(person >= 0, "unreadable person: " + q.sub);
             assertEquals(q.answer, CONJCHOICE.form(v, tense, person),
                          `${q.prompt} ${tense} ${person}`);
@@ -57,7 +57,7 @@ Deno.test("picking a tense asks only that tense", () => {
 Deno.test("the present is never asked in the 1sg it already prints", () => {
     for (let r = 0; r < 100; r++)
         for (const q of CONJCHOICE.buildRound(null, 10))
-            assert(!(q.topic === "Ενεστώτας" && q.answer === q.prompt),
+            assert(!(q.topic.startsWith("Ενεστώτας") && q.answer === q.prompt),
                    "asked for the lemma it had just shown: " + q.prompt);
 });
 
@@ -71,4 +71,15 @@ Deno.test("every verb comes up before any verb comes up twice", () => {
     const firstPass = seen.slice(0, verbs.length);
     assertEquals(new Set(firstPass).size, verbs.length,
                  "a verb repeated before the pool was exhausted");
+});
+
+Deno.test("every label says in English what is being asked", () => {
+    for (const t of CONJCHOICE.TOPICS)
+        assert(/ — (present|imperfect|past|future)$/.test(t), "Greek-only tense label: " + t);
+    for (let r = 0; r < 20; r++)
+        for (const q of CONJCHOICE.buildRound(null, 10)) {
+            assert(/\((I|you|he \/ she|we|you all|they)\)/.test(q.sub), "no English person: " + q.sub);
+            assert(/· (now|was …-ing \/ used to|did it once|will \(θα\))$/.test(q.sub),
+                   "no plain-English hint: " + q.sub);
+        }
 });
