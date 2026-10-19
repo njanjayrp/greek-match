@@ -160,3 +160,22 @@ Deno.test("Choose is a Practice drill with its own tense filter", async () => {
     app.switchMode("pick");
     assertEquals(app.state().group, "Αόριστος — past");
 });
+
+Deno.test("a refresh comes back to the mode you were in", async () => {
+    const app = await bootApp();
+    app.switchMode("pick");
+    assertEquals(app.store.greek_mode, "pick");
+
+    for (const m of MODES) {
+        const again = await bootApp({ greek_mode: m });
+        assertEquals(again.state().mode, m, "boot did not restore " + m);
+        assertEquals(again.state().section, again.sectionOf(m));
+    }
+});
+
+Deno.test("an unknown stored mode falls back to Match, not to a drill", async () => {
+    for (const junk of ["quiz", "", "dates2"]) {
+        const app = await bootApp({ greek_mode: junk });
+        assertEquals(app.state().mode, "match", "stored \"" + junk + "\"");
+    }
+});

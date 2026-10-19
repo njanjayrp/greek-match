@@ -55,9 +55,9 @@ function makeEl() {
 }
 
 // Boots the real app against a stub DOM and hands back its internals.
-export async function bootApp() {
+export async function bootApp(seed = {}) {
     const els = new Map();
-    const store = {};
+    const store = { ...seed };
     const win = {};
     const doc = {
         getElementById(id) { if (!els.has(id)) els.set(id, makeEl()); return els.get(id); },
@@ -84,7 +84,7 @@ export async function bootApp() {
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",
         src + `
         return {
-            switchMode, switchGroup, selectRound, modePool, setLang, answerDates,
+            switchMode, switchGroup, selectRound, modePool, setLang, answerDates, sectionOf,
             dates: () => ({ index: datesIndex, score: datesScore, question: datesRound[datesIndex] }),
             state: () => ({ mode, section, group, round, lang, words: allWords.length }),
             grammar: () => window.GRAMMAR,

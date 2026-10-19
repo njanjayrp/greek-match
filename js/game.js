@@ -24,7 +24,11 @@ function initApp(words) {
     const urlParams = new URLSearchParams(location.search);
     const urlMode   = urlParams.get("mode");
     const urlLang   = urlParams.get("lang") || localStorage.getItem("greek_lang");
-    if (["match", "type", "browse", "fill", "conj", "dates", "manual", "drill"].includes(urlMode)) mode = urlMode;
+    // The last mode is remembered, so a refresh stays where you were instead of
+    // going back to whatever a "New Round" click last baked into the URL. The
+    // list of modes comes from SECTIONS, so a new tab cannot be left out of it.
+    const wanted = urlMode || localStorage.getItem("greek_mode");
+    if (Object.values(SECTIONS).some(tabs => tabs.some(([id]) => id === wanted))) mode = wanted;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
@@ -642,6 +646,7 @@ function switchMode(target) {
     const prev = mode;
     mode = target;
     section = sectionOf(mode);
+    rememberMode();
     // Rebuild dropdown — Fill uses sentence topics, others use word groups
     populateGroupSelect();
     if (mode === "fill") {
@@ -658,6 +663,18 @@ function switchMode(target) {
         round = selectRound();
     }
     applyMode();
+}
+
+// Keep both the URL and localStorage on the current mode, so a refresh, a
+// reopened tab and a shared link all land in the same place.
+function rememberMode() {
+    try { localStorage.setItem("greek_mode", mode); } catch (e) { /* private mode */ }
+    if (typeof history === "undefined" || !history.replaceState) return;
+    try {
+        const url = new URL(location.href);
+        url.searchParams.set("mode", mode);
+        history.replaceState(null, "", url.toString());
+    } catch (e) { /* file:// and friends */ }
 }
 
 function switchGroup(target) {
