@@ -16,8 +16,15 @@ export function loadLibs() {
     const win = {};
     win.window = win;
     win.WORDS = readWords();        // js/compare.js builds its sentences from the dictionary
-    for (const f of ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "grammar.js"]) {
-        new Function("window", readSrc(f))(win);
+    // conjchoice.js keeps its queue in localStorage, so the rig provides one.
+    const store = {};
+    win.localStorage = {
+        getItem: k => (k in store ? store[k] : null),
+        setItem: (k, v) => { store[k] = String(v); },
+        removeItem: k => { delete store[k]; }
+    };
+    for (const f of ["conjugations.js", "conjugator.js", "conjchoice.js", "datetime.js", "compare.js", "grammar.js"]) {
+        new Function("window", "localStorage", readSrc(f))(win, win.localStorage);
     }
     return win;
 }
@@ -71,7 +78,7 @@ export async function bootApp() {
         json: async () => JSON.parse(Deno.readTextFileSync(ROOT + url.replace("./", ""))),
     });
 
-    const src = ["conjugations.js", "conjugator.js", "datetime.js", "compare.js", "grammar.js", "game.js", "browse.js"]
+    const src = ["conjugations.js", "conjugator.js", "conjchoice.js", "datetime.js", "compare.js", "grammar.js", "game.js", "browse.js"]
         .map(readSrc).join("\n");
     const api = new Function(
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",

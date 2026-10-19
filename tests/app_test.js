@@ -1,7 +1,7 @@
 import { assert, assertEquals } from "jsr:@std/assert@1";
 import { bootApp } from "./helpers.js";
 
-const MODES = ["match", "type", "browse", "fill", "conj", "dates", "manual", "drill"];
+const MODES = ["match", "type", "browse", "fill", "conj", "pick", "dates", "manual", "drill"];
 
 Deno.test("the app boots into Match with the whole word list", async () => {
     const app = await bootApp();
@@ -142,4 +142,21 @@ Deno.test("a correct drill answer scores and moves on by itself", async () => {
     assertEquals(app.dates().score, 1);
     await new Promise(r => setTimeout(r, 900));
     assertEquals(app.dates().index, 1);
+});
+
+Deno.test("Choose is a Practice drill with its own tense filter", async () => {
+    const app = await bootApp();
+    app.switchMode("pick");
+    assertEquals(app.state().section, "practice");
+    assertEquals(app.el("dates-progress").textContent, "1 / 10");
+    assert(app.el("dates-gloss").textContent, "the verb's English is missing");
+
+    app.switchGroup("Αόριστος");
+    assertEquals(app.el("dates-topic").textContent, "Αόριστος");
+
+    // Dates, Choose and the grammar drill each remember their own filter
+    app.switchMode("dates");
+    assertEquals(app.state().group, "__all__");
+    app.switchMode("pick");
+    assertEquals(app.state().group, "Αόριστος");
 });

@@ -68,7 +68,7 @@ const MARKED = "__marked__";
 
 const SECTIONS = {
     words:    [["match", "Match"], ["type", "Type"], ["browse", "Browse"]],
-    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["dates", "Dates"]],
+    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["pick", "Choose"], ["dates", "Dates"]],
     grammar:  [["manual", "Manual"], ["drill", "Drill"]]
 };
 
@@ -155,10 +155,12 @@ function populateGroupSelect() {
     }
 }
 
-// Dates and Compare are the same kind of drill over different generators.
+// Dates, Choose and the grammar drills are the same kind of question over
+// different generators, so they share one renderer.
 function quizSource() {
     if (mode === "dates")   return window.DATETIME || null;
     if (mode === "drill")   return window.GRAMMAR || null;
+    if (mode === "pick")    return window.CONJCHOICE || null;
     return null;
 }
 
@@ -295,6 +297,7 @@ function updateSubtitle() {
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
         fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
         conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
+        pick:   { greek: "Choose the verb in the requested tense and person",         english: "Choose the verb in the requested tense and person" },
         dates:  { greek: "Say the clock, date, age or duration in Greek",            english: "Read the clock, date, age or duration" },
         browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" },
         manual: { greek: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things",            english: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things" },
@@ -621,7 +624,7 @@ function applyMode() {
     renderTabs();
     // Lang toggle has no role in Fill or Browse mode
     document.querySelector(".lang-toggle").style.display =
-        (mode === "fill" || mode === "browse" || mode === "drill") ? "none" : "";
+        (["fill", "browse", "drill", "pick"].includes(mode)) ? "none" : "";
     // Conjugate drills its own verb list — the group filter has nothing to say there
     document.getElementById("group-select").disabled = (mode === "conj");
     updateSubtitle();
