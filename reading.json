@@ -35,7 +35,8 @@
                 ]
             }
         ],
-        "id": "t1"
+        "id": "t1",
+        "group": "Lessons"
     },
     {
         "title": "Το ταξίδι στο χωριό",
@@ -89,7 +90,8 @@
                 ]
             }
         ],
-        "id": "t2"
+        "id": "t2",
+        "group": "Lessons"
     },
     {
         "title": "Στο μαγαζί με τα ρούχα (διάλογος)",
@@ -141,7 +143,8 @@
                 ]
             }
         ],
-        "id": "t3"
+        "id": "t3",
+        "group": "Lessons"
     },
     {
         "title": "Movie descriptions (film genres)",
@@ -202,7 +205,8 @@
                 ]
             }
         ],
-        "id": "t4"
+        "id": "t4",
+        "group": "Lessons"
     },
     {
         "title": "Το αγαπημένο μου καρτούν (Kiki's Delivery Service)",
@@ -217,7 +221,8 @@
                 ]
             }
         ],
-        "id": "t5"
+        "id": "t5",
+        "group": "Lessons"
     },
     {
         "title": "Η καθημερινή ζωή (Ερωτήσεις & απαντήσεις)",
@@ -236,6 +241,279 @@
                 ]
             }
         ],
-        "id": "t6"
+        "id": "t6",
+        "group": "Lessons"
+    },
+    {
+        "id": "m1",
+        "title": "Η κράτηση",
+        "marked": true,
+        "parts": [
+            {
+                "gr": [
+                    "Ο Νίκος σχεδίαζε αυτό το ταξίδι πολύ καιρό. Τελικά έκανε την κράτηση μέσω ίντερνετ, σε ένα ξενοδοχείο τεσσάρων αστέρων. Το ξενοδοχείο διαθέτει ένα τετράκλινο δωμάτιο με κλιματισμό, και κάθε διανυκτέρευση κόστιζε ενενήντα ευρώ με ημιδιατροφή. Έδωσε τα στοιχεία του, πλήρωσε μια μικρή προκαταβολή και περίμενε."
+                ],
+                "en": [
+                    "Nikos had been planning this trip for a long time. In the end he made the booking over the internet, at a four-star hotel. The hotel has a quadruple room with air conditioning, and each overnight stay cost ninety euros with half board. He gave his details, paid a small deposit and waited."
+                ]
+            },
+            {
+                "gr": [
+                    "Η πτήση καθυστέρησε τρεις ώρες. Στο αεροδρόμιο υπάρχει πάντα μεγάλη ουρά στον έλεγχο ασφαλείας και η σειρά τους δεν ερχόταν ποτέ. Ο Νίκος δυσκολεύτηκε να παραμείνει ήσυχος. «Δεν πειράζει», του εξήγησε ο συνάδελφός του, «προς το παρόν δεν μπορούμε να κάνουμε τίποτα.» Μια υπάλληλος τους πληροφόρησε ότι η καθυστέρηση δεν θα διαρκούσε πολύ, και τους κέρασε έναν καφέ."
+                ],
+                "en": [
+                    "The flight was three hours late. At the airport there is always a long queue at security and their turn never came. Nikos struggled to stay calm. «Never mind», his colleague explained, «for now there is nothing we can do.» A member of staff informed them that the delay would not last long, and treated them to a coffee."
+                ]
+            },
+            {
+                "gr": [
+                    "Όταν έφτασαν, το μπαλκόνι τους ήταν εντυπωσιακό. Αριστερά ήταν η θάλασσα και δεξιά τα βουνά. Η φιλοξενία ήταν εξαιρετική και η υπηρεσία γρήγορη. Ο Νίκος χαλάρωσε, απόλαυσε το πρωινό του και κατάλαβε ότι δεν μετάνιωσε καθόλου. «Του χρόνου επιστρέφουμε οπωσδήποτε», είπε."
+                ],
+                "en": [
+                    "When they arrived, their balcony was impressive. To the left was the sea and to the right the mountains. The hospitality was exceptional and the service quick. Nikos relaxed, enjoyed his breakfast and realised he did not regret it at all. «Next year we are definitely coming back», he said."
+                ]
+            }
+        ],
+        "group": "Your marked words"
+    },
+    {
+        "id": "m2",
+        "title": "Μια άλλη ζωή",
+        "marked": true,
+        "parts": [
+            {
+                "gr": [
+                    "Πριν από δύο χρόνια η Άννα μετακόμισε στην εξοχή. Η απόσταση από την πόλη δεν είναι μεγάλη, μισή ώρα προς τον νότο, αλλά ο τρόπος ζωής της άλλαξε πολύ. Το σπίτι της είναι ήσυχο και τα βράδια δεν ακούγεται τίποτα."
+                ],
+                "en": [
+                    "Two years ago Anna moved to the countryside. The distance from the city is not great — half an hour to the south — but her way of life changed a lot. Her house is quiet and in the evenings you cannot hear a thing."
+                ]
+            },
+            {
+                "gr": [
+                    "Στην αρχή δυσκολεύτηκε. Ένιωθε μοναξιά, επειδή ο κύκλος των φίλων της είχε μείνει αλλού. Μερικές φορές φοβόταν τη νύχτα· ένας τρόμος χωρίς λόγο, όπως έλεγε, που τον έδιωχνε γρήγορα. Σιγά σιγά όμως άρχισε να παρατηρεί τα δέντρα, τα πουλιά και τον άνεμο, και η ηρεμία έγινε ευχάριστη."
+                ],
+                "en": [
+                    "At first she struggled. She felt lonely, because her circle of friends had stayed elsewhere. Sometimes she was afraid at night — a terror with no reason, as she put it, which she chased away quickly. Little by little, though, she began to notice the trees, the birds and the wind, and the calm became pleasant."
+                ]
+            },
+            {
+                "gr": [
+                    "Η κολλητή της την επισκέπτεται κάθε μήνα. Η Άννα λαδώνει ένα ταψί, ψήνει κάτι, την κερνάει και την αγκαλιάζει στην πόρτα. «Μου λείπεις από κοντά», της λέει. «Με τον πρώην τον κύκλο μου η σχέση χάλασε, μαζί σου όχι.» «Αλλά δεν θα επιστρέψω μόνιμα. Το παρελθόν ήταν ωραίο· εδώ όμως προχωράω.»"
+                ],
+                "en": [
+                    "Her best friend visits her every month. Anna greases a baking tray, bakes something, treats her and hugs her at the door. «I miss seeing you in person», she tells her. «With my former circle the relationship fell apart, with you it did not. But I am not going back permanently. The past was nice — here, though, I am moving on.»"
+                ]
+            }
+        ],
+        "group": "Your marked words"
+    },
+    {
+        "id": "m3",
+        "title": "Το βράδυ της Παρασκευής",
+        "marked": true,
+        "parts": [
+            {
+                "gr": [
+                    "Την περασμένη Παρασκευή ο Κώστας πρότεινε να μείνουμε σπίτι. Νυστάζαμε όλοι. Λαδώσαμε ένα ταψί, ψήσαμε κάτι και τσιμπήσαμε γρήγορα."
+                ],
+                "en": [
+                    "Last Friday Kostas suggested we stay in. We were all sleepy. We greased a baking tray, baked something and grabbed a quick bite."
+                ]
+            },
+            {
+                "gr": [
+                    "Μετά χαζεύαμε στην οθόνη ώσπου να βρούμε μια ταινία. Ο Κώστας προτείνει πάντα ταινίες τρόμου και μας πειράζει όταν τρομάζουμε. Αυτή τη φορά όμως έβαλε μια κωμωδία με έναν νεαρό ηθοποιό, και αυτό ήταν μεγάλη έκπληξη."
+                ],
+                "en": [
+                    "Then we browsed the screen until we found a film. Kostas always suggests horror films and teases us when we get scared. This time, though, he put on a comedy with a young actor, and that was a big surprise."
+                ]
+            },
+            {
+                "gr": [
+                    "Η ταινία ήταν υπέροχη. Γελάσαμε τόσο πολύ που μου πόνεσε η κοιλιά. Κανείς δεν ενόχλησε κανέναν, και τα υπόλοιπα περίμεναν μέχρι το πρωί. Ιδιαίτερα η Μαρία το χρειαζόταν, γιατί δούλευε όλη την εβδομάδα."
+                ],
+                "en": [
+                    "The film was wonderful. We laughed so much that my stomach hurt. Nobody bothered anybody, and the rest waited until morning. Maria especially needed it, because she had worked all week."
+                ]
+            },
+            {
+                "gr": [
+                    "Προς το τέλος είχε κοιμηθεί στον καναπέ. Δεν την πειράξαμε. «Καληνύχτα», ευχήθηκε σιγά ο Κώστας, «και εννοείται ότι την άλλη Παρασκευή το κάνουμε ξανά.»"
+                ],
+                "en": [
+                    "Towards the end she had fallen asleep on the sofa. We did not tease her. «Goodnight», Kostas wished quietly, «and it goes without saying that next Friday we do it again.»"
+                ]
+            }
+        ],
+        "group": "Your marked words"
+    },
+    {
+        "id": "m4",
+        "title": "Μπροστά στην ντουλάπα",
+        "marked": true,
+        "parts": [
+            {
+                "gr": [
+                    "Το Σάββατο η Ελένη είχε γάμο και δεν ήξερε τι να βάλει. Άνοιξε την ντουλάπα της και στάθηκε μπροστά της δέκα λεπτά. Η επιλογή δεν ήταν εύκολη: όλα τα φορέματα έμοιαζαν μεταξύ τους."
+                ],
+                "en": [
+                    "On Saturday Eleni had a wedding and did not know what to wear. She opened her wardrobe and stood in front of it for ten minutes. The choice was not easy: all the dresses looked alike."
+                ]
+            },
+            {
+                "gr": [
+                    "Πρόβαρε τρία. Το πρώτο το είχε φορέσει και πέρυσι. Το δεύτερο το αγαπούσε, αλλά την έσφιγγε στη μέση. Το τρίτο ήταν ωραίο, όμως κάτι δεν της άρεσε. «Θα το ράψω μόνη μου», σκέφτηκε, «και θα βάψω και τα μαλλιά μου.»"
+                ],
+                "en": [
+                    "She tried on three. The first she had already worn last year. The second she loved, but it was tight at the waist. The third was nice, but something about it did not appeal. «I will sew it myself», she thought, «and I will dye my hair too.»"
+                ]
+            },
+            {
+                "gr": [
+                    "Στο τέλος διάλεξε το δεύτερο. Έπλυνε τα μαλλιά της, τα στέγνωσε, πρόσεξε να μην αγγίξει το φόρεμα πριν στεγνώσουν τα χέρια της, και ετοιμάστηκε. Όταν έφτασε, η κολλητή της την παρατήρησε από μακριά και της είπε: «Είσαι τρομερή.» Η Ελένη δεν ήταν πια δυστυχισμένη με την επιλογή της."
+                ],
+                "en": [
+                    "In the end she chose the second. She washed her hair, dried it, was careful not to touch the dress before her hands were dry, and got ready. When she arrived, her best friend noticed her from a distance and told her: «You look terrific.» Eleni was no longer unhappy with her choice."
+                ]
+            }
+        ],
+        "group": "Your marked words"
+    },
+    {
+        "id": "m5",
+        "title": "Η έκθεση",
+        "marked": true,
+        "parts": [
+            {
+                "gr": [
+                    "Την περασμένη Κυριακή επισκεφτήκαμε μια έκθεση στο κέντρο. Ήταν μια συλλογή από τον εικοστό αιώνα: φωτογραφίες από τον βορρά της χώρας, την ανατολή και τη δύση."
+                ],
+                "en": [
+                    "Last Sunday we visited an exhibition in the centre. It was a collection from the twentieth century: photographs from the north of the country, the east and the west."
+                ]
+            },
+            {
+                "gr": [
+                    "Μόλις μπήκαμε, μας πληροφόρησαν ότι μια ταινία προβάλλεται κάθε μισή ώρα. Ακολουθήσαμε τους άλλους στη μεγάλη οθόνη και καθίσαμε. Η ενημέρωση κράτησε δέκα λεπτά και μετά προχωρήσαμε αριστερά, προς τις φωτογραφίες."
+                ],
+                "en": [
+                    "As soon as we went in, they informed us that a film is shown every half hour. We followed the others to the big screen and sat down. The briefing lasted ten minutes and then we moved on to the left, towards the photographs."
+                ]
+            },
+            {
+                "gr": [
+                    "Δεν κρίνω εύκολα, αλλά εκεί ένιωσα κάτι. Σε μια φωτογραφία ένας νεαρός αγκάλιαζε τη γιαγιά του· το συναίσθημα ακουγόταν χωρίς λόγια. Από κοντά η φωτογραφία ήταν ακόμα πιο εντυπωσιακή."
+                ],
+                "en": [
+                    "I do not judge easily, but there I felt something. In one photograph a young man was hugging his grandmother; the emotion came through without words. Close up the photograph was even more impressive."
+                ]
+            },
+            {
+                "gr": [
+                    "«Φταίω εγώ που δεν ερχόμαστε συχνότερα», είπε ο κολλητός μου. «Δεν είναι απλώς διασκέδαση· είναι ανάγκη.» Συμφώνησα. Ό,τι είδαμε εκεί δεν το βλέπεις σε οθόνη."
+                ],
+                "en": [
+                    "«It is my fault that we do not come more often», my best friend said. «It is not simply entertainment — it is a need.» I agreed. What we saw there you do not see on a screen."
+                ]
+            }
+        ],
+        "group": "Your marked words"
+    },
+    {
+        "id": "s1",
+        "title": "Ο λαγός και η χελώνα",
+        "group": "Stories",
+        "glossary": "ο λαγός — hare · η χελώνα — tortoise · τρέχω — to run · ξαπλώνω — to lie down",
+        "parts": [
+            {
+                "gr": [
+                    "Μια φορά ένας λαγός πείραζε μια χελώνα. «Είσαι τόσο αργή», της έλεγε και γελούσε. Η χελώνα δεν θύμωσε. «Θέλεις να τρέξουμε;» του πρότεινε."
+                ],
+                "en": [
+                    "Once a hare was teasing a tortoise. «You are so slow», he kept telling her, and he laughed. The tortoise did not get angry. «Do you want to race?» she suggested."
+                ]
+            },
+            {
+                "gr": [
+                    "Ο λαγός γέλασε ακόμα πιο δυνατά, αλλά δέχτηκε. Ξεκίνησαν μαζί. Σε λίγο ο λαγός ήταν τόσο μπροστά που σκέφτηκε: «Έχω χρόνο.» Ξάπλωσε κάτω από ένα δέντρο και κοιμήθηκε."
+                ],
+                "en": [
+                    "The hare laughed even harder, but he accepted. They set off together. Before long the hare was so far ahead that he thought: «I have time.» He lay down under a tree and fell asleep."
+                ]
+            },
+            {
+                "gr": [
+                    "Η χελώνα προχωρούσε σιγά σιγά, χωρίς να σταματήσει. Όταν ο λαγός ξύπνησε, εκείνη ήταν ήδη στο τέλος. Από τότε λένε: σιγά σιγά, αλλά πάντα μπροστά."
+                ],
+                "en": [
+                    "The tortoise kept moving on little by little, without stopping. When the hare woke up she was already at the finish. Ever since, people say: slowly, but always forward."
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s2",
+        "title": "Το λιοντάρι και το ποντίκι",
+        "group": "Stories",
+        "glossary": "το λιοντάρι — lion · το ποντίκι — mouse · το δίχτυ — net · πιάνω — to catch · βοηθάω — to help",
+        "parts": [
+            {
+                "gr": [
+                    "Ένα λιοντάρι κοιμόταν στον ήλιο. Ένα μικρό ποντίκι πέρασε από πάνω του και το ξύπνησε. Το λιοντάρι το έπιασε και ήθελε να το φάει."
+                ],
+                "en": [
+                    "A lion was sleeping in the sun. A little mouse ran across him and woke him up. The lion caught it and wanted to eat it."
+                ]
+            },
+            {
+                "gr": [
+                    "«Άφησέ με», είπε το ποντίκι, «και μια μέρα θα σε βοηθήσω.» Το λιοντάρι γέλασε — πώς μπορεί ένα τόσο μικρό ζώο να βοηθήσει; Αλλά το άφησε."
+                ],
+                "en": [
+                    "«Let me go», said the mouse, «and one day I will help you.» The lion laughed — how can an animal that small be of any help? But he let it go."
+                ]
+            },
+            {
+                "gr": [
+                    "Λίγους μήνες μετά, το λιοντάρι έπεσε σε ένα δίχτυ. Φώναζε και δεν μπορούσε να βγει. Το ποντίκι το άκουσε, ήρθε και έκοψε το δίχτυ με τα δόντια του. «Βλέπεις;» του είπε. «Και ο μικρός βοηθάει.»"
+                ],
+                "en": [
+                    "A few months later the lion fell into a net. He roared and could not get out. The mouse heard him, came, and cut the net with its teeth. «You see?» it said. «Even the small one helps.»"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s3",
+        "title": "Ο βοσκός που φώναζε «λύκος»",
+        "group": "Stories",
+        "glossary": "ο βοσκός — shepherd · ο λύκος — wolf · το πρόβατο — sheep · το αγόρι — boy · τα ψέματα — lies",
+        "parts": [
+            {
+                "gr": [
+                    "Ένα νεαρό αγόρι πρόσεχε τα πρόβατα στο βουνό. Η μέρα ήταν μεγάλη και βαριόταν. Για διασκέδαση φώναξε: «Λύκος! Έρχεται λύκος!»"
+                ],
+                "en": [
+                    "A young boy was watching the sheep on the mountain. The day was long and he was bored. For entertainment he shouted: «Wolf! A wolf is coming!»"
+                ]
+            },
+            {
+                "gr": [
+                    "Οι άνθρωποι από το χωριό άφησαν τη δουλειά τους και έτρεξαν επάνω. Λύκος δεν υπήρχε. Το αγόρι γελούσε. Το έκανε και δεύτερη φορά, και πάλι ήρθαν, και πάλι γελούσε."
+                ],
+                "en": [
+                    "The people from the village left their work and ran up. There was no wolf. The boy was laughing. He did it a second time too, and again they came, and again he laughed."
+                ]
+            },
+            {
+                "gr": [
+                    "Την τρίτη φορά ο λύκος ήρθε στ' αλήθεια. Το αγόρι φώναζε και φώναζε, αλλά κανείς δεν ξεκίνησε από το χωριό. Όποιος λέει ψέματα, δεν τον πιστεύουν ούτε όταν λέει την αλήθεια."
+                ],
+                "en": [
+                    "The third time the wolf really came. The boy shouted and shouted, but nobody set off from the village. Whoever tells lies is not believed even when he tells the truth."
+                ]
+            }
+        ]
     }
 ]

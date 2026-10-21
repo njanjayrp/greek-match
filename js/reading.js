@@ -45,14 +45,14 @@ function renderPart(part, box) {
     if (part.en && part.en.length) {
         const en = document.createElement("div");
         en.className = "read-en";
-        en.hidden = true;
+        en.hidden = false;          // the translation is there to be read, not hunted for
         for (const line of part.en) en.appendChild(paragraph(line, ""));
 
         const toggle = document.createElement("button");
         toggle.className = "read-toggle";
         toggle.type = "button";
-        toggle.textContent = "English";
-        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "Hide";
+        toggle.setAttribute("aria-expanded", "true");
         toggle.addEventListener("click", () => {
             en.hidden = !en.hidden;
             toggle.textContent = en.hidden ? "English" : "Hide";
@@ -80,7 +80,7 @@ function show(id) {
     const all = document.createElement("button");
     all.className = "read-all";
     all.type = "button";
-    all.textContent = "Show every translation";
+    all.textContent = "Hide every translation";
     all.addEventListener("click", () => {
         const hiding = [...box.querySelectorAll(".read-en")].some(e => e.hidden);
         for (const e of box.querySelectorAll(".read-en")) e.hidden = !hiding;
@@ -91,6 +91,14 @@ function show(id) {
         all.textContent = hiding ? "Hide every translation" : "Show every translation";
     });
     box.appendChild(all);
+
+    // A story brings a handful of words the dictionary has no reason to hold.
+    if (text.glossary) {
+        const g = document.createElement("p");
+        g.className = "read-glossary";
+        g.textContent = text.glossary;
+        box.appendChild(g);
+    }
 
     for (const part of text.parts) renderPart(part, box);
     if (typeof window.scrollTo === "function") window.scrollTo(0, 0);

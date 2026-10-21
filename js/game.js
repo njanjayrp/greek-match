@@ -124,15 +124,29 @@ function defaultGroup() {
 function populateGroupSelect() {
     const select = document.getElementById("group-select");
     select.innerHTML = "";
-    if (mode === "manual" || mode === "read") {
-        const items = mode === "manual"
-            ? window.GRAMMAR.TOPICS.map(t => [t.id, t.title])
-            : window.ReadingMode.TEXTS().map(t => [t.id, t.title]);
-        for (const [value, label] of items) {
+    if (mode === "manual") {
+        for (const t of window.GRAMMAR.TOPICS) {
             const opt = document.createElement("option");
-            opt.value = value;
-            opt.textContent = label;
+            opt.value = t.id;
+            opt.textContent = t.title;
             select.appendChild(opt);
+        }
+        return;
+    }
+    if (mode === "read") {
+        // Grouped, so the list stays short to scan as more texts arrive
+        let current = null, parent = select;
+        for (const t of window.ReadingMode.TEXTS()) {
+            if (t.group && t.group !== current) {
+                current = t.group;
+                parent = document.createElement("optgroup");
+                parent.label = t.group;
+                select.appendChild(parent);
+            }
+            const opt = document.createElement("option");
+            opt.value = t.id;
+            opt.textContent = t.title;
+            (t.group ? parent : select).appendChild(opt);
         }
         return;
     }
@@ -327,7 +341,7 @@ function updateSubtitle() {
         browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" },
         manual: { greek: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things",            english: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things" },
         drill:  { greek: "Practise the grammar topic",                               english: "Practise the grammar topic" },
-        read:   { greek: "Read the text \u2014 the English is one tap away",            english: "Read the text \u2014 the English is one tap away" }
+        read:   { greek: "Read the text \u2014 the English sits under each paragraph",   english: "Read the text \u2014 the English sits under each paragraph" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
 }
