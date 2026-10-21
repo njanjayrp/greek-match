@@ -170,7 +170,7 @@ h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2
 }
 #typing-form { display: flex; gap: 8px; margin-bottom: 12px; }
 #typing-input {
-    flex: 1; padding: 12px 14px; font-size: 16px;
+    flex: 1; min-width: 0; padding: 12px 14px; font-size: 16px;
     border: 1.5px solid var(--border); border-radius: 8px; background: var(--surface);
     color: var(--text); font-family: inherit;
     -webkit-user-select: text; user-select: text;
@@ -212,7 +212,7 @@ h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2
 #conj-prompt .target  { color: var(--muted); font-size: 13px; font-weight: 600; display: block; margin-top: 6px; }
 #conj-form { display: flex; gap: 8px; margin-bottom: 12px; }
 #conj-input {
-    flex: 1; padding: 12px 14px; font-size: 16px;
+    flex: 1; min-width: 0; padding: 12px 14px; font-size: 16px;
     border: 1.5px solid var(--border); border-radius: 8px; background: var(--surface);
     color: var(--text); font-family: inherit;
     -webkit-user-select: text; user-select: text;
@@ -333,7 +333,7 @@ button:active { transform: scale(0.97); }
     display: flex; justify-content: space-between; align-items: center;
     margin-bottom: 10px;
 }
-.header-left { display: flex; gap: 6px; align-items: center; }
+.header-left { display: flex; gap: 6px; align-items: center; min-width: 0; flex: 1; }
 .mode-select {
     font-size: 13px; font-weight: 600; padding: 7px 28px 7px 12px;
     border: 1.5px solid var(--border); border-radius: 7px; background: var(--surface);
@@ -342,6 +342,7 @@ button:active { transform: scale(0.97); }
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%23777f8c' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
     background-repeat: no-repeat; background-position: right 9px center; background-size: 10px;
 }
+.mode-select { max-width: 100%; text-overflow: ellipsis; }
 .mode-select:focus { outline: none; border-color: var(--accent); }
 .mode-select:disabled {
     cursor: not-allowed;
@@ -382,8 +383,20 @@ button:active { transform: scale(0.97); }
     #fill-prompt   { padding: 12px 14px; font-size: 13px; }
     #dates-prompt  { padding: 20px 14px; font-size: 18px; }
     #dates-gloss   { font-size: 12px; margin-top: 8px; }
+    /* Practice now has five tabs; tighten them so 320px still fits */
+    .tabs          { gap: 10px; }
+    .tab           { font-size: 12px; }
+    .read-title    { font-size: 17px; }
+    .read-block    { padding: 14px 14px; }
+    .read-gr       { font-size: 16px; line-height: 1.7; }
+    .read-en       { font-size: 13px; }
     #dates-sub     { padding: 10px 14px; font-size: 12px; }
     .fill-opt      { padding: 9px 10px; font-size: 13px; }
+}
+
+@media (max-width: 360px) {
+    .tabs { gap: 8px; }
+    .tab  { font-size: 11px; }
 }
 
 /* ── Sections and tabs ──────────────────────────────────────────────────── */
@@ -420,8 +433,14 @@ button:active { transform: scale(0.97); }
     margin: 0 auto 12px;
     padding: 0 2px;
     border-bottom: 1px solid var(--border);
+    /* The strip itself scrolls if a section ever has more tabs than fit, so the
+       page never does. On every size we ship it does not have to. */
+    overflow-x: auto;
+    scrollbar-width: none;
 }
-.tabs { display: flex; gap: 20px; flex: 1; }
+.tabrow::-webkit-scrollbar { display: none; }
+.tabs { display: flex; gap: 20px; flex: 1; flex-wrap: nowrap; }
+.tab { white-space: nowrap; }
 .tab {
     appearance: none;
     background: none;
@@ -659,3 +678,51 @@ body { color: var(--text); }
 
 /* Greek capitals drop their accents, so leave the topic label as written. */
 #dates-topic { text-transform: none; font-size: 11px; }
+
+/* ── Reading ─────────────────────────────────────────────────────────────── */
+
+#reading-container {
+    max-width: 640px;
+    margin: 0 auto 24px;
+    /* Greek is long; nothing here may push the page sideways on a phone */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    -webkit-user-select: text;
+    user-select: text;
+}
+.read-title {
+    font-size: 19px; font-weight: 700; line-height: 1.35;
+    margin: 0 0 14px; letter-spacing: -0.3px;
+}
+.read-all {
+    background: var(--soft); color: var(--text);
+    font-size: 12px; padding: 7px 14px; margin-bottom: 18px;
+}
+.read-all:hover { background: var(--soft-hover); }
+.read-heading {
+    font-size: 13px; font-weight: 700; color: var(--accent);
+    letter-spacing: 0.4px; margin: 26px 0 10px;
+}
+.read-block {
+    background: var(--surface); border: 1.5px solid var(--border); border-radius: 10px;
+    padding: 16px 18px; margin-bottom: 12px;
+}
+.read-gr {
+    margin: 0 0 10px; font-size: 17px; line-height: 1.75;
+    hyphens: auto;
+}
+.read-gr:last-of-type { margin-bottom: 0; }
+.read-block b { font-weight: 700; color: var(--accent-dk); }
+.read-toggle {
+    background: none; color: var(--accent);
+    font-size: 12px; font-weight: 600; padding: 8px 0 0;
+    border-radius: 0;
+}
+.read-toggle:hover { text-decoration: underline; }
+.read-en {
+    margin-top: 10px; padding-left: 12px;
+    border-left: 2px solid var(--border);
+    color: var(--muted); font-size: 14px; line-height: 1.6;
+}
+.read-en p { margin: 0 0 8px; }
+.read-en p:last-child { margin-bottom: 0; }

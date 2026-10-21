@@ -34,7 +34,7 @@ function initApp(words) {
     // Build the group dropdown from the data
     populateGroupSelect();
     group = localStorage.getItem("greek_group") || "__all__";
-    if (!groupExists(group)) group = mode === "manual" ? window.GRAMMAR.TOPICS[0].id : "__all__";
+    if (!groupExists(group)) group = defaultGroup();
     document.getElementById("group-select").value = group;
 
     round = selectRound();
@@ -66,13 +66,23 @@ function initApp(words) {
     applyMode();
     // grammar drills load on demand; redraw once they are in
     window.GRAMMAR.load().then(() => { if (section === "grammar") { populateGroupSelect(); applyMode(); } });
+    window.ReadingMode.load().then(() => { if (mode === "read") { refreshReading(); } });
+}
+
+// The texts arrive after boot, so whatever is on screen is redrawn once they do.
+function refreshReading() {
+    populateGroupSelect();
+    group = localStorage.getItem("greek_topic_read") || defaultGroup();
+    if (!groupExists(group)) group = defaultGroup();
+    document.getElementById("group-select").value = group;
+    applyMode();
 }
 
 const MARKED = "__marked__";
 
 const SECTIONS = {
     words:    [["match", "Match"], ["type", "Type"], ["browse", "Browse"]],
-    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["pick", "Choose"], ["dates", "Dates"]],
+    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["pick", "Choose"], ["dates", "Dates"], ["read", "Reading"]],
     grammar:  [["manual", "Manual"], ["drill", "Drill"]]
 };
 
@@ -104,14 +114,24 @@ function switchSection(target) {
     switchMode(SECTIONS[section][0][0]);
 }
 
+// Manual and Reading have no "All" entry, so they fall back to their first one.
+function defaultGroup() {
+    if (mode === "manual") return window.GRAMMAR.TOPICS[0].id;
+    if (mode === "read")   return (window.ReadingMode.TEXTS()[0] || {}).id || "__all__";
+    return "__all__";
+}
+
 function populateGroupSelect() {
     const select = document.getElementById("group-select");
     select.innerHTML = "";
-    if (mode === "manual") {
-        for (const t of window.GRAMMAR.TOPICS) {
+    if (mode === "manual" || mode === "read") {
+        const items = mode === "manual"
+            ? window.GRAMMAR.TOPICS.map(t => [t.id, t.title])
+            : window.ReadingMode.TEXTS().map(t => [t.id, t.title]);
+        for (const [value, label] of items) {
             const opt = document.createElement("option");
-            opt.value = t.id;
-            opt.textContent = t.title;
+            opt.value = value;
+            opt.textContent = label;
             select.appendChild(opt);
         }
         return;
@@ -172,6 +192,7 @@ function groupExists(g) {
     if (g === "__all__") return true;
     if (g === MARKED) return !quizSource() && mode !== "fill" && allWords.some(w => w.marked);
     if (mode === "manual") return window.GRAMMAR.TOPICS.some(t => t.id === g);
+    if (mode === "read")   return window.ReadingMode.TEXTS().some(t => t.id === g);
     if (mode === "drill")  return !!window.GRAMMAR.resolve(g);
     if (quizSource()) return quizSource().TOPICS.includes(g);
     if (mode === "fill") return allSentences.some(s => s.topic === g);
@@ -190,7 +211,7 @@ function modePool() {
 }
 
 function selectRound() {
-    if (quizSource() || mode === "manual") return [];
+    if (quizSource() || mode === "manual" || mode === "read") return [];
     if (mode === "fill") {
         const pool = modePool().slice();
         for (let i = pool.length - 1; i > 0; i--) {
@@ -305,7 +326,8 @@ function updateSubtitle() {
         dates:  { greek: "Say the clock, date, age or duration in Greek",            english: "Read the clock, date, age or duration" },
         browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" },
         manual: { greek: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things",            english: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things" },
-        drill:  { greek: "Practise the grammar topic",                               english: "Practise the grammar topic" }
+        drill:  { greek: "Practise the grammar topic",                               english: "Practise the grammar topic" },
+        read:   { greek: "Read the text \u2014 the English is one tap away",            english: "Read the text \u2014 the English is one tap away" }
     };
     document.getElementById("subtitle").textContent = subtitles[mode][lang];
 }
@@ -620,15 +642,17 @@ function applyMode() {
     document.getElementById("dates-container").style.display  = quizSource() ? "" : "none";
     document.getElementById("manual-container").style.display = mode === "manual" ? "" : "none";
     if (mode === "manual") renderManual();
+    document.getElementById("reading-container").style.display = mode === "read" ? "" : "none";
+    if (mode === "read") window.ReadingMode.show(group);
     document.getElementById("browse-container").style.display = mode === "browse" ? "" : "none";
     document.getElementById("browse-search").style.display    = mode === "browse" ? "" : "none";
     document.querySelector(".actions").style.display =
-        (mode === "browse" || mode === "manual") ? "none" : "";
+        (["browse", "manual", "read"].includes(mode)) ? "none" : "";
 
     renderTabs();
     // Lang toggle has no role in Fill or Browse mode
     document.querySelector(".lang-toggle").style.display =
-        (["fill", "browse", "drill", "pick"].includes(mode)) ? "none" : "";
+        (["fill", "browse", "drill", "pick", "read"].includes(mode)) ? "none" : "";
     // Conjugate drills its own verb list — the group filter has nothing to say there
     document.getElementById("group-select").disabled = (mode === "conj");
     updateSubtitle();
@@ -647,16 +671,17 @@ function switchMode(target) {
     mode = target;
     section = sectionOf(mode);
     rememberMode();
+    if (mode === "read") window.ReadingMode.load().then(refreshReading);
     // Rebuild dropdown — Fill uses sentence topics, others use word groups
     populateGroupSelect();
     if (mode === "fill") {
         group = localStorage.getItem("greek_topic") || "__all__";
-    } else if (quizSource() || mode === "manual") {
+    } else if (quizSource() || mode === "manual" || mode === "read") {
         group = localStorage.getItem("greek_topic_" + mode) || "__all__";
     } else {
         group = localStorage.getItem("greek_group") || "__all__";
     }
-    if (!groupExists(group)) group = mode === "manual" ? window.GRAMMAR.TOPICS[0].id : "__all__";
+    if (!groupExists(group)) group = defaultGroup();
     document.getElementById("group-select").value = group;
     // Always re-pick the round when entering or leaving a mode with a different data shape
     if (mode === "fill" || prev === "fill" || quizSource() || ["dates", "drill"].includes(prev)) {
@@ -682,7 +707,7 @@ function switchGroup(target) {
     group = target;
     if (mode === "fill") {
         localStorage.setItem("greek_topic", group);
-    } else if (quizSource() || mode === "manual") {
+    } else if (quizSource() || mode === "manual" || mode === "read") {
         localStorage.setItem("greek_topic_" + mode, group);
     } else {
         localStorage.setItem("greek_group", group);

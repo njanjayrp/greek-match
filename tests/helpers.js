@@ -31,8 +31,8 @@ export function loadLibs() {
 
 function makeEl() {
     const el = {
-        children: [], style: {}, dataset: {}, value: "", textContent: "", innerHTML: "",
-        disabled: false, lang: "", placeholder: "",
+        children: [], style: {}, dataset: {}, value: "", textContent: "",
+        disabled: false, lang: "", placeholder: "", hidden: false,
         classList: {
             _s: new Set(),
             add(...c) { c.forEach(x => this._s.add(x)); },
@@ -51,6 +51,13 @@ function makeEl() {
         closest() { return null; },
         getBoundingClientRect() { return { top: 0, left: 0, width: 0, height: 0 }; },
     };
+    // Clearing innerHTML empties the node, the way a browser does — otherwise a
+    // re-render appends to the previous one and the test reads a stale child.
+    let html = "";
+    Object.defineProperty(el, "innerHTML", {
+        get: () => html,
+        set: v => { html = String(v); if (!html) el.children = []; }
+    });
     return el;
 }
 
@@ -78,7 +85,7 @@ export async function bootApp(seed = {}) {
         json: async () => JSON.parse(Deno.readTextFileSync(ROOT + url.replace("./", ""))),
     });
 
-    const src = ["conjugations.js", "conjugator.js", "conjchoice.js", "datetime.js", "compare.js", "grammar.js", "game.js", "browse.js"]
+    const src = ["conjugations.js", "conjugator.js", "conjchoice.js", "datetime.js", "compare.js", "grammar.js", "game.js", "browse.js", "reading.js"]
         .map(readSrc).join("\n");
     const api = new Function(
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",
