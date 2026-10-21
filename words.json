@@ -1136,73 +1136,73 @@
     {
         "greek": "στις τρεις",
         "english": "at three o'clock",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "για λίγο",
         "english": "for a little while",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "προς το γραφείο",
         "english": "towards the office",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "μέχρι τις τρεις",
         "english": "until three",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "ώς εδώ",
         "english": "up to here",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "χωρίς λεφτά",
         "english": "without money",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "εξαιτίας της βροχής",
         "english": "because of the rain",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "αντί της Μαρίας",
         "english": "instead of Maria",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "εκτός του Αχιλλέα",
         "english": "except Achilles",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "υπέρ του Νίκου",
         "english": "in favour of Nikos",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "κατά τις δέκα",
         "english": "around ten o'clock",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
         "greek": "κατά τη γνώμη μου",
         "english": "in my opinion",
-        "group": "Connectors & logic",
+        "group": "Prepositions & cases",
         "marked": false
     },
     {
@@ -5613,6 +5613,126 @@
         "greek": "ήσυχος",
         "english": "quiet",
         "group": "Adjectives & qualities",
+        "marked": true
+    },
+    {
+        "greek": "μετακομίζω (μετακομίσω)",
+        "english": "to move house",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "μοιάζω (μοιάσω)",
+        "english": "to resemble",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "δυσκολεύομαι (δυσκολευτώ)",
+        "english": "to struggle",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "επισκέπτομαι (επισκεφτώ)",
+        "english": "to visit",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "επιστρέφω (επιστρέψω)",
+        "english": "to return",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "η κράτηση",
+        "english": "booking",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "το αστέρι",
+        "english": "star",
+        "group": "Travel & airport",
+        "marked": true
+    },
+    {
+        "greek": "η απόσταση",
+        "english": "distance",
+        "group": "City transport",
+        "marked": true
+    },
+    {
+        "greek": "η ηρεμία",
+        "english": "calm",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "η μοναξιά",
+        "english": "loneliness",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
+        "greek": "η διασκέδαση",
+        "english": "entertainment",
+        "group": "Free time, film & arts",
+        "marked": true
+    },
+    {
+        "greek": "ο κύκλος",
+        "english": "circle",
+        "group": "People & relationships",
+        "marked": true
+    },
+    {
+        "greek": "ο τρόπος ζωής",
+        "english": "way of life",
+        "group": "Daily life & school",
+        "marked": true
+    },
+    {
+        "greek": "ευχάριστος",
+        "english": "pleasant",
+        "group": "Adjectives & qualities",
+        "marked": true
+    },
+    {
+        "greek": "τα υπόλοιπα",
+        "english": "the rest",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "ιδιαίτερα",
+        "english": "especially",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "μόνιμα",
+        "english": "permanently",
+        "group": "Time & frequency",
+        "marked": true
+    },
+    {
+        "greek": "μέσω",
+        "english": "via",
+        "group": "Prepositions & cases",
+        "marked": true
+    },
+    {
+        "greek": "μεταξύ",
+        "english": "between",
+        "group": "Prepositions & cases",
+        "marked": true
+    },
+    {
+        "greek": "προς το παρόν",
+        "english": "for now",
+        "group": "Prepositions & cases",
         "marked": true
     }
 ]

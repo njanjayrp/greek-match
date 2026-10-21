@@ -32,8 +32,9 @@ Deno.test("there is no catch-all group left", () => {
     assert(!words.some(w => w.group === "Common verbs"), "Common verbs is back");
 });
 
-// ενώ is a conjunction that happens to end like a contract verb
-const NOT_VERBS = new Set(["ενώ"]);
+// Words that end like a contract verb without being one: ενώ is a conjunction,
+// μέσω a preposition.
+const NOT_VERBS = new Set(["ενώ", "μέσω"]);
 
 Deno.test("verb entries name their aorist subjunctive", () => {
     const verbs = words.filter(w => /(ω|ώ|ομαι|άμαι|ιέμαι)$/.test(w.greek.split(" (")[0])
