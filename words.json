@@ -5259,7 +5259,7 @@
         "greek": "το δάσος",
         "english": "forest",
         "group": "Mountains & winter",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "το ποτάμι",
@@ -5718,6 +5718,12 @@
         "marked": true
     },
     {
+        "greek": "αγαπητός",
+        "english": "dear",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
         "greek": "η διασκέδαση",
         "english": "entertainment",
         "group": "Free time, film & arts",
@@ -5780,6 +5786,12 @@
     {
         "greek": "ιδιαίτερα",
         "english": "especially",
+        "group": "Connectors & logic",
+        "marked": true
+    },
+    {
+        "greek": "όπου",
+        "english": "wherever",
         "group": "Connectors & logic",
         "marked": true
     },
