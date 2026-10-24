@@ -5544,6 +5544,12 @@
         "marked": false
     },
     {
+        "greek": "το τοπίο",
+        "english": "landscape",
+        "group": "Nature, weather & outdoors",
+        "marked": true
+    },
+    {
         "greek": "η διανυκτέρευση",
         "english": "overnight stay",
         "group": "Travel & airport",
@@ -5682,6 +5688,12 @@
         "marked": true
     },
     {
+        "greek": "η αγάπη",
+        "english": "love",
+        "group": "Feelings & emotions",
+        "marked": true
+    },
+    {
         "greek": "η διασκέδαση",
         "english": "entertainment",
         "group": "Free time, film & arts",
@@ -5720,6 +5732,12 @@
     {
         "greek": "πολιτιστικός",
         "english": "cultural",
+        "group": "Adjectives & qualities",
+        "marked": true
+    },
+    {
+        "greek": "ξεχωριστός",
+        "english": "distinctive",
         "group": "Adjectives & qualities",
         "marked": true
     },
