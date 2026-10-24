@@ -5319,7 +5319,7 @@
         "greek": "η φύση",
         "english": "nature",
         "group": "Mountains & winter",
-        "marked": false
+        "marked": true
     },
     {
         "greek": "οι καλοκαιρινές διακοπές",
@@ -5642,6 +5642,18 @@
     {
         "greek": "δυσκολεύομαι (δυσκολευτώ)",
         "english": "to struggle",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "γεμίζω (γεμίσω)",
+        "english": "to fill",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "δεν χάνει κανείς",
+        "english": "nobody misses it",
         "group": "Everyday verbs",
         "marked": true
     },
