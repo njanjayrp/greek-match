@@ -5604,6 +5604,12 @@
         "marked": true
     },
     {
+        "greek": "φιλοξενώ (φιλοξενήσω)",
+        "english": "to host",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
         "greek": "τα στοιχεία",
         "english": "personal details",
         "group": "Orders & delivery",
@@ -5654,6 +5660,12 @@
     {
         "greek": "δεν χάνει κανείς",
         "english": "nobody misses it",
+        "group": "Everyday verbs",
+        "marked": true
+    },
+    {
+        "greek": "περιλαμβάνω (περιλάβω)",
+        "english": "to include",
         "group": "Everyday verbs",
         "marked": true
     },
@@ -5750,6 +5762,12 @@
     {
         "greek": "ξεχωριστός",
         "english": "distinctive",
+        "group": "Adjectives & qualities",
+        "marked": true
+    },
+    {
+        "greek": "πανέμορφος",
+        "english": "gorgeous",
         "group": "Adjectives & qualities",
         "marked": true
     },
