@@ -5592,6 +5592,12 @@
         "marked": true
     },
     {
+        "greek": "η πρόταση",
+        "english": "suggestion",
+        "group": "Social & communication",
+        "marked": true
+    },
+    {
         "greek": "τα στοιχεία",
         "english": "personal details",
         "group": "Orders & delivery",
@@ -5682,6 +5688,12 @@
         "marked": true
     },
     {
+        "greek": "η εκδήλωση",
+        "english": "event",
+        "group": "Free time, film & arts",
+        "marked": true
+    },
+    {
         "greek": "ο κύκλος",
         "english": "circle",
         "group": "People & relationships",
@@ -5696,6 +5708,18 @@
     {
         "greek": "ευχάριστος",
         "english": "pleasant",
+        "group": "Adjectives & qualities",
+        "marked": true
+    },
+    {
+        "greek": "εναλλακτικός",
+        "english": "alternative",
+        "group": "Adjectives & qualities",
+        "marked": true
+    },
+    {
+        "greek": "πολιτιστικός",
+        "english": "cultural",
         "group": "Adjectives & qualities",
         "marked": true
     },
