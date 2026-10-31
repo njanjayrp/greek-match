@@ -3054,5 +3054,257 @@
         "hint": "go — εσύ, irregular (πηγαίνω)"
       }
     ]
+  },
+  {
+    "id": "epirrimata-001",
+    "topic": "Επιρρήματα",
+    "en": "We will arrive in Thessaloniki early. Giannis drives fast.",
+    "template": "Θα φτάσουμε νωρίς στη Θεσσαλονίκη. Ο Γιάννης οδηγεί {0}.",
+    "blanks": [
+      {
+        "answer": "γρήγορα",
+        "options": [
+          "γρήγορα",
+          "γρήγορος",
+          "γρήγορες",
+          "γρήγορο"
+        ],
+        "hint": "fast — the adverb of γρήγορος"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-002",
+    "topic": "Επιρρήματα",
+    "en": "— Is the hotel close? — Yes, you will turn right and you will see it.",
+    "template": "— Είναι κοντά το ξενοδοχείο; — Ναι, θα στρίψεις {0} και θα το δεις.",
+    "blanks": [
+      {
+        "answer": "δεξιά",
+        "options": [
+          "δεξιά",
+          "δεξιός",
+          "δεξί",
+          "δεξιές"
+        ],
+        "hint": "to the right"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-003",
+    "topic": "Επιρρήματα",
+    "en": "We will go on holiday to the village. It is quiet there.",
+    "template": "Θα πάμε διακοπές στο χωριό. Είναι {0} εκεί.",
+    "blanks": [
+      {
+        "answer": "ήσυχα",
+        "options": [
+          "ήσυχα",
+          "ήσυχος",
+          "ήσυχες",
+          "ήσυχο"
+        ],
+        "hint": "quietly — the adverb of ήσυχος"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-004",
+    "topic": "Επιρρήματα",
+    "en": "I missed the boat. I woke up late.",
+    "template": "Έχασα το πλοίο. Ξύπνησα {0}.",
+    "blanks": [
+      {
+        "answer": "αργά",
+        "options": [
+          "αργά",
+          "αργός",
+          "αργή",
+          "αργό"
+        ],
+        "hint": "late — the adverb of αργός"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-005",
+    "topic": "Επιρρήματα",
+    "en": "I did not get my mother a souvenir from Aegina. I feel bad.",
+    "template": "Δεν πήρα αναμνηστικό δώρο στη μητέρα μου από την Αίγινα. Νιώθω {0}.",
+    "blanks": [
+      {
+        "answer": "άσχημα",
+        "options": [
+          "άσχημα",
+          "άσχημος",
+          "άσχημη",
+          "άσχημο"
+        ],
+        "hint": "bad — the adverb of άσχημος"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-006",
+    "topic": "Επιρρήματα",
+    "en": "We went on holiday to Halkidiki. We had an amazing time!",
+    "template": "Πήγαμε διακοπές στη Χαλκιδική. Περάσαμε {0}!",
+    "blanks": [
+      {
+        "answer": "καταπληκτικά",
+        "options": [
+          "καταπληκτικά",
+          "καταπληκτικός",
+          "καταπληκτική",
+          "καταπληκτικό"
+        ],
+        "hint": "amazingly — the adverb of καταπληκτικός"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-007",
+    "topic": "Επιρρήματα",
+    "en": "I drive more carefully than my sister.",
+    "template": "Οδηγώ {0} από την αδερφή μου.",
+    "blanks": [
+      {
+        "answer": "πιο προσεκτικά",
+        "options": [
+          "πιο προσεκτικά",
+          "πιο προσεκτικός",
+          "προσεκτικά",
+          "πιο προσεκτική"
+        ],
+        "hint": "more carefully — comparative of the adverb"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-008",
+    "topic": "Επιρρήματα",
+    "en": "Diego eats less than Ricardo.",
+    "template": "Ο Ντιέγκο τρώει {0} από τον Ρικάρντο.",
+    "blanks": [
+      {
+        "answer": "λιγότερο",
+        "options": [
+          "λιγότερο",
+          "λιγότερα",
+          "πιο λίγοι",
+          "λίγο"
+        ],
+        "hint": "less — the one-word form"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-009",
+    "topic": "Επιρρήματα",
+    "en": "Giannis goes fishing more often than Petros.",
+    "template": "Ο Γιάννης πηγαίνει για ψάρεμα {0} από τον Πέτρο.",
+    "blanks": [
+      {
+        "answer": "πιο συχνά",
+        "options": [
+          "πιο συχνά",
+          "πιο συχνός",
+          "συχνότερος",
+          "πιο συχνές"
+        ],
+        "hint": "more often"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-010",
+    "topic": "Επιρρήματα",
+    "en": "The boat for Naxos leaves every day at 6:00 in the morning. Yesterday it was delayed and left later.",
+    "template": "Το πλοίο για τη Νάξο φεύγει κάθε μέρα στις 6:00 το πρωί. Χθες είχε καθυστέρηση κι έφυγε {0}.",
+    "blanks": [
+      {
+        "answer": "πιο αργά",
+        "options": [
+          "πιο αργά",
+          "πιο αργός",
+          "πιο αργή",
+          "αργότερος"
+        ],
+        "hint": "later — comparative of αργά"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-011",
+    "topic": "Επιρρήματα",
+    "en": "Aeroplanes fly higher than birds.",
+    "template": "Τα αεροπλάνα πετάνε {0} από τα πουλιά.",
+    "blanks": [
+      {
+        "answer": "πιο ψηλά",
+        "options": [
+          "πιο ψηλά",
+          "πιο ψηλός",
+          "ψηλότερος",
+          "πιο ψηλές"
+        ],
+        "hint": "higher — comparative of ψηλά"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-012",
+    "topic": "Επιρρήματα",
+    "en": "Anna bought the book «Αιγαίο Πέλαγος» at a higher price than Natalia.",
+    "template": "Η Άννα αγόρασε το βιβλίο «Αιγαίο Πέλαγος» {0} από τη Ναταλία.",
+    "blanks": [
+      {
+        "answer": "πιο ακριβά",
+        "options": [
+          "πιο ακριβά",
+          "πιο ακριβός",
+          "πιο ακριβώς",
+          "ακριβότερος"
+        ],
+        "hint": "more expensively — not ακριβώς, which means exactly"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-013",
+    "topic": "Επιρρήματα",
+    "en": "He cooks better than his mother.",
+    "template": "Μαγειρεύει {0} από τη μητέρα του.",
+    "blanks": [
+      {
+        "answer": "καλύτερα",
+        "options": [
+          "καλύτερα",
+          "πιο καλύτερα",
+          "καλύτερος",
+          "καλύτερη"
+        ],
+        "hint": "better — one word, never with πιο"
+      }
+    ]
+  },
+  {
+    "id": "epirrimata-014",
+    "topic": "Επιρρήματα",
+    "en": "This year I travel more than last year.",
+    "template": "Φέτος ταξιδεύω {0} από πέρυσι.",
+    "blanks": [
+      {
+        "answer": "περισσότερο",
+        "options": [
+          "περισσότερο",
+          "περισσότερα",
+          "πιο πολλοί",
+          "πιο περισσότερο"
+        ],
+        "hint": "more — the adverb of περισσότερος"
+      }
+    ]
   }
 ]

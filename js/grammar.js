@@ -180,6 +180,92 @@ const TOPICS = [
         <li><s>Μη οδηγήσεις γρήγορα!</s> → <b>Μην</b> οδηγήσεις (ν before a vowel)</li>
     </ul>
 </article>`
+    },
+    {
+        id: "adverbs",
+        title: "Επιρρήματα",
+        blurb: "From adjective to adverb: καλός → καλά, and πιο καλά → καλύτερα",
+        manual: `<article class="manual">
+    <h2>Επιρρήματα — how something is done</h2>
+    <p class="manual-lead">An adjective describes a <i>thing</i> and changes with it; an adverb describes
+    the <i>verb</i> and never changes at all. Greek builds the adverb by swapping the adjective's ending
+    for <b>-α</b>: <b>γρήγορος → γρήγορα</b>, <b>καλός → καλά</b>.</p>
+
+    <h3>1. Από το επίθετο στο επίρρημα</h3>
+    <table class="manual-table">
+        <thead><tr><th>επίθετο</th><th>επίρρημα</th><th></th></tr></thead>
+        <tbody>
+            <tr><td>καλ<b>ός</b></td><td>καλ<b>ά</b></td><td>well</td></tr>
+            <tr><td>ωραί<b>ος</b></td><td>ωραί<b>α</b></td><td>nicely</td></tr>
+            <tr><td>γρήγορ<b>ος</b></td><td>γρήγορ<b>α</b></td><td>fast</td></tr>
+            <tr><td>αργ<b>ός</b></td><td>αργ<b>ά</b></td><td>slowly, late</td></tr>
+            <tr><td>ήσυχ<b>ος</b></td><td>ήσυχ<b>α</b></td><td>quietly</td></tr>
+            <tr><td>προσεκτικ<b>ός</b></td><td>προσεκτικ<b>ά</b></td><td>carefully</td></tr>
+            <tr><td>συχν<b>ός</b></td><td>συχν<b>ά</b></td><td>often</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">The adverb is the same shape as the <b>neuter plural</b> of the adjective, and
+    that is the whole trick: τα ωραία παιδιά (adjective) vs περάσαμε ωραία (adverb). It never agrees with
+    anything, because there is nothing for it to agree with.</p>
+
+    <h3>2. Δύο που δεν ακολουθούν</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>λίγος</th><td>λίγ<b>ο</b> — Τρώει λίγο. <s>λίγα</s></td></tr>
+            <tr><th>πολύς</th><td>πολ<b>ύ</b> — Δουλεύει πολύ. <s>πολλά</s></td></tr>
+        </tbody>
+    </table>
+
+    <h3>3. Παραθετικά: πιο + επίρρημα</h3>
+    <table class="manual-table">
+        <thead><tr><th>θετικός</th><th>συγκριτικός</th></tr></thead>
+        <tbody>
+            <tr><td>αργά</td><td><b>πιο</b> αργά</td></tr>
+            <tr><td>ωραία</td><td><b>πιο</b> ωραία</td></tr>
+            <tr><td>προσεκτικά</td><td><b>πιο</b> προσεκτικά</td></tr>
+        </tbody>
+    </table>
+    <ul class="manual-examples">
+        <li>Οδηγώ <b>πιο προσεκτικά από</b> την αδερφή μου.</li>
+        <li>Τα αεροπλάνα πετάνε <b>πιο ψηλά από</b> τα πουλιά.</li>
+    </ul>
+    <p class="manual-note">What you compare against still goes in the <b>accusative</b> after <b>από</b>,
+    exactly as with adjectives.</p>
+
+    <h3>4. Μονολεκτικά</h3>
+    <table class="manual-table">
+        <thead><tr><th>θετικός</th><th>συγκριτικός</th></tr></thead>
+        <tbody>
+            <tr><td>καλά</td><td>καλύτερα</td></tr>
+            <tr><td>άσχημα</td><td>χειρότερα</td></tr>
+            <tr><td>πολύ</td><td>περισσότερο</td></tr>
+            <tr><td>λίγο</td><td>λιγότερο</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">These end in <b>-ο</b> or <b>-α</b> and never change. They are the adverbs of
+    καλύτερος, χειρότερος, περισσότερος, λιγότερος — same four one-word forms you already know from
+    <b>Παραθετικά</b>.</p>
+
+    <h3>5. -α ή -ως;</h3>
+    <p>A few adjectives give two adverbs, and they do not mean the same thing:</p>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>ακριβός</th><td><b>ακριβά</b> = expensively · <b>ακριβώς</b> = exactly</td></tr>
+            <tr><th>τέλειος</th><td><b>τέλεια</b> = perfectly · <b>τελείως</b> = completely</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">At this level <b>-α</b> is the form you build; the handful of <b>-ως</b> adverbs
+    are learnt one by one as separate words.</p>
+
+    <h3>6. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>Ο Γιάννης οδηγεί γρήγορος.</s> → οδηγεί <b>γρήγορα</b> (it describes the driving, not Γιάννης)</li>
+        <li><s>Περάσαμε ωραίοι!</s> → Περάσαμε <b>ωραία</b></li>
+        <li><s>Τρώει λίγα.</s> → Τρώει <b>λίγο</b></li>
+        <li><s>Μαγειρεύει πιο καλύτερα.</s> → Μαγειρεύει <b>καλύτερα</b> (never πιο with a one-word form)</li>
+        <li><s>Το αγόρασε πιο ακριβώς.</s> → πιο <b>ακριβά</b> (ακριβώς means “exactly”)</li>
+    </ul>
+</article>`
     }
 ];
 
