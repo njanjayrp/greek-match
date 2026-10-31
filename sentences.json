@@ -2874,5 +2874,185 @@
         "hint": "remained / stayed (3pl aorist)"
       }
     ]
+  },
+  {
+    "id": "prostaktiki-001",
+    "topic": "Προστακτική",
+    "en": "Eat now! The food will get cold.",
+    "template": "{0} τώρα! Το φαγητό θα κρυώσει.",
+    "blanks": [
+      {
+        "answer": "Φάε",
+        "options": [
+          "Φάε",
+          "Φάτε",
+          "Τρώγε",
+          "Έφαγες"
+        ],
+        "hint": "eat — one action, εσύ (τρώω)"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-002",
+    "topic": "Προστακτική",
+    "en": "Close the window before you leave!",
+    "template": "{0} το παράθυρο, πριν φύγεις!",
+    "blanks": [
+      {
+        "answer": "Κλείσε",
+        "options": [
+          "Κλείσε",
+          "Κλείστε",
+          "Κλείνε",
+          "Έκλεισε"
+        ],
+        "hint": "close it — εσύ (κλείνω)"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-003",
+    "topic": "Προστακτική",
+    "en": "Lock the door when it gets dark!",
+    "template": "{0} την πόρτα, όταν βραδιάσει!",
+    "blanks": [
+      {
+        "answer": "Κλείδωσε",
+        "options": [
+          "Κλείδωσε",
+          "Κλειδώστε",
+          "Κλείδωνε",
+          "Κλείδωσες"
+        ],
+        "hint": "lock it — εσύ (κλειδώνω)"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-004",
+    "topic": "Προστακτική",
+    "en": "Girls, take the dog out in the afternoon!",
+    "template": "Κορίτσια, {0} τον σκύλο έξω το απόγευμα!",
+    "blanks": [
+      {
+        "answer": "βγάλτε",
+        "options": [
+          "βγάλτε",
+          "βγάλε",
+          "βγαίνετε",
+          "βγάζετε"
+        ],
+        "hint": "take out — εσείς (βγάζω)"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-005",
+    "topic": "Προστακτική",
+    "en": "Eleni, call an ambulance right away, grandfather is not well!",
+    "template": "Ελένη, {0} αμέσως το ασθενοφόρο, ο παππούς δεν είναι καλά!",
+    "blanks": [
+      {
+        "answer": "πάρε",
+        "options": [
+          "πάρε",
+          "πάρτε",
+          "παίρνε",
+          "πήρες"
+        ],
+        "hint": "call — εσύ, irregular (παίρνω)"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-006",
+    "topic": "Προστακτική",
+    "en": "Children, do not watch television until late!",
+    "template": "Παιδιά, {0} τηλεόραση μέχρι αργά!",
+    "blanks": [
+      {
+        "answer": "μη βλέπετε",
+        "options": [
+          "μη βλέπετε",
+          "μη δείτε",
+          "μην έβλεπες",
+          "δε βλέπετε"
+        ],
+        "hint": "do not watch — εσείς, a habit"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-007",
+    "topic": "Προστακτική",
+    "en": "Do not go to work for one day!",
+    "template": "{0} μια μέρα στη δουλειά!",
+    "blanks": [
+      {
+        "answer": "Μην πας",
+        "options": [
+          "Μην πας",
+          "Μην πάτε",
+          "Μη πήγαινε",
+          "Δεν πας"
+        ],
+        "hint": "do not go — εσύ, one day"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-008",
+    "topic": "Προστακτική",
+    "en": "Come over to my place tonight, the beers are on me!",
+    "template": "{0} από σπίτι μου το βράδυ, κερνάω μπίρες!",
+    "blanks": [
+      {
+        "answer": "Έλα",
+        "options": [
+          "Έλα",
+          "Ελάτε",
+          "Έρχεσαι",
+          "Ήρθες"
+        ],
+        "hint": "come — εσύ, irregular (έρχομαι)"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-009",
+    "topic": "Προστακτική",
+    "en": "Take a seat, sir. The doctor will see you in ten minutes.",
+    "template": "{0}, κύριε. Ο γιατρός θα σας δει σε δέκα λεπτά.",
+    "blanks": [
+      {
+        "answer": "Καθίστε",
+        "options": [
+          "Καθίστε",
+          "Κάτσε",
+          "Κάθεσαι",
+          "Καθόσουν"
+        ],
+        "hint": "take a seat — a stranger, so εσείς"
+      }
+    ]
+  },
+  {
+    "id": "prostaktiki-010",
+    "topic": "Προστακτική",
+    "en": "Go inside the house at once! You will catch cold!",
+    "template": "{0} αμέσως μέσα στο σπίτι! Θα κρυώσεις!",
+    "blanks": [
+      {
+        "answer": "Πήγαινε",
+        "options": [
+          "Πήγαινε",
+          "Πάτε",
+          "Πήγες",
+          "Πηγαίνεις"
+        ],
+        "hint": "go — εσύ, irregular (πηγαίνω)"
+      }
+    ]
   }
 ]

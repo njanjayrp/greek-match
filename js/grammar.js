@@ -89,6 +89,97 @@ const TOPICS = [
     </ul>
 </article>`,
         drill: { src: "js/compare.js", global: "COMPARE" }
+    },
+    {
+        id: "imperative",
+        title: "Προστακτική",
+        blurb: "Telling someone to do something: γράψε, γράψτε, μη γράψεις",
+        manual: `<article class="manual">
+    <h2>Προστακτική — telling someone to do something</h2>
+    <p class="manual-lead">The imperative is built off the <b>future stem</b>, not the present one.
+    Take <b>θα</b> + the verb, drop the <b>θα</b> and the ending, and what is left is the stem you
+    command with: <b>γράφω → θα γράψω → γραψ-</b> → <b>γράψε</b> (you) / <b>γράψτε</b> (you all).</p>
+
+    <h3>1. Πώς φτιάχνεται</h3>
+    <table class="manual-table">
+        <thead><tr><th>ενεστώτας</th><th>μέλλοντας</th><th>στέλεχος</th><th>εσύ</th><th>εσείς</th></tr></thead>
+        <tbody>
+            <tr><td>γράφω</td><td>θα γράψω</td><td>γραψ-</td><td>γράψ<b>ε</b></td><td>γράψ<b>τε</b></td></tr>
+            <tr><td>διαβάζω</td><td>θα διαβάσω</td><td>διαβασ-</td><td>διάβασ<b>ε</b></td><td>διαβάσ<b>τε</b></td></tr>
+            <tr><td>μιλάω</td><td>θα μιλήσω</td><td>μιλησ-</td><td>μίλησ<b>ε</b></td><td>μιλήσ<b>τε</b></td></tr>
+            <tr><td>οδηγώ</td><td>θα οδηγήσω</td><td>οδηγησ-</td><td>οδήγησ<b>ε</b></td><td>οδηγήσ<b>τε</b></td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">Singular <b>-ε</b>, plural <b>-τε</b>. The accent sits on the third syllable
+    from the end in the singular (<b>διά</b>βασε) and moves one step right in the plural
+    (δια<b>βά</b>στε), because the word got shorter.</p>
+
+    <h3>2. Το «να» κάνει την ίδια δουλειά</h3>
+    <p>Every command has a second, softer form with <b>να</b> + the same stem. The two are
+    interchangeable, and the να-form is what you use whenever the imperative sounds too blunt:</p>
+    <ul class="manual-examples">
+        <li>Αντώνιο, <b>γράψε</b> στον πίνακα! = Αντώνιο, <b>να γράψεις</b> στον πίνακα!</li>
+        <li>Παιδιά, <b>γράψτε</b> γρήγορα! = Παιδιά, <b>να γράψετε</b> γρήγορα!</li>
+    </ul>
+
+    <h3>3. Άρνηση: πάντα με «να»</h3>
+    <p>There is <b>no negative imperative</b> in Greek. To tell someone <i>not</i> to do something you
+    drop the imperative form entirely and use <b>μη(ν)</b> + the να-form without the να:</p>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>εσύ</th><td><b>μη γράψεις</b> στον πίνακα</td></tr>
+            <tr><th>εσείς</th><td><b>μη γράψετε</b> γρήγορα</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note"><b>μη</b> becomes <b>μην</b> before a vowel and before κ π τ ξ ψ γκ μπ ντ τσ τζ,
+    exactly like τη/την: μη <b>γ</b>ράψεις, but μην <b>ο</b>δηγήσεις, μην <b>π</b>ας.</p>
+
+    <h3>4. Μία φορά ή συνέχεια;</h3>
+    <table class="manual-table">
+        <thead><tr><th></th><th>μία φορά</th><th>συνέχεια / συνήθεια</th></tr></thead>
+        <tbody>
+            <tr><th>εσύ</th><td>γράψε (future stem)</td><td>γράφε (present stem)</td></tr>
+            <tr><th>άρνηση</th><td>μη γράψεις</td><td>μη γράφεις</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">Κλείσε την πόρτα = close it, now. Μη βλέπετε τηλεόραση μέχρι αργά =
+    stop making a habit of it. The one-off form is the common one; reach for the present stem only
+    when you really mean “keep on” or “as a rule”.</p>
+
+    <h3>5. Ανώμαλα</h3>
+    <table class="manual-table">
+        <thead><tr><th>ρήμα</th><th>εσύ</th><th>εσείς</th></tr></thead>
+        <tbody>
+            <tr><td>αφήνω</td><td>άσε</td><td>άστε / αφήστε</td></tr>
+            <tr><td>βλέπω</td><td>δες</td><td>δείτε</td></tr>
+            <tr><td>βρίσκω</td><td>βρες</td><td>βρείτε</td></tr>
+            <tr><td>μπαίνω</td><td>μπες</td><td>μπείτε</td></tr>
+            <tr><td>βγαίνω</td><td>βγες</td><td>βγείτε</td></tr>
+            <tr><td>δίνω</td><td>δώσε</td><td>δώστε</td></tr>
+            <tr><td>λέω</td><td>πες</td><td>πείτε</td></tr>
+            <tr><td>πίνω</td><td>πιες</td><td>πιείτε</td></tr>
+            <tr><td>παίρνω</td><td>πάρε</td><td>πάρτε</td></tr>
+            <tr><td>πηγαίνω</td><td>πήγαινε</td><td>πάτε / πηγαίνετε</td></tr>
+            <tr><td>τρώω</td><td>φάε</td><td>φάτε</td></tr>
+            <tr><td>ανεβαίνω</td><td>ανέβα</td><td>ανεβείτε</td></tr>
+            <tr><td>κατεβαίνω</td><td>κατέβα</td><td>κατεβείτε</td></tr>
+            <tr><td>σηκώνομαι</td><td>σήκω</td><td>σηκωθείτε</td></tr>
+            <tr><td>έρχομαι</td><td>έλα</td><td>ελάτε</td></tr>
+            <tr><td>κάθομαι</td><td>κάτσε / κάθισε</td><td>καθίστε</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">These are the ones you hear every day — έλα, πες, δες, πάρε, φάε — so they
+    are worth knowing cold. Note that the negative of an irregular is regular again:
+    <b>έλα</b> but <b>μην έρθεις</b>, <b>πες</b> but <b>μην πεις</b>.</p>
+
+    <h3>6. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>Μη γράψε στον πίνακα!</s> → μη <b>γράψεις</b> (the negative never uses the imperative form)</li>
+        <li><s>Κύριε, κάτσε εδώ.</s> → <b>Καθίστε</b> εδώ (one stranger, but you address them as εσείς)</li>
+        <li><s>Γράφε το γρήγορα!</s> → <b>Γράψε</b> το γρήγορα (one action, so the future stem)</li>
+        <li><s>Μη οδηγήσεις γρήγορα!</s> → <b>Μην</b> οδηγήσεις (ν before a vowel)</li>
+    </ul>
+</article>`
     }
 ];
 
