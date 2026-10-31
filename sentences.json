@@ -3306,5 +3306,515 @@
         "hint": "more — the adverb of περισσότερος"
       }
     ]
+  },
+  {
+    "id": "aoristos-008",
+    "topic": "Αόριστος",
+    "en": "The lessons finished on the 10th of July.",
+    "template": "Τα μαθήματα {0} στις 10 Ιουλίου.",
+    "blanks": [
+      {
+        "answer": "τελείωσαν",
+        "options": [
+          "τελείωσαν",
+          "τελειώσαν",
+          "τελείωσε",
+          "τελειώνουν"
+        ],
+        "hint": "finished — αυτοί (τελειώνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-009",
+    "topic": "Αόριστος",
+    "en": "Mark, did you clean the house at the weekend?",
+    "template": "Μαρκ, {0} το σπίτι το σαββατοκύριακο;",
+    "blanks": [
+      {
+        "answer": "καθάρισες",
+        "options": [
+          "καθάρισες",
+          "καθαρίσες",
+          "καθάρισε",
+          "καθαρίζεις"
+        ],
+        "hint": "did you clean — εσύ (καθαρίζω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-010",
+    "topic": "Αόριστος",
+    "en": "The children first did their homework and then played in the garden.",
+    "template": "Τα παιδιά πρώτα {0} τα μαθήματά τους και μετά {1} στον κήπο.",
+    "blanks": [
+      {
+        "answer": "διάβασαν",
+        "options": [
+          "διάβασαν",
+          "διαβάσαν",
+          "διάβασε",
+          "διαβάζουν"
+        ],
+        "hint": "read — αυτοί (διαβάζω)"
+      },
+      {
+        "answer": "έπαιξαν",
+        "options": [
+          "έπαιξαν",
+          "έπαισαν",
+          "έπαιξε",
+          "παίζουν"
+        ],
+        "hint": "played — αυτοί (παίζω, -ξ- not -σ-)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-011",
+    "topic": "Αόριστος",
+    "en": "Marlena discovered a fantastic little bar in Gazi.",
+    "template": "Η Μαρλένα {0} ένα φανταστικό μπαράκι στο Γκάζι.",
+    "blanks": [
+      {
+        "answer": "ανακάλυψε",
+        "options": [
+          "ανακάλυψε",
+          "ανακάλυψα",
+          "ανακάλυσε",
+          "ανακαλύπτει"
+        ],
+        "hint": "discovered — αυτή (ανακαλύπτω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-012",
+    "topic": "Αόριστος",
+    "en": "Balint, what did you cook today?",
+    "template": "Μπάλιντ, τι {0} σήμερα;",
+    "blanks": [
+      {
+        "answer": "μαγείρεψες",
+        "options": [
+          "μαγείρεψες",
+          "μαγείρευσες",
+          "μαγείρεψε",
+          "μαγειρεύεις"
+        ],
+        "hint": "did you cook — εσύ (μαγειρεύω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-013",
+    "topic": "Αόριστος",
+    "en": "Antigoni and Panos painted the whole house two years ago.",
+    "template": "Η Αντιγόνη και ο Πάνος πρόπερσι {0} όλο το σπίτι.",
+    "blanks": [
+      {
+        "answer": "έβαψαν",
+        "options": [
+          "έβαψαν",
+          "έβαφαν",
+          "έβαψε",
+          "βάφουν"
+        ],
+        "hint": "painted — αυτοί (βάφω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-014",
+    "topic": "Αόριστος",
+    "en": "— Where were you last night, children? — We were at the cinema.",
+    "template": "— Πού {0} χτες το βράδυ, παιδιά; — {1} στο σινεμά.",
+    "blanks": [
+      {
+        "answer": "ήσασταν",
+        "options": [
+          "ήσασταν",
+          "ήμασταν",
+          "ήταν",
+          "είσαστε"
+        ],
+        "hint": "were you — εσείς (είμαι)"
+      },
+      {
+        "answer": "Ήμασταν",
+        "options": [
+          "Ήμασταν",
+          "Ήσασταν",
+          "Ήμουν",
+          "Είμαστε"
+        ],
+        "hint": "we were — εμείς (είμαι)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-015",
+    "topic": "Αόριστος",
+    "en": "— Veronika, why were you away from the lesson the day before yesterday? Were you ill?",
+    "template": "— Βερόνικα, γιατί {0} προχτές από το μάθημα; Μήπως {1} άρρωστη;",
+    "blanks": [
+      {
+        "answer": "έλειψες",
+        "options": [
+          "έλειψες",
+          "έλειπες",
+          "έλειψε",
+          "λείπεις"
+        ],
+        "hint": "were you missing — εσύ (λείπω)"
+      },
+      {
+        "answer": "ήσουν",
+        "options": [
+          "ήσουν",
+          "ήμουν",
+          "ήταν",
+          "είσαι"
+        ],
+        "hint": "were you — εσύ (είμαι)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-016",
+    "topic": "Αόριστος",
+    "en": "Last night Jarda opened his computer and read all his emails.",
+    "template": "Χτες το βράδυ ο Γιάρντα {0} τον υπολογιστή του και {1} όλα τα μέιλ του.",
+    "blanks": [
+      {
+        "answer": "άνοιξε",
+        "options": [
+          "άνοιξε",
+          "άνοισε",
+          "άνοιξα",
+          "ανοίγει"
+        ],
+        "hint": "opened — αυτός (ανοίγω)"
+      },
+      {
+        "answer": "διάβασε",
+        "options": [
+          "διάβασε",
+          "διάβαξε",
+          "διάβασα",
+          "διαβάζει"
+        ],
+        "hint": "read — αυτός (διαβάζω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-017",
+    "topic": "Αόριστος",
+    "en": "Our teacher taught us the Aorist yesterday.",
+    "template": "Η καθηγήτριά μας χτες μας {0} τον Αόριστο.",
+    "blanks": [
+      {
+        "answer": "δίδαξε",
+        "options": [
+          "δίδαξε",
+          "δίδασε",
+          "δίδαξα",
+          "διδάσκει"
+        ],
+        "hint": "taught — αυτή (διδάσκω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-018",
+    "topic": "Αόριστος",
+    "en": "Last summer on Skyros we stayed in a very nice hotel, right by the sea!",
+    "template": "Πέρσι το καλοκαίρι στη Σκύρο {0} σε ένα πολύ ωραίο ξενοδοχείο, δίπλα στη θάλασσα!",
+    "blanks": [
+      {
+        "answer": "μείναμε",
+        "options": [
+          "μείναμε",
+          "εμείναμε",
+          "μείνουμε",
+          "μέναμε"
+        ],
+        "hint": "we stayed — εμείς (μένω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-019",
+    "topic": "Αόριστος",
+    "en": "I sent Petros a message to come with us to the cinema.",
+    "template": "{0} μήνυμα στον Πέτρο για να έρθει μαζί μας στο σινεμά.",
+    "blanks": [
+      {
+        "answer": "Έστειλα",
+        "options": [
+          "Έστειλα",
+          "Έστελνα",
+          "Έστειλε",
+          "Στέλνω"
+        ],
+        "hint": "I sent — εγώ (στέλνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-020",
+    "topic": "Αόριστος",
+    "en": "— Dimitris, did you wash the car?",
+    "template": "— Δημήτρη, {0} το αυτοκίνητο;",
+    "blanks": [
+      {
+        "answer": "έπλυνες",
+        "options": [
+          "έπλυνες",
+          "έπλενες",
+          "έπλυνα",
+          "πλένεις"
+        ],
+        "hint": "did you wash — εσύ (πλένω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-021",
+    "topic": "Αόριστος",
+    "en": "What time did you leave the bar last night?",
+    "template": "Τι ώρα {0} από το μπαρ χτες το βράδυ;",
+    "blanks": [
+      {
+        "answer": "φύγατε",
+        "options": [
+          "φύγατε",
+          "εφύγατε",
+          "φύγαμε",
+          "φεύγετε"
+        ],
+        "hint": "did you leave — εσείς (φεύγω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-022",
+    "topic": "Αόριστος",
+    "en": "I drank a lot at the party and now I feel awful.",
+    "template": "{0} πολύ στο πάρτι και τώρα είμαι χάλια.",
+    "blanks": [
+      {
+        "answer": "Ήπια",
+        "options": [
+          "Ήπια",
+          "Ήπιασα",
+          "Έπινα",
+          "Ήπιε"
+        ],
+        "hint": "I drank — εγώ (πίνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-023",
+    "topic": "Αόριστος",
+    "en": "The children ate all the food!",
+    "template": "Τα παιδιά {0} όλο το φαγητό!",
+    "blanks": [
+      {
+        "answer": "έφαγαν",
+        "options": [
+          "έφαγαν",
+          "έτρωγαν",
+          "έφαγε",
+          "τρώνε"
+        ],
+        "hint": "ate — αυτοί (τρώω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-024",
+    "topic": "Αόριστος",
+    "en": "Their son got into university.",
+    "template": "Ο γιος τους {0} στο πανεπιστήμιο.",
+    "blanks": [
+      {
+        "answer": "μπήκε",
+        "options": [
+          "μπήκε",
+          "έμπαινε",
+          "μπήκα",
+          "μπαίνει"
+        ],
+        "hint": "got in — αυτός (μπαίνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-025",
+    "topic": "Αόριστος",
+    "en": "Yesterday we went out with our friends for a drink.",
+    "template": "Χτες {0} με τους φίλους μας για ποτό.",
+    "blanks": [
+      {
+        "answer": "βγήκαμε",
+        "options": [
+          "βγήκαμε",
+          "βγάλαμε",
+          "βγαίναμε",
+          "βγαίνουμε"
+        ],
+        "hint": "we went out — εμείς (βγαίνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-026",
+    "topic": "Αόριστος",
+    "en": "Wahid took the dog out for a walk.",
+    "template": "Ο Γουαχίντ {0} τον σκύλο βόλτα.",
+    "blanks": [
+      {
+        "answer": "έβγαλε",
+        "options": [
+          "έβγαλε",
+          "βγήκε",
+          "έβγαζε",
+          "βγάζει"
+        ],
+        "hint": "took out — αυτός (βγάζω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-027",
+    "topic": "Αόριστος",
+    "en": "Slava, did you find your wallet in the end?",
+    "template": "Σλάβα, {0} το πορτοφόλι σου τελικά;",
+    "blanks": [
+      {
+        "answer": "βρήκες",
+        "options": [
+          "βρήκες",
+          "έβρισκες",
+          "βρήκα",
+          "βρίσκεις"
+        ],
+        "hint": "did you find — εσύ (βρίσκω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-028",
+    "topic": "Αόριστος",
+    "en": "Did you hear the news? Dora is pregnant!",
+    "template": "{0} τα νέα; Η Δώρα είναι έγκυος!",
+    "blanks": [
+      {
+        "answer": "Έμαθες",
+        "options": [
+          "Έμαθες",
+          "Μάθαινες",
+          "Έμαθα",
+          "Μαθαίνεις"
+        ],
+        "hint": "did you hear — εσύ (μαθαίνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-029",
+    "topic": "Αόριστος",
+    "en": "— Children, did you understand the exercise?",
+    "template": "— Παιδιά, {0} την άσκηση;",
+    "blanks": [
+      {
+        "answer": "καταλάβατε",
+        "options": [
+          "καταλάβατε",
+          "καταλαβαίνατε",
+          "καταλάβαμε",
+          "καταλαβαίνετε"
+        ],
+        "hint": "did you understand — εσείς (καταλαβαίνω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-030",
+    "topic": "Αόριστος",
+    "en": "— Eleftheria, did you put the milk in the fridge?",
+    "template": "— Ελευθερία, {0} το γάλα στο ψυγείο;",
+    "blanks": [
+      {
+        "answer": "έβαλες",
+        "options": [
+          "έβαλες",
+          "έβαζες",
+          "έβαλα",
+          "βάζεις"
+        ],
+        "hint": "did you put — εσύ (βάζω)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-031",
+    "topic": "Αόριστος",
+    "en": "Last week I spoke with the professor and he helped me a lot.",
+    "template": "Την περασμένη εβδομάδα {0} με τον καθηγητή και με {1} πολύ.",
+    "blanks": [
+      {
+        "answer": "μίλησα",
+        "options": [
+          "μίλησα",
+          "εμίλησα",
+          "μιλούσα",
+          "μίλησε"
+        ],
+        "hint": "I spoke — εγώ (μιλάω, type Β)"
+      },
+      {
+        "answer": "βοήθησε",
+        "options": [
+          "βοήθησε",
+          "εβοήθησε",
+          "βοήθησα",
+          "βοηθάει"
+        ],
+        "hint": "helped — αυτός (βοηθάω, type Β)"
+      }
+    ]
+  },
+  {
+    "id": "aoristos-032",
+    "topic": "Αόριστος",
+    "en": "I came home late and went to sleep at once.",
+    "template": "{0} σπίτι αργά και {1} αμέσως.",
+    "blanks": [
+      {
+        "answer": "Ήρθα",
+        "options": [
+          "Ήρθα",
+          "Ερχόμουν",
+          "Ήρθε",
+          "Έρχομαι"
+        ],
+        "hint": "I came — εγώ (έρχομαι, type Γ1)"
+      },
+      {
+        "answer": "κοιμήθηκα",
+        "options": [
+          "κοιμήθηκα",
+          "κοιμόμουν",
+          "κοιμήθηκε",
+          "κοιμάμαι"
+        ],
+        "hint": "I fell asleep — εγώ (κοιμάμαι, type Γ2)"
+      }
+    ]
   }
 ]

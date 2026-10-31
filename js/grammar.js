@@ -266,6 +266,141 @@ const TOPICS = [
         <li><s>Το αγόρασε πιο ακριβώς.</s> → πιο <b>ακριβά</b> (ακριβώς means “exactly”)</li>
     </ul>
 </article>`
+    },
+    {
+        id: "aorist",
+        title: "Αόριστος",
+        blurb: "The simple past: one finished action — έγραψα, μίλησα, ήρθα",
+        manual: `<article class="manual">
+    <h2>Αόριστος — the simple past</h2>
+    <p class="manual-lead">One action, finished, seen as a whole: <b>χτες έγραψα ένα γράμμα</b>.
+    If you mean “I was writing” or “I used to write”, that is the Παρατατικός, a different tense.
+    The Αόριστος is built on the <b>same stem as the future</b>, so if you know θα γράψω you already
+    know έγραψα.</p>
+
+    <h3>1. Τύπος Α: από τον μέλλοντα στον αόριστο</h3>
+    <p>Take <b>θα</b> + verb, drop the -ω, and add the past endings:
+    <b>γράφω → θα γράψω → έγραψα</b>. The consonant before the ending is what changes:</p>
+    <table class="manual-table">
+        <thead><tr><th>ενεστώτας</th><th>γίνεται</th><th>αόριστος</th></tr></thead>
+        <tbody>
+            <tr><td>-ν-, -ζ-, -θ- (πληρώνω, διαβάζω, νιώθω)</td><td><b>-σ-</b></td><td>πλήρω<b>σ</b>α, διάβα<b>σ</b>α, ένιω<b>σ</b>α</td></tr>
+            <tr><td>-κ-, -σκ-, -γ-, -γγ-, -χ-, -χν- (μπλέκω, ανοίγω, προσέχω, φτιάχνω)</td><td><b>-ξ-</b></td><td>έμπλε<b>ξ</b>α, άνοι<b>ξ</b>α, πρόσε<b>ξ</b>α, έφτια<b>ξ</b>α</td></tr>
+            <tr><td>-π-, -πτ-, -β-, -φ- (λείπω, ανακαλύπτω, ράβω, βάφω)</td><td><b>-ψ-</b></td><td>έλει<b>ψ</b>α, ανακάλυ<b>ψ</b>α, έρα<b>ψ</b>α, έβα<b>ψ</b>α</td></tr>
+            <tr><td>-εύω (ταξιδεύω)</td><td><b>-εψ-</b></td><td>ταξίδε<b>ψ</b>α</td></tr>
+            <tr><td>-αύω (παύω)</td><td><b>-αψ-</b></td><td>έπα<b>ψ</b>α</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note manual-warn">A small group in <b>-άζω</b> takes <b>-ξ-</b>, not -σ-:
+    αλλάζω → άλλαξα, παίζω → έπαιξα, φωνάζω → φώναξα, κοιτάζω → κοίταξα, τρομάζω → τρόμαξα,
+    νυστάζω → νύσταξα, πειράζω → πείραξα, σφυρίζω → σφύριξα. Learn them with the list, not the rule.</p>
+
+    <h3>2. Καταλήξεις, τόνος, αύξηση</h3>
+    <table class="manual-table">
+        <thead><tr><th></th><th>διαβάζω</th><th>γράφω</th></tr></thead>
+        <tbody>
+            <tr><th>εγώ</th><td>διάβασ<b>α</b></td><td>έγραψ<b>α</b></td></tr>
+            <tr><th>εσύ</th><td>διάβασ<b>ες</b></td><td>έγραψ<b>ες</b></td></tr>
+            <tr><th>αυτός</th><td>διάβασ<b>ε</b></td><td>έγραψ<b>ε</b></td></tr>
+            <tr><th>εμείς</th><td>διαβάσ<b>αμε</b></td><td>γράψ<b>αμε</b></td></tr>
+            <tr><th>εσείς</th><td>διαβάσ<b>ατε</b></td><td>γράψ<b>ατε</b></td></tr>
+            <tr><th>αυτοί</th><td>διάβασ<b>αν</b> / διαβάσ<b>ανε</b></td><td>έγραψ<b>αν</b> / γράψ<b>ανε</b></td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">The accent always sits on the <b>third syllable from the end</b>. That is the
+    whole reason for the <b>έ-</b> in έγραψα: γραψ-α has only two syllables, so the verb borrows one to
+    carry the accent. Once the ending is long enough the borrowed syllable goes away again —
+    <b>έ</b>γραψα but <b>γρά</b>ψαμε, <b>ά</b>νοιξα but <b>α</b>νοίξαμε.</p>
+
+    <h3>3. είμαι και έχω</h3>
+    <table class="manual-table">
+        <thead><tr><th></th><th>είμαι</th><th>έχω</th></tr></thead>
+        <tbody>
+            <tr><th>εγώ</th><td>ήμουν(α)</td><td>είχα</td></tr>
+            <tr><th>εσύ</th><td>ήσουν(α)</td><td>είχες</td></tr>
+            <tr><th>αυτός</th><td>ήταν(ε)</td><td>είχε</td></tr>
+            <tr><th>εμείς</th><td>ήμασταν</td><td>είχαμε</td></tr>
+            <tr><th>εσείς</th><td>ήσασταν</td><td>είχατε</td></tr>
+            <tr><th>αυτοί</th><td>ήταν(ε)</td><td>είχαν(ε)</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">These two have no separate simple past — the forms above cover both
+    “I was / I used to be” and “I had”.</p>
+
+    <h3>4. Ανώμαλα</h3>
+    <table class="manual-table">
+        <thead><tr><th>ενεστώτας</th><th>μέλλοντας</th><th>αόριστος</th></tr></thead>
+        <tbody>
+            <tr><td>κάνω</td><td>θα κάνω</td><td>έκανα</td></tr>
+            <tr><td>μένω</td><td>θα μείνω</td><td>έμεινα</td></tr>
+            <tr><td>στέλνω</td><td>θα στείλω</td><td>έστειλα</td></tr>
+            <tr><td>πλένω</td><td>θα πλύνω</td><td>έπλυνα</td></tr>
+            <tr><td>φεύγω</td><td>θα φύγω</td><td>έφυγα</td></tr>
+            <tr><td>παίρνω</td><td>θα πάρω</td><td>πήρα</td></tr>
+            <tr><td>φέρνω</td><td>θα φέρω</td><td>έφερα</td></tr>
+            <tr><td>δίνω</td><td>θα δώσω</td><td>έδωσα</td></tr>
+            <tr><td>βάζω</td><td>θα βάλω</td><td>έβαλα</td></tr>
+            <tr><td>βγάζω</td><td>θα βγάλω</td><td>έβγαλα</td></tr>
+            <tr><td>πέφτω</td><td>θα πέσω</td><td>έπεσα</td></tr>
+            <tr><td>μαθαίνω</td><td>θα μάθω</td><td>έμαθα</td></tr>
+            <tr><td>καταλαβαίνω</td><td>θα καταλάβω</td><td>κατάλαβα</td></tr>
+            <tr><td>ανεβαίνω</td><td>θα ανέβω</td><td>ανέβηκα</td></tr>
+            <tr><td>κατεβαίνω</td><td>θα κατέβω</td><td>κατέβηκα</td></tr>
+            <tr><td>μπαίνω</td><td>θα μπω</td><td>μπήκα</td></tr>
+            <tr><td>βγαίνω</td><td>θα βγω</td><td>βγήκα</td></tr>
+            <tr><td>βρίσκω</td><td>θα βρω</td><td>βρήκα</td></tr>
+            <tr><td>λέω</td><td>θα πω</td><td>είπα</td></tr>
+            <tr><td>πίνω</td><td>θα πιω</td><td>ήπια</td></tr>
+            <tr><td>βλέπω</td><td>θα δω</td><td>είδα</td></tr>
+            <tr><td>πηγαίνω / πάω</td><td>θα πάω</td><td>πήγα</td></tr>
+            <tr><td>τρώω</td><td>θα φάω</td><td>έφαγα</td></tr>
+            <tr><td>ακούω</td><td>θα ακούσω</td><td>άκουσα</td></tr>
+            <tr><td>κλαίω</td><td>θα κλάψω</td><td>έκλαψα</td></tr>
+        </tbody>
+    </table>
+
+    <h3>5. Τύπος Β1 και Β2: τα -άω / -ώ</h3>
+    <table class="manual-table">
+        <thead><tr><th>ενεστώτας</th><th>κατάληξη</th><th>αόριστος</th></tr></thead>
+        <tbody>
+            <tr><td>μιλάω</td><td><b>-ησα</b></td><td>μίλησα, μίλησες, μίλησε, μιλήσαμε, μιλήσατε, μίλησαν</td></tr>
+            <tr><td>φοράω</td><td><b>-εσα</b></td><td>φόρεσα, φόρεσες, φόρεσε, φορέσαμε…</td></tr>
+            <tr><td>πεινάω</td><td><b>-ασα</b></td><td>πείνασα, πείνασες, πείνασε, πεινάσαμε…</td></tr>
+            <tr><td>τραβάω</td><td><b>-ηξα</b></td><td>τράβηξα, τράβηξες, τράβηξε, τραβήξαμε…</td></tr>
+            <tr><td>πετάω</td><td><b>-αξα</b></td><td>πέταξα, πέταξες, πέταξε, πετάξαμε…</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">Most of them take <b>-ησα</b>: αγαπάω, ρωτάω, ζητάω, βοηθάω, ξυπνάω,
+    περπατάω, συναντάω, τραγουδάω, οδηγώ, μπορώ, προσπαθώ, τηλεφωνώ. These verbs <b>never</b> take an
+    <b>ε-</b> at the front, and the accent is still on the third syllable from the end.</p>
+    <p class="manual-note manual-warn">Two to memorise: <b>ζω → έζησα</b> and <b>μεθάω → μέθυσα</b>.</p>
+
+    <h3>6. Τύπος Γ: τα -ομαι / -άμαι</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>έρχομαι</th><td>ήρθα, ήρθες, ήρθε, ήρθαμε, ήρθατε, ήρθαν(ε)</td></tr>
+            <tr><th>κάθομαι</th><td>κάθισα, κάθισες, κάθισε, καθίσαμε, καθίσατε, κάθισαν</td></tr>
+            <tr><th>κοιμάμαι</th><td>κοιμήθηκα, κοιμήθηκες, κοιμήθηκε, κοιμηθήκαμε, κοιμηθήκατε, κοιμήθηκαν</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note"><b>φοβάμαι, θυμάμαι, λυπάμαι</b> follow κοιμάμαι: φοβήθηκα, θυμήθηκα, λυπήθηκα.</p>
+
+    <h3>7. Λέξεις που ζητούν Αόριστο</h3>
+    <ul class="manual-examples">
+        <li><b>χτες</b>, <b>προχτές</b>, <b>πέρυσι</b>, <b>πρόπερσι</b></li>
+        <li><b>πριν από</b> δύο μέρες / τρεις εβδομάδες / λίγους μήνες / πολλά χρόνια</li>
+        <li><b>την περασμένη</b> εβδομάδα, <b>τον περασμένο</b> μήνα, <b>τον περασμένο</b> χρόνο</li>
+    </ul>
+
+    <h3>8. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>Χτες εγράψαμε ένα γράμμα.</s> → <b>γράψαμε</b> (the ε- goes only where the accent needs it)</li>
+        <li><s>Μίλησα με τον γιατρό εχθές και εμίλησα πάλι σήμερα.</s> → <b>μίλησα</b> (Β verbs never take ε-)</li>
+        <li><s>Τι ώρα φύγατε; — Εφύγαμε στις οχτώ.</s> → <b>Φύγαμε</b> στις οχτώ</li>
+        <li><s>Πήγα στο σινεμά και έβλεπα μια ταινία.</s> → <b>είδα</b> μια ταινία (one finished action)</li>
+        <li><s>Ήπιασα πολύ.</s> → <b>Ήπια</b> πολύ</li>
+    </ul>
+</article>`
     }
 ];
 
