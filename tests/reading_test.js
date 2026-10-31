@@ -88,7 +88,7 @@ Deno.test("between them they reach every marked word", () => {
         return i >= 3 && f.length - i <= 3 && w.length - i <= 6;
     };
     const missed = words.filter(x => x.marked).filter(x => {
-        const forms = x.greek.replace(/^(ο \/ η |η |ο |το |τα )/, "").split(/[()/]/)
+        const forms = x.greek.replace(/^(ο \/ η |η |ο |το |τα |οι )/, "").split(/[()/]/)
             .map(f => strip(f.trim()).split(" ")[0]).filter(f => f.length > 2);
         return !forms.some(f => inText.some(w => close(w, f)));
     });

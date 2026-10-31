@@ -551,6 +551,45 @@
         "group": "Your marked words"
     },
     {
+        "title": "Στο ιατρείο",
+        "parts": [
+            {
+                "gr": [
+                    "Η Ελένη ξύπνησε χάλια. Είχε πονόλαιμο, ήταν συναχωμένη και πονούσε το κεφάλι της. Πήρε το θερμόμετρο και είδε δέκατα. «Είμαι κρυωμένη», σκέφτηκε, «ή μήπως είναι γρίπη;» Ήπιε ζεστό τσάι, αλλά ο βήχας δεν περνούσε."
+                ],
+                "en": [
+                    "Eleni woke up feeling awful. She had a sore throat, she was stuffed up and her head hurt. She took the thermometer and saw a slight fever. «I have a cold», she thought, «or maybe it is the flu?» She drank hot tea, but the cough would not pass."
+                ]
+            },
+            {
+                "gr": [
+                    "Το απόγευμα πήγε στο ιατρείο. Περίμεναν και άλλοι ασθενείς. Ο γιατρός την εξέτασε. «Ξαπλώστε και πάρτε μια βαθιά ανάσα. Τώρα βήξτε.»"
+                ],
+                "en": [
+                    "In the afternoon she went to the doctor's office. Other patients were waiting too. The doctor examined her. «Lie down and take a deep breath. Now cough.»"
+                ]
+            },
+            {
+                "gr": [
+                    "«Δεν είναι κάτι σοβαρό», είπε. «Μια απλή ίωση. Θα σας δώσω μια συνταγή για ένα παυσίπονο και ένα σιρόπι για τον βήχα. Αντιβιοτικά δεν χρειάζεται. Αν ο πυρετός δεν πέσει σε τρεις μέρες, θα κάνουμε εξετάσεις αίματος και εξετάσεις ούρων.»"
+                ],
+                "en": [
+                    "«It is not something serious», he said. «A simple viral infection. I will give you a prescription for a painkiller and a syrup for the cough. Antibiotics are not needed. If the fever does not fall within three days, we will do blood tests and urine tests.»"
+                ]
+            },
+            {
+                "gr": [
+                    "Στο φαρμακείο πήρε τα χάπια, μια ασπιρίνη και μια αλοιφή. Ένεση δεν χρειάζεται, ακτινογραφία επίσης όχι. «Η υγεία πριν από όλα», σκέφτηκε. Μετά από τρεις μέρες δεν ήταν πια άρρωστη: ο πόνος πέρασε, το συνάχι έφυγε και το φάρμακο έμεινε στο τραπέζι."
+                ],
+                "en": [
+                    "At the pharmacy she took the pills, an aspirin and an ointment. An injection is not needed, an X-ray likewise not. «Health before everything», she thought. After three days she was no longer sick: the pain passed, the runny nose went away and the medicine stayed on the table."
+                ]
+            }
+        ],
+        "id": "m6",
+        "group": "Your marked words"
+    },
+    {
         "id": "s1",
         "title": "Ο λαγός και η χελώνα",
         "group": "Stories",

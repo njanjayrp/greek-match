@@ -624,7 +624,7 @@
         "marked": false
     },
     {
-        "greek": "φυσικά",
+        "greek": "φυσικά / βέβαια",
         "english": "naturally / of course",
         "group": "Connectors & logic",
         "marked": false
@@ -4260,6 +4260,36 @@
         "marked": false
     },
     {
+        "greek": "τα υγρά",
+        "english": "fluids",
+        "group": "Kitchen & cooking",
+        "marked": false
+    },
+    {
+        "greek": "ο χυμός",
+        "english": "juice",
+        "group": "Kitchen & cooking",
+        "marked": false
+    },
+    {
+        "greek": "η σούπα",
+        "english": "soup",
+        "group": "Kitchen & cooking",
+        "marked": false
+    },
+    {
+        "greek": "το τσάι",
+        "english": "tea",
+        "group": "Kitchen & cooking",
+        "marked": false
+    },
+    {
+        "greek": "ο καφές",
+        "english": "coffee",
+        "group": "Kitchen & cooking",
+        "marked": false
+    },
+    {
         "greek": "στεγνώνω (στεγνώσω)",
         "english": "to dry off (clothes, hair)",
         "group": "Home, buildings & rooms",
@@ -5610,6 +5640,12 @@
         "marked": true
     },
     {
+        "greek": "στο καλό",
+        "english": "take care (goodbye)",
+        "group": "Social & communication",
+        "marked": false
+    },
+    {
         "greek": "τα στοιχεία",
         "english": "personal details",
         "group": "Orders & delivery",
@@ -5668,6 +5704,18 @@
         "english": "to include",
         "group": "Everyday verbs",
         "marked": true
+    },
+    {
+        "greek": "ξαπλώνω (ξαπλώσω)",
+        "english": "to lie down",
+        "group": "Everyday verbs",
+        "marked": false
+    },
+    {
+        "greek": "αλλάζω (αλλάξω)",
+        "english": "to change",
+        "group": "Everyday verbs",
+        "marked": false
     },
     {
         "greek": "επισκέπτομαι (επισκεφτώ)",
@@ -5742,10 +5790,46 @@
         "marked": true
     },
     {
+        "greek": "η κοπέλα",
+        "english": "young woman",
+        "group": "People & relationships",
+        "marked": false
+    },
+    {
+        "greek": "ο γραμματέας",
+        "english": "secretary",
+        "group": "People & relationships",
+        "marked": false
+    },
+    {
         "greek": "ο τρόπος ζωής",
         "english": "way of life",
         "group": "Daily life & school",
         "marked": true
+    },
+    {
+        "greek": "η τάξη",
+        "english": "class",
+        "group": "Daily life & school",
+        "marked": false
+    },
+    {
+        "greek": "το πρόγραμμα",
+        "english": "schedule",
+        "group": "Daily life & school",
+        "marked": false
+    },
+    {
+        "greek": "εργάζομαι (εργαστώ)",
+        "english": "to work (formal)",
+        "group": "Daily life & school",
+        "marked": false
+    },
+    {
+        "greek": "φοιτητικός",
+        "english": "student (adj.)",
+        "group": "Daily life & school",
+        "marked": false
     },
     {
         "greek": "ευχάριστος",
@@ -5778,6 +5862,48 @@
         "marked": true
     },
     {
+        "greek": "δυνατός",
+        "english": "strong",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "έντονος",
+        "english": "intense",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "σοβαρός",
+        "english": "serious",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "βαθύς",
+        "english": "deep",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "ζεστός",
+        "english": "hot",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "φυσικός",
+        "english": "natural",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "πρόσφατος",
+        "english": "recent",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
         "greek": "τα υπόλοιπα",
         "english": "the rest",
         "group": "Connectors & logic",
@@ -5794,6 +5920,18 @@
         "english": "wherever",
         "group": "Connectors & logic",
         "marked": true
+    },
+    {
+        "greek": "τελείως",
+        "english": "completely",
+        "group": "Connectors & logic",
+        "marked": false
+    },
+    {
+        "greek": "κιόλας",
+        "english": "as well",
+        "group": "Connectors & logic",
+        "marked": false
     },
     {
         "greek": "μόνιμα",
@@ -5818,5 +5956,347 @@
         "english": "for now",
         "group": "Prepositions & cases",
         "marked": true
+    },
+    {
+        "greek": "η υγεία",
+        "english": "health",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "άρρωστος",
+        "english": "sick",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "ο / η ασθενής",
+        "english": "patient",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "ο πονόλαιμος",
+        "english": "sore throat",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "είμαι κρυωμένος",
+        "english": "I have a cold",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "το συνάχι",
+        "english": "runny nose",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "συναχωμένος",
+        "english": "stuffed up",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "τα δέκατα",
+        "english": "slight fever",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η ίωση",
+        "english": "viral infection",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η γρίπη",
+        "english": "flu",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "ο βήχας",
+        "english": "cough",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "βήχω (βήξω)",
+        "english": "to cough",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "ο πόνος",
+        "english": "pain",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η ανάσα",
+        "english": "breath",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "χάλια",
+        "english": "awful",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η συνταγή",
+        "english": "prescription",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "το φάρμακο",
+        "english": "medicine",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "τα αντιβιοτικά",
+        "english": "antibiotics",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η ασπιρίνη",
+        "english": "aspirin",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "το παυσίπονο",
+        "english": "painkiller",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "το χάπι",
+        "english": "pill",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "το σιρόπι",
+        "english": "syrup",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η αλοιφή",
+        "english": "ointment",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η ένεση",
+        "english": "injection",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "το θερμόμετρο",
+        "english": "thermometer",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "η ακτινογραφία",
+        "english": "X-ray",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "οι εξετάσεις αίματος",
+        "english": "blood tests",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "οι εξετάσεις ούρων",
+        "english": "urine tests",
+        "group": "At the doctor",
+        "marked": true
+    },
+    {
+        "greek": "ο γιατρός",
+        "english": "doctor",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "το ιατρείο",
+        "english": "doctor's office",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η παθολόγος",
+        "english": "GP",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η ορθοπαιδικός",
+        "english": "orthopaedist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η οδοντίατρος",
+        "english": "dentist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η δερματολόγος",
+        "english": "dermatologist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η καρδιολόγος",
+        "english": "cardiologist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η μικροβιολόγος",
+        "english": "microbiologist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η οφθαλμίατρος",
+        "english": "eye doctor",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η γυναικολόγος",
+        "english": "gynaecologist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η γαστρεντερολόγος",
+        "english": "gastroenterologist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η νευρολόγος",
+        "english": "neurologist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η χειρουργός",
+        "english": "surgeon",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η παιδίατρος",
+        "english": "paediatrician",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η ωριλά (ΩΡΛ)",
+        "english": "ENT doctor",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "ο / η ψυχίατρος",
+        "english": "psychiatrist",
+        "group": "Doctors & specialists",
+        "marked": false
+    },
+    {
+        "greek": "η τράπεζα",
+        "english": "bank",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "ο λογαριασμός",
+        "english": "bank account",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "η κατάθεση",
+        "english": "deposit",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "η ανάληψη",
+        "english": "withdrawal",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "τα λεφτά",
+        "english": "money",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "η ταυτότητα",
+        "english": "ID card",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "η βεβαίωση",
+        "english": "certificate",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "υπογράφω (υπογράψω)",
+        "english": "to sign",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "η υπογραφή",
+        "english": "signature",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "το συνάλλαγμα",
+        "english": "currency exchange",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "η λίρα",
+        "english": "pound",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "το χαρτί",
+        "english": "paper",
+        "group": "Bank & money",
+        "marked": false
+    },
+    {
+        "greek": "ορίστε",
+        "english": "here you are",
+        "group": "Bank & money",
+        "marked": false
     }
 ]
