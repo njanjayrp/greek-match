@@ -160,11 +160,11 @@ function resolveGroup() {
 function appendTopicOptions(select) {
     for (const area of window.GRAMMAR.areas()) {
         const parent = document.createElement("optgroup");
-        parent.label = area;
+        parent.label = window.GRAMMAR.areaLabel(area);
         for (const t of window.GRAMMAR.TOPICS.filter(x => x.area === area)) {
             const opt = document.createElement("option");
             opt.value = t.id;
-            opt.textContent = t.title;
+            opt.textContent = window.GRAMMAR.topicLabel(t);
             parent.appendChild(opt);
         }
         select.appendChild(parent);

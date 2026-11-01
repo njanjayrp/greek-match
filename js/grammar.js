@@ -13,6 +13,7 @@ const TOPICS = [
     {
         id: "comparatives",
         title: "Παραθετικά",
+        en: "comparison",
         blurb: "Comparing things: πιο, ο πιο, τόσο… όσο",
         area: "Ονόματα & αντωνυμίες",
         sentences: ["Σύγκριση"],
@@ -95,6 +96,7 @@ const TOPICS = [
     {
         id: "imperative",
         title: "Προστακτική",
+        en: "commands",
         blurb: "Telling someone to do something: γράψε, γράψτε, μη γράψεις",
         area: "Ρήματα",
         sentences: ["Προστακτική"],
@@ -188,6 +190,7 @@ const TOPICS = [
     {
         id: "adverbs",
         title: "Επιρρήματα",
+        en: "adverbs",
         blurb: "From adjective to adverb: καλός → καλά, and πιο καλά → καλύτερα",
         area: "Ονόματα & αντωνυμίες",
         sentences: ["Επιρρήματα"],
@@ -276,6 +279,7 @@ const TOPICS = [
     {
         id: "aorist",
         title: "Αόριστος",
+        en: "simple past",
         blurb: "The simple past: one finished action — έγραψα, μίλησα, ήρθα",
         area: "Ρήματα",
         sentences: ["Αόριστος"],
@@ -415,6 +419,7 @@ const TOPICS = [
     {
         id: "future",
         title: "Μέλλοντας",
+        en: "future",
         blurb: "θα + the same stem as the aorist: θα γράψω, θα μιλήσω, θα πάω",
         area: "Ρήματα",
         sentences: [],
@@ -526,6 +531,7 @@ const TOPICS = [
     {
         id: "subjunctive",
         title: "Υποτακτική",
+        en: "the να-form",
         blurb: "να + the same stem, after θέλω, πρέπει, μπορώ",
         area: "Ρήματα",
         sentences: ["Υποτακτική"],
@@ -598,6 +604,7 @@ const TOPICS = [
     {
         id: "diminutives",
         title: "Υποκοριστικά",
+        en: "diminutives",
         blurb: "The friendly -άκι: ουζάκι, μπιρίτσα, ταβερνούλα, Γιωργάκης",
         area: "Λεξιλόγιο",
         sentences: [],
@@ -640,6 +647,7 @@ const TOPICS = [
     {
         id: "present",
         title: "Ενεστώτας",
+        en: "present",
         blurb: "What is happening now and what happens as a rule.",
         area: "Ρήματα",
         sentences: [],
@@ -656,6 +664,7 @@ const TOPICS = [
     {
         id: "imperfect",
         title: "Παρατατικός",
+        en: "imperfect",
         blurb: "Was doing, used to do — the past seen as it ran, not as it finished.",
         area: "Ρήματα",
         sentences: ["Παρατατικός"],
@@ -672,6 +681,7 @@ const TOPICS = [
     {
         id: "passive",
         title: "Παθητική Φωνή",
+        en: "passive voice",
         blurb: "πλένομαι, χτενίζομαι, γράφτηκε — when the subject is on the receiving end.",
         area: "Ρήματα",
         sentences: ["Παθητική Φωνή"],
@@ -686,6 +696,7 @@ const TOPICS = [
     {
         id: "genitive",
         title: "Γενική",
+        en: "genitive",
         blurb: "Whose, of what — the case that links two nouns.",
         area: "Ονόματα & αντωνυμίες",
         sentences: ["Γενική"],
@@ -700,6 +711,7 @@ const TOPICS = [
     {
         id: "weak-pronouns",
         title: "Κλιτικά",
+        en: "weak pronouns",
         blurb: "μου, σου, του, τον, την, το — the little words that stand in for a noun.",
         area: "Ονόματα & αντωνυμίες",
         sentences: ["Κλιτικά"],
@@ -714,6 +726,7 @@ const TOPICS = [
     {
         id: "prepositions",
         title: "Προθέσεις",
+        en: "prepositions",
         blurb: "σε, από, με, για, προς, μέχρι — and the accusative that follows them.",
         area: "Προτάσεις & σύνδεση",
         sentences: ["Prep: Airport"],
@@ -728,6 +741,7 @@ const TOPICS = [
     {
         id: "conjunctions",
         title: "Σύνδεσμοι",
+        en: "linking words",
         blurb: "ότι, να, που, αν, ώστε, επειδή — which linker belongs where.",
         area: "Προτάσεις & σύνδεση",
         sentences: ["Σύνδεσμοι"],
@@ -742,6 +756,7 @@ const TOPICS = [
     {
         id: "relative-clauses",
         title: "Αναφορικές Προτάσεις",
+        en: "relative clauses",
         blurb: "που and ο οποίος — the clause that describes a noun.",
         area: "Προτάσεις & σύνδεση",
         sentences: ["Αναφορικές Προτάσεις"],
@@ -756,6 +771,7 @@ const TOPICS = [
     {
         id: "conditionals",
         title: "Υποθετικός Λόγος",
+        en: "if-sentences",
         blurb: "αν + what follows, from the real to the impossible.",
         area: "Προτάσεις & σύνδεση",
         sentences: ["Υποθετικός Λόγος"],
@@ -770,6 +786,7 @@ const TOPICS = [
     {
         id: "reported-speech",
         title: "Πλάγιος Λόγος",
+        en: "reported speech",
         blurb: "Turning what someone said into what you report they said.",
         area: "Προτάσεις & σύνδεση",
         sentences: ["Πλάγιος Λόγος"],
@@ -784,6 +801,7 @@ const TOPICS = [
     {
         id: "word-formation",
         title: "Παραγωγή Λέξεων",
+        en: "word building",
         blurb: "Endings that turn one word into another: -ση, -τής, -ικός, -άκι.",
         area: "Λεξιλόγιο",
         sentences: ["Παραγωγή Λέξεων"],
@@ -798,6 +816,7 @@ const TOPICS = [
     {
         id: "idioms",
         title: "Ιδιωματισμοί",
+        en: "idioms",
         blurb: "Phrases that do not add up from their words.",
         area: "Λεξιλόγιο",
         sentences: ["Ιδιωματισμοί"],
@@ -812,6 +831,7 @@ const TOPICS = [
     {
         id: "time-dates",
         title: "Ώρα & ημερομηνίες",
+        en: "time & dates",
         blurb: "Telling the time, saying a date, an age, how long something lasts.",
         area: "Χρόνος",
         sentences: [],
@@ -854,11 +874,22 @@ function byId(id) { return TOPICS.find(t => t.id === id) || TOPICS[0]; }
 
 // The areas, in the order the topics declare them — the <optgroup>s of both
 // the Grammar and the Practice dropdown come from here, so the two cannot drift.
+const AREA_EN = {
+    "Ρήματα":                "verbs",
+    "Ονόματα & αντωνυμίες":  "nouns & pronouns",
+    "Προτάσεις & σύνδεση":   "sentences & linking",
+    "Λεξιλόγιο":             "vocabulary",
+    "Χρόνος":                "time"
+};
 function areas() {
     const out = [];
     for (const t of TOPICS) if (t.area && !out.includes(t.area)) out.push(t.area);
     return out;
 }
+// Both menus print the Greek term with its English, because the Greek term is
+// one of the things being learnt, not something to be assumed.
+function areaLabel(area) { return AREA_EN[area] ? area + " — " + AREA_EN[area] : area; }
+function topicLabel(t)   { return t.en ? t.title + " — " + t.en : t.title; }
 
 // One dealable source of questions: a (module, sub-topic) pair. `subs` on an
 // exercise pins a module to part of itself, which is how one conjugation drill
@@ -936,6 +967,6 @@ function shuffle(arr) {
     return a;
 }
 
-return { TOPICS, byId, areas, streams, formatsFor, resolve, buildRound, load, sourceOf, shuffle };
+return { TOPICS, byId, areas, areaLabel, topicLabel, streams, formatsFor, resolve, buildRound, load, sourceOf, shuffle };
 
 })();

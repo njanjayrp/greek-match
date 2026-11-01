@@ -52,6 +52,9 @@ Deno.test("every topic declares an area and a blurb, and claims its sentences", 
     const claimed = new Map();
     for (const t of GRAMMAR.TOPICS) {
         assert(t.area && t.blurb, t.id + ": needs an area and a blurb");
+        assert(t.en, t.id + ": needs an English name for the menu");
+        assert(GRAMMAR.topicLabel(t).includes(" — "), t.id + ": the menu label needs both languages");
+        assert(GRAMMAR.areaLabel(t.area).includes(" — "), t.area + ": the area needs an English name");
         for (const name of t.sentences || []) {
             assert(topics.has(name), t.id + ": sentences.json has no topic " + name);
             assert(!claimed.has(name), name + " is claimed by " + claimed.get(name) + " and " + t.id);
