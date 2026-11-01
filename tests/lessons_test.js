@@ -22,7 +22,7 @@ Deno.test("a lesson only names things that exist", () => {
     }
 });
 
-Deno.test("every lesson has something to study and something to practise", () => {
+Deno.test("every lesson holds something, and practises what it teaches", () => {
     const { LESSONS, PRACTICE } = loadLibs();
     PRACTICE.setSentences(sentences);
     for (const l of LESSONS.all()) {
@@ -30,7 +30,14 @@ Deno.test("every lesson has something to study and something to practise", () =>
                "Μάθημα " + l.n + " holds nothing");
         PRACTICE.setLesson(l.n);
         const round = PRACTICE.buildRound(null, "mixed", 10);
-        assert(round.length, "Μάθημα " + l.n + " builds no practice round");
+        if (l.topics.length) {
+            assert(round.length, "Μάθημα " + l.n + " teaches grammar but builds no round");
+        } else {
+            // Μάθημα 19 is vocabulary and reading; it owes a text instead
+            assert(l.texts.length || l.words.length,
+                   "Μάθημα " + l.n + " teaches no grammar and offers nothing to read");
+            assertEquals(round.length, 0, "Μάθημα " + l.n + " should have no round");
+        }
     }
     PRACTICE.setLesson(null);
 });

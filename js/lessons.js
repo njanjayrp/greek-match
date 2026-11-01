@@ -62,6 +62,14 @@ const LIST = [
         topics: ["imperative"],
         words:  ["At the doctor", "Doctors & specialists", "Bank & money"],
         texts:  ["m6"]
+    },
+    {
+        n: 19,
+        gr: "Χρόνια Πολλά!",
+        en: "Feasts and holidays",
+        topics: [],                       // this lesson teaches no new grammar
+        words:  [],
+        texts:  ["t8"]
     }
 ];
 

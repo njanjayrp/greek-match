@@ -142,7 +142,10 @@ function switchSection(target) {
 
 // Manual and Reading have no "All" entry, so they fall back to their first one.
 function defaultGroup() {
-    if (mode === "manual") return (topicsInLesson()[0] || window.GRAMMAR.TOPICS[0]).id;
+    if (mode === "manual") {
+        const inLesson = topicsInLesson();
+        return inLesson.length ? inLesson[0].id : "";      // the lesson teaches no grammar
+    }
     if (mode === "read") {
         const only = lessonTexts();
         const texts = window.ReadingMode.TEXTS().filter(t => !only || only.includes(t.id));
@@ -720,8 +723,16 @@ function updateWeights(wrongGreekWords) {
 }
 
 function renderManual() {
-    const topic = window.GRAMMAR.byId(group);
-    document.getElementById("manual-container").innerHTML = topic.manual;
+    const box = document.getElementById("manual-container");
+    const inLesson = topicsInLesson();
+    if (!inLesson.length) {
+        box.innerHTML = '<article class="manual"><h2>' + window.LESSONS.label(lesson) + "</h2>" +
+            '<p class="manual-lead">This lesson teaches no new grammar — it is vocabulary and reading. ' +
+            "Its text is in <b>Reading</b>.</p></article>";
+        return;
+    }
+    const topic = inLesson.find(t => t.id === group) || inLesson[0];
+    box.innerHTML = topic.manual;
 }
 
 function applyMode() {
@@ -740,7 +751,8 @@ function applyMode() {
     document.getElementById("browse-search").style.display    = mode === "browse" ? "" : "none";
     document.querySelector(".actions").style.display =
         (["browse", "manual", "read"].includes(mode)) ? "none" : "";
-    document.getElementById("btn-practise").style.display = mode === "manual" ? "" : "none";
+    document.getElementById("btn-practise").style.display =
+        (mode === "manual" && topicsInLesson().length) ? "" : "none";
 
     renderTabs();
     // The toggle only means something where a question can be asked either way
