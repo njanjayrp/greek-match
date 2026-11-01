@@ -40,11 +40,11 @@ Deno.test("no markdown survived the conversion", () => {
                 assert(!/\*\*|^>|^#/.test(line), t.title + ": raw markdown — " + line.slice(0, 40));
 });
 
-Deno.test("Reading is a Practice tab that opens a text", async () => {
+Deno.test("Reading is its own section and opens a text", async () => {
     const app = await bootApp();
     app.switchMode("read");
     await new Promise(r => setTimeout(r, 0));
-    assertEquals(app.state().section, "practice");
+    assertEquals(app.state().section, "reading");
     const box = app.el("reading-container");
     assert(box.children.length > 2, "nothing was rendered");
     assertEquals(box.children[0].textContent, texts[0].title);

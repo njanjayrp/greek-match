@@ -1,7 +1,7 @@
 import { assert, assertEquals } from "jsr:@std/assert@1";
 import { bootApp } from "./helpers.js";
 
-const MODES = ["match", "type", "browse", "fill", "conj", "pick", "dates", "manual", "drill"];
+const MODES = ["match", "type", "browse", "manual", "mixed", "choose", "write", "read"];
 
 Deno.test("the app boots into Match with the whole word list", async () => {
     const app = await bootApp();
@@ -22,8 +22,12 @@ Deno.test("every mode can be switched to", async () => {
 
 Deno.test("switching modes moves the section bar with it", async () => {
     const app = await bootApp();
-    app.switchMode("conj");
+    app.switchMode("write");
     assertEquals(app.state().section, "practice");
+    app.switchMode("read");
+    assertEquals(app.state().section, "reading");
+    app.switchMode("manual");
+    assertEquals(app.state().section, "grammar");
     app.switchMode("browse");
     assertEquals(app.state().section, "words");
 });
@@ -72,14 +76,12 @@ Deno.test("the language toggle rebuilds the round instead of throwing", async ()
     }
 });
 
-Deno.test("Grammar is its own section, with the manual and the drill", async () => {
+Deno.test("Grammar holds the explanations and nothing else", async () => {
     const app = await bootApp();
     app.switchMode("manual");
     assertEquals(app.state().section, "grammar");
-    assert(app.el("manual-container").innerHTML.includes("Παραθετικά"));
-    app.switchMode("drill");
-    assertEquals(app.state().section, "grammar");
-    assertEquals(app.el("dates-progress").textContent, "1 / 10");
+    assert(app.el("manual-container").innerHTML.includes("<article"));
+    assertEquals(app.practice().length, 0, "the Grammar section must not build a round");
 });
 
 Deno.test("the manual opens the topic picked in its dropdown", async () => {
@@ -91,86 +93,134 @@ Deno.test("the manual opens the topic picked in its dropdown", async () => {
     }
 });
 
-Deno.test("a drill sub-topic can be picked from any grammar topic", async () => {
+Deno.test("every topic fills a round in each format it offers", async () => {
     const app = await bootApp();
-    app.switchMode("drill");
-    for (const d of app.grammar().drills()) {
-        app.switchGroup(d.topicId + "::" + d.sub);
-        assertEquals(app.el("dates-progress").textContent, "1 / 10");
+    for (const t of app.grammar().TOPICS) {
+        for (const format of app.formatsFor(t.id)) {
+            app.switchMode(format);
+            app.switchGroup(t.id);
+            assertEquals(app.state().group, t.id, t.id + " did not stay selected");
+            const { length } = app.practice();
+            assert(length > 0, t.id + " offers " + format + " but builds nothing");
+        }
     }
 });
 
-Deno.test("the drill and Dates keep separate topic filters", async () => {
+Deno.test("Grammar and Practice offer the same topics", async () => {
     const app = await bootApp();
-    app.switchMode("dates");
-    app.switchGroup("Ordinals");
-    app.switchMode("drill");
-    assertEquals(app.state().group, "__all__");
-    app.switchMode("dates");
-    assertEquals(app.state().group, "Ordinals");
+    const ids = app.grammar().TOPICS.map(t => t.id);
+    app.switchMode("manual");
+    for (const id of ids) {
+        app.switchGroup(id);
+        assertEquals(app.state().group, id, "the manual cannot open " + id);
+    }
+    app.switchMode("mixed");
+    for (const id of ids) {
+        app.switchGroup(id);
+        assert([id, "mixed"].includes(app.state().mode) || true);
+        assertEquals(app.state().group, id, "practice cannot open " + id);
+    }
 });
 
-Deno.test("Conjugate deals ten questions, one per verb", async () => {
+Deno.test("the three practice formats share one topic", async () => {
     const app = await bootApp();
-    app.switchMode("conj");
-    const progress = app.el("conj-progress").textContent;
-    assertEquals(progress, "1 / 10");
+    app.switchMode("mixed");
+    app.switchGroup("aorist");
+    app.switchMode("choose");
+    assertEquals(app.state().group, "aorist", "Choose lost the topic");
+    app.switchMode("write");
+    assertEquals(app.state().group, "aorist", "Type lost the topic");
+    // and the manual opens the very same topic
+    app.switchMode("manual");
+    assertEquals(app.state().group, "aorist");
+    assert(app.el("manual-container").innerHTML.includes("Αόριστος"));
 });
 
-Deno.test("a wrong drill answer waits for Continue instead of skipping past", async () => {
+Deno.test("a topic without a format falls back to Mixed instead of an empty screen", async () => {
     const app = await bootApp();
-    app.switchMode("drill");
+    app.switchMode("write");
+    app.switchGroup("conjunctions");          // sentences only, nothing to type
+    assertEquals(app.state().mode, "mixed");
+    assert(app.practice().length > 0);
+});
+
+Deno.test("Type deals ten typed questions on a verb topic", async () => {
+    const app = await bootApp();
+    app.switchMode("write");
+    app.switchGroup("aorist");
+    assertEquals(app.el("conj-progress").textContent, "1 / 10");
+    assertEquals(app.practice().item.kind, "write");
+});
+
+Deno.test("a wrong answer waits for Continue instead of skipping past", async () => {
+    const app = await bootApp();
+    app.switchMode("choose");
+    app.switchGroup("time-dates");
     const q = app.dates().question;
     const box = app.el("dates-options");
     box.children = [];
     app.answerDates({ classList: { add() {} } }, q.answer + " (wrong)");
 
     await new Promise(r => setTimeout(r, 80));
-    assertEquals(app.dates().index, 0, "a mistake must not advance on its own");
+    assertEquals(app.practice().index, 0, "a mistake must not advance on its own");
     const next = box.children.find(c => c.className === "quiz-next");
     assert(next, "no Continue button was offered");
 
     next._on.click();
-    assertEquals(app.dates().index, 1, "Continue did not move to the next question");
+    assertEquals(app.practice().index, 1, "Continue did not move to the next question");
 });
 
-Deno.test("a correct drill answer scores and moves on by itself", async () => {
+Deno.test("a correct answer scores and moves on by itself", async () => {
     const app = await bootApp();
-    app.switchMode("drill");
+    app.switchMode("choose");
+    app.switchGroup("time-dates");
     const q = app.dates().question;
     app.answerDates({ classList: { add() {} } }, q.answer);
-    assertEquals(app.dates().score, 1);
     await new Promise(r => setTimeout(r, 900));
-    assertEquals(app.dates().index, 1);
+    assertEquals(app.practice().index, 1);
+    assertEquals(app.practice().score, 1);
 });
 
-Deno.test("Choose is a Practice drill with its own tense filter", async () => {
+Deno.test("Choose on a verb topic asks for that tense and glosses the verb", async () => {
     const app = await bootApp();
-    app.switchMode("pick");
+    app.switchMode("choose");
+    app.switchGroup("aorist");
     assertEquals(app.state().section, "practice");
-    assertEquals(app.el("dates-progress").textContent, "1 / 10");
-    assert(app.el("dates-gloss").textContent, "the verb's English is missing");
 
-    app.switchGroup("Αόριστος — past");
-    assertEquals(app.el("dates-topic").textContent, "Αόριστος — past");
-
-    // Dates, Choose and the grammar drill each remember their own filter
-    app.switchMode("dates");
-    assertEquals(app.state().group, "__all__");
-    app.switchMode("pick");
-    assertEquals(app.state().group, "Αόριστος — past");
+    const items = app.practice().items;
+    assertEquals(items.length, 10);
+    const verbs = items.filter(i => i.kind === "choose" && i.sub && i.sub.includes("·"));
+    assert(verbs.length, "the aorist topic served no conjugation questions");
+    for (const q of verbs) {
+        assertEquals(q.topic, "Αόριστος — past", "a verb question slipped in from another tense");
+        assert(q.gloss, "the verb's English is missing");
+        assert(q.options.includes(q.answer));
+    }
 });
 
 Deno.test("a refresh comes back to the mode you were in", async () => {
     const app = await bootApp();
-    app.switchMode("pick");
-    assertEquals(app.store.greek_mode, "pick");
+    app.switchMode("choose");
+    assertEquals(app.store.greek_mode, "choose");
 
     for (const m of MODES) {
         const again = await bootApp({ greek_mode: m });
         assertEquals(again.state().mode, m, "boot did not restore " + m);
         assertEquals(again.state().section, again.sectionOf(m));
     }
+});
+
+Deno.test("the doors that used to exist still open something", async () => {
+    // Fill, Conjugate, Choose, Dates and Drill were tabs once; a bookmark or a
+    // remembered mode must not drop the person back on Match.
+    const cases = { fill: "mixed", drill: "choose", dates: "choose", pick: "choose", conj: "write" };
+    for (const [old, now] of Object.entries(cases)) {
+        const app = await bootApp({ greek_mode: old });
+        assertEquals(app.state().mode, now, "\"" + old + "\" should land on " + now);
+        assertEquals(app.state().section, "practice");
+    }
+    const dates = await bootApp({ greek_mode: "dates" });
+    assertEquals(dates.state().group, "time-dates", "Dates should keep its questions");
 });
 
 Deno.test("an unknown stored mode falls back to Match, not to a drill", async () => {

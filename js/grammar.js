@@ -14,6 +14,8 @@ const TOPICS = [
         id: "comparatives",
         title: "Παραθετικά",
         blurb: "Comparing things: πιο, ο πιο, τόσο… όσο",
+        area: "Ονόματα & αντωνυμίες",
+        sentences: ["Σύγκριση"],
         manual: `<article class="manual">
     <h2>Παραθετικά — comparing things</h2>
     <p class="manual-lead">Greek compares with a little word in front of the adjective, not with
@@ -88,12 +90,14 @@ const TOPICS = [
         <li><s>Είναι πιο ψηλός από ο Ηλίας.</s> → από <b>τον Ηλία</b></li>
     </ul>
 </article>`,
-        drill: { src: "js/compare.js", global: "COMPARE" }
+        drills: [{ format: "choose", src: "js/compare.js", global: "COMPARE" }]
     },
     {
         id: "imperative",
         title: "Προστακτική",
         blurb: "Telling someone to do something: γράψε, γράψτε, μη γράψεις",
+        area: "Ρήματα",
+        sentences: ["Προστακτική"],
         manual: `<article class="manual">
     <h2>Προστακτική — telling someone to do something</h2>
     <p class="manual-lead">The imperative is built off the <b>future stem</b>, not the present one.
@@ -185,6 +189,8 @@ const TOPICS = [
         id: "adverbs",
         title: "Επιρρήματα",
         blurb: "From adjective to adverb: καλός → καλά, and πιο καλά → καλύτερα",
+        area: "Ονόματα & αντωνυμίες",
+        sentences: ["Επιρρήματα"],
         manual: `<article class="manual">
     <h2>Επιρρήματα — how something is done</h2>
     <p class="manual-lead">An adjective describes a <i>thing</i> and changes with it; an adverb describes
@@ -271,6 +277,8 @@ const TOPICS = [
         id: "aorist",
         title: "Αόριστος",
         blurb: "The simple past: one finished action — έγραψα, μίλησα, ήρθα",
+        area: "Ρήματα",
+        sentences: ["Αόριστος"],
         manual: `<article class="manual">
     <h2>Αόριστος — the simple past</h2>
     <p class="manual-lead">One action, finished, seen as a whole: <b>χτες έγραψα ένα γράμμα</b>.
@@ -400,15 +408,434 @@ const TOPICS = [
         <li><s>Πήγα στο σινεμά και έβλεπα μια ταινία.</s> → <b>είδα</b> μια ταινία (one finished action)</li>
         <li><s>Ήπιασα πολύ.</s> → <b>Ήπια</b> πολύ</li>
     </ul>
+</article>`,
+        drills: [{ format: "choose", src: "js/conjchoice.js", global: "CONJCHOICE", subs: ["Αόριστος — past"] },
+                  { format: "write",  src: "js/conjtype.js",   global: "CONJTYPE",   subs: ["Αόριστος — past"] }]
+    },
+    {
+        id: "future",
+        title: "Μέλλοντας",
+        blurb: "θα + the same stem as the aorist: θα γράψω, θα μιλήσω, θα πάω",
+        area: "Ρήματα",
+        sentences: [],
+        manual: `<article class="manual">
+    <h2>Απλός Μέλλοντας — what will happen once</h2>
+    <p class="manual-lead">One word of grammar and one changed stem: <b>θα</b> + the aorist stem with
+    present endings. <b>γράφω → θα γράψω</b>. If you know έγραψα you already know θα γράψω, and the
+    other way round — it is the same stem learnt once and used in three places (μέλλοντας, αόριστος,
+    υποτακτική).</p>
+
+    <h3>1. Τύπος Α: το σύμφωνο αλλάζει</h3>
+    <table class="manual-table">
+        <thead><tr><th>ενεστώτας</th><th>γίνεται</th><th>μέλλοντας</th></tr></thead>
+        <tbody>
+            <tr><td>-ν-, -θ-, -ζ- (ψήνω, νιώθω, ετοιμάζω)</td><td><b>-σ-</b></td><td>θα ψή<b>σ</b>ω, θα νιώ<b>σ</b>ω, θα ετοιμά<b>σ</b>ω</td></tr>
+            <tr><td>-κ-, -σκ-, -γ-, -γγ-, -χ-, -χν- (πλέκω, διδάσκω, ανοίγω, σφίγγω, τρέχω, φτιάχνω)</td><td><b>-ξ-</b></td><td>θα πλέ<b>ξ</b>ω, θα διδά<b>ξ</b>ω, θα ανοί<b>ξ</b>ω, θα τρέ<b>ξ</b>ω</td></tr>
+            <tr><td>-π-, -πτ-, -β-, -φ- (λείπω, ανακαλύπτω, κόβω, γράφω)</td><td><b>-ψ-</b></td><td>θα λεί<b>ψ</b>ω, θα ανακαλύ<b>ψ</b>ω, θα κό<b>ψ</b>ω, θα γρά<b>ψ</b>ω</td></tr>
+            <tr><td>-εύω (μαγειρεύω)</td><td><b>-έψω</b></td><td>θα μαγειρέ<b>ψ</b>ω</td></tr>
+            <tr><td>-αύω (παύω)</td><td><b>-άψω</b></td><td>θα πά<b>ψ</b>ω</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note manual-warn">The same -άζω / -ίζω group that broke the rule in the aorist takes
+    <b>-ξω</b> here: αγγίζω → θα αγγίξω, αλλάζω → θα αλλάξω, κοιτάζω → θα κοιτάξω, νυστάζω → θα νυστάξω,
+    ουρλιάζω → θα ουρλιάξω, παίζω → θα παίξω, πειράζω → θα πειράξω, σφυρίζω → θα σφυρίξω,
+    τρομάζω → θα τρομάξω, φωνάζω → θα φωνάξω.</p>
+
+    <h3>2. Καταλήξεις</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>εγώ</th><td>θα μαγειρέψ<b>ω</b></td><th>εμείς</th><td>θα μαγειρέψ<b>ουμε</b></td></tr>
+            <tr><th>εσύ</th><td>θα μαγειρέψ<b>εις</b></td><th>εσείς</th><td>θα μαγειρέψ<b>ετε</b></td></tr>
+            <tr><th>αυτός</th><td>θα μαγειρέψ<b>ει</b></td><th>αυτοί</th><td>θα μαγειρέψ<b>ουν(ε)</b></td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">The endings are the present endings — only the stem moved. Negative is
+    <b>δε(ν)</b> before θα: δεν θα μαγειρέψω.</p>
+
+    <h3>3. Έξι που δεν αλλάζουν καθόλου</h3>
+    <ul class="manual-examples">
+        <li>είμαι → <b>θα είμαι</b> · έχω → <b>θα έχω</b> · κάνω → <b>θα κάνω</b></li>
+        <li>ξέρω → <b>θα ξέρω</b> · πάω / πηγαίνω → <b>θα πάω</b> · περιμένω → <b>θα περιμένω</b></li>
+    </ul>
+
+    <h3>4. Ανώμαλα</h3>
+    <table class="manual-table">
+        <thead><tr><th>ενεστώτας</th><th>μέλλοντας</th><th>ενεστώτας</th><th>μέλλοντας</th></tr></thead>
+        <tbody>
+            <tr><td>μένω</td><td>θα μείνω</td><td>μπαίνω</td><td>θα μπω</td></tr>
+            <tr><td>στέλνω</td><td>θα στείλω</td><td>βγαίνω</td><td>θα βγω</td></tr>
+            <tr><td>παραγγέλνω</td><td>θα παραγγείλω</td><td>ανεβαίνω</td><td>θα ανεβώ</td></tr>
+            <tr><td>πλένω</td><td>θα πλύνω</td><td>κατεβαίνω</td><td>θα κατεβώ</td></tr>
+            <tr><td>φεύγω</td><td>θα φύγω</td><td>λέω</td><td>θα πω</td></tr>
+            <tr><td>παίρνω</td><td>θα πάρω</td><td>πίνω</td><td>θα πιω</td></tr>
+            <tr><td>φέρνω</td><td>θα φέρω</td><td>βλέπω</td><td>θα δω</td></tr>
+            <tr><td>δίνω</td><td>θα δώσω</td><td>βρίσκω</td><td>θα βρω</td></tr>
+            <tr><td>βάζω</td><td>θα βάλω</td><td>τρώω</td><td>θα φάω</td></tr>
+            <tr><td>βγάζω</td><td>θα βγάλω</td><td>φταίω</td><td>θα φταίξω</td></tr>
+            <tr><td>πέφτω</td><td>θα πέσω</td><td>καίω</td><td>θα κάψω</td></tr>
+            <tr><td>μαθαίνω</td><td>θα μάθω</td><td>κλαίω</td><td>θα κλάψω</td></tr>
+            <tr><td>καταλαβαίνω</td><td>θα καταλάβω</td><td>ακούω</td><td>θα ακούσω</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">Three of them take their own endings. <b>θα μείνω</b> is ordinary
+    (μείνω, μείνεις, μείνει, μείνουμε, μείνετε, μείνουν). <b>θα βγω</b> is stressed on the ending:
+    βγω, βγεις, βγει, βγούμε, βγείτε, βγουν. <b>θα πάω</b> keeps the -άω verb's own set:
+    πάω, πας, πάει, πάμε, πάτε, πάνε.</p>
+
+    <h3>5. Τύπος Β1 και Β2</h3>
+    <table class="manual-table">
+        <thead><tr><th>κατάληξη</th><th>παράδειγμα</th><th>και ακόμα</th></tr></thead>
+        <tbody>
+            <tr><td><b>-ήσω</b></td><td>μιλάω → θα μιλήσω</td><td>αγαπάω, ρωτάω, ζητάω, βοηθάω, ξυπνάω, συναντάω, τραγουδάω, περπατάω, οδηγώ, τηλεφωνώ, προσπαθώ, ζω → θα ζήσω</td></tr>
+            <tr><td><b>-έσω</b></td><td>μπορώ → θα μπορέσω</td><td>φοράω, πονάω, χωράω, παρακαλώ, προσκαλώ, διαρκώ</td></tr>
+            <tr><td><b>-άσω</b></td><td>περνάω → θα περάσω</td><td>γελάω, πεινάω, διψάω, κρεμάω</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note manual-warn">Two short lists to memorise. <b>-άξω</b>: πετάω → θα πετάξω,
+    κοιτάω → θα κοιτάξω, φυλάω → θα φυλάξω. <b>-ήξω</b>: τραβάω → θα τραβήξω, βουτάω → θα βουτήξω,
+    πηδάω → θα πηδήξω, φυσάω → θα φυσήξω. And four in <b>-άσω</b> that look like they should not be:
+    ξεχνάω → θα ξεχάσω, κερνάω → θα κεράσω, περνάω → θα περάσω, γερνάω → θα γεράσω.</p>
+
+    <h3>6. Τύπος Γ</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>έρχομαι</th><td>θα έρθω, θα έρθεις, θα έρθει, θα έρθουμε, θα έρθετε, θα έρθουν(ε)</td></tr>
+            <tr><th>κοιμάμαι</th><td>θα κοιμηθώ, θα κοιμηθείς, θα κοιμηθεί, θα κοιμηθούμε, θα κοιμηθείτε, θα κοιμηθούν(ε)</td></tr>
+        </tbody>
+    </table>
+
+    <h3>7. Λέξεις που ζητούν Μέλλοντα</h3>
+    <ul class="manual-examples">
+        <li><b>σήμερα, απόψε, αύριο, μεθαύριο, (ε)φέτος, του χρόνου</b></li>
+        <li><b>την Κυριακή</b>, αυτή την εβδομάδα, αυτόν τον μήνα</li>
+        <li><b>την επόμενη / την άλλη</b> εβδομάδα, τον επόμενο / τον άλλο μήνα</li>
+        <li><b>σε</b> λίγες μέρες, σε τρεις εβδομάδες, σε τέσσερις μήνες, σε δύο χρόνια</li>
+    </ul>
+
+    <h3>8. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>Αύριο θα γράφω ένα γράμμα.</s> → θα <b>γράψω</b> (one action; θα γράφω means “I will be writing, regularly”)</li>
+        <li><s>Θα πάρω τηλέφωνο και θα λέω.</s> → και θα <b>πω</b></li>
+        <li><s>Θα μιλήσεις ελληνικά; Ναι, θα μιλέσω.</s> → θα <b>μιλήσω</b></li>
+        <li><s>Θα βγούμε έξω; — Ναι, θα βγάλουμε.</s> → θα <b>βγούμε</b> (βγάζω is “take out”, βγαίνω is “go out”)</li>
+    </ul>
+</article>`,
+        drills: [{ format: "choose", src: "js/conjchoice.js", global: "CONJCHOICE", subs: ["Μέλλοντας — future"] },
+                  { format: "write",  src: "js/conjtype.js",   global: "CONJTYPE",   subs: ["Μέλλοντας — future"] }]
+    },
+    {
+        id: "subjunctive",
+        title: "Υποτακτική",
+        blurb: "να + the same stem, after θέλω, πρέπει, μπορώ",
+        area: "Ρήματα",
+        sentences: ["Υποτακτική"],
+        manual: `<article class="manual">
+    <h2>Απλή Υποτακτική — the να-form</h2>
+    <p class="manual-lead">Same stem again, different little word in front: <b>γράφω → θα γράψω →
+    να γράψω</b>. Greek has no infinitive, so wherever English says “to do”, Greek says <b>να</b> + a
+    verb that still agrees with its subject: <b>θέλω να πάω</b>, θέλει <b>να πάει</b>.</p>
+
+    <h3>1. Μετά από ρήμα</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>μπορώ</th><td>Τα παιδιά δεν <b>μπορούν να πάνε</b> στο σχολείο σήμερα.</td></tr>
+            <tr><th>θέλω</th><td>Η Μαρία <b>θέλει να σπουδάσει</b> Αγγλική Φιλολογία.</td></tr>
+            <tr><th>πάω</th><td>— Πού πας; — <b>Πάω να στείλω</b> μέιλ στους φίλους μου.</td></tr>
+            <tr><th>προσπαθώ</th><td>Η Μαρίνα <b>προσπαθεί να μάθει</b> την Υποτακτική!</td></tr>
+            <tr><th>σκέφτομαι</th><td><b>Σκεφτόμαστε</b> φέτος <b>να πάμε</b> διακοπές στη Ρόδο.</td></tr>
+            <tr><th>προτιμώ</th><td><b>Προτιμάς να φας</b> τώρα ή αργότερα;</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">Both verbs carry the person, and they usually match: θέλω να <b>πάω</b>,
+    θέλεις να <b>πας</b>. They differ only when the two subjects differ:
+    <b>θέλω να πας</b> εσύ = I want <i>you</i> to go.</p>
+
+    <h3>2. Μετά από απρόσωπη έκφραση</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>πρέπει</th><td><b>Πρέπει να φύγεις</b> από τώρα;</td></tr>
+            <tr><th>μπορεί</th><td>Την Κυριακή <b>μπορεί να πάμε</b> για φαγητό έξω.</td></tr>
+            <tr><th>χρειάζεται</th><td>Στις εξετάσεις <b>χρειάζεται να έχετε</b> μαζί σας ταυτότητα.</td></tr>
+            <tr><th>είναι ανάγκη<br>είναι απαραίτητο</th><td>Δεν <b>είναι απαραίτητο να με πάρεις</b> τηλέφωνο.</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">These never change for person — it is always <b>πρέπει</b>, <b>μπορεί</b>,
+    <b>χρειάζεται</b>. The person lives in the second verb: πρέπει <b>να φύγω</b> / <b>να φύγεις</b> /
+    <b>να φύγουμε</b>.</p>
+
+    <h3>3. Άρνηση: να μην</h3>
+    <ul class="manual-examples">
+        <li>Προτιμώ <b>να μην</b> πάω απόψε.</li>
+        <li>Πρέπει <b>να μην</b> ξεχάσεις τα εισιτήρια.</li>
+    </ul>
+    <p class="manual-note">The <b>μην</b> goes between να and the verb, never before να.</p>
+
+    <h3>4. Δύο εκφράσεις</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>έχω να</th><td>Δε θα βγω απόψε γιατί <b>έχω να διαβάσω</b> για το τεστ.<span>= πρέπει να διαβάσω</span></td></tr>
+            <tr><th>λέω να</th><td><b>Λέω να φύγω</b> νωρίς.<span>= σκέφτομαι να φύγω νωρίς</span></td></tr>
+        </tbody>
+    </table>
+
+    <h3>5. Απλή ή εξακολουθητική;</h3>
+    <table class="manual-table">
+        <tbody>
+            <tr><th>να γράψω</th><td>once — Θέλω <b>να γράψω</b> ένα γράμμα.</td></tr>
+            <tr><th>να γράφω</th><td>repeatedly — Μου αρέσει <b>να γράφω</b> γράμματα.</td></tr>
+        </tbody>
+    </table>
+
+    <h3>6. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>Θέλω πάω στην Ελλάδα.</s> → Θέλω <b>να πάω</b> (there is no “to go”)</li>
+        <li><s>Πρέπουμε να φύγουμε.</s> → <b>Πρέπει</b> να φύγουμε (πρέπει never changes)</li>
+        <li><s>Προτιμώ μην πάω.</s> → Προτιμώ <b>να μην</b> πάω</li>
+        <li><s>Μπορείς να παίρνεις τηλέφωνο τώρα;</s> → να <b>πάρεις</b> (one call, not a habit)</li>
+    </ul>
 </article>`
+    },
+    {
+        id: "diminutives",
+        title: "Υποκοριστικά",
+        blurb: "The friendly -άκι: ουζάκι, μπιρίτσα, ταβερνούλα, Γιωργάκης",
+        area: "Λεξιλόγιο",
+        sentences: [],
+        manual: `<article class="manual">
+    <h2>Υποκοριστικά — the small, friendly form</h2>
+    <p class="manual-lead">Greek shrinks a word to make it smaller, but far more often to make it
+    <i>warmer</i>. <b>Ένα ουζάκι</b> is not a small ouzo, it is a nice ouzo among friends. You will hear
+    these constantly in a taverna and in people's names.</p>
+
+    <h3>1. Οι καταλήξεις</h3>
+    <table class="manual-table">
+        <thead><tr><th>κατάληξη</th><th>από</th><th>γίνεται</th></tr></thead>
+        <tbody>
+            <tr><td><b>-άκι</b> (το)</td><td>το ούζο, το κρασί, ο καφές, η ταβέρνα, η Μαρία</td><td>το ουζ<b>άκι</b>, το κρασ<b>άκι</b>, το καφεδ<b>άκι</b>, το ταβερν<b>άκι</b>, το Μαρ<b>άκι</b></td></tr>
+            <tr><td><b>-ίτσα</b> (η)</td><td>η μπίρα, η ταβέρνα</td><td>η μπιρ<b>ίτσα</b>, η ταβερν<b>ίτσα</b></td></tr>
+            <tr><td><b>-ούλα</b> (η)</td><td>η σαλάτα, η ταβέρνα</td><td>η σαλατ<b>ούλα</b>, η ταβερν<b>ούλα</b></td></tr>
+            <tr><td><b>-άκης</b> (ο)</td><td>ο Γιώργος</td><td>ο Γιωργ<b>άκης</b></td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note manual-warn"><b>-άκι is always neuter</b>, whatever the original was:
+    ο καφές is masculine but <b>το</b> καφεδάκι, η ταβέρνα is feminine but <b>το</b> ταβερνάκι.
+    That changes the article and every adjective with it: ένα ωραί<b>ο</b> καφεδάκι.</p>
+
+    <h3>2. Πότε τα χρησιμοποιώ</h3>
+    <ul class="manual-examples">
+        <li>Παραγγελία: Θα πιούμε ένα <b>κρασάκι</b> και θα φάμε ένα <b>σουβλακάκι</b>.</li>
+        <li>Τρυφερά: Έλα, <b>Λαουράκι</b>! · Καλό <b>ταξιδάκι</b>!</li>
+        <li>Λίγο: Θα μείνω ένα <b>λεπτάκι</b> ακόμα.</li>
+    </ul>
+    <p class="manual-note">A diminutive in a formal letter or an exam essay reads as childish — it belongs
+    in speech, in a taverna, between friends.</p>
+
+    <h3>3. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>Μία ωραία καφεδάκι.</s> → <b>Ένα ωραίο</b> καφεδάκι (-άκι is neuter)</li>
+        <li><s>Θα ήθελα ένα μπιράκι.</s> → μία <b>μπιρίτσα</b> (η μπίρα takes -ίτσα)</li>
+    </ul>
+</article>`
+    },
+    {
+        id: "present",
+        title: "Ενεστώτας",
+        blurb: "What is happening now and what happens as a rule.",
+        area: "Ρήματα",
+        sentences: [],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Ενεστώτας — the present</h2>
+    <p class="manual-lead">What is happening now and what happens as a rule.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`,
+        drills: [{ format: "choose", src: "js/conjchoice.js", global: "CONJCHOICE", subs: ["Ενεστώτας — present"] },
+                  { format: "write", src: "js/conjtype.js", global: "CONJTYPE", subs: ["Ενεστώτας — present"] }]
+    },
+    {
+        id: "imperfect",
+        title: "Παρατατικός",
+        blurb: "Was doing, used to do — the past seen as it ran, not as it finished.",
+        area: "Ρήματα",
+        sentences: ["Παρατατικός"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Παρατατικός — the past that lasted</h2>
+    <p class="manual-lead">Was doing, used to do — the past seen as it ran, not as it finished.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`,
+        drills: [{ format: "choose", src: "js/conjchoice.js", global: "CONJCHOICE", subs: ["Παρατατικός — imperfect"] },
+                  { format: "write", src: "js/conjtype.js", global: "CONJTYPE", subs: ["Παρατατικός — imperfect"] }]
+    },
+    {
+        id: "passive",
+        title: "Παθητική Φωνή",
+        blurb: "πλένομαι, χτενίζομαι, γράφτηκε — when the subject is on the receiving end.",
+        area: "Ρήματα",
+        sentences: ["Παθητική Φωνή"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Παθητική Φωνή — the passive voice</h2>
+    <p class="manual-lead">πλένομαι, χτενίζομαι, γράφτηκε — when the subject is on the receiving end.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "genitive",
+        title: "Γενική",
+        blurb: "Whose, of what — the case that links two nouns.",
+        area: "Ονόματα & αντωνυμίες",
+        sentences: ["Γενική"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Γενική — the genitive</h2>
+    <p class="manual-lead">Whose, of what — the case that links two nouns.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "weak-pronouns",
+        title: "Κλιτικά",
+        blurb: "μου, σου, του, τον, την, το — the little words that stand in for a noun.",
+        area: "Ονόματα & αντωνυμίες",
+        sentences: ["Κλιτικά"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Κλιτικά — the weak pronouns</h2>
+    <p class="manual-lead">μου, σου, του, τον, την, το — the little words that stand in for a noun.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "prepositions",
+        title: "Προθέσεις",
+        blurb: "σε, από, με, για, προς, μέχρι — and the accusative that follows them.",
+        area: "Προτάσεις & σύνδεση",
+        sentences: ["Prep: Airport"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Προθέσεις — prepositions and their case</h2>
+    <p class="manual-lead">σε, από, με, για, προς, μέχρι — and the accusative that follows them.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "conjunctions",
+        title: "Σύνδεσμοι",
+        blurb: "ότι, να, που, αν, ώστε, επειδή — which linker belongs where.",
+        area: "Προτάσεις & σύνδεση",
+        sentences: ["Σύνδεσμοι"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Σύνδεσμοι — linking two clauses</h2>
+    <p class="manual-lead">ότι, να, που, αν, ώστε, επειδή — which linker belongs where.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "relative-clauses",
+        title: "Αναφορικές Προτάσεις",
+        blurb: "που and ο οποίος — the clause that describes a noun.",
+        area: "Προτάσεις & σύνδεση",
+        sentences: ["Αναφορικές Προτάσεις"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Αναφορικές Προτάσεις — relative clauses</h2>
+    <p class="manual-lead">που and ο οποίος — the clause that describes a noun.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "conditionals",
+        title: "Υποθετικός Λόγος",
+        blurb: "αν + what follows, from the real to the impossible.",
+        area: "Προτάσεις & σύνδεση",
+        sentences: ["Υποθετικός Λόγος"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Υποθετικός Λόγος — if-sentences</h2>
+    <p class="manual-lead">αν + what follows, from the real to the impossible.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "reported-speech",
+        title: "Πλάγιος Λόγος",
+        blurb: "Turning what someone said into what you report they said.",
+        area: "Προτάσεις & σύνδεση",
+        sentences: ["Πλάγιος Λόγος"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Πλάγιος Λόγος — reported speech</h2>
+    <p class="manual-lead">Turning what someone said into what you report they said.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "word-formation",
+        title: "Παραγωγή Λέξεων",
+        blurb: "Endings that turn one word into another: -ση, -τής, -ικός, -άκι.",
+        area: "Λεξιλόγιο",
+        sentences: ["Παραγωγή Λέξεων"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Παραγωγή Λέξεων — building words</h2>
+    <p class="manual-lead">Endings that turn one word into another: -ση, -τής, -ικός, -άκι.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "idioms",
+        title: "Ιδιωματισμοί",
+        blurb: "Phrases that do not add up from their words.",
+        area: "Λεξιλόγιο",
+        sentences: ["Ιδιωματισμοί"],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Ιδιωματισμοί — idioms</h2>
+    <p class="manual-lead">Phrases that do not add up from their words.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`
+    },
+    {
+        id: "time-dates",
+        title: "Ώρα & ημερομηνίες",
+        blurb: "Telling the time, saying a date, an age, how long something lasts.",
+        area: "Χρόνος",
+        sentences: [],
+        todo: true,
+        manual: `<article class="manual">
+    <h2>Ώρα & ημερομηνίες — clock, dates and numbers</h2>
+    <p class="manual-lead">Telling the time, saying a date, an age, how long something lasts.</p>
+    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
+    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+</article>`,
+        drills: [{ format: "choose", src: "js/datetime.js", global: "DATETIME" }]
     }
 ];
 
-// Scripts are fetched once, the first time the Grammar section is opened.
+// Scripts are fetched once, the first time a topic that needs them is opened.
 const loaded = {};
+function exercises() {
+    const out = [];
+    for (const t of TOPICS) for (const d of (t.drills || [])) out.push(d);
+    return out;
+}
 function load() {
-    return Promise.all(TOPICS.filter(t => t.drill).map(t => {
-        const { src, global } = t.drill;
+    return Promise.all(exercises().map(d => {
+        const { src, global } = d;
         if (window[global]) return Promise.resolve();
         if (loaded[src]) return loaded[src];
         loaded[src] = new Promise(resolve => {
@@ -421,49 +848,83 @@ function load() {
     }));
 }
 
-function sourceOf(t) { return t.drill ? (window[t.drill.global] || null) : null; }
+function sourceOf(d) { return d && d.global ? (window[d.global] || null) : null; }
 
 function byId(id) { return TOPICS.find(t => t.id === id) || TOPICS[0]; }
 
-// Every drillable sub-topic across every grammar topic, for the dropdown:
-// [{ topicId, topicTitle, sub, source }]
-function drills() {
+// The areas, in the order the topics declare them — the <optgroup>s of both
+// the Grammar and the Practice dropdown come from here, so the two cannot drift.
+function areas() {
+    const out = [];
+    for (const t of TOPICS) if (t.area && !out.includes(t.area)) out.push(t.area);
+    return out;
+}
+
+// One dealable source of questions: a (module, sub-topic) pair. `subs` on an
+// exercise pins a module to part of itself, which is how one conjugation drill
+// serves four tense topics.
+function streams(topicId, format) {
     const out = [];
     for (const t of TOPICS) {
-        const source = sourceOf(t);
-        if (!source) continue;
-        for (const sub of source.TOPICS) {
-            out.push({ topicId: t.id, topicTitle: t.title, sub, source });
+        if (topicId && t.id !== topicId) continue;
+        for (const d of (t.drills || [])) {
+            if (format && (d.format || "choose") !== format) continue;
+            const source = sourceOf(d);
+            if (!source) continue;
+            const subs = (d.subs && d.subs.length) ? d.subs : source.TOPICS;
+            for (const sub of subs) {
+                if (!source.TOPICS.includes(sub)) continue;   // a typo'd sub would silently empty a topic
+                out.push({ topicId: t.id, topicTitle: t.title, format: d.format || "choose", sub, source });
+            }
         }
     }
     return out;
 }
 
-// "comparatives::Υπερθετικός" → the entry that builds that round
-function resolve(value) {
-    const [topicId, sub] = String(value).split("::");
-    return drills().find(d => d.topicId === topicId && d.sub === sub) || null;
+// Which answer formats a topic can offer, from the declaration alone — the tab
+// row has to know before the drill scripts have finished loading.
+function formatsFor(topicId) {
+    const out = new Set();
+    const list = topicId ? TOPICS.filter(t => t.id === topicId) : TOPICS;
+    for (const t of list) {
+        if ((t.sentences || []).length) out.add("choose");
+        for (const d of (t.drills || [])) out.add(d.format || "choose");
+    }
+    return [...out];
 }
 
-function buildRound(value, n) {
-    if (value && value !== "__all__") {
-        const d = resolve(value);
-        return d ? d.source.buildRound(d.sub, n) : [];
-    }
-    // "All topics" deals the sub-topics round-robin out of a reshuffled queue, so
-    // ten questions cover them evenly instead of favouring whichever drill
-    // happens to have the most question shapes behind it.
-    const all = drills();
-    if (!all.length) return [];
-    const round = [], seen = new Set();
-    let queue = [];
+// "comparatives::Υπερθετικός" → the stream that builds that round. A tense
+// label belongs to both a tapping and a typing drill, so the format picks
+// between them; without one, the tapping drill answers.
+function resolve(value, format) {
+    const [topicId, sub] = String(value).split("::");
+    const all = streams(null, format);
+    return all.find(d => d.topicId === topicId && d.sub === sub) || null;
+}
+
+// The deal queue lives here rather than inside buildRound, so consecutive
+// rounds continue one shuffled deal instead of re-rolling ten of n every time.
+let queue = [];
+function dealFrom(all, n, seen) {
+    const round = [];
     for (let i = 0; i < n * 5 && round.length < n; i++) {
         if (!queue.length) queue = shuffle(all);
         const d = queue.shift();
+        if (!all.includes(d)) continue;
         const [q] = d.source.buildRound(d.sub, 1);
         if (q && !seen.has(q.prompt)) { seen.add(q.prompt); round.push(q); }
     }
     return round;
+}
+
+function buildRound(value, n, format) {
+    const single = String(value || "").includes("::") ? resolve(value, format) : null;
+    if (single) return single.source.buildRound(single.sub, n);
+    const topicId = (value && value !== "__all__") ? value : null;
+    const all = streams(topicId, format);
+    if (!all.length) return [];
+    queue = queue.filter(d => all.includes(d));
+    return dealFrom(all, n, new Set());
 }
 
 function shuffle(arr) {
@@ -475,6 +936,6 @@ function shuffle(arr) {
     return a;
 }
 
-return { TOPICS, byId, drills, resolve, buildRound, load, sourceOf };
+return { TOPICS, byId, areas, streams, formatsFor, resolve, buildRound, load, sourceOf, shuffle };
 
 })();

@@ -731,3 +731,25 @@ body { color: var(--text); }
 }
 .read-en p { margin: 0 0 8px; }
 .read-en p:last-child { margin-bottom: 0; }
+
+/* A format this topic has nothing for: still shown, so the row does not jump */
+.tab.off, .tab:disabled {
+    opacity: .38;
+    cursor: default;
+}
+
+/* Under the manual: the way from the rule to the exercises */
+.btn-practise {
+    display: block;
+    width: 100%;
+    margin: 18px 0 4px;
+    padding: 12px 14px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--accent, #2d6cdf);
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-practise:hover { background: rgba(45, 108, 223, .08); }

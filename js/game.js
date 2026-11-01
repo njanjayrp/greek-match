@@ -27,14 +27,18 @@ function initApp(words) {
     // The last mode is remembered, so a refresh stays where you were instead of
     // going back to whatever a "New Round" click last baked into the URL. The
     // list of modes comes from SECTIONS, so a new tab cannot be left out of it.
-    const wanted = urlMode || localStorage.getItem("greek_mode");
+    let wanted = urlMode || localStorage.getItem("greek_mode");
+    if (LEGACY_MODE[wanted]) {
+        if (LEGACY_TOPIC[wanted]) { try { localStorage.setItem("greek_topic", LEGACY_TOPIC[wanted]); } catch (e) { /* private mode */ } }
+        wanted = LEGACY_MODE[wanted];
+    }
     if (Object.values(SECTIONS).some(tabs => tabs.some(([id]) => id === wanted))) mode = wanted;
     if (urlLang === "english") lang = "english";
 
     // Build the group dropdown from the data
+    window.PRACTICE.setSentences(allSentences);
     populateGroupSelect();
-    group = localStorage.getItem("greek_group") || "__all__";
-    if (!groupExists(group)) group = defaultGroup();
+    group = resolveGroup();
     document.getElementById("group-select").value = group;
 
     round = selectRound();
@@ -52,6 +56,8 @@ function initApp(words) {
         btn.addEventListener("click", () => switchSection(btn.dataset.section));
     }
     document.getElementById("group-select").addEventListener("change", e => switchGroup(e.target.value));
+    // One click from reading the rule to drilling it — the topic is already shared.
+    document.getElementById("btn-practise").addEventListener("click", () => switchSection("practice"));
     document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
     document.getElementById("conj-form").addEventListener("submit", submitConjAnswer);
     document.getElementById("lang-gr").addEventListener("click", () => setLang("greek"));
@@ -65,7 +71,7 @@ function initApp(words) {
     BrowseMode.init(allWords);
     applyMode();
     // grammar drills load on demand; redraw once they are in
-    window.GRAMMAR.load().then(() => { if (section === "grammar") { populateGroupSelect(); applyMode(); } });
+    window.GRAMMAR.load().then(() => { if (section === "grammar" || section === "practice") { populateGroupSelect(); applyMode(); } });
     window.ReadingMode.load().then(() => { if (mode === "read") { refreshReading(); } });
 }
 
@@ -82,9 +88,19 @@ const MARKED = "__marked__";
 
 const SECTIONS = {
     words:    [["match", "Match"], ["type", "Type"], ["browse", "Browse"]],
-    practice: [["fill", "Fill"], ["conj", "Conjugate"], ["pick", "Choose"], ["dates", "Dates"], ["read", "Reading"]],
-    grammar:  [["manual", "Manual"], ["drill", "Drill"]]
+    grammar:  [["manual", "Manual"]],
+    practice: [["mixed", "Mixed"], ["choose", "Choose"], ["write", "Type"]],
+    reading:  [["read", "Reading"]]
 };
+
+// Grammar holds the explanations, Practice the exercises, and both are indexed
+// by the same list of topics. The old doors — Fill, Conjugate, Choose, Dates,
+// Drill — were formats pretending to be topics; a remembered mode or a
+// bookmarked ?mode= still lands on what it meant.
+const LEGACY_MODE  = { fill: "mixed", drill: "choose", dates: "choose", pick: "choose", conj: "write" };
+const LEGACY_TOPIC = { dates: "time-dates" };
+
+function isPractice(m) { return sectionOf(m) === "practice"; }
 
 function sectionOf(m) {
     return Object.keys(SECTIONS).find(s => SECTIONS[s].some(([id]) => id === m)) || "words";
@@ -93,11 +109,16 @@ function sectionOf(m) {
 function renderTabs() {
     const bar = document.getElementById("tabs");
     bar.innerHTML = "";
+    // One tab is not a choice — Grammar and Reading show no row at all.
+    if (bar.parentElement) bar.parentElement.style.display = SECTIONS[section].length > 1 ? "" : "none";
+    const offered = section === "practice" ? window.PRACTICE.formatsFor(group) : null;
     for (const [id, label] of SECTIONS[section]) {
         const b = document.createElement("button");
-        b.className = "tab" + (id === mode ? " active" : "");
+        const off = offered && !offered.includes(id);
+        b.className = "tab" + (id === mode ? " active" : "") + (off ? " off" : "");
         b.textContent = label;
-        b.addEventListener("click", () => switchMode(id));
+        b.disabled = !!off;
+        if (!off) b.addEventListener("click", () => switchMode(id));
         bar.appendChild(b);
     }
     for (const btn of document.querySelectorAll("#sections .section")) {
@@ -121,16 +142,48 @@ function defaultGroup() {
     return "__all__";
 }
 
+// Grammar and Practice share one topic, so reading a rule and drilling it are
+// the same place seen twice; Words keeps its own word-group filter.
+function topicKeyFor(m) {
+    if (m === "read") return "greek_topic_read";
+    if (m === "manual" || isPractice(m)) return "greek_topic";
+    return "greek_group";
+}
+
+function resolveGroup() {
+    let g = null;
+    try { g = localStorage.getItem(topicKeyFor(mode)); } catch (e) { g = null; }
+    return (g && groupExists(g)) ? g : defaultGroup();
+}
+
+// The grammar topics, grouped by area — the same markup for both dropdowns.
+function appendTopicOptions(select) {
+    for (const area of window.GRAMMAR.areas()) {
+        const parent = document.createElement("optgroup");
+        parent.label = area;
+        for (const t of window.GRAMMAR.TOPICS.filter(x => x.area === area)) {
+            const opt = document.createElement("option");
+            opt.value = t.id;
+            opt.textContent = t.title;
+            parent.appendChild(opt);
+        }
+        select.appendChild(parent);
+    }
+}
+
 function populateGroupSelect() {
     const select = document.getElementById("group-select");
     select.innerHTML = "";
     if (mode === "manual") {
-        for (const t of window.GRAMMAR.TOPICS) {
-            const opt = document.createElement("option");
-            opt.value = t.id;
-            opt.textContent = t.title;
-            select.appendChild(opt);
-        }
+        appendTopicOptions(select);
+        return;
+    }
+    if (isPractice(mode)) {
+        const allOpt = document.createElement("option");
+        allOpt.value = "__all__";
+        allOpt.textContent = "All topics";
+        select.appendChild(allOpt);
+        appendTopicOptions(select);
         return;
     }
     if (mode === "read") {
@@ -152,39 +205,17 @@ function populateGroupSelect() {
     }
     const allOpt = document.createElement("option");
     allOpt.value = "__all__";
-    allOpt.textContent = (mode === "fill" || quizSource()) ? "All topics" : "All groups";
+    allOpt.textContent = "All groups";
     select.appendChild(allOpt);
 
-    if (!quizSource() && mode !== "fill" && allWords.some(w => w.marked)) {
+    if (allWords.some(w => w.marked)) {
         const marked = document.createElement("option");
         marked.value = MARKED;
         marked.textContent = "\u2605 Marked";
         select.appendChild(marked);
     }
 
-    if (mode === "drill") {
-        // grouped by grammar topic, so a second topic just adds its own group
-        let current = null, parent = select;
-        for (const d of window.GRAMMAR.drills()) {
-            if (d.topicId !== current) {
-                current = d.topicId;
-                parent = document.createElement("optgroup");
-                parent.label = d.topicTitle;
-                select.appendChild(parent);
-            }
-            const opt = document.createElement("option");
-            opt.value = d.topicId + "::" + d.sub;
-            opt.textContent = d.sub;
-            parent.appendChild(opt);
-        }
-        return;
-    }
-
-    const items = quizSource()
-        ? quizSource().TOPICS
-        : mode === "fill"
-            ? [...new Set(allSentences.map(s => s.topic).filter(Boolean))].sort()
-            : [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
+    const items = [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
     for (const g of items) {
         const opt = document.createElement("option");
         opt.value = g;
@@ -193,47 +224,27 @@ function populateGroupSelect() {
     }
 }
 
-// Dates, Choose and the grammar drills are the same kind of question over
-// different generators, so they share one renderer.
-function quizSource() {
-    if (mode === "dates")   return window.DATETIME || null;
-    if (mode === "drill")   return window.GRAMMAR || null;
-    if (mode === "pick")    return window.CONJCHOICE || null;
-    return null;
-}
+// Generated questions and written sentences are the same kind of question over
+// different sources, so one renderer per answer format serves all of them.
 
 function groupExists(g) {
-    if (g === "__all__") return true;
-    if (g === MARKED) return !quizSource() && mode !== "fill" && allWords.some(w => w.marked);
-    if (mode === "manual") return window.GRAMMAR.TOPICS.some(t => t.id === g);
+    if (g === "__all__") return mode !== "manual" && mode !== "read";
+    if (g === MARKED) return !isPractice(mode) && mode !== "manual" && allWords.some(w => w.marked);
+    if (mode === "manual" || isPractice(mode)) return window.GRAMMAR.TOPICS.some(t => t.id === g);
     if (mode === "read")   return window.ReadingMode.TEXTS().some(t => t.id === g);
-    if (mode === "drill")  return !!window.GRAMMAR.resolve(g);
-    if (quizSource()) return quizSource().TOPICS.includes(g);
-    if (mode === "fill") return allSentences.some(s => s.topic === g);
     return allWords.some(w => w.group === g);
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 function modePool() {
-    if (mode === "fill") {
-        return group === "__all__" ? allSentences : allSentences.filter(s => s.topic === group);
-    }
     if (group === MARKED) return allWords.filter(w => w.marked);
     if (group === "__all__") return allWords;
     return allWords.filter(w => w.group === group);
 }
 
 function selectRound() {
-    if (quizSource() || mode === "manual" || mode === "read") return [];
-    if (mode === "fill") {
-        const pool = modePool().slice();
-        for (let i = pool.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [pool[i], pool[j]] = [pool[j], pool[i]];
-        }
-        return pool.slice(0, Math.min(10, pool.length));
-    }
+    if (isPractice(mode) || mode === "manual" || mode === "read") return [];
     return selectWordRound();
 }
 
@@ -324,9 +335,7 @@ function setLang(l) {
     document.getElementById("lang-en").classList.toggle("active", l === "english");
     updateSubtitle();
     if (mode === "type") buildTyping();
-    else if (mode === "fill") buildFill();
-    else if (mode === "conj") buildConj();
-    else if (mode === "dates") buildDates();
+    else if (isPractice(mode)) buildPractice();
     else buildMatch();
 }
 
@@ -334,16 +343,19 @@ function updateSubtitle() {
     const subtitles = {
         match:  { greek: "Tap or drag the Greek word to its English meaning",        english: "Tap or drag the English word to its Greek meaning" },
         type:   { greek: "Type the Greek translation",                               english: "Type the English translation" },
-        fill:   { greek: "Fill the blanks with the correct form",                    english: "Fill the blanks with the correct form" },
-        conj:   { greek: "Type the verb in the requested tense and person",           english: "Type the verb in the requested tense and person" },
-        pick:   { greek: "Choose the verb in the requested tense and person",         english: "Choose the verb in the requested tense and person" },
-        dates:  { greek: "Say the clock, date, age or duration in Greek",            english: "Read the clock, date, age or duration" },
+        mixed:  { greek: "Everything this topic has \u2014 tap or type",                 english: "Everything this topic has \u2014 tap or type" },
+        choose: { greek: "Tap the right form",                                       english: "Tap the right form" },
+        write:  { greek: "Write the form",                                           english: "Write the form" },
         browse: { greek: "Look a word up \u2014 verbs show how they change",           english: "Look a word up \u2014 verbs show how they change" },
-        manual: { greek: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things",            english: "\u03a0\u03b1\u03c1\u03b1\u03b8\u03b5\u03c4\u03b9\u03ba\u03ac \u2014 how Greek compares things" },
-        drill:  { greek: "Practise the grammar topic",                               english: "Practise the grammar topic" },
+        manual: { greek: "Read the rule, then practise it",                          english: "Read the rule, then practise it" },
         read:   { greek: "Read the text \u2014 the English sits under each paragraph",   english: "Read the text \u2014 the English sits under each paragraph" }
     };
-    document.getElementById("subtitle").textContent = subtitles[mode][lang];
+    // A topic names itself in the subtitle, so the dropdown is not the only clue
+    const topic = (mode === "manual" || isPractice(mode)) && group !== "__all__"
+        ? window.GRAMMAR.TOPICS.find(t => t.id === group) : null;
+    const base = subtitles[mode][lang];
+    document.getElementById("subtitle").textContent =
+        topic ? topic.title + " \u2014 " + topic.blurb : base;
 }
 
 // ── Match game ──────────────────────────────────────────────────────────────
@@ -651,9 +663,10 @@ function applyMode() {
     const isMatchLike = (mode === "match");
     document.getElementById("match-container").style.display  = isMatchLike ? "" : "none";
     document.getElementById("typing-container").style.display = mode === "type" ? "" : "none";
-    document.getElementById("fill-container").style.display   = mode === "fill" ? "" : "none";
-    document.getElementById("conj-container").style.display   = mode === "conj" ? "" : "none";
-    document.getElementById("dates-container").style.display  = quizSource() ? "" : "none";
+    // The three practice containers are shown one at a time by showPracticeItem
+    for (const id of ["fill-container", "conj-container", "dates-container"]) {
+        document.getElementById(id).style.display = "none";
+    }
     document.getElementById("manual-container").style.display = mode === "manual" ? "" : "none";
     if (mode === "manual") renderManual();
     document.getElementById("reading-container").style.display = mode === "read" ? "" : "none";
@@ -662,20 +675,18 @@ function applyMode() {
     document.getElementById("browse-search").style.display    = mode === "browse" ? "" : "none";
     document.querySelector(".actions").style.display =
         (["browse", "manual", "read"].includes(mode)) ? "none" : "";
+    document.getElementById("btn-practise").style.display = mode === "manual" ? "" : "none";
 
     renderTabs();
-    // Lang toggle has no role in Fill or Browse mode
+    // The toggle only means something where a question can be asked either way
     document.querySelector(".lang-toggle").style.display =
-        (["fill", "browse", "drill", "pick", "read"].includes(mode)) ? "none" : "";
-    // Conjugate drills its own verb list — the group filter has nothing to say there
-    document.getElementById("group-select").disabled = (mode === "conj");
+        (["match", "type"].includes(mode)) ? "" : "none";
+    document.getElementById("group-select").disabled = false;
     updateSubtitle();
     if (mode === "type") buildTyping();
-    else if (mode === "fill") buildFill();
-    else if (mode === "conj") buildConj();
-    else if (quizSource()) buildDates();
+    else if (isPractice(mode)) buildPractice();
     else if (mode === "browse") BrowseMode.show();
-
+    else if (mode === "manual" || mode === "read") { /* nothing to build */ }
     else buildMatch();
 }
 
@@ -688,19 +699,10 @@ function switchMode(target) {
     if (mode === "read") window.ReadingMode.load().then(refreshReading);
     // Rebuild dropdown — Fill uses sentence topics, others use word groups
     populateGroupSelect();
-    if (mode === "fill") {
-        group = localStorage.getItem("greek_topic") || "__all__";
-    } else if (quizSource() || mode === "manual" || mode === "read") {
-        group = localStorage.getItem("greek_topic_" + mode) || "__all__";
-    } else {
-        group = localStorage.getItem("greek_group") || "__all__";
-    }
-    if (!groupExists(group)) group = defaultGroup();
+    group = resolveGroup();
     document.getElementById("group-select").value = group;
-    // Always re-pick the round when entering or leaving a mode with a different data shape
-    if (mode === "fill" || prev === "fill" || quizSource() || ["dates", "drill"].includes(prev)) {
-        round = selectRound();
-    }
+    // Re-pick whenever the shape of the data changed under us
+    if (isPractice(mode) || isPractice(prev)) round = selectRound();
     applyMode();
 }
 
@@ -719,12 +721,11 @@ function rememberMode() {
 function switchGroup(target) {
     if (target === group) return;
     group = target;
-    if (mode === "fill") {
-        localStorage.setItem("greek_topic", group);
-    } else if (quizSource() || mode === "manual" || mode === "read") {
-        localStorage.setItem("greek_topic_" + mode, group);
-    } else {
-        localStorage.setItem("greek_group", group);
+    try { localStorage.setItem(topicKeyFor(mode), group); } catch (e) { /* private mode */ }
+    // A topic may not offer the format you are on; Mixed always works.
+    if (isPractice(mode) && !window.PRACTICE.formatsFor(group).includes(mode)) {
+        mode = "mixed";
+        rememberMode();
     }
     round = selectRound();
     applyMode();
@@ -865,24 +866,6 @@ let fillTotal   = 0;
 let fillChecked = false;
 let fillState   = []; // per-blank: { selected: string|null }
 
-function buildFill() {
-    fillIndex = 0;
-    fillScore = 0;
-    fillTotal = 0;
-    document.getElementById("score-banner").style.display = "none";
-    document.getElementById("btn-check").style.display    = "";
-    document.getElementById("btn-retry").style.display    = "none";
-    document.getElementById("btn-new").style.display      = "none";
-    if (!round.length) {
-        document.getElementById("fill-prompt").textContent   = "No sentences for this topic.";
-        document.getElementById("fill-sentence").innerHTML   = "";
-        document.getElementById("fill-blanks").innerHTML     = "";
-        document.getElementById("btn-check").style.display   = "none";
-        return;
-    }
-    showFillQuestion();
-}
-
 function showFillQuestion() {
     const item = round[fillIndex];
     fillChecked = false;
@@ -1009,6 +992,12 @@ function advanceFill() {
 }
 
 function finishFill() {
+    if (isPractice(mode)) {
+        practiceScore += fillScore;
+        practiceTotal += fillTotal;
+        advancePractice();
+        return;
+    }
     showScoreBanner(fillScore, fillTotal);
     document.getElementById("btn-check").style.display = "none";
     document.getElementById("btn-retry").style.display = "";
@@ -1017,14 +1006,13 @@ function finishFill() {
 
 // Wire Check/Retry buttons for Fill mode too
 function dispatchCheck() {
-    if (mode === "fill") checkFillAnswers();
+    const item = currentItem();
+    if (isPractice(mode) && item && item.kind === "fill") checkFillAnswers();
     else checkMatchAnswers();
 }
 function dispatchRetry() {
     if (mode === "type") buildTyping();
-    else if (mode === "fill") { round = selectRound(); buildFill(); }
-    else if (mode === "conj") buildConj();
-    else if (mode === "dates") buildDates();
+    else if (isPractice(mode)) buildPractice();
     else buildMatch();
 }
 
@@ -1042,84 +1030,6 @@ const TENSE_LABELS = {
     future:    "future (θα V)"
 };
 const PERSON_LABELS = ["1sg (I)", "2sg (you)", "3sg (he/she/it)", "1pl (we)", "2pl (you all)", "3pl (they)"];
-
-const CONJ_TENSES = ["present", "imperfect", "aorist", "future"];
-const CONJ_QUEUE_KEY = "greek_conj_queue";
-
-function shuffleArr(arr) {
-    const a = arr.slice();
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-}
-
-// Verbs are dealt from a shuffled queue that survives page reloads, so every
-// verb comes up once before any verb comes up twice.
-function takeFromConjQueue(verbs, size) {
-    const byLemma = new Map(verbs.map(v => [v.lemma, v]));
-    let queue = [];
-    try { queue = JSON.parse(localStorage.getItem(CONJ_QUEUE_KEY) || "[]"); } catch (e) { queue = []; }
-    queue = queue.filter(l => byLemma.has(l));
-
-    const taken = [];
-    while (taken.length < size) {
-        if (!queue.length) {
-            // Reshuffle the whole list, keeping the verbs just drilled to the back.
-            const fresh = shuffleArr(verbs.map(v => v.lemma).filter(l => !taken.includes(l)));
-            if (!fresh.length) break;
-            queue = fresh;
-        }
-        taken.push(queue.shift());
-    }
-    try { localStorage.setItem(CONJ_QUEUE_KEY, JSON.stringify(queue)); } catch (e) { /* private mode */ }
-    return taken.map(l => byLemma.get(l));
-}
-
-function buildConjRound() {
-    const verbs = window.CONJUGATIONS || [];
-    if (!verbs.length) return [];
-    const size = Math.min(10, verbs.length);
-    const order = takeFromConjQueue(verbs, size);
-
-    // Deal tenses from a shuffled deck so every four questions cover all four
-    // tenses, instead of a round coming out all-present by chance.
-    let deck = [];
-    const round = [];
-    for (const v of order) {
-        if (!deck.length) deck = shuffleArr(CONJ_TENSES);
-        let ti = deck.findIndex(t => v[t]);
-        if (ti === -1) { deck = shuffleArr(CONJ_TENSES); ti = deck.findIndex(t => v[t]); }
-        if (ti === -1) continue;                       // verb has no usable tense
-        const tense = deck.splice(ti, 1)[0];
-
-        // present 1sg is skipped — it is identical to the lemma being shown
-        const person = shuffleArr([0, 1, 2, 3, 4, 5])
-            .find(p => v[tense][p] && !(tense === "present" && p === 0));
-        if (person === undefined) continue;
-
-        round.push({ lemma: v.lemma, english: v.english, tense, person, answer: v[tense][person] });
-    }
-    return shuffleArr(round);
-}
-
-function buildConj() {
-    conjRound  = buildConjRound();
-    conjIndex  = 0;
-    conjScore  = 0;
-    conjWrong  = 0;
-    document.getElementById("score-banner").style.display = "none";
-    document.getElementById("btn-check").style.display    = "none";
-    document.getElementById("btn-retry").style.display    = "none";
-    document.getElementById("btn-new").style.display      = "none";
-    document.getElementById("conj-history").innerHTML     = "";
-    if (!conjRound.length) {
-        document.getElementById("conj-prompt").textContent = "No verbs loaded.";
-        return;
-    }
-    showConjQuestion();
-}
 
 function showConjQuestion() {
     const q = conjRound[conjIndex];
@@ -1187,10 +1097,97 @@ function advanceConj() {
 }
 
 function finishConj() {
+    if (isPractice(mode)) {
+        practiceScore += conjScore;
+        practiceTotal += 1;
+        advancePractice();
+        return;
+    }
     showScoreBanner(conjScore, conjRound.length);
     document.getElementById("btn-retry").style.display = "";
     document.getElementById("btn-new").style.display   = "";
     document.getElementById("conj-input").disabled     = true;
+}
+
+// ── Practice: one topic, one answer format, ten questions ───────────────────
+// The round can hold three kinds of item and each has its own renderer below;
+// this layer owns the cursor and the score so a mixed round counts as one.
+
+let practiceRound = [], practiceIndex = 0, practiceScore = 0, practiceTotal = 0;
+
+function currentItem() { return practiceRound[practiceIndex] || null; }
+
+function buildPractice() {
+    clearTimeout(datesTimer);
+    clearDatesContinue();
+    practiceRound = window.PRACTICE.buildRound(group === "__all__" ? null : group, mode, 10);
+    practiceIndex = 0;
+    practiceScore = 0;
+    practiceTotal = 0;
+    checked = false;
+    document.getElementById("score-banner").style.display = "none";
+    for (const id of ["btn-check", "btn-retry", "btn-new"]) {
+        document.getElementById(id).style.display = "none";
+    }
+    if (!practiceRound.length) {
+        showPracticeContainer("choose");
+        document.getElementById("dates-progress").textContent = "";
+        document.getElementById("dates-topic").textContent    = "";
+        document.getElementById("dates-sub").textContent      = "";
+        document.getElementById("dates-prompt-text").textContent =
+            "No exercises for this topic yet \u2014 read it in Grammar.";
+        document.getElementById("dates-gloss").textContent  = "";
+        document.getElementById("dates-options").innerHTML  = "";
+        return;
+    }
+    showPracticeItem();
+}
+
+function showPracticeContainer(kind) {
+    const map = { fill: "fill-container", write: "conj-container", choose: "dates-container" };
+    for (const [k, id] of Object.entries(map)) {
+        document.getElementById(id).style.display = (k === kind) ? "" : "none";
+    }
+}
+
+function practiceProgress() { return (practiceIndex + 1) + " / " + practiceRound.length; }
+
+function showPracticeItem() {
+    const item = currentItem();
+    // A Continue button left in a container we are about to hide would still
+    // answer to Enter, so the previous question is torn down first.
+    clearDatesContinue();
+    clearTimeout(datesTimer);
+    if (item.kind !== "choose") document.getElementById("dates-options").innerHTML = "";
+    showPracticeContainer(item.kind);
+    document.getElementById("btn-check").style.display = item.kind === "fill" ? "" : "none";
+
+    if (item.kind === "fill") {
+        round = [item]; fillIndex = 0; fillScore = 0; fillTotal = 0;
+        showFillQuestion();
+        document.getElementById("fill-progress").textContent = practiceProgress();
+    } else if (item.kind === "write") {
+        conjRound = [item]; conjIndex = 0; conjScore = 0; conjWrong = 0;
+        showConjQuestion();
+        document.getElementById("conj-progress").textContent = practiceProgress();
+    } else {
+        datesRound = [item]; datesIndex = 0; datesScore = 0;
+        showDatesQuestion();
+        document.getElementById("dates-progress").textContent = practiceProgress();
+    }
+}
+
+function advancePractice() {
+    practiceIndex++;
+    if (practiceIndex < practiceRound.length) showPracticeItem();
+    else finishPractice();
+}
+
+function finishPractice() {
+    showScoreBanner(practiceScore, practiceTotal);
+    document.getElementById("btn-check").style.display = "none";
+    document.getElementById("btn-retry").style.display = "";
+    document.getElementById("btn-new").style.display   = "";
 }
 
 // ── Dates / time drill ──────────────────────────────────────────────────────
@@ -1200,31 +1197,6 @@ let datesRound = [];
 let datesIndex = 0;
 let datesScore = 0;
 let datesTimer = null;
-
-function buildDates() {
-    // Drop any answer-reveal timer or Continue listener left by the previous round
-    clearTimeout(datesTimer);
-    clearDatesContinue();
-    const source = quizSource();
-    datesRound = source
-        ? source.buildRound(group === "__all__" ? null : group, 10,
-                            lang === "english" ? "en" : "gr")
-        : [];
-    datesIndex = 0;
-    datesScore = 0;
-    checked    = false;
-    document.getElementById("score-banner").style.display = "none";
-    document.getElementById("btn-check").style.display    = "none";
-    document.getElementById("btn-retry").style.display    = "none";
-    document.getElementById("btn-new").style.display      = "none";
-    if (!datesRound.length) {
-        document.getElementById("dates-prompt-text").textContent = "No questions available.";
-        document.getElementById("dates-gloss").textContent  = "";
-        document.getElementById("dates-options").innerHTML  = "";
-        return;
-    }
-    showDatesQuestion();
-}
 
 function showDatesQuestion() {
     const q = datesRound[datesIndex];
@@ -1301,6 +1273,12 @@ function advanceDates() {
 }
 
 function finishDates() {
+    if (isPractice(mode)) {
+        practiceScore += datesScore;
+        practiceTotal += 1;
+        advancePractice();
+        return;
+    }
     showScoreBanner(datesScore, datesRound.length);
     document.getElementById("btn-retry").style.display = "";
     document.getElementById("btn-new").style.display   = "";
