@@ -361,8 +361,8 @@ button:active { transform: scale(0.97); }
 
 #score-banner {
     display: none; text-align: center; font-size: 16px; font-weight: 700;
-    padding: 12px 24px; border-radius: 8px; margin-bottom: 20px;
-    width: 100%; max-width: 720px;
+    padding: 12px 24px; border-radius: 8px;
+    width: 100%; max-width: 640px; margin: 0 auto 20px;
 }
 #score-banner.perfect { background: var(--good-bg); color: var(--good); border: 1.5px solid var(--good); }
 #score-banner.partial { background: var(--warn-bg); color: var(--warn); border: 1.5px solid var(--warn); }
@@ -765,8 +765,9 @@ body { color: var(--text); }
 .btn-practise:hover { background: rgba(45, 108, 223, .08); }
 
 /* The lesson picker sits above the game, because it narrows all of it */
+/* Sits outside .game, so it has to hold the same column itself */
 .lesson-bar {
-    margin: 0 0 10px;
+    width: 100%; max-width: 640px; margin: 0 auto 10px;
 }
 .lesson-bar .mode-select {
     width: 100%;

@@ -169,7 +169,9 @@ function resolveGroup() {
 }
 
 // The grammar topics, grouped by area — the same markup for both dropdowns.
-function appendTopicOptions(select) {
+// In Practice each topic is followed by its own sub-drills, so you can take
+// just the clock, just the months, just the aorist, instead of the whole topic.
+function appendTopicOptions(select, withSubs) {
     const visible = topicsInLesson();
     for (const area of window.GRAMMAR.areas()) {
         const inArea = visible.filter(x => x.area === area);
@@ -181,9 +183,26 @@ function appendTopicOptions(select) {
             opt.value = t.id;
             opt.textContent = window.GRAMMAR.topicLabel(t);
             parent.appendChild(opt);
+            if (!withSubs) continue;
+            for (const sub of subsOf(t.id)) {
+                const o = document.createElement("option");
+                o.value = t.id + "::" + sub;
+                o.textContent = "\u2003\u21b3 " + sub;
+                parent.appendChild(o);
+            }
         }
         select.appendChild(parent);
     }
+}
+
+// Every separately drillable part of a topic, named once. A tense is served by
+// both a tapping and a typing drill; the tab row picks which, not the menu.
+function subsOf(topicId) {
+    const seen = [];
+    for (const s of window.GRAMMAR.streams(topicId, null)) {
+        if (!seen.includes(s.sub)) seen.push(s.sub);
+    }
+    return seen.length > 1 ? seen : [];
 }
 
 function populateLessonSelect() {
@@ -240,7 +259,7 @@ function populateGroupSelect() {
         allOpt.value = "__all__";
         allOpt.textContent = "All topics";
         select.appendChild(allOpt);
-        appendTopicOptions(select);
+        appendTopicOptions(select, true);
         return;
     }
     if (mode === "read") {
@@ -290,7 +309,11 @@ function populateGroupSelect() {
 function groupExists(g) {
     if (g === "__all__") return mode !== "manual" && mode !== "read";
     if (g === MARKED) return !isPractice(mode) && mode !== "manual" && allWords.some(w => w.marked);
-    if (mode === "manual" || isPractice(mode)) return topicsInLesson().some(t => t.id === g);
+    if (mode === "manual" || isPractice(mode)) {
+        const { id, sub } = window.PRACTICE.split(g);
+        if (!topicsInLesson().some(t => t.id === id)) return false;
+        return !sub || (mode !== "manual" && subsOf(id).includes(sub));
+    }
     if (mode === "read") {
         const only = lessonTexts();
         return window.ReadingMode.TEXTS().some(t => t.id === g) && (!only || only.includes(g));
@@ -418,10 +441,13 @@ function updateSubtitle() {
         read:   { greek: "Read the text \u2014 the English sits under each paragraph",   english: "Read the text \u2014 the English sits under each paragraph" }
     };
     // A topic names itself in the subtitle, so the dropdown is not the only clue
+    const { id: topicId, sub } = window.PRACTICE.split(group);
     const topic = (mode === "manual" || isPractice(mode)) && group !== "__all__"
-        ? window.GRAMMAR.TOPICS.find(t => t.id === group) : null;
+        ? window.GRAMMAR.TOPICS.find(t => t.id === topicId) : null;
     const base = subtitles[mode][lang];
-    const line = topic ? topic.title + " \u2014 " + topic.blurb : base;
+    const line = !topic ? base
+               : sub ? topic.title + " \u00b7 " + sub
+               : topic.title + " \u2014 " + topic.blurb;
     document.getElementById("subtitle").textContent =
         lesson === "__all__" ? line : window.LESSONS.label(lesson) + " \u00b7 " + line;
 }

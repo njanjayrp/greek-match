@@ -32,9 +32,19 @@ function topicInLesson(topicId) {
 
 function G() { return window.GRAMMAR; }
 
+// A practice value is either a topic id or one of its sub-drills, "id::sub" —
+// which is how you practise only the clock, or only the aorist of a verb.
+function split(value) {
+    const s = String(value == null ? "" : value);
+    const i = s.indexOf("::");
+    return i < 0 ? { id: s, sub: null } : { id: s.slice(0, i), sub: s.slice(i + 2) };
+}
+
 // The sentences.json topics a grammar topic owns. No topic id means every
 // sentence, which is what "All topics" practises.
-function sentencesFor(topicId) {
+function sentencesFor(value) {
+    const { id: topicId, sub } = split(value);
+    if (sub) return [];                 // a sub-drill is generated, never written
     if (!sentences.length) return [];
     let pool = sentences;
     if (lesson) pool = pool.filter(s => String(s.lesson) === lesson);
@@ -47,8 +57,17 @@ function sentencesFor(topicId) {
 
 // Declaration-driven and synchronous: the tab row has to know what a topic
 // offers before the drill scripts have finished loading.
-function formatsFor(topicId) {
+function formatsFor(value) {
+    const { id: topicId, sub } = split(value);
     if (topicId && topicId !== "__all__" && !topicInLesson(topicId)) return [];
+    if (sub) {
+        const formats = G().streams(topicId, null).filter(s => s.sub === sub).map(s => s.format);
+        if (!formats.length) return [];
+        const only = ["mixed"];
+        if (formats.includes("choose")) only.push("choose");
+        if (formats.includes("write"))  only.push("write");
+        return only;
+    }
     let generated = G().formatsFor(topicId && topicId !== "__all__" ? topicId : null);
     // Under a lesson, only that lesson's topics can generate anything
     if (lesson && (!topicId || topicId === "__all__")) {
@@ -56,7 +75,7 @@ function formatsFor(topicId) {
         generated = ids.some(id => G().formatsFor(id).length)
             ? [...new Set(ids.flatMap(id => G().formatsFor(id)))] : [];
     }
-    const hasFill   = sentencesFor(topicId).length > 0;
+    const hasFill   = sentencesFor(value).length > 0;
     if (!generated.length && !hasFill) return [];   // a topic with a manual and no exercises yet
     const out = ["mixed"];
     if (generated.includes("choose") || hasFill) out.push("choose");
@@ -74,12 +93,13 @@ function shuffle(arr) {
 }
 
 // One dealable source, generated or written, behind the same next() call.
-function sourcesFor(topicId, format) {
+function sourcesFor(value, format) {
+    const { id: topicId, sub: only } = split(value);
     const id = (topicId && topicId !== "__all__") ? topicId : null;
     const out = [];
 
     if (format !== "write") {
-        const pool = shuffle(sentencesFor(topicId));
+        const pool = shuffle(sentencesFor(value));
         let i = 0;
         if (pool.length) out.push({
             kind: "fill",
@@ -88,6 +108,7 @@ function sourcesFor(topicId, format) {
     }
     for (const s of G().streams(id, format === "mixed" ? null : format)) {
         if (!topicInLesson(s.topicId)) continue;
+        if (only && s.sub !== only) continue;
         out.push({
             kind: s.format,
             next: () => {
@@ -102,10 +123,10 @@ function sourcesFor(topicId, format) {
 // Deals round-robin from a reshuffled queue of sources, so a topic with four
 // generators and a sentence set spreads a round over all five instead of
 // emptying whichever one answers first.
-function buildRound(topicId, format, n) {
+function buildRound(value, format, n) {
     n = n || 10;
     format = format || "mixed";
-    let sources = sourcesFor(topicId, format);
+    let sources = sourcesFor(value, format);
     if (!sources.length) return [];
 
     const round = [], seen = new Set();
@@ -134,6 +155,6 @@ function weightOf(item) {
     return item && item.kind === "fill" ? item.blanks.length : 1;
 }
 
-return { FORMATS, setSentences, setLesson, sentencesFor, formatsFor, buildRound, weightOf };
+return { FORMATS, setSentences, setLesson, sentencesFor, formatsFor, buildRound, weightOf, split };
 
 })();

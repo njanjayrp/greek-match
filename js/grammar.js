@@ -645,6 +645,29 @@ const TOPICS = [
 </article>`
     },
     {
+        id: "tenses",
+        title: "Χρόνοι του ρήματος",
+        en: "all tenses together",
+        blurb: "All four tenses in one round — the drill that mixes them.",
+        area: "Ρήματα",
+        sentences: [],
+        manual: `<article class="manual">
+    <h2>Χρόνοι του ρήματος — the four tenses side by side</h2>
+    <p class="manual-lead">All four tenses in one round — the drill that mixes them.</p>
+    <table class="manual-table">
+        <tr><th>Χρόνος</th><th>English</th><th>What it says</th><th>γράφω</th></tr>
+        <tr><td>Ενεστώτας</td><td>present</td><td>now, or as a rule</td><td>γράφω</td></tr>
+        <tr><td>Παρατατικός</td><td>imperfect</td><td>was writing, used to write</td><td>έγραφα</td></tr>
+        <tr><td>Αόριστος</td><td>simple past</td><td>wrote, once and finished</td><td>έγραψα</td></tr>
+        <tr><td>Μέλλοντας</td><td>future</td><td>will write</td><td>θα γράψω</td></tr>
+    </table>
+    <p class="manual-note">Κάθε χρόνος έχει και δική του σελίδα. Εδώ έρχονται ανακατεμένοι,
+    που είναι το δύσκολο: πρώτα διάλεξε χρόνο, μετά πρόσωπο.</p>
+</article>`,
+        drills: [{ format: "choose", src: "js/conjchoice.js", global: "CONJCHOICE" },
+                 { format: "write",  src: "js/conjtype.js",   global: "CONJTYPE" }]
+    },
+    {
         id: "present",
         title: "Ενεστώτας",
         en: "present",
