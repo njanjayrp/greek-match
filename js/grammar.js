@@ -422,7 +422,7 @@ const TOPICS = [
         en: "future",
         blurb: "θα + the same stem as the aorist: θα γράψω, θα μιλήσω, θα πάω",
         area: "Ρήματα",
-        sentences: [],
+        sentences: ["Μέλλοντας"],
         manual: `<article class="manual">
     <h2>Απλός Μέλλοντας — what will happen once</h2>
     <p class="manual-lead">One word of grammar and one changed stem: <b>θα</b> + the aorist stem with
@@ -607,7 +607,7 @@ const TOPICS = [
         en: "diminutives",
         blurb: "The friendly -άκι: ουζάκι, μπιρίτσα, ταβερνούλα, Γιωργάκης",
         area: "Λεξιλόγιο",
-        sentences: [],
+        sentences: ["Υποκοριστικά"],
         manual: `<article class="manual">
     <h2>Υποκοριστικά — the small, friendly form</h2>
     <p class="manual-lead">Greek shrinks a word to make it smaller, but far more often to make it

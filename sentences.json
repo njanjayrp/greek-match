@@ -3881,5 +3881,1003 @@
       }
     ],
     "lesson": 15
+  },
+  {
+    "id": "mellontas-001",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Next year Nikolas and I will buy a new car.",
+    "template": "Του χρόνου ο Νικόλας κι εγώ {0} καινούργιο αυτοκίνητο.",
+    "blanks": [
+      {
+        "answer": "θα αγοράσουμε",
+        "options": [
+          "θα αγοράσουμε",
+          "θα αγοράζουμε",
+          "θα αγοράσουν",
+          "αγοράσαμε"
+        ],
+        "hint": "we will buy (αγοράζω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-002",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Athina and Katerina will travel to England next week.",
+    "template": "Η Αθηνά και η Κατερίνα {0} την επόμενη εβδομάδα στην Αγγλία.",
+    "blanks": [
+      {
+        "answer": "θα ταξιδέψουν",
+        "options": [
+          "θα ταξιδέψουν",
+          "θα ταξιδεύουν",
+          "θα ταξιδέψουμε",
+          "ταξίδεψαν"
+        ],
+        "hint": "they will travel (ταξιδεύω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-003",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "In two hours the train will arrive in Larisa.",
+    "template": "Σε δύο ώρες το τρένο {0} στη Λάρισα.",
+    "blanks": [
+      {
+        "answer": "θα φτάσει",
+        "options": [
+          "θα φτάσει",
+          "θα φτάνει",
+          "θα φτάσουν",
+          "έφτασε"
+        ],
+        "hint": "it will arrive (φτάνω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-004",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Mrs Manta, when will you come back from the holidays?",
+    "template": "— Κυρία Μαντά, πότε {0} από τις διακοπές;",
+    "blanks": [
+      {
+        "answer": "θα επιστρέψετε",
+        "options": [
+          "θα επιστρέψετε",
+          "θα επιστρέφετε",
+          "θα επιστρέψουμε",
+          "επιστρέψατε"
+        ],
+        "hint": "will you return (επιστρέφω, εσείς)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-005",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Mr Marinos will be away abroad for three months.",
+    "template": "Ο κύριος Μαρίνος {0} για τρεις μήνες στο εξωτερικό.",
+    "blanks": [
+      {
+        "answer": "θα λείψει",
+        "options": [
+          "θα λείψει",
+          "θα λείπει",
+          "θα λείψουν",
+          "έλειψε"
+        ],
+        "hint": "he will be away (λείπω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-006",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "My friends will work at a new company.",
+    "template": "Οι φίλοι μου {0} σε μια καινούργια εταιρεία.",
+    "blanks": [
+      {
+        "answer": "θα δουλέψουν",
+        "options": [
+          "θα δουλέψουν",
+          "θα δουλεύουν",
+          "θα δουλέψουμε",
+          "δούλεψαν"
+        ],
+        "hint": "they will work (δουλεύω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-007",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Next month my sister and I will paint the room.",
+    "template": "Τον επόμενο μήνα εγώ και η αδελφή μου {0} το δωμάτιο.",
+    "blanks": [
+      {
+        "answer": "θα βάψουμε",
+        "options": [
+          "θα βάψουμε",
+          "θα βάφουμε",
+          "θα βάψετε",
+          "βάψαμε"
+        ],
+        "hint": "we will paint (βάφω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-008",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "In the afternoon Mohamed will do his homework.",
+    "template": "Το απόγευμα ο Μοχάμεντ {0} τα μαθήματά του.",
+    "blanks": [
+      {
+        "answer": "θα διαβάσει",
+        "options": [
+          "θα διαβάσει",
+          "θα διαβάζει",
+          "θα διαβάσουν",
+          "διάβασε"
+        ],
+        "hint": "he will study (διαβάζω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-009",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "On Sunday Fotini will play tennis with Georgia.",
+    "template": "Την Κυριακή η Φωτεινή {0} τένις με τη Γεωργία.",
+    "blanks": [
+      {
+        "answer": "θα παίξει",
+        "options": [
+          "θα παίξει",
+          "θα παίσει",
+          "θα παίζει",
+          "έπαιξε"
+        ],
+        "hint": "she will play (παίζω — -ξ-, not -σ-)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-010",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Giorgos, when will you quit smoking?",
+    "template": "— Γιώργο, πότε {0} το κάπνισμα;",
+    "blanks": [
+      {
+        "answer": "θα κόψεις",
+        "options": [
+          "θα κόψεις",
+          "θα κόβεις",
+          "θα κόψετε",
+          "έκοψες"
+        ],
+        "hint": "will you cut out (κόβω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-011",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Tomorrow Regina will make a chocolate cake for her friends.",
+    "template": "Αύριο η Ρεγγίνα {0} ένα κέικ σοκολάτα για τους φίλους της.",
+    "blanks": [
+      {
+        "answer": "θα φτιάξει",
+        "options": [
+          "θα φτιάξει",
+          "θα φτιάχνει",
+          "θα φτιάσει",
+          "έφτιαξε"
+        ],
+        "hint": "she will make (φτιάχνω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-012",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "In the evening Faten will write the exercises on the future.",
+    "template": "Το βράδυ η Φατέν {0} τις ασκήσεις για τον Μέλλοντα.",
+    "blanks": [
+      {
+        "answer": "θα γράψει",
+        "options": [
+          "θα γράψει",
+          "θα γράφει",
+          "θα γράψουν",
+          "έγραψε"
+        ],
+        "hint": "she will write (γράφω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-013",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Next month Vlanta will leave for Thessaloniki.",
+    "template": "Τον επόμενο μήνα η Βλάντα {0} για Θεσσαλονίκη.",
+    "blanks": [
+      {
+        "answer": "θα φύγει",
+        "options": [
+          "θα φύγει",
+          "θα φεύγει",
+          "θα φύγουν",
+          "έφυγε"
+        ],
+        "hint": "she will leave (φεύγω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-014",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Our son will get into university this year.",
+    "template": "Ο γιος μας {0} στο πανεπιστήμιο φέτος.",
+    "blanks": [
+      {
+        "answer": "θα μπει",
+        "options": [
+          "θα μπει",
+          "θα μπαίνει",
+          "θα μπεις",
+          "μπήκε"
+        ],
+        "hint": "he will get in (μπαίνω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-015",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Who will order the souvlakia?",
+    "template": "Ποιος {0} τα σουβλάκια;",
+    "blanks": [
+      {
+        "answer": "θα παραγγείλει",
+        "options": [
+          "θα παραγγείλει",
+          "θα παραγγέλνει",
+          "θα παραγγείλεις",
+          "παράγγειλε"
+        ],
+        "hint": "will order (παραγγέλνω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-016",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Lena and Nazih will not come with us to the cinema tonight.",
+    "template": "Η Λένα και η Ναζίχ δε {0} μαζί μας στο σινεμά απόψε.",
+    "blanks": [
+      {
+        "answer": "θα έρθουν",
+        "options": [
+          "θα έρθουν",
+          "θα έρχονται",
+          "θα έρθουμε",
+          "ήρθαν"
+        ],
+        "hint": "they will come (έρχομαι, type Γ1)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-017",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Alina will not eat in the evening. She is on a diet!",
+    "template": "Η Αλίνα δε {0} το βράδυ. Κάνει δίαιτα!",
+    "blanks": [
+      {
+        "answer": "θα φάει",
+        "options": [
+          "θα φάει",
+          "θα τρώει",
+          "θα φάμε",
+          "έφαγε"
+        ],
+        "hint": "she will eat (τρώω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-018",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "My husband and I will stay in Greece until October.",
+    "template": "Ο άντρας μου κι εγώ {0} στην Ελλάδα μέχρι τον Οκτώβριο.",
+    "blanks": [
+      {
+        "answer": "θα μείνουμε",
+        "options": [
+          "θα μείνουμε",
+          "θα μένουμε",
+          "θα μείνετε",
+          "μείναμε"
+        ],
+        "hint": "we will stay (μένω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-019",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "In the evening I will send the email to my professor.",
+    "template": "Το βράδυ {0} το μέιλ στον καθηγητή μου.",
+    "blanks": [
+      {
+        "answer": "θα στείλω",
+        "options": [
+          "θα στείλω",
+          "θα στέλνω",
+          "θα στείλει",
+          "έστειλα"
+        ],
+        "hint": "I will send (στέλνω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-020",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "What will you drink? Ouzo or a beer?",
+    "template": "Τι {0}; Ουζάκι ή μπιρίτσα;",
+    "blanks": [
+      {
+        "answer": "θα πιείτε",
+        "options": [
+          "θα πιείτε",
+          "θα πίνετε",
+          "θα πιούμε",
+          "ήπιατε"
+        ],
+        "hint": "will you drink (πίνω, εσείς)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-021",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Ivan, will you give this book to Martha, please?",
+    "template": "— Ιβάν, {0} αυτό το βιβλίο στη Μάρθα, σε παρακαλώ;",
+    "blanks": [
+      {
+        "answer": "θα δώσεις",
+        "options": [
+          "θα δώσεις",
+          "θα δίνεις",
+          "θα δώσετε",
+          "έδωσες"
+        ],
+        "hint": "will you give (δίνω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-022",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Afroditi, will you put on a wash on Sunday?",
+    "template": "— Αφροδίτη, την Κυριακή {0} πλυντήριο;",
+    "blanks": [
+      {
+        "answer": "θα βάλεις",
+        "options": [
+          "θα βάλεις",
+          "θα βάζεις",
+          "θα βάλετε",
+          "έβαλες"
+        ],
+        "hint": "will you put on (βάζω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-023",
+    "topic": "Μέλλοντας",
+    "lesson": 11,
+    "en": "Maria, what time will you go to sleep tonight?",
+    "template": "— Μαρία, τι ώρα {0} απόψε;",
+    "blanks": [
+      {
+        "answer": "θα κοιμηθείς",
+        "options": [
+          "θα κοιμηθείς",
+          "θα κοιμάσαι",
+          "θα κοιμηθείτε",
+          "κοιμήθηκες"
+        ],
+        "hint": "will you sleep (κοιμάμαι, type Γ2)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-001",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Tomorrow the buses are on strike, but the metro will run normally.",
+    "template": "Αύριο τα λεωφορεία απεργούν, αλλά το μετρό {0} κανονικά.",
+    "blanks": [
+      {
+        "answer": "θα λειτουργήσει",
+        "options": [
+          "θα λειτουργήσει",
+          "θα λειτουργεί",
+          "θα λειτουργήσουν",
+          "λειτούργησε"
+        ],
+        "hint": "it will run (λειτουργώ, Β2)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-002",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Marina, what will you wear to the party?",
+    "template": "— Μαρίνα, τι {0} στο πάρτι;",
+    "blanks": [
+      {
+        "answer": "θα φορέσεις",
+        "options": [
+          "θα φορέσεις",
+          "θα φοράς",
+          "θα φορέσετε",
+          "φόρεσες"
+        ],
+        "hint": "will you wear (φοράω → -έσω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-003",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "The film will last two hours and ten minutes.",
+    "template": "Η ταινία {0} δύο ώρες και δέκα λεπτά.",
+    "blanks": [
+      {
+        "answer": "θα διαρκέσει",
+        "options": [
+          "θα διαρκέσει",
+          "θα διαρκεί",
+          "θα διαρκήσει",
+          "διάρκεσε"
+        ],
+        "hint": "it will last (διαρκώ → -έσω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-004",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "I am afraid my friend and I will be late for the lesson today.",
+    "template": "Πολύ φοβάμαι ότι σήμερα η φίλη μου κι εγώ {0} στο μάθημα.",
+    "blanks": [
+      {
+        "answer": "θα αργήσουμε",
+        "options": [
+          "θα αργήσουμε",
+          "θα αργούμε",
+          "θα αργήσετε",
+          "αργήσαμε"
+        ],
+        "hint": "we will be late (αργώ)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-005",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Oh no! We are out of money again! We will ask our parents.",
+    "template": "Ωχ! Πάλι είμαστε χωρίς λεφτά! {0} από τους γονείς μας.",
+    "blanks": [
+      {
+        "answer": "Θα ζητήσουμε",
+        "options": [
+          "Θα ζητήσουμε",
+          "Θα ζητάμε",
+          "Θα ζητήσετε",
+          "Ζητήσαμε"
+        ],
+        "hint": "we will ask for (ζητάω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-006",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Tonight Nicolas will talk to his friends on Skype.",
+    "template": "Απόψε ο Νικολά {0} με τους φίλους του στο skype.",
+    "blanks": [
+      {
+        "answer": "θα μιλήσει",
+        "options": [
+          "θα μιλήσει",
+          "θα μιλάει",
+          "θα μιλήσουν",
+          "μίλησε"
+        ],
+        "hint": "he will talk (μιλάω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-007",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Dear students, our office will inform you shortly about the date of the test.",
+    "template": "Αγαπητοί φοιτητές, η γραμματεία μας {0} σύντομα για την ημερομηνία του τεστ.",
+    "blanks": [
+      {
+        "answer": "θα σας πληροφορήσει",
+        "options": [
+          "θα σας πληροφορήσει",
+          "θα σας πληροφορεί",
+          "θα σας πληροφορήσουν",
+          "σας πληροφόρησε"
+        ],
+        "hint": "it will inform you (πληροφορώ)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-008",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Will you not take a sandwich for the break? You will be hungry for hours!",
+    "template": "Δε θα πάρεις ένα σάντουιτς για το διάλειμμα; {0} τόσες ώρες!",
+    "blanks": [
+      {
+        "answer": "Θα πεινάσεις",
+        "options": [
+          "Θα πεινάσεις",
+          "Θα πεινάς",
+          "Θα πεινάσετε",
+          "Πείνασες"
+        ],
+        "hint": "you will be hungry (πεινάω → -άσω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-009",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "I have a lot of questions from the lesson, I will probably ask the teacher.",
+    "template": "Έχω πολλές απορίες από το μάθημα, μάλλον {0} τον καθηγητή.",
+    "blanks": [
+      {
+        "answer": "θα ρωτήσω",
+        "options": [
+          "θα ρωτήσω",
+          "θα ρωτάω",
+          "θα ρωτήσει",
+          "ρώτησα"
+        ],
+        "hint": "I will ask (ρωτάω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-010",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Who will you invite to your wedding, Eleni?",
+    "template": "— Ποιους {0} στον γάμο σου, Ελένη;",
+    "blanks": [
+      {
+        "answer": "θα προσκαλέσεις",
+        "options": [
+          "θα προσκαλέσεις",
+          "θα προσκαλείς",
+          "θα προσκαλέσετε",
+          "προσκάλεσες"
+        ],
+        "hint": "will you invite (προσκαλώ → -έσω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-011",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "The grammar is difficult, but I will try.",
+    "template": "Η γραμματική είναι δύσκολη, αλλά εγώ {0}.",
+    "blanks": [
+      {
+        "answer": "θα προσπαθήσω",
+        "options": [
+          "θα προσπαθήσω",
+          "θα προσπαθώ",
+          "θα προσπαθήσει",
+          "προσπάθησα"
+        ],
+        "hint": "I will try (προσπαθώ)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-012",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "We will climb the rock and dive into the sea.",
+    "template": "Θα ανεβούμε στον βράχο και {0} στη θάλασσα.",
+    "blanks": [
+      {
+        "answer": "θα βουτήξουμε",
+        "options": [
+          "θα βουτήξουμε",
+          "θα βουτάμε",
+          "θα βουτήσουμε",
+          "βουτήξαμε"
+        ],
+        "hint": "we will dive (βουτάω → -ήξω)"
+      }
+    ]
+  },
+  {
+    "id": "mellontas-b-013",
+    "topic": "Μέλλοντας",
+    "lesson": 12,
+    "en": "Niko, would you look this word up in the dictionary, please?",
+    "template": "— Νίκο, σε παρακαλώ {0} αυτήν τη λέξη στο λεξικό;",
+    "blanks": [
+      {
+        "answer": "θα κοιτάξεις",
+        "options": [
+          "θα κοιτάξεις",
+          "θα κοιτάς",
+          "θα κοιτήσεις",
+          "κοίταξες"
+        ],
+        "hint": "will you look at (κοιτάω → -άξω)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-001",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "Can you call the office, please?",
+    "template": "Μπορείς {0} τηλέφωνο στη γραμματεία, σε παρακαλώ;",
+    "blanks": [
+      {
+        "answer": "να πάρεις",
+        "options": [
+          "να πάρεις",
+          "να παίρνεις",
+          "να πάρετε",
+          "πήρες"
+        ],
+        "hint": "to call (παίρνω)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-002",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "You do not need to speak English, I understand Greek.",
+    "template": "Δε χρειάζεται {0} αγγλικά, καταλαβαίνω ελληνικά.",
+    "blanks": [
+      {
+        "answer": "να μιλήσετε",
+        "options": [
+          "να μιλήσετε",
+          "να μιλάτε",
+          "να μιλήσεις",
+          "μιλήσατε"
+        ],
+        "hint": "to speak (μιλάω, εσείς)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-004",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "Would you like to go for a coffee in the afternoon?",
+    "template": "Θέλετε {0} για καφέ το απόγευμα;",
+    "blanks": [
+      {
+        "answer": "να πάμε",
+        "options": [
+          "να πάμε",
+          "να πηγαίνουμε",
+          "να πάτε",
+          "πήγαμε"
+        ],
+        "hint": "to go (πάω, εμείς)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-005",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "Eleni says she will cook for her friends tonight.",
+    "template": "Η Ελένη λέει {0} για τους φίλους της το βράδυ.",
+    "blanks": [
+      {
+        "answer": "να μαγειρέψει",
+        "options": [
+          "να μαγειρέψει",
+          "να μαγειρεύει",
+          "να μαγειρέψεις",
+          "μαγείρεψε"
+        ],
+        "hint": "to cook (μαγειρεύω)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-006",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "Nikos and Sofia prefer to leave on holiday in August.",
+    "template": "Ο Νίκος και η Σοφία προτιμούν {0} για διακοπές τον Αύγουστο.",
+    "blanks": [
+      {
+        "answer": "να φύγουν",
+        "options": [
+          "να φύγουν",
+          "να φεύγουν",
+          "να φύγουμε",
+          "έφυγαν"
+        ],
+        "hint": "to leave (φεύγω)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-007",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "Is it necessary for me to come to work on Saturday too?",
+    "template": "Είναι απαραίτητο {0} στη δουλειά και το Σάββατο;",
+    "blanks": [
+      {
+        "answer": "να έρθω",
+        "options": [
+          "να έρθω",
+          "να έρχομαι",
+          "να έρθεις",
+          "ήρθα"
+        ],
+        "hint": "for me to come (έρχομαι)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-008",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "My brother is trying to finish university this year.",
+    "template": "Ο αδερφός μου προσπαθεί {0} φέτος το πανεπιστήμιο.",
+    "blanks": [
+      {
+        "answer": "να τελειώσει",
+        "options": [
+          "να τελειώσει",
+          "να τελειώνει",
+          "να τελειώσεις",
+          "τελείωσε"
+        ],
+        "hint": "to finish (τελειώνω)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-009",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "We might see a film at the cinema tomorrow. Are you coming with us?",
+    "template": "Μπορεί {0} μια ταινία στο σινεμά αύριο. Έρχεσαι μαζί μας;",
+    "blanks": [
+      {
+        "answer": "να δούμε",
+        "options": [
+          "να δούμε",
+          "να βλέπουμε",
+          "να δείτε",
+          "είδαμε"
+        ],
+        "hint": "for us to see (βλέπω)"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-010",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "Children, are you going shopping at the supermarket tomorrow?",
+    "template": "— Παιδιά, πάτε {0} αύριο στο σούπερ-μάρκετ;",
+    "blanks": [
+      {
+        "answer": "να ψωνίσετε",
+        "options": [
+          "να ψωνίσετε",
+          "να ψωνίζετε",
+          "να ψωνίσουμε",
+          "ψωνίσατε"
+        ],
+        "hint": "to shop (ψωνίζω)"
+      }
+    ]
+  },
+  {
+    "id": "ypokoristika-001",
+    "topic": "Υποκοριστικά",
+    "lesson": 11,
+    "en": "We will drink a little ouzo before the food.",
+    "template": "Θα πιούμε ένα {0} πριν το φαγητό.",
+    "blanks": [
+      {
+        "answer": "ουζάκι",
+        "options": [
+          "ουζάκι",
+          "ουζίτσα",
+          "ουζούλα",
+          "ουζάκης"
+        ],
+        "hint": "little ouzo — το ούζο takes -άκι"
+      }
+    ]
+  },
+  {
+    "id": "ypokoristika-002",
+    "topic": "Υποκοριστικά",
+    "lesson": 11,
+    "en": "Let's go to a nice little taverna in the neighbourhood.",
+    "template": "Πάμε σε ένα ωραίο {0} στη γειτονιά.",
+    "blanks": [
+      {
+        "answer": "ταβερνάκι",
+        "options": [
+          "ταβερνάκι",
+          "ταβερνάκης",
+          "ταβερνίτσο",
+          "ταβέρνακι"
+        ],
+        "hint": "little taverna — with -άκι it turns neuter"
+      }
+    ]
+  },
+  {
+    "id": "ypokoristika-003",
+    "topic": "Υποκοριστικά",
+    "lesson": 11,
+    "en": "I would like a beer, please.",
+    "template": "Θα ήθελα μία {0}, παρακαλώ.",
+    "blanks": [
+      {
+        "answer": "μπιρίτσα",
+        "options": [
+          "μπιρίτσα",
+          "μπιράκι",
+          "μπιρούλα",
+          "μπιράκης"
+        ],
+        "hint": "a beer — η μπίρα takes -ίτσα"
+      }
+    ]
+  },
+  {
+    "id": "ypokoristika-004",
+    "topic": "Υποκοριστικά",
+    "lesson": 11,
+    "en": "She made a nice little salad with tomato.",
+    "template": "Έφτιαξε μια ωραία {0} με ντομάτα.",
+    "blanks": [
+      {
+        "answer": "σαλατούλα",
+        "options": [
+          "σαλατούλα",
+          "σαλατάκης",
+          "σαλατίτσα",
+          "σαλάτουλα"
+        ],
+        "hint": "little salad — η σαλάτα takes -ούλα"
+      }
+    ]
+  },
+  {
+    "id": "ypokoristika-005",
+    "topic": "Υποκοριστικά",
+    "lesson": 11,
+    "en": "Little Giorgos is playing in the yard.",
+    "template": "Ο μικρός {0} παίζει στην αυλή.",
+    "blanks": [
+      {
+        "answer": "Γιωργάκης",
+        "options": [
+          "Γιωργάκης",
+          "Γιωργάκι",
+          "Γιωργούλα",
+          "Γιωργίτσα"
+        ],
+        "hint": "little George — a boy's name takes -άκης"
+      }
+    ]
+  },
+  {
+    "id": "ypokoristika-006",
+    "topic": "Υποκοριστικά",
+    "lesson": 11,
+    "en": "One more minute and we are leaving.",
+    "template": "Ένα {0} ακόμα και φεύγουμε.",
+    "blanks": [
+      {
+        "answer": "λεπτάκι",
+        "options": [
+          "λεπτάκι",
+          "λεπτίτσα",
+          "λεπτούλα",
+          "λεπτάκης"
+        ],
+        "hint": "just a minute — το λεπτό takes -άκι"
+      }
+    ]
+  },
+  {
+    "id": "ypotaktiki-m13-003",
+    "topic": "Υποτακτική",
+    "lesson": 13,
+    "en": "What does a foreign student who wants to start courses at the university have to do?",
+    "template": "Τι πρέπει {0} ένας ξένος φοιτητής που θέλει {1} μαθήματα στο πανεπιστήμιο;",
+    "blanks": [
+      {
+        "answer": "να κάνει",
+        "options": [
+          "να κάνει",
+          "να κάνεις",
+          "να κάνουν",
+          "έκανε"
+        ],
+        "hint": "to do (κάνω)"
+      },
+      {
+        "answer": "να αρχίσει",
+        "options": [
+          "να αρχίσει",
+          "να αρχίζει",
+          "να αρχίσουν",
+          "άρχισε"
+        ],
+        "hint": "to start (αρχίζω)"
+      }
+    ]
   }
 ]
