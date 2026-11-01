@@ -652,11 +652,21 @@ body { color: var(--text); }
 .manual b { font-weight: 700; }
 .manual s { color: var(--bad); text-decoration-color: var(--bad); }
 
+/* A wide conjugation table scrolls inside itself rather than pushing the page
+   sideways, which on a phone makes every other line hard to read. */
 .manual-table {
+    display: block;
     width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-collapse: collapse;
     font-size: 12.5px;
     margin-bottom: 8px;
+}
+.manual-table thead, .manual-table tbody {
+    display: table;
+    width: 100%;
 }
 .manual-table th, .manual-table td {
     border: 1px solid var(--border);
