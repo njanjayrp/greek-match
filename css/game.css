@@ -753,3 +753,11 @@ body { color: var(--text); }
     cursor: pointer;
 }
 .btn-practise:hover { background: rgba(45, 108, 223, .08); }
+
+/* The lesson picker sits above the game, because it narrows all of it */
+.lesson-bar {
+    margin: 0 0 10px;
+}
+.lesson-bar .mode-select {
+    width: 100%;
+}

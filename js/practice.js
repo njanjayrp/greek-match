@@ -16,8 +16,19 @@ window.PRACTICE = (function () {
 const FORMATS = [["mixed", "Mixed"], ["choose", "Choose"], ["write", "Type"]];
 
 let sentences = [];
+let lesson    = null;          // null = every lesson
 
 function setSentences(list) { sentences = Array.isArray(list) ? list : []; }
+
+// Narrow every round to one Μάθημα. Exercises carry their lesson; a generated
+// drill belongs to a lesson through the topic that owns it.
+function setLesson(n) { lesson = (n && n !== "__all__") ? String(n) : null; }
+
+function topicInLesson(topicId) {
+    if (!lesson) return true;
+    const ids = window.LESSONS.topicsOf(lesson) || [];
+    return ids.includes(topicId);
+}
 
 function G() { return window.GRAMMAR; }
 
@@ -25,17 +36,26 @@ function G() { return window.GRAMMAR; }
 // sentence, which is what "All topics" practises.
 function sentencesFor(topicId) {
     if (!sentences.length) return [];
-    if (!topicId || topicId === "__all__") return sentences.slice();
+    let pool = sentences;
+    if (lesson) pool = pool.filter(s => String(s.lesson) === lesson);
+    if (!topicId || topicId === "__all__") return pool.slice();
     const t = G().TOPICS.find(x => x.id === topicId);
     const owned = (t && t.sentences) || [];
     if (!owned.length) return [];
-    return sentences.filter(s => owned.includes(s.topic));
+    return pool.filter(s => owned.includes(s.topic));
 }
 
 // Declaration-driven and synchronous: the tab row has to know what a topic
 // offers before the drill scripts have finished loading.
 function formatsFor(topicId) {
-    const generated = G().formatsFor(topicId && topicId !== "__all__" ? topicId : null);
+    if (topicId && topicId !== "__all__" && !topicInLesson(topicId)) return [];
+    let generated = G().formatsFor(topicId && topicId !== "__all__" ? topicId : null);
+    // Under a lesson, only that lesson's topics can generate anything
+    if (lesson && (!topicId || topicId === "__all__")) {
+        const ids = window.LESSONS.topicsOf(lesson) || [];
+        generated = ids.some(id => G().formatsFor(id).length)
+            ? [...new Set(ids.flatMap(id => G().formatsFor(id)))] : [];
+    }
     const hasFill   = sentencesFor(topicId).length > 0;
     if (!generated.length && !hasFill) return [];   // a topic with a manual and no exercises yet
     const out = ["mixed"];
@@ -67,6 +87,7 @@ function sourcesFor(topicId, format) {
         });
     }
     for (const s of G().streams(id, format === "mixed" ? null : format)) {
+        if (!topicInLesson(s.topicId)) continue;
         out.push({
             kind: s.format,
             next: () => {
@@ -113,6 +134,6 @@ function weightOf(item) {
     return item && item.kind === "fill" ? item.blanks.length : 1;
 }
 
-return { FORMATS, setSentences, sentencesFor, formatsFor, buildRound, weightOf };
+return { FORMATS, setSentences, setLesson, sentencesFor, formatsFor, buildRound, weightOf };
 
 })();

@@ -23,7 +23,7 @@ export function loadLibs() {
         setItem: (k, v) => { store[k] = String(v); },
         removeItem: k => { delete store[k]; }
     };
-    for (const f of ["conjugations.js", "conjugator.js", "conjchoice.js", "conjtype.js", "datetime.js", "compare.js", "grammar.js", "practice.js"]) {
+    for (const f of ["conjugations.js", "conjugator.js", "conjchoice.js", "conjtype.js", "datetime.js", "compare.js", "lessons.js", "grammar.js", "practice.js"]) {
         new Function("window", "localStorage", readSrc(f))(win, win.localStorage);
     }
     return win;
@@ -85,19 +85,19 @@ export async function bootApp(seed = {}) {
         json: async () => JSON.parse(Deno.readTextFileSync(ROOT + url.replace("./", ""))),
     });
 
-    const src = ["conjugations.js", "conjugator.js", "conjchoice.js", "conjtype.js", "datetime.js", "compare.js", "grammar.js", "practice.js", "game.js", "browse.js", "reading.js"]
+    const src = ["conjugations.js", "conjugator.js", "conjchoice.js", "conjtype.js", "datetime.js", "compare.js", "lessons.js", "grammar.js", "practice.js", "game.js", "browse.js", "reading.js"]
         .map(readSrc).join("\n");
     const api = new Function(
         "window", "document", "localStorage", "fetch", "navigator", "location", "setTimeout",
         src + `
         return {
-            switchMode, switchGroup, selectRound, modePool, setLang, answerDates, sectionOf,
+            switchMode, switchGroup, switchLesson, selectRound, modePool, setLang, answerDates, sectionOf,
             dates: () => ({ index: datesIndex, score: datesScore, question: datesRound[datesIndex] }),
             practice: () => ({ index: practiceIndex, score: practiceScore, total: practiceTotal,
                                length: practiceRound.length, item: practiceRound[practiceIndex],
                                items: practiceRound.slice() }),
             formatsFor: id => window.PRACTICE.formatsFor(id),
-            state: () => ({ mode, section, group, round, lang, words: allWords.length }),
+            state: () => ({ mode, section, group, lesson, round, lang, words: allWords.length }),
             grammar: () => window.GRAMMAR,
             el: id => document.getElementById(id),
         };`

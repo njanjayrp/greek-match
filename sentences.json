@@ -579,7 +579,8 @@
         ],
         "hint": "he said (aor 3sg of λέω — irregular stem)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-002",
@@ -607,7 +608,8 @@
         ],
         "hint": "I drank (aor 1sg of πίνω — irregular)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-003",
@@ -635,7 +637,8 @@
         ],
         "hint": "it had left (pluperfect 3sg — earlier in past)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-004",
@@ -663,7 +666,8 @@
         ],
         "hint": "I found (aor 1sg of βρίσκω — irregular)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-005",
@@ -691,7 +695,8 @@
         ],
         "hint": "they ran (aor 3pl)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-006",
@@ -719,7 +724,8 @@
         ],
         "hint": "he went (aor 3sg of πηγαίνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-007",
@@ -747,7 +753,8 @@
         ],
         "hint": "he gave / he 'took' a call (aor 3sg — πήρε τηλέφωνο idiom)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "ypotaktiki-001",
@@ -775,7 +782,8 @@
         ],
         "hint": "perfective aspect (single future event)"
       }
-    ]
+    ],
+    "lesson": 13
   },
   {
     "id": "ypotaktiki-002",
@@ -803,7 +811,8 @@
         ],
         "hint": "perfective aspect (single occasion)"
       }
-    ]
+    ],
+    "lesson": 13
   },
   {
     "id": "ypotaktiki-003",
@@ -831,7 +840,8 @@
         ],
         "hint": "perfective (single decision)"
       }
-    ]
+    ],
+    "lesson": 13
   },
   {
     "id": "ypotaktiki-004",
@@ -859,7 +869,8 @@
         ],
         "hint": "perfective (today, single session)"
       }
-    ]
+    ],
+    "lesson": 13
   },
   {
     "id": "ypotaktiki-005",
@@ -887,7 +898,8 @@
         ],
         "hint": "continuous (often — habitual)"
       }
-    ]
+    ],
+    "lesson": 13
   },
   {
     "id": "klitika-001",
@@ -1495,7 +1507,8 @@
         ],
         "hint": "than (with πιο)"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "sygkrisi-002",
@@ -1513,7 +1526,8 @@
         ],
         "hint": "superlative (the most — with article η)"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "sygkrisi-003",
@@ -1541,7 +1555,8 @@
         ],
         "hint": "than (used before a clause)"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "sygkrisi-004",
@@ -1569,7 +1584,8 @@
         ],
         "hint": "most (superlative — already has ο)"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "pathitiki-001",
@@ -2891,7 +2907,8 @@
         ],
         "hint": "eat — one action, εσύ (τρώω)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-002",
@@ -2909,7 +2926,8 @@
         ],
         "hint": "close it — εσύ (κλείνω)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-003",
@@ -2927,7 +2945,8 @@
         ],
         "hint": "lock it — εσύ (κλειδώνω)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-004",
@@ -2945,7 +2964,8 @@
         ],
         "hint": "take out — εσείς (βγάζω)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-005",
@@ -2963,7 +2983,8 @@
         ],
         "hint": "call — εσύ, irregular (παίρνω)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-006",
@@ -2981,7 +3002,8 @@
         ],
         "hint": "do not watch — εσείς, a habit"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-007",
@@ -2999,7 +3021,8 @@
         ],
         "hint": "do not go — εσύ, one day"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-008",
@@ -3017,7 +3040,8 @@
         ],
         "hint": "come — εσύ, irregular (έρχομαι)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-009",
@@ -3035,7 +3059,8 @@
         ],
         "hint": "take a seat — a stranger, so εσείς"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "prostaktiki-010",
@@ -3053,7 +3078,8 @@
         ],
         "hint": "go — εσύ, irregular (πηγαίνω)"
       }
-    ]
+    ],
+    "lesson": 17
   },
   {
     "id": "epirrimata-001",
@@ -3071,7 +3097,8 @@
         ],
         "hint": "fast — the adverb of γρήγορος"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-002",
@@ -3089,7 +3116,8 @@
         ],
         "hint": "to the right"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-003",
@@ -3107,7 +3135,8 @@
         ],
         "hint": "quietly — the adverb of ήσυχος"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-004",
@@ -3125,7 +3154,8 @@
         ],
         "hint": "late — the adverb of αργός"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-005",
@@ -3143,7 +3173,8 @@
         ],
         "hint": "bad — the adverb of άσχημος"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-006",
@@ -3161,7 +3192,8 @@
         ],
         "hint": "amazingly — the adverb of καταπληκτικός"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-007",
@@ -3179,7 +3211,8 @@
         ],
         "hint": "more carefully — comparative of the adverb"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-008",
@@ -3197,7 +3230,8 @@
         ],
         "hint": "less — the one-word form"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-009",
@@ -3215,7 +3249,8 @@
         ],
         "hint": "more often"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-010",
@@ -3233,7 +3268,8 @@
         ],
         "hint": "later — comparative of αργά"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-011",
@@ -3251,7 +3287,8 @@
         ],
         "hint": "higher — comparative of ψηλά"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-012",
@@ -3269,7 +3306,8 @@
         ],
         "hint": "more expensively — not ακριβώς, which means exactly"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-013",
@@ -3287,7 +3325,8 @@
         ],
         "hint": "better — one word, never with πιο"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "epirrimata-014",
@@ -3305,7 +3344,8 @@
         ],
         "hint": "more — the adverb of περισσότερος"
       }
-    ]
+    ],
+    "lesson": 16
   },
   {
     "id": "aoristos-008",
@@ -3323,7 +3363,8 @@
         ],
         "hint": "finished — αυτοί (τελειώνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-009",
@@ -3341,7 +3382,8 @@
         ],
         "hint": "did you clean — εσύ (καθαρίζω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-010",
@@ -3369,7 +3411,8 @@
         ],
         "hint": "played — αυτοί (παίζω, -ξ- not -σ-)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-011",
@@ -3387,7 +3430,8 @@
         ],
         "hint": "discovered — αυτή (ανακαλύπτω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-012",
@@ -3405,7 +3449,8 @@
         ],
         "hint": "did you cook — εσύ (μαγειρεύω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-013",
@@ -3423,7 +3468,8 @@
         ],
         "hint": "painted — αυτοί (βάφω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-014",
@@ -3451,7 +3497,8 @@
         ],
         "hint": "we were — εμείς (είμαι)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-015",
@@ -3479,7 +3526,8 @@
         ],
         "hint": "were you — εσύ (είμαι)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-016",
@@ -3507,7 +3555,8 @@
         ],
         "hint": "read — αυτός (διαβάζω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-017",
@@ -3525,7 +3574,8 @@
         ],
         "hint": "taught — αυτή (διδάσκω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-018",
@@ -3543,7 +3593,8 @@
         ],
         "hint": "we stayed — εμείς (μένω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-019",
@@ -3561,7 +3612,8 @@
         ],
         "hint": "I sent — εγώ (στέλνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-020",
@@ -3579,7 +3631,8 @@
         ],
         "hint": "did you wash — εσύ (πλένω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-021",
@@ -3597,7 +3650,8 @@
         ],
         "hint": "did you leave — εσείς (φεύγω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-022",
@@ -3615,7 +3669,8 @@
         ],
         "hint": "I drank — εγώ (πίνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-023",
@@ -3633,7 +3688,8 @@
         ],
         "hint": "ate — αυτοί (τρώω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-024",
@@ -3651,7 +3707,8 @@
         ],
         "hint": "got in — αυτός (μπαίνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-025",
@@ -3669,7 +3726,8 @@
         ],
         "hint": "we went out — εμείς (βγαίνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-026",
@@ -3687,7 +3745,8 @@
         ],
         "hint": "took out — αυτός (βγάζω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-027",
@@ -3705,7 +3764,8 @@
         ],
         "hint": "did you find — εσύ (βρίσκω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-028",
@@ -3723,7 +3783,8 @@
         ],
         "hint": "did you hear — εσύ (μαθαίνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-029",
@@ -3741,7 +3802,8 @@
         ],
         "hint": "did you understand — εσείς (καταλαβαίνω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-030",
@@ -3759,7 +3821,8 @@
         ],
         "hint": "did you put — εσύ (βάζω)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-031",
@@ -3787,7 +3850,8 @@
         ],
         "hint": "helped — αυτός (βοηθάω, type Β)"
       }
-    ]
+    ],
+    "lesson": 15
   },
   {
     "id": "aoristos-032",
@@ -3815,6 +3879,7 @@
         ],
         "hint": "I fell asleep — εγώ (κοιμάμαι, type Γ2)"
       }
-    ]
+    ],
+    "lesson": 15
   }
 ]

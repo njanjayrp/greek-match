@@ -35,8 +35,12 @@ function initApp(words) {
     if (Object.values(SECTIONS).some(tabs => tabs.some(([id]) => id === wanted))) mode = wanted;
     if (urlLang === "english") lang = "english";
 
-    // Build the group dropdown from the data
+    // Build the dropdowns from the data
     window.PRACTICE.setSentences(allSentences);
+    lesson = localStorage.getItem("greek_lesson") || "__all__";
+    if (lesson !== "__all__" && !window.LESSONS.has(lesson)) lesson = "__all__";
+    window.PRACTICE.setLesson(lesson);
+    populateLessonSelect();
     populateGroupSelect();
     group = resolveGroup();
     document.getElementById("group-select").value = group;
@@ -56,6 +60,7 @@ function initApp(words) {
         btn.addEventListener("click", () => switchSection(btn.dataset.section));
     }
     document.getElementById("group-select").addEventListener("change", e => switchGroup(e.target.value));
+    document.getElementById("lesson-select").addEventListener("change", e => switchLesson(e.target.value));
     // One click from reading the rule to drilling it — the topic is already shared.
     document.getElementById("btn-practise").addEventListener("click", () => switchSection("practice"));
     document.getElementById("typing-form").addEventListener("submit", submitTypingAnswer);
@@ -137,8 +142,12 @@ function switchSection(target) {
 
 // Manual and Reading have no "All" entry, so they fall back to their first one.
 function defaultGroup() {
-    if (mode === "manual") return window.GRAMMAR.TOPICS[0].id;
-    if (mode === "read")   return (window.ReadingMode.TEXTS()[0] || {}).id || "__all__";
+    if (mode === "manual") return (topicsInLesson()[0] || window.GRAMMAR.TOPICS[0]).id;
+    if (mode === "read") {
+        const only = lessonTexts();
+        const texts = window.ReadingMode.TEXTS().filter(t => !only || only.includes(t.id));
+        return (texts[0] || window.ReadingMode.TEXTS()[0] || {}).id || "__all__";
+    }
     return "__all__";
 }
 
@@ -158,10 +167,13 @@ function resolveGroup() {
 
 // The grammar topics, grouped by area — the same markup for both dropdowns.
 function appendTopicOptions(select) {
+    const visible = topicsInLesson();
     for (const area of window.GRAMMAR.areas()) {
+        const inArea = visible.filter(x => x.area === area);
+        if (!inArea.length) continue;
         const parent = document.createElement("optgroup");
         parent.label = window.GRAMMAR.areaLabel(area);
-        for (const t of window.GRAMMAR.TOPICS.filter(x => x.area === area)) {
+        for (const t of inArea) {
             const opt = document.createElement("option");
             opt.value = t.id;
             opt.textContent = window.GRAMMAR.topicLabel(t);
@@ -169,6 +181,48 @@ function appendTopicOptions(select) {
         }
         select.appendChild(parent);
     }
+}
+
+function populateLessonSelect() {
+    const select = document.getElementById("lesson-select");
+    select.innerHTML = "";
+    const all = document.createElement("option");
+    all.value = "__all__";
+    all.textContent = "All lessons";
+    select.appendChild(all);
+    for (const l of window.LESSONS.all()) {
+        const opt = document.createElement("option");
+        opt.value = String(l.n);
+        opt.textContent = "Μάθημα " + l.n + " — " + l.gr + " · " + l.en;
+        select.appendChild(opt);
+    }
+    select.value = lesson;
+}
+
+// Picking a Μάθημα narrows every section at once; "All lessons" restores them.
+function switchLesson(target) {
+    lesson = target || "__all__";
+    try { localStorage.setItem("greek_lesson", lesson); } catch (e) { /* private mode */ }
+    window.PRACTICE.setLesson(lesson);
+    populateGroupSelect();
+    if (!groupExists(group)) group = defaultGroup();
+    document.getElementById("group-select").value = group;
+    if (isPractice(mode) && !window.PRACTICE.formatsFor(group).includes(mode)) {
+        const offered = window.PRACTICE.formatsFor(group);
+        if (offered.length) { mode = offered[0]; rememberMode(); }
+    }
+    round = selectRound();
+    applyMode();
+}
+
+// The topics, texts and word groups this lesson taught — null means no filter.
+function lessonTopics() { return lesson === "__all__" ? null : (window.LESSONS.topicsOf(lesson) || []); }
+function lessonTexts()  { return lesson === "__all__" ? null : (window.LESSONS.textsOf(lesson)  || []); }
+function lessonWords()  { return lesson === "__all__" ? null : (window.LESSONS.wordsOf(lesson)  || []); }
+
+function topicsInLesson() {
+    const only = lessonTopics();
+    return window.GRAMMAR.TOPICS.filter(t => !only || only.includes(t.id));
 }
 
 function populateGroupSelect() {
@@ -188,8 +242,9 @@ function populateGroupSelect() {
     }
     if (mode === "read") {
         // Grouped, so the list stays short to scan as more texts arrive
+        const onlyTexts = lessonTexts();
         let current = null, parent = select;
-        for (const t of window.ReadingMode.TEXTS()) {
+        for (const t of window.ReadingMode.TEXTS().filter(t => !onlyTexts || onlyTexts.includes(t.id))) {
             if (t.group && t.group !== current) {
                 current = t.group;
                 parent = document.createElement("optgroup");
@@ -215,7 +270,9 @@ function populateGroupSelect() {
         select.appendChild(marked);
     }
 
-    const items = [...new Set(allWords.map(w => w.group).filter(Boolean))].sort();
+    const onlyWords = lessonWords();
+    const items = [...new Set(allWords.map(w => w.group).filter(Boolean))]
+        .filter(g => !onlyWords || onlyWords.includes(g)).sort();
     for (const g of items) {
         const opt = document.createElement("option");
         opt.value = g;
@@ -230,17 +287,23 @@ function populateGroupSelect() {
 function groupExists(g) {
     if (g === "__all__") return mode !== "manual" && mode !== "read";
     if (g === MARKED) return !isPractice(mode) && mode !== "manual" && allWords.some(w => w.marked);
-    if (mode === "manual" || isPractice(mode)) return window.GRAMMAR.TOPICS.some(t => t.id === g);
-    if (mode === "read")   return window.ReadingMode.TEXTS().some(t => t.id === g);
-    return allWords.some(w => w.group === g);
+    if (mode === "manual" || isPractice(mode)) return topicsInLesson().some(t => t.id === g);
+    if (mode === "read") {
+        const only = lessonTexts();
+        return window.ReadingMode.TEXTS().some(t => t.id === g) && (!only || only.includes(g));
+    }
+    const onlyWords = lessonWords();
+    return allWords.some(w => w.group === g) && (!onlyWords || onlyWords.includes(g));
 }
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
 function modePool() {
-    if (group === MARKED) return allWords.filter(w => w.marked);
-    if (group === "__all__") return allWords;
-    return allWords.filter(w => w.group === group);
+    const onlyWords = lessonWords();
+    const base = onlyWords ? allWords.filter(w => onlyWords.includes(w.group)) : allWords;
+    if (group === MARKED) return base.filter(w => w.marked);
+    if (group === "__all__") return base;
+    return base.filter(w => w.group === group);
 }
 
 function selectRound() {
@@ -323,6 +386,7 @@ function selectWordRound() {
 
 let mode    = "match";
 let section = "words";
+let lesson  = "__all__";      // which Μάθημα the whole app is narrowed to
 let group   = "__all__";
 let lang    = "greek";
 let checked = false;
@@ -354,8 +418,9 @@ function updateSubtitle() {
     const topic = (mode === "manual" || isPractice(mode)) && group !== "__all__"
         ? window.GRAMMAR.TOPICS.find(t => t.id === group) : null;
     const base = subtitles[mode][lang];
+    const line = topic ? topic.title + " \u2014 " + topic.blurb : base;
     document.getElementById("subtitle").textContent =
-        topic ? topic.title + " \u2014 " + topic.blurb : base;
+        lesson === "__all__" ? line : window.LESSONS.label(lesson) + " \u00b7 " + line;
 }
 
 // ── Match game ──────────────────────────────────────────────────────────────
