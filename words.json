@@ -6298,5 +6298,89 @@
         "english": "here you are",
         "group": "Bank & money",
         "marked": false
+    },
+    {
+        "greek": "η Χώρα",
+        "english": "the main town of an island",
+        "group": "Beach & summer",
+        "marked": false
+    },
+    {
+        "greek": "η ορεινή ποδηλασία",
+        "english": "mountain biking",
+        "group": "Mountains & winter",
+        "marked": false
+    },
+    {
+        "greek": "γραφικός",
+        "english": "picturesque",
+        "group": "Adjectives & qualities",
+        "marked": false
+    },
+    {
+        "greek": "το κόσμημα",
+        "english": "piece of jewellery",
+        "group": "Commerce & shopping",
+        "marked": false
+    },
+    {
+        "greek": "η άμμος",
+        "english": "sand",
+        "group": "Feminine nouns in -ος",
+        "marked": false
+    },
+    {
+        "greek": "το χελωνάκι",
+        "english": "little turtle",
+        "group": "Nature, weather & outdoors",
+        "marked": false
+    },
+    {
+        "greek": "προλαβαίνω (προλάβω)",
+        "english": "to make it in time",
+        "group": "Time & frequency",
+        "marked": false
+    },
+    {
+        "greek": "βρέχομαι (βραχώ)",
+        "english": "to get wet",
+        "group": "Nature, weather & outdoors",
+        "marked": false
+    },
+    {
+        "greek": "μεταφέρω (μεταφέρω)",
+        "english": "to carry something across",
+        "group": "Everyday verbs",
+        "marked": false
+    },
+    {
+        "greek": "σκύβω (σκύψω)",
+        "english": "to bend down",
+        "group": "Body & health",
+        "marked": false
+    },
+    {
+        "greek": "στέκομαι (σταθώ)",
+        "english": "to stand",
+        "group": "Body & health",
+        "marked": false
+    },
+    {
+        "greek": "νοικιάζω (νοικιάσω)",
+        "english": "to rent",
+        "group": "Commerce & shopping",
+        "marked": false
+    },
+    {
+        "greek": "συγκεντρώνομαι (συγκεντρωθώ)",
+        "english": "to concentrate",
+        "group": "Daily life & school",
+        "marked": false
+    },
+    {
+        "greek": "χρειάζομαι (χρειαστώ)",
+        "english": "to need",
+        "group": "Everyday verbs",
+        "marked": false
     }
 ]
