@@ -508,6 +508,90 @@
         "glossary": "Μάθημα 19. Από το κείμενο: ο κουραμπιές / το μελομακάρονο / η δίπλα = Christmas sweets · η βασιλόπιτα = New Year cake · το φλουρί = the lucky coin · τα κάλαντα = carols · η Τσικνοπέμπτη = “Smoky Thursday” · η λαγάνα = Clean Monday flatbread · η μαγειρίτσα = Easter soup · ο Επιτάφιος = the bier of Christ"
     },
     {
+        "title": "Καλοκαιρινοί προορισμοί — τέσσερα μέρη της Ελλάδας",
+        "id": "t9",
+        "group": "Lessons",
+        "glossary": "Μάθημα 16, Άσκηση 12 (ακουστική). Από το κείμενο: η Χώρα = the main town of an island · η ιστιοσανίδα = windsurf board · η πεζοπορία = hiking · η ορεινή ποδηλασία = mountain biking · το τσίπουρο = grape spirit from Epirus · η τυρόπιτα τηγανητή = fried cheese pie · τα καραβάκια = the little boats",
+        "parts": [
+            {
+                "heading": "Η Σκόπελος"
+            },
+            {
+                "gr": [
+                    "Η Σκόπελος είναι το πιο πράσινο νησί στο Αιγαίο Πέλαγος. Είναι γεμάτη από δάση με πεύκα. Βρίσκεται ανάμεσα στη Σκιάθο και στην Αλόννησο. Το αρχαίο όνομά της είναι Πεπάρηθος."
+                ],
+                "en": [
+                    "Skopelos is the greenest island in the Aegean Sea. It is full of forests with pine trees. It is situated between Skiathos and Alonnisos. Its ancient name is Peparithos."
+                ]
+            },
+            {
+                "gr": [
+                    "Στη Σκόπελο θα θαυμάσετε την όμορφη Χώρα. Επίσης θα κολυμπήσετε σε φανταστικές παραλίες, όπως η Στάφυλος, ο Πάνορμος και η Μηλιά. Θα δοκιμάσετε τη σπεσιαλιτέ του νησιού, τη σκοπελίτικη τυρόπιτα. Είναι τυρόπιτα τηγανητή."
+                ],
+                "en": [
+                    "On Skopelos you will admire the beautiful Chora. Also you will swim at fantastic beaches, such as Stafylos, Panormos and Milia. You will try the island's speciality, the Skopelos cheese pie. It is a fried cheese pie."
+                ]
+            },
+            {
+                "heading": "Η Πάρος"
+            },
+            {
+                "gr": [
+                    "Στην Πάρο μπορείτε να κολυμπήσετε στις καταπληκτικές παραλίες. Όμως μπορείτε να κάνετε και θαλάσσια σπορ. Στις παραλίες Σάντα Μαρία, Χρυσή Ακτή και Πούντα υπάρχουν σχολές που μπορείτε να μάθετε ιστιοσανίδα δίπλα σε πολύ καλούς δασκάλους."
+                ],
+                "en": [
+                    "On Paros you can swim at the amazing beaches. But you can also do water sports. At the beaches Santa Maria, Chrysi Akti and Pounta there are schools where you can learn windsurfing next to very good teachers."
+                ]
+            },
+            {
+                "gr": [
+                    "Και στις Κολυμπήθρες μπορείτε να κάνετε θαλάσσιο σκι. Επίσης, το νησί έχει και πολύ ωραία μέρη για πεζοπορία και ορεινή ποδηλασία."
+                ],
+                "en": [
+                    "And at Kolymbithres you can do water-skiing. Also, the island has very nice places for hiking and mountain biking as well."
+                ]
+            },
+            {
+                "heading": "Τα Ιωάννινα"
+            },
+            {
+                "gr": [
+                    "Τα Ιωάννινα βρίσκονται στη βορειοδυτική Ελλάδα, στην Ήπειρο. Είναι μια πολύ όμορφη και γραφική πόλη. Εκεί θα δείτε το κάστρο και πολλά μαγαζιά με παραδοσιακά κοσμήματα. Θα θαυμάσετε τη λίμνη και το μικρό νησί που βρίσκεται στο κέντρο της. Στο νησί μπορείτε να πάτε με καραβάκι."
+                ],
+                "en": [
+                    "Ioannina is situated in north-western Greece, in Epirus. It is a very beautiful and picturesque city. There you will see the castle and many shops with traditional jewellery. You will admire the lake and the small island that is in the middle of it. You can go to the island by little boat."
+                ]
+            },
+            {
+                "gr": [
+                    "Θα δοκιμάσετε το παραδοσιακό γλυκό, τον μπακλαβά, και θα πιείτε τσίπουρο. Το τσίπουρο είναι ένα παραδοσιακό ποτό που γίνεται από σταφύλι."
+                ],
+                "en": [
+                    "You will try the traditional sweet, baklava, and you will drink tsipouro. Tsipouro is a traditional drink that is made from grapes."
+                ]
+            },
+            {
+                "heading": "Η Ζάκυνθος"
+            },
+            {
+                "gr": [
+                    "Η Ζάκυνθος βρίσκεται στο Ιόνιο Πέλαγος. Οι Βενετοί ονόμασαν το νησί «Φιόρε ντι Λεβάντε», που στα ελληνικά σημαίνει «το λουλούδι της Ανατολής»."
+                ],
+                "en": [
+                    "Zakynthos is situated in the Ionian Sea. The Venetians named the island «Fiore di Levante», which in Greek means «the flower of the East»."
+                ]
+            },
+            {
+                "gr": [
+                    "Στη Ζάκυνθο μπορείτε να πάτε στην παραλία του Λαγανά, όπου από τον Ιούλιο μέχρι τον Αύγουστο οι χελώνες καρέτα-καρέτα γεννάνε τα αυγά τους στην άμμο. Μετά από 55 μέρες περίπου τα μικρά χελωνάκια βρίσκουν τον δρόμο προς τη θάλασσα και αρχίζουν το ταξίδι τους."
+                ],
+                "en": [
+                    "On Zakynthos you can go to the beach of Laganas, where from July until August the caretta-caretta turtles lay their eggs in the sand. After about 55 days the little turtles find the road to the sea and begin their journey."
+                ]
+            }
+        ]
+    },
+    {
         "id": "m1",
         "title": "Η κράτηση",
         "marked": true,

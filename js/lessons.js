@@ -53,7 +53,7 @@ const LIST = [
         en: "Happy holidays!",
         topics: ["adverbs", "comparatives"],
         words:  ["Beach & summer", "Mountains & winter"],
-        texts:  []
+        texts:  ["t9"]
     },
     {
         n: 17,
