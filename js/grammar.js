@@ -825,15 +825,132 @@ const TOPICS = [
         id: "word-formation",
         title: "Παραγωγή Λέξεων",
         en: "word building",
-        blurb: "Endings that turn one word into another: -ση, -τής, -ικός, -άκι.",
+        blurb: "Endings and joins that build new words: σχολείο → σχολικός, βόρειος + δυτικός → βορειοδυτικός.",
         area: "Λεξιλόγιο",
         sentences: ["Παραγωγή Λέξεων"],
-        todo: true,
         manual: `<article class="manual">
     <h2>Παραγωγή Λέξεων — building words</h2>
-    <p class="manual-lead">Endings that turn one word into another: -ση, -τής, -ικός, -άκι.</p>
-    <p class="manual-note">Το μάθημα δεν είναι γραμμένο ακόμα. Οι ασκήσεις δουλεύουν κανονικά —
-    διάλεξε <b>Practice</b> για αυτό το θέμα.</p>
+    <p class="manual-lead">Greek builds most new words in one of two ways: it adds an <b>ending</b> to a word
+    (σχολείο → σχολ<b>ικός</b>), or it <b>joins two words</b> with an <b>-ο-</b>
+    (βόρει<b>ο</b>δυτικός). Learn the handful of endings and the one join, and a lot of
+    unfamiliar words become easy to work out.</p>
+
+    <h3>1. Επίθετα από ουσιαστικά — from a noun to an adjective</h3>
+    <table class="manual-table">
+        <thead><tr><th>κατάληξη</th><th>for</th><th>ουσιαστικό → επίθετο</th></tr></thead>
+        <tbody>
+            <tr><td><b>-ικός</b></td><td>“to do with”, the default</td><td>σχολείο → σχολ<b>ικός</b> · ιστορία → ιστορ<b>ικός</b> · τουρισμός → τουριστ<b>ικός</b> · σπίτι → σπιτ<b>ικός</b> · παιδί → παιδ<b>ικός</b> · Κρήτη → κρητ<b>ικός</b> · ανατολή → ανατολ<b>ικός</b></td></tr>
+            <tr><td><b>-ινός</b></td><td>time of day, season, day</td><td>πρωί → πρω<b>ινός</b> · βράδυ → βραδ<b>ινός</b> · απόγευμα → απογευματ<b>ινός</b> · καλοκαίρι → καλοκαιρ<b>ινός</b> · σήμερα → σημερ<b>ινός</b> · χθες → χθεσ<b>ινός</b></td></tr>
+            <tr><td><b>-ινος</b> (stress stays back)</td><td>what something is made of</td><td>ξύλο → ξύλ<b>ινος</b> · πέτρα → πέτρ<b>ινος</b> · γυαλί → γυάλ<b>ινος</b> · μαλλί → μάλλ<b>ινος</b> · χαρτί → χάρτ<b>ινος</b></td></tr>
+            <tr><td><b>-ένιος</b></td><td>made of, mostly metal</td><td>ασήμι → ασημ<b>ένιος</b> · σίδερο → σιδερ<b>ένιος</b></td></tr>
+            <tr><td><b>-ωτός</b></td><td>made of (fabric)</td><td>μετάξι → μεταξ<b>ωτός</b></td></tr>
+            <tr><td><b>-ερός</b></td><td>full of, having</td><td>βαμβάκι → βαμβακ<b>ερός</b> · λάδι → λαδ<b>ερός</b> · δροσιά → δροσ<b>ερός</b></td></tr>
+            <tr><td><b>-ιάτικος / -άτικος</b></td><td>season or place, everyday speech</td><td>χειμώνας → χειμων<b>ιάτικος</b> · άνοιξη → ανοιξ<b>ιάτικος</b> · χωριό → χωρι<b>άτικος</b> (χωριάτικη σαλάτα)</td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">When in doubt, guess <b>-ικός</b>. It is right far more often than the rest.</p>
+    <p class="manual-note">Watch the stress on material words: <b>-ινός</b> is about time (πρωιν<b>ό</b>ς),
+    <b>-ινος</b> is about material (ξ<b>ύ</b>λινος). The ending is spelled the same, and only the stress tells them apart.</p>
+    <p class="manual-note">The new word is an ordinary adjective, so it agrees with its noun:
+    η σχολ<b>ική</b> χρονιά · ένα βαμβακ<b>ερό</b> μπλουζάκι · τις πρωιν<b>ές</b> ώρες.</p>
+
+    <h3>2. Εξαιρέσεις — the ones that don't follow</h3>
+    <table class="manual-table">
+        <thead><tr><th>ουσιαστικό</th><th>επίθετο</th><th>what is odd</th></tr></thead>
+        <tbody>
+            <tr><td>ο βορράς · ο νότος</td><td><b>βόρειος · νότιος</b></td><td>old <b>-ειος / -ιος</b> forms, learn them as they are</td></tr>
+            <tr><td>η δύση</td><td><b>δυτικός</b></td><td>-ικός, but the stem changes to δυτ-</td></tr>
+            <tr><td>η Ελλάδα</td><td><b>ελληνικός</b></td><td>built on Έλλην-, not Ελλαδ-</td></tr>
+            <tr><td>το βουνό</td><td><b>ορεινός</b></td><td>a different, ancient word for mountain (όρος)</td></tr>
+            <tr><td>η νύχτα · το μεσημέρι · αύριο</td><td><b>νυχτερινός · μεσημεριανός · αυριανός</b></td><td>time words, but not plain -ινός</td></tr>
+            <tr><td>ο χειμώνας</td><td><b>χειμωνιάτικος</b> / <b>χειμερινός</b></td><td>two forms: everyday and formal (Χειμερινοί Ολυμπιακοί Αγώνες)</td></tr>
+            <tr><td>η θάλασσα</td><td><b>θαλασσινός</b></td><td>-ινός, but not about time (τα θαλασσινά = seafood)</td></tr>
+            <tr><td>το δέρμα · το πρόβλημα · το σώμα</td><td><b>δερμάτινος · προβληματικός · σωματικός</b></td><td>nouns in <b>-μα</b> add <b>-ατ-</b> first, as in the plural (τα δέρματα)</td></tr>
+        </tbody>
+    </table>
+
+    <h3>3. Σύνθετες λέξεις — joining two words</h3>
+    <p>Take the <b>stem</b> of the first word, add <b>-ο-</b>, then the whole second word:</p>
+    <table class="manual-table">
+        <thead><tr><th>λέξη 1</th><th>λέξη 2</th><th>σύνθετη</th><th></th></tr></thead>
+        <tbody>
+            <tr><td>άσπρος</td><td>μαύρος</td><td>ασπρ<b>ό</b>μαυρος</td><td>black and white</td></tr>
+            <tr><td>γλυκός</td><td>ξινός</td><td>γλυκ<b>ό</b>ξινος</td><td>sweet and sour</td></tr>
+            <tr><td>γαλανός</td><td>λευκός</td><td>γαλαν<b>ό</b>λευκη</td><td>blue and white (the flag)</td></tr>
+            <tr><td>ελληνικός</td><td>τουρκικός</td><td>ελλην<b>ο</b>τουρκικός</td><td>Greek-Turkish</td></tr>
+            <tr><td>κόκκινος</td><td>μαλλιά</td><td>κοκκιν<b>ο</b>μάλλης</td><td>redhead</td></tr>
+            <tr><td>άγριος</td><td>γουρούνι</td><td>αγρι<b>ο</b>γούρουνο</td><td>wild boar</td></tr>
+            <tr><td>ψάρι</td><td>σούπα</td><td>ψαρ<b>ό</b>σουπα</td><td>fish soup</td></tr>
+            <tr><td>ντομάτα</td><td>σαλάτα</td><td>ντοματ<b>ο</b>σαλάτα</td><td>tomato salad</td></tr>
+            <tr><td>πορτοκάλι</td><td>χυμός</td><td>πορτοκαλ<b>ό</b>χυμος</td><td>orange juice</td></tr>
+            <tr><td>κρασί</td><td>ποτήρι</td><td>κρασ<b>ο</b>πότηρο</td><td>wine glass</td></tr>
+            <tr><td>μαχαίρι</td><td>πιρούνι</td><td>μαχαιρ<b>ο</b>πίρουνα</td><td>cutlery</td></tr>
+            <tr><td>καλά</td><td>περνάω</td><td>καλ<b>ο</b>περνάω</td><td>to have a good time</td></tr>
+            <tr><td>ανοίγω</td><td>κλείνω</td><td>ανοιγ<b>ο</b>κλείνω</td><td>to open and shut, blink</td></tr>
+            <tr><td>ανεβαίνω</td><td>κατεβαίνω</td><td>ανεβ<b>ο</b>κατεβαίνω</td><td>to go up and down</td></tr>
+        </tbody>
+    </table>
+    <ul class="manual-examples">
+        <li><b>The last part decides the gender:</b> η σούπα → <b>η</b> ψαρόσουπα · ο χυμός → <b>ο</b> πορτοκαλόχυμος · το ποτήρι → <b>το</b> κρασοπότηρο.</li>
+        <li><b>Only the last part changes:</b> ελληνοτουρκικ<b>ός</b> / ελληνοτουρκικ<b>ή</b> / ελληνοτουρκικ<b>ό</b>, while ελληνο- stays put.</li>
+        <li><b>The stress often moves</b> in nouns (ψ<b>ά</b>ρι → ψαρ<b>ό</b>σουπα). There is no rule you can rely on, so learn it with the word.</li>
+    </ul>
+    <p class="manual-note manual-warn"><b>No -ο- in the greetings:</b> καλή + μέρα → <b>καλημέρα</b>,
+    καλή + νύχτα → <b>καληνύχτα</b>, καλή + εσπέρα → <b>καλησπέρα</b>. These are old fixed forms.</p>
+
+    <h3>4. Τα σημεία του ορίζοντα — the compass, all of it together</h3>
+    <table class="manual-table">
+        <thead><tr><th></th><th>ουσιαστικό</th><th>in the …</th><th>επίθετο</th></tr></thead>
+        <tbody>
+            <tr><th>north</th><td>ο βορράς</td><td>στα βόρεια / στον βορρά</td><td>βόρειος, -α, -ο</td></tr>
+            <tr><th>south</th><td>ο νότος</td><td>στα νότια / στον νότο</td><td>νότιος, -α, -ο</td></tr>
+            <tr><th>east</th><td>η ανατολή</td><td>στα ανατολικά / στην ανατολή</td><td>ανατολικός, -ή, -ό</td></tr>
+            <tr><th>west</th><td>η δύση</td><td>στα δυτικά / στη δύση</td><td>δυτικός, -ή, -ό</td></tr>
+        </tbody>
+    </table>
+    <table class="manual-table">
+        <thead><tr><th></th><th>σύνθετο</th><th>in the …</th></tr></thead>
+        <tbody>
+            <tr><th>northeast</th><td>βορειοανατολικός</td><td>στα βορειοανατολικά</td></tr>
+            <tr><th>northwest</th><td>βορειοδυτικός</td><td>στα βορειοδυτικά</td></tr>
+            <tr><th>southeast</th><td>νοτιοανατολικός</td><td>στα νοτιοανατολικά</td></tr>
+            <tr><th>southwest</th><td>νοτιοδυτικός</td><td>στα νοτιοδυτικά</td></tr>
+        </tbody>
+    </table>
+    <ul class="manual-examples">
+        <li>Μένω <b>στα βόρεια</b> της Ελλάδας.</li>
+        <li>Η Κέρκυρα είναι στη <b>βορειοδυτική</b> Ελλάδα.</li>
+        <li>Η Ταϊλάνδη είναι στη <b>Νοτιοανατολική</b> Ασία.</li>
+    </ul>
+    <p class="manual-note"><b>North or south always comes first</b>, as in English. <b>Στα βόρεια</b> is the
+    adjective in the neuter plural used as a noun, the same trick as τα <b>ελληνικά</b> (Greek, the language)
+    and τα <b>θαλασσινά</b> (seafood).</p>
+    <p class="manual-note">Ανατολή and δύση also mean <b>sunrise</b> and <b>sunset</b>.</p>
+
+    <h3>5. Ουσιαστικά από άλλες λέξεις — nouns from other words</h3>
+    <table class="manual-table">
+        <thead><tr><th>κατάληξη</th><th>for</th><th>παραδείγματα</th></tr></thead>
+        <tbody>
+            <tr><td><b>-ση / -ψη / -ξη</b> (η)</td><td>the action of a verb</td><td>λύνω → λύ<b>ση</b> · εξηγώ → εξήγη<b>ση</b> · σκέφτομαι → σκέ<b>ψη</b></td></tr>
+            <tr><td><b>-μα</b> (το)</td><td>the result of a verb</td><td>γράφω → γράμ<b>μα</b> · διαβάζω → διάβασ<b>μα</b></td></tr>
+            <tr><td><b>-ία / -ιά</b> (η)</td><td>a quality, from an adjective</td><td>ελεύθερος → ελευθερ<b>ία</b> · όμορφος → ομορφ<b>ιά</b></td></tr>
+            <tr><td><b>-είο</b> (το)</td><td>the place where</td><td>φάρμακο → φαρμακ<b>είο</b> · γράφω → γραφ<b>είο</b></td></tr>
+            <tr><td><b>-τής / -της</b> (ο)</td><td>the person who does it</td><td>μαθαίνω → μαθη<b>τής</b> · παίζω → παίκ<b>της</b></td></tr>
+            <tr><td><b>-ίστας</b> (ο)</td><td>the person who plays or does it</td><td>κιθάρα → κιθαρ<b>ίστας</b> · τουρισμός → τουρ<b>ίστας</b></td></tr>
+        </tbody>
+    </table>
+    <p class="manual-note">Adverbs (καλός → καλά) and the friendly -άκι have their own pages:
+    <b>Επιρρήματα</b> and <b>Υποκοριστικά</b>.</p>
+
+    <h3>6. Λάθη που κοστίζουν</h3>
+    <ul class="manual-examples manual-bad">
+        <li><s>ένα ξυλινό τραπέζι</s> → ένα <b>ξύλινο</b> τραπέζι (material: stress stays back)</li>
+        <li><s>Μένω στο βόρειο.</s> → Μένω <b>στα βόρεια</b> (neuter plural)</li>
+        <li><s>η δυτικοβόρεια Ελλάδα</s> → η <b>βορειοδυτική</b> Ελλάδα (north/south first)</li>
+        <li><s>το πορτοκαλόχυμο</s> → <b>ο</b> πορτοκαλόχυμος (ο χυμός decides)</li>
+        <li><s>Η σχολικός χρονιά</s> → η <b>σχολική</b> χρονιά (agrees with χρονιά)</li>
+        <li><s>δερμίνος</s> → <b>δερμάτινος</b> (-μα nouns add -ατ-)</li>
+    </ul>
 </article>`
     },
     {
